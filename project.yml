@@ -1,0 +1,75 @@
+---
+settings:
+  name: Database workloads
+  platform: cloud
+  internal:
+    pdf_enabled: true
+    termcheck_enabled: true
+  prod:
+    pdf_enabled: true
+    harmony_enabled: false
+  rss_page: whats-new.html
+  langs: fr-fr,us-en,ja-jp,ko-kr,zh-cn,zh-tw,de-de,es-es,it-it
+sidebar:
+  entries:
+  - title: Documents relatifs aux workloads de base de données
+    url: "/index.html"
+  - title: Notes de mise à jour
+    entries:
+    - title: Quoi de neuf
+      url: "/whats-new.html"
+    - title: Limites connues
+      url: "/known-limitations.html"
+  - title: Commencez
+    entries:
+    - title: Découvrez Workload Factory pour bases de données
+      url: "/learn-databases.html"
+    - title: Démarrage rapide
+      url: "/quick-start-databases.html"
+  - title: Utilisez les charges de travail des bases de données
+    entries:
+    - title: Découvrez les économies
+      url: "/explore-savings.html"
+    - title: Créez un nouveau serveur de base de données
+      url: "/create-database-server.html"
+    - title: Détecter un serveur de base de données
+      url: "/detect-host.html"
+    - title: Créer une base de données
+      url: "/create-database.html"
+    - title: Automatisez avec Codebox
+      url: "/automate-codebox.html"
+  - title: Administration et contrôle
+    entries:
+    - title: Gérer un serveur Microsoft SQL
+      url: "/manage-server.html"
+    - title: Gérer les clones
+      entries:
+      - title: Créez un clone sandbox
+        url: "/create-sandbox-clone.html"
+      - title: Vérifier l'intégrité d'un clone sandbox
+        url: "/check-clone-integrity.html"
+      - title: Restaurez un clone sandbox
+        url: "/revert-clone.html"
+      - title: Actualiser un clone sandbox
+        url: "/refresh-clone.html"
+      - title: Connectez-vous au pipeline ci/CD
+        url: "/connect-clone-cicd.html"
+      - title: Afficher les informations de connexion de clone
+        url: "/view-clone-connection.html"
+      - title: Fractionner un clone sandbox
+        url: "/split-clone.html"
+      - title: Supprimez un clone sandbox
+        url: "/delete-clone.html"
+    - title: Surveiller les bases de données
+      url: "/monitor-databases.html"
+  - title: Connaissances et support
+    entries:
+    - title: S'inscrire pour obtenir de l'aide
+      url: "/support-registration-databases.html"
+    - title: Obtenez de l'aide
+      url: "/get-help-databases.html"
+  - title: Mentions légales
+    url: "/legal-notices.html"
+product-family:
+  name: BlueXP Workload Factory for AWS
+  repo: workload-family

@@ -1,0 +1,83 @@
+---
+sidebar: sidebar 
+permalink: detect-host.html 
+keywords: detect, detect server instance, instance, detect a database host, instance 
+summary: Détectez une instance Microsoft SQL Server dans Workload Factory pour les bases de données. 
+---
+= Détecter une instance de Microsoft SQL Server
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Détectez une instance Microsoft SQL Server dans Workload Factory pour les bases de données.
+
+Cette tâche permet de détecter une instance _non détectée_.
+
+.Description de la tâche
+Lorsque des identifiants AWS sont associés à Workload Factory, les bases de données permettent de détecter automatiquement les serveurs Microsoft SQL Server, à partir de SQL Server 2016, avec les types de stockage AWS suivants :
+
+* FSX pour ONTAP
+* EBS (Elastic Block Store)
+* FSX pour serveur de fichiers Windows
+
+
+Dans les bases de données, les instances découvertes sont classées comme suit :
+
+* _Instances non détectées_: Instances non détectées qui ont été automatiquement découvertes par Workload Factory. Les instances ne sont pas détectées dans les cas suivants :
++
+** Échec de l'authentification Microsoft SQL Server.
+** Le système de fichiers FSX for ONTAP pour Microsoft SQL Server n'est pas enregistré avec votre compte dans Workload Factory.
+
+
+* _Instances non gérées_ : instances détectées qui ne sont pas gérées par Workload Factory
+* _Managed instances_ : instances détectées gérées par Workload Factory
+
+
+La première étape de la gestion d'une instance de Microsoft SQL Server, ou instance hôte, dans Workload Factory pour les bases de données est la détection d'une instance de serveur de base de données non détectée.
+
+.Avant de commencer
+Les conditions requises pour détecter une instance de serveur de base de données non détectée sont les suivantes :
+
+* Vous devez link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Identifiants de compte AWS"^] détecter une instance de serveur de base de données dans Workload Factory.
+* Le type de stockage de l'instance doit être l'un des suivants :
++
+** FSX pour ONTAP
+** EBS (Elastic Block Store)
+** FSX pour serveur de fichiers Windows
+
+
+* Les instances EC2 doivent avoir un profil rôle/instance qui permet à la connexion SSM de fonctionner pour la détection.
++
+Lorsqu'une instance Microsoft SQL est détectée, l'environnement existant n'est pas modifié. La détection se fait via AWS Systems Manager session Manager (SSM). Sans le profil d'instance IAM droit, la détection échouera. link:https://docs.aws.amazon.com/systems-manager/latest/userguide/session-manager-troubleshooting.html["En savoir plus sur le dépannage SSM"^].
+
+
+
+.Étapes
+. Connectez-vous au link:https://console.workloads.netapp.com["Console Workload Factory"^].
+. Dans la mosaïque bases de données, sélectionnez *aller à bases de données Inventaire*.
+. Dans bases de données, sélectionnez l'onglet *Inventaire*.
+. Cliquez sur la flèche déroulante pour développer la ligne de l'hôte à détecter.
++
+L'hôte se développe et les instances hôte s'affichent.
+
+. Cliquez sur le menu des trois points de l'instance à détecter.
+. Cliquez sur *détecter*.
+. Dans la boîte de dialogue *Detect instance*, indiquez le nom d'utilisateur et le mot de passe Microsoft SQL Server ou le nom d'utilisateur et le mot de passe FSX for ONTAP.
++
+Workload Factory essaie de valider vos informations d'identification Microsoft SQL ou FSX for ONTAP.
+
++
+Si l'une de ces informations d'identification n'est pas disponible, Workload Factory tente d'installer le `aws.tools.SimpleSystemsManagement` module dans PowerShell.
+
+. Cliquez sur *détecter*.
++
+Les informations sur l'instance détectée s'affichent.
+
+. Sélectionnez *Oui, gérer l'instance via Workload Factory* ou *non*.
+. Cliquez sur *Done*.
+
+
+.Et la suite
+Lorsque le type de stockage de l'instance hôte est FSX pour ONTAP, vous pouvez link:manage-server.html["Gérez l'instance via Workload Factory"].

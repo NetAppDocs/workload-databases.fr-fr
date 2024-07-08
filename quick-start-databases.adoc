@@ -1,0 +1,41 @@
+---
+sidebar: sidebar 
+permalink: quick-start-databases.html 
+keywords: requirements, basic mode, read mode, automate mode 
+summary: Les bases de données ont trois modes différents qui ont des exigences différentes. 
+---
+= Démarrage rapide pour les bases de données
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Avec les bases de données, vous pouvez commencer immédiatement en _Basic_ mode. Si vous souhaitez utiliser Workload Factory pour détecter les hôtes, gérer les ressources, etc., vous pouvez commencer en quelques étapes.
+
+Pour commencer, vous devez disposer d'un compte AWS.
+
+Procédez comme suit pour vous lancer avec les bases de données Workload Factory.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["Une seule"] Connectez-vous à Workload Factory
+[role="quick-margin-para"]
+Vous aurez besoin de link:https://docs.netapp.com/us-en/workload-setup-admin/sign-up-saas.html["Configurez un compte avec Workload Factory"^] et link:https://console.workloads.netapp.com["connectez-vous"^]
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["Deux"] Ajoutez des informations d'identification et des autorisations
+[role="quick-margin-para"]
+Choisissez entre link:https://docs.netapp.com/us-en/workload-setup-admin/operational-modes.html["modes opérationnels _basic_, _read_ et _automate_"^].
+
+[role="quick-margin-para"]
+Si vous utilisez le mode _Basic_, vous n'avez pas besoin d'aller plus loin. Vous pouvez commencer à utiliser les bases de données Workload Factory pour copier des exemples de code partiellement terminés. Dans la mosaïque bases de données, cliquez sur *déployer l'hôte de base de données*. link:create-database-server.html["Apprenez à déployer un serveur de base de données"].
+
+[role="quick-margin-para"]
+Si vous utilisez le mode _READ_ ou _automate_, vous devrez link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["ajoutez manuellement des informations d'identification à un compte"^] sélectionner les fonctionnalités de charge de travail, telles que les bases de données et l'IA, et créer les stratégies IAM pour vous assurer que vous disposez des autorisations appropriées pour fonctionner en mode _READ_ ou _automate_.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["Trois"] Déployer un serveur de base de données
+[role="quick-margin-para"]
+Enfin, si vous choisissez de fonctionner en _automate_ mode, vous devez link:create-database-server.html["déploiement"] ou link:detect-host.html["détecter un serveur de base de données"] pour gérer vos ressources hôtes et avant d'ajouter des bases de données utilisateur.
+
+.Et la suite
+Lorsque vous avez des hôtes gérés FSX pour ONTAP dans votre inventaire de bases de données, vous pouvez link:create-database.html["créer une base de données utilisateur"] ou link:create-sandbox-clone.html["cloner votre hôte pour créer un sandbox"].
+
+Lorsque vous avez des hôtes Elastic Block Store dans votre inventaire de bases de données, vous pouvez link:explore-savings.html["Découvrez les économies réalisées grâce au calculateur d'économies de stockage"].

@@ -1,0 +1,119 @@
+---
+sidebar: sidebar 
+permalink: create-database.html 
+keywords: create, database, creation, Microsoft SQL 
+summary: Créez une base de données Microsoft SQL avec les bases de données Workload Factory. 
+---
+= Créez une base de données Microsoft SQL dans Workload Factory pour les bases de données
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+La création d'une nouvelle base de données Microsoft SQL dans la console Workload Factory vous permet de gérer la ressource au sein de Workload Factory.
+
+.Description de la tâche
+Lors de la création de la base de données, deux nouveaux volumes sont créés dans le système de fichiers FSX pour ONTAP, composé de LUN indépendants qui hébergent les données et les fichiers journaux de la base de données. Les fichiers de base de données de la nouvelle base de données sont à provisionnement fin et ne consomment que quelques Mo de la taille totale allouée à la nouvelle base de données.
+
+Si vous souhaitez isoler le stockage de la base de données, vous pouvez le faire en utilisant un _point de montage virtuel_. Le point de montage virtuel vous permet de consolider des bases de données sur quelques lecteurs communs de l'hôte.
+
+La création d'une base de données dans Workload Factory nécessite des autorisations de mode automatisé. En mode de base, vous pouvez également copier ou télécharger un modèle de code partiellement rempli pour terminer l'opération en dehors de Workload Factory. link:https://docs.netapp.com/us-en/workload-setup-admin/operational-modes.html["Découvrez les modes opérationnels dans Workload Factory"^] pour choisir le mode que vous souhaitez utiliser.
+
+
+NOTE: Les serveurs Microsoft SQL utilisant le protocole SMB ne prennent pas en charge la création de bases de données.
+
+.Avant de commencer
+Assurez-vous de remplir les conditions préalables suivantes avant de créer une nouvelle base de données.
+
+Informations d'identification et autorisations:: Vous devez link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Informations d'identification du compte AWS et autorisations _read_ ou _automate_ mode"^] créer une nouvelle base de données dans Workload Factory.
++
+--
+Vous pouvez également utiliser la Codebox pour copier un modèle afin de déployer une base de données hors de Workload Factory à l'aide de l'API REST. link:https://docs.netapp.com/us-en/workload-setup-admin/codebox-automation.html["En savoir plus sur l'automatisation de Codebox"^].
+
+--
+Hôte Windows:: Vous devez disposer de suffisamment de lettres de lecteur disponibles sur Microsoft SQL Server pour créer de nouveaux lecteurs pour la nouvelle base de données si vous utilisez le mode _création rapide_.
+Microsoft SQL Server:: Pour héberger la nouvelle base de données, vous devez disposer d'un serveur Microsoft SQL géré dans Workload Factory.
+AWS Systems Manager:: Vérifiez que le `NT Authority\SYSTEM user` privilège est activé sur l'hôte Microsoft SQL via AWS System Manager.
+
+
+
+
+== Créer une base de données
+
+Vous pouvez utiliser les modes de déploiement _Quick CREATE_ ou _Advanced CREATE_ pour effectuer cette tâche dans Workload Factory avec des autorisations de mode _READ_ ou _automate_.
+
+[role="tabbed-block"]
+====
+.Création rapide
+--
+.Étapes
+. Connectez-vous au link:https://console.workloads.netapp.com["Console Workload Factory"^].
+. Dans la mosaïque bases de données, sélectionnez *aller à bases de données Inventaire*.
+. Dans bases de données, sélectionnez l'onglet *Inventaire*.
+. Dans l'onglet Inventaire, sélectionnez un serveur de base de données avec une instance de serveur SQL gérée dans laquelle créer la base de données.
+. Cliquez sur le menu à trois points de l'instance gérée, puis sélectionnez *Créer une base de données utilisateur*.
+. Sur la page Créer une base de données utilisateur, sous informations sur la base de données, fournissez les informations suivantes :
++
+.. *Nom de la base de données* : entrez le nom de la base de données.
+.. *Classement* : sélectionnez un classement pour la base de données. Le classement par défaut SQL_Latin1_General_CP1_ci_AS » sur Microsoft SQL Server est sélectionné.
+
+
+. Sous Paramètres de fichier, fournissez les informations suivantes :
++
+.. *Mode Paramètres de fichier* : sélectionnez *création rapide*.
+.. *Noms de fichiers et chemin* :
++
+*** *Nom du fichier de données* : entrez le nom du fichier de données.
+*** *Nom du fichier journal* : entrez le nom du fichier journal.
+
+
+.. *Taille des fichiers* : entrez la taille des données et du journal de la base de données.
+
+
+. Cliquez sur *Créer*.
++
+Sinon, si vous voulez modifier l'un de ces paramètres par défaut maintenant, changez le *mode Paramètres du fichier* en *mode de création avancée*.
+
+
+
+--
+.Création avancée
+--
+.Étapes
+. Connectez-vous au link:https://console.workloads.netapp.com["Console Workload Factory"^].
+. Dans la mosaïque bases de données, sélectionnez *aller à bases de données Inventaire*.
+. Dans bases de données, sélectionnez l'onglet *Inventaire*.
+. Dans l'onglet Inventaire, sélectionnez un serveur de base de données avec une instance de serveur SQL gérée dans laquelle créer la base de données.
+. Cliquez sur le menu à trois points de l'instance gérée, puis sélectionnez *Créer une base de données utilisateur*.
+. Sélectionnez *Créer une base de données utilisateur*.
+. Sur la page Créer une base de données utilisateur, sous informations sur la base de données, fournissez les informations suivantes :
++
+.. *Nom de la base de données* : entrez le nom de la base de données.
+.. *Classement* : sélectionnez le classement de la base de données. Le classement par défaut SQL_Latin1_General_CP1_ci_AS » sur Microsoft SQL Server est sélectionné.
+
+
+. Sous Paramètres de fichier, fournissez les informations suivantes :
++
+.. *Mode Paramètres de fichier* : sélectionnez *création avancée*.
+.. *Noms de fichiers et chemin* :
++
+... *Fichier de données* : sélectionnez une lettre de lecteur et entrez le nom du fichier de données.
++
+Si vous le souhaitez, cliquez sur la case *point de montage virtuel*.
+
+... *Fichier journal* : sélectionnez une lettre de lecteur et entrez le nom du fichier journal.
++
+Si vous le souhaitez, cliquez sur la case *point de montage virtuel*.
+
+
+
+.. *Taille des fichiers* : entrez la taille des données et du journal de la base de données.
+
+
+. Cliquez sur *Créer*.
+
+
+--
+====
+Si vous avez créé l'hôte de base de données, vous pouvez vérifier la progression du travail dans l'onglet *surveillance du travail*.

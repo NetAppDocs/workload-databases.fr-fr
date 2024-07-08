@@ -1,0 +1,26 @@
+---
+sidebar: sidebar 
+permalink: split-clone.html 
+keywords: split, clone, source, new database 
+summary: Fractionner un clone sandbox à partir de la base de données source pour créer une nouvelle base de données. 
+---
+= Fractionner un clone sandbox à partir de la base de données source
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Le fractionnement d'un clone sandbox à partir de sa base de données source crée une nouvelle base de données qui consomme une certaine capacité de stockage. Le clone est supprimé lorsque le fractionnement est terminé et que la nouvelle base de données apparaît dans l'inventaire.
+
+.Avant de commencer
+Évaluez la capacité de stockage nécessaire pour la nouvelle base de données. Si nécessaire, link:https://docs.netapp.com/us-en/workload-fsx-ontap/increase-file-system-capacity.html["augmenter la capacité du système de fichiers"^] pour le système de fichiers FSX pour ONTAP avant de commencer.
+
+.Étapes
+. Connectez-vous au link:https://console.workloads.netapp.com["Console Workload Factory"^].
+. Dans la mosaïque bases de données, sélectionnez *aller à bases de données Inventaire*.
+. Dans bases de données, sélectionnez l'onglet *sandbox*.
+. Dans l'onglet sandbox, cliquez sur le menu trois points du clone sandbox que vous souhaitez fractionner.
+. Sélectionnez *Fractionner*.
+. Dans la boîte de dialogue Fractionner, cliquez sur *Fractionner*.
+

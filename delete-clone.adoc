@@ -1,0 +1,23 @@
+---
+sidebar: sidebar 
+permalink: delete-clone.html 
+keywords: delete, clone 
+summary: 'Supprimez un clone sandbox lorsque vous n"en avez plus besoin.' 
+---
+= Fractionner un clone sandbox à partir de la base de données source
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Supprimez un clone sandbox lorsque vous n'en avez plus besoin et que vous souhaitez libérer de la capacité de stockage.
+
+.Étapes
+. Connectez-vous au link:https://console.workloads.netapp.com["Console Workload Factory"^].
+. Dans la mosaïque bases de données, cliquez sur *aller à bases de données Inventory*.
+. Dans bases de données, sélectionnez l'onglet *sandbox*.
+. Cliquez sur le menu des trois points du clone sandbox à supprimer.
+. Sélectionnez *Supprimer*.
+. Dans la boîte de dialogue Supprimer, cliquez sur *Supprimer*.
+

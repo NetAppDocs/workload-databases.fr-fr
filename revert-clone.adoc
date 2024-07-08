@@ -1,0 +1,26 @@
+---
+sidebar: sidebar 
+permalink: revert-clone.html 
+keywords: re-baseline, revert clone, database, Microsoft SQL 
+summary: Restaurez un clone sandbox dans Workload Factory pour les bases de données. 
+---
+= Restaurez un clone sandbox dans Workload Factory pour les bases de données
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Restaurez la version d'origine d'un clone de base de données au moment de sa création.
+
+.Description de la tâche
+Lorsque vous clonez une base de données, le clone à la création est un clone _baseline_. Les données de la base de données clonée sont les mêmes que celles de la base de données source au moment de la création. Au fur et à mesure que les données d'un clone de base de données sandbox changent au fil du temps, vous pouvez rétablir les données à la base lors de la création du clone. Cette opération s'appelle la redéfinition de la base d'un clone. La redéfinition de la base d'un clone plutôt que de créer un nouveau clone permet de gagner de l'espace. Toutefois, toute modification apportée au clone sandbox sera supprimée.
+
+.Étapes
+. Connectez-vous au link:https://console.workloads.netapp.com["Console Workload Factory"^].
+. Dans la mosaïque bases de données, sélectionnez *aller à bases de données Inventaire*.
+. Dans bases de données, sélectionnez l'onglet *sandbox*.
+. Dans l'onglet sandbox, cliquez sur le menu trois points du clone sandbox à rétablir.
+. Sélectionnez *Re-Baseline*.
+. Dans la boîte de dialogue Re-Baseline, cliquez sur *Re-Baseline*.
+

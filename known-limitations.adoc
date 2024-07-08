@@ -1,0 +1,110 @@
+---
+sidebar: sidebar 
+permalink: known-limitations.html 
+keywords: limitations, databases 
+summary: Les limitations connues identifient les plateformes, les périphériques ou les fonctions qui ne sont pas pris en charge par cette version du produit, ou qui ne fonctionnent pas correctement avec elle. Examinez attentivement ces limites. 
+---
+= Limites connues
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Les limitations connues identifient les plateformes, les périphériques ou les fonctions qui ne sont pas pris en charge par cette version du produit, ou qui ne fonctionnent pas correctement avec elle. Examinez attentivement ces limites.
+
+
+
+== Prise en charge de la version d'image ami
+
+Nous n'affichons que quatre versions ou révisions récentes d'images ami pour chaque version SQL. Nous n'autorisons pas l'installation à partir d'une image ami antérieure aux quatre dernières versions.
+
+
+
+== Ami personnalisé
+
+Le déploiement avec un ami personnalisé suppose que le support d'installation est présent dans l'image. Ceci est nécessaire pour la configuration FCI pour les raisons suivantes :
+
+* Pour désinstaller et reconfigurer pour former le cluster FCI
+* Lors de la sélection d'un classement autre que celui défini dans l'image pour un déploiement autonome
+
+
+Dans le cadre du déploiement, Workload Factory n'installe pas d'ami personnalisé avec plusieurs instances de Microsoft SQL Server. Seule l'instance par défaut de Microsoft SQL Server est sélectionnée et configurée dans le cadre du déploiement.
+
+
+
+== Effectuez une restauration et réessayez en cas d'échec des déploiements
+
+La restauration et les tentatives pour les déploiements en échec ne sont pas prises en charge dans Workload Factory. Vous pouvez revenir en arrière ou réessayer une pile défaillante à partir de la console CloudFormation dans AWS.
+
+
+
+== Restauration des ressources Active Directory et DNS
+
+Les ressources DNS suivantes ne sont pas supprimées d'Active Directory et DNS lorsque vous effectuez une restauration d'un test ou que vous avez échoué au déploiement depuis la console CloudFormation dans AWS :
+
+* Chaque nœud du déploiement SQL à son adresse IP de gestion
+* Nom du cluster Windows vers les adresses IP secondaires réservées des instances EC2 en cas de FCI
+* Nom de FCI SQL vers les deux adresses IP réservées des deux instances EC2 de FCI
+
+
+Vous devrez les nettoyer manuellement ou attendre que le domaine purge les entrées obsolètes.
+
+
+
+== Prise en charge de la configuration des groupes de disponibilité permanente
+
+La gestion des configurations de groupes de disponibilité always-on n'est pas prise en charge dans Workload Factory.
+
+
+
+== Groupes de sécurité Active Directory gérés par l'utilisateur
+
+Si vous sélectionnez « Active Directory géré par l'utilisateur » pendant le déploiement de Microsoft SQL Server dans Workload Factory, vous devez fournir un groupe de sécurité qui autorise le trafic entre les instances EC2 vers le service d'annuaire pour le déploiement. Workload Factory ne connecte pas automatiquement le groupe de sécurité pour Active Directory géré par l'utilisateur, comme il le fait pour Microsoft AD géré par AWS.
+
+
+
+== Clés de chiffrement personnalisées
+
+Les clés de chiffrement personnalisées pour FSX pour ONTAP ne sont pas répertoriées en fonction de l'applicabilité du service. Vous devez choisir la clé appropriée. Les clés gérées AWS sont filtrées en fonction de leur applicabilité au service.
+
+
+
+== Détection de Microsoft SQL Server
+
+La détection de Microsoft SQL Server n'est pas enregistrée. Chaque fois que vous accédez aux bases de données dans Workload Factory, la détection de Microsoft SQL Server s'exécute à nouveau pour identifier les installations SQL dans la région.
+
+
+
+== Modèle CloudFormation
+
+Un modèle CloudFormation téléchargé ou copié généré par Codebox (fichier YAML) a une période de conservation limitée de sept jours.
+
+
+
+== Prise en charge de sandbox
+
+* Le nombre maximum de clones sandbox pouvant être créés à partir d'un serveur de base de données est de 50.
+* La création de sandbox n'est pas prise en charge dans les cas suivants :
++
+** Les fichiers de données et les fichiers journaux se trouvent sur le même disque.
+** La base de données source contient plusieurs fichiers de données.
+
+
+
+
+
+
+== Détection et gestion de Microsoft SQL Server
+
+* La détection et la gestion des instances de Microsoft SQL ne sont pas prises en charge lors de l'utilisation d'un réseau privé sans connectivité externe.
+* Lorsque les instances Microsoft SQL bloquent l'authentification Windows et autorisent uniquement l'authentification utilisateur Microsoft SQL, la détection de Microsoft SQL Server est prise en charge, mais les opérations de gestion ne sont pas prises en charge.
+
+
+
+
+== Découvrez les économies
+
+* Dans l'onglet Inventaire, le coût estimé affiché pour chaque instance de Microsoft SQL est calculé au niveau du système de fichiers FSX pour ONTAP et non pour les volumes hébergeant l'instance SQL.
+* Les calculs d'économies explore ne sont pas pris en charge pour FSX for Windows File Server.
+

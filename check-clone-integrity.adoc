@@ -1,0 +1,29 @@
+---
+sidebar: sidebar 
+permalink: check-clone-integrity.html 
+keywords: integrity check, data corruption 
+summary: 'Exécutez un contrôle d"intégrité pour déterminer si les données des clones du bac à sable sont intactes ou corrompues.' 
+---
+= Vérifiez l'intégrité des données d'un clone sandbox
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Exécutez un contrôle d'intégrité pour déterminer si les données des clones du bac à sable sont intactes ou corrompues.
+
+.Description de la tâche
+Lorsque vous créez un clone sandbox à partir d'une base de données source alors qu'il est occupé, les données du clone peuvent ne pas être synchronisées avec l'instantané le plus récent de la base de données source. Cette opération vérifie l'intégrité de tous les objets du clone sandbox pour déterminer si les données du clone sandbox sont à jour.
+
+.Étapes
+. Connectez-vous au link:https://console.workloads.netapp.com["Console Workload Factory"^].
+. Dans la mosaïque bases de données, sélectionnez *aller à bases de données Inventaire*.
+. Dans bases de données, sélectionnez l'onglet *sandbox*.
+. Dans l'onglet sandbox, cliquez sur le menu trois points du clone sandbox pour vérifier son intégrité.
+. Sélectionnez *Exécuter le contrôle d'intégrité*.
+. Dans la boîte de dialogue Vérification d'intégrité, cliquez sur *Vérification d'intégrité*.
+. Vérifiez l'état de la vérification d'intégrité dans les sandbox ou dans la surveillance des travaux.
+
+
+Si la vérification d'intégrité échoue, nous vous recommandons de ne pas utiliser le clone sandbox et de créer un nouveau clone sandbox.

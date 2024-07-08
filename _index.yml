@@ -1,0 +1,29 @@
+---
+indexpage:
+  title: Documentation Workload Factory pour les charges de travail de bases de données
+  lead: Déployez des configurations Microsoft SQL Server et gérez les environnements
+    de base de données en plus du stockage du système de fichiers FSX pour ONTAP dans
+    BlueXP Workload Factory.
+  tiles:
+  - title: Commencez
+    links:
+    - title: Notes de mise à jour
+      url: "/whats-new.html"
+    - title: En savoir plus sur les bases de données
+      url: "/learn-databases.html"
+    - title: Démarrage rapide
+      url: "/quick-start-databases.html"
+  - title: Utilisez des bases de données
+    links:
+    - title: Créez un serveur de base de données
+      url: "/create-database-server.html"
+    - title: Créer une base de données
+      url: "/create-database.html"
+    - title: Surveiller une base de données
+      url: "/monitor-databases.html"
+  - title: Connaissances et support
+    links:
+    - title: S'inscrire pour obtenir de l'aide
+      url: "/support-registration-databases.html"
+    - title: Obtenez de l'aide
+      url: "/get-help-databases.html"

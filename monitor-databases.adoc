@@ -1,0 +1,44 @@
+---
+sidebar: sidebar 
+permalink: monitor-databases.html 
+keywords: monitor databases, monitor jobs, track database jobs 
+summary: Suivez les tâches de base de données et surveillez les bases de données dans Workload Factory pour les bases de données. 
+---
+= Surveiller les bases de données
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Suivez les tâches de base de données et surveillez les bases de données avec Workload Factory pour les bases de données.
+
+.Description de la tâche
+Les bases de données permettent de surveiller la progression des tâches et de diagnostiquer et dépanner en cas de défaillance. En outre, filtre par type et par état, la fonction de recherche et l'option permettant de télécharger l'aide de la table des travaux avec la navigation et le reporting des travaux de base de données.
+
+La surveillance des tâches prend en charge jusqu'à trois niveaux de surveillance selon le travail. Par exemple, pour la création de nouvelles bases de données et de clones sandbox, la surveillance des tâches suit les travaux et sous-travaux parents.
+
+Niveaux de surveillance des tâches::
++
+--
+* Niveau 1 (travail parent) : assure le suivi du travail de déploiement de l'hôte.
+* Niveau 2 (sous-travail) : assure le suivi des sous-travaux liés au travail parent de déploiement hôte.
+* Niveau 3 (tâche) : liste la séquence des actions entreprises sur chaque ressource.
+
+
+--
+État des tâches:: La fonction de surveillance des tâches effectue le suivi des tâches _en cours_, _terminées_ et _échouées_ tous les jours, toutes les semaines, toutes les deux semaines et tous les mois.
+Conservation des événements de travail:: Les événements de surveillance des travaux sont conservés dans l'interface utilisateur pendant 30 jours.
+
+
+
+
+== Surveiller les tâches
+
+.Étapes
+. Connectez-vous au link:https://console.workloads.netapp.com["Console Workload Factory"^].
+. Dans la mosaïque bases de données, sélectionnez *aller à bases de données Inventaire*.
+. Dans bases de données, sélectionnez l'onglet *surveillance des travaux*.
+. Dans l'onglet surveillance des travaux, utilisez les filtres ou la recherche pour affiner les résultats des travaux. Vous pouvez également télécharger un rapport de travaux.
+. Cliquez sur le menu des trois points du travail et cliquez sur *aller à CloudFormation* pour afficher le journal du travail dans la console AWS CloudFormation.
+
