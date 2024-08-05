@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: explore-savings.html 
 keywords: cost, savings, compare costs, EBS, FSx for ONTAP 
-summary: 'Découvrez les économies réalisées pour les charges de travail de vos bases de données grâce au stockage Amazon Elastic Block Store (EBS).' 
+summary: 'Comparez les coûts liés au stockage Amazon Elastic Block Store (EBS) et FSX pour ONTAP pour les workloads de bases de données et les économies réalisées.' 
 ---
 = Découvrez les économies réalisées avec Workload Factory pour les bases de données
 :allow-uri-read: 
@@ -11,29 +11,27 @@ summary: 'Découvrez les économies réalisées pour les charges de travail de v
 
 
 [role="lead"]
-Découvrez les économies réalisées pour les charges de travail de vos bases de données grâce au stockage Amazon Elastic Block Store (EBS).
+Comparez les coûts liés au stockage Amazon Elastic Block Store (EBS) et FSX pour ONTAP pour les workloads de bases de données et les économies réalisées.
 
-Workload Factory fournit un calculateur. Vous pouvez ainsi comparer les différents composants de coûts liés à l'exécution des workloads Microsoft SQL Server, par exemple le stockage, le calcul, la licence SQL, les snapshots et les clones pour vos workloads de base de données sur les systèmes de fichiers FSX pour ONTAP par rapport au stockage Elastic Block Store (EBS). Selon vos besoins en stockage, vous constaterez peut-être que les systèmes de fichiers FSX pour ONTAP sont les plus économiques pour vos workloads de base de données.
+Workload Factory fournit un calculateur d'économies. Vous pouvez donc comparer les différents composants de coûts liés à l'exécution des workloads Microsoft SQL Server, par exemple le stockage, le calcul, la licence SQL, les snapshots et les clones pour vos workloads de bases de données sur les systèmes de fichiers FSX pour ONTAP par rapport au stockage Elastic Block Store (EBS). Selon vos besoins en stockage, vous constaterez peut-être que les systèmes de fichiers FSX pour ONTAP sont les plus économiques pour vos workloads de base de données.
 
 Le calculateur indique si le stockage des workloads de base de données sur ces serveurs Microsoft SQL coûterait moins cher si vous utilisez un système de fichiers FSX pour ONTAP.
 
-Si Workload Factory détermine que vous pourriez économiser de l'argent en exécutant ces workloads sur un système de fichiers FSX pour ONTAP, vous pouvez déployer Microsoft SQL sur FSX pour ONTAP directement à partir du calculateur de Workload Factory. Dans certains cas, Workload Factory peut vous recommander de déployer plusieurs systèmes de fichiers en fonction de la quantité de stockage que vous utilisez actuellement et des caractéristiques de performances de vos charges de travail de base de données. Dans certains cas, Workload Factory peut vous recommander de déployer plusieurs systèmes de fichiers en fonction de la quantité de stockage que vous utilisez actuellement et des caractéristiques de performances de vos charges de travail de base de données.
+image:screenshot-ebs-savings-calculator.png["Une capture d'écran de la page du calculateur d'économies montre la configuration Microsoft SQL Server sélectionnée sur Amazon Elastic Block Store à gauche avec l'option de personnalisation des valeurs de snapshot et de clone. Les économies réalisées en pourcentage et en montant, ainsi que le coût mensuel total pour l'utilisation de Microsoft SQL Server sur FSX pour ONTAP et du stockage Elastic Block Store s'affichent à gauche."]
+
+Si Workload Factory détermine que vous pourriez économiser de l'argent en exécutant ces workloads sur un système de fichiers FSX pour ONTAP, vous pouvez déployer Microsoft SQL sur FSX pour ONTAP directement à partir du calculateur de Workload Factory. Si vous avez plusieurs instances de Microsoft SQL Server sur le stockage Elastic Block Store, nous vous recommandons une configuration FSX pour ONTAP avec une seule instance SQL.
 
 
 
 == Indiquez la configuration système requise
 
-Si vous avez activé _automate_ mode (link:https://docs.netapp.com/us-en/workload-setup-admin/operational-modes.html["en savoir plus sur les modes"]) en ajoutant des informations d'identification AWS à votre compte Workload Factory, Workload Factory peut identifier tous les systèmes de stockage disponibles dans votre compte AWS et afficher les caractéristiques des volumes de ces systèmes dans la page d'inventaire Storage. Le compte AWS recherché est basé sur les informations d'identification que vous avez définies dans votre compte Workload Factory.
+Si vous avez activé _automate_ mode (link:https://docs.netapp.com/us-en/workload-setup-admin/operational-modes.html["en savoir plus sur les modes"]) en ajoutant des informations d'identification AWS à votre compte Workload Factory, Workload Factory peut identifier tous les systèmes de stockage exécutant Microsoft SQL Server disponibles dans votre compte AWS. Le compte AWS recherché est basé sur les informations d'identification que vous avez définies dans votre compte Workload Factory.
 
-Cette figure présente les volumes découverts dans un compte AWS sur les systèmes FSX pour Windows File Server.
+Cette figure montre les hôtes Microsoft SQL Server sur un stockage EBS dans l'onglet économies Explore qui ont été découverts dans un compte AWS.
 
-image:screenshot-storage-inventory.png["Page d'inventaire du stockage affichant votre inventaire actuel des volumes sur FSX pour les serveurs de fichiers Windows."]
+image:screenshot-explore-savings-tab.png["Cette figure présente les hôtes Microsoft SQL Server détectés et non gérés dans l'onglet Explorer les économies détectées dans un compte AWS."]
 
-Si vous n'avez pas ajouté d'informations d'identification pour lier votre compte Workload Factory à un compte AWS (appelé _Basic_ mode), vous pouvez entrer manuellement les caractéristiques requises pour un système de stockage que vous prévoyez de déployer et le calculateur de stockage déterminera le meilleur système de fichiers en fonction du coût. Vous pouvez utiliser cette méthode pour étendre l'étendue d'un nouveau système de fichiers FSX for ONTAP tout en utilisant _automate_ mode également.
-
-Cette figure présente la page de calculateur de stockage, en comparant FSX pour ONTAP et le stockage EBS.
-
-image:screenshot-ebs-calculator.png["La page du calculateur de stockage, qui compare le stockage FSX pour ONTAP et Elastic Block Store."]
+Vous pouvez explorer les économies automatiquement pour un hôte sélectionné ou saisir manuellement les paramètres d'une configuration Microsoft SQL Server que vous prévoyez de déployer. Le calculateur d'économies déterminera la meilleure configuration de FSX pour ONTAP en fonction des coûts.
 
 .Avant de commencer
 Avant de commencer, remplissez les conditions préalables suivantes :
@@ -42,6 +40,18 @@ Avant de commencer, remplissez les conditions préalables suivantes :
 * Détection des hôtes du stockage EBS dans l'inventaire de vos bases de données. link:detect-host.html["Découvrez comment détecter des hôtes"].
 
 
+
+
+== Découvrez les économies
+
+Vous pouvez explorer les économies d'un hôte sélectionné ou utiliser la méthode manuelle.
+
+[role="tabbed-block"]
+====
+.Explorer les économies réalisées sur l'hôte sélectionné
+--
+Workload Factory entre les caractéristiques de l'hôte sélectionné afin que vous puissiez explorer les économies automatiquement.
+
 .Étapes
 . Connectez-vous au link:https://console.workloads.netapp.com["Console Workload Factory"^].
 . Dans la mosaïque bases de données, sélectionnez *aller à l'inventaire des bases de données*.
@@ -49,22 +59,68 @@ Avant de commencer, remplissez les conditions préalables suivantes :
 . Cliquez sur *Explorer les économies* pour le serveur de base de données utilisant le stockage EBS.
 . Fournissez éventuellement les informations suivantes sur les clones et les snapshots de votre stockage EBS pour une estimation plus précise des économies.
 +
-.. *Fréquence d'instantané* : sélectionnez une fréquence d'instantané dans la liste déroulante.
-.. *Fréquence d'actualisation de clone* : sélectionnez une fréquence d'actualisation de clone dans la liste déroulante.
+.. *Fréquence d'instantané* : sélectionnez une fréquence d'instantané dans le menu déroulant.
+.. *Fréquence d'actualisation des clones* : sélectionnez la fréquence d'actualisation des clones dans le menu déroulant.
+.. *Nombre de copies clonées* : entrez le nombre de copies clonées dans la configuration EBS.
 .. *Taux de modification mensuel* : saisissez le pourcentage de changements de données de clonage et d'instantanés en moyenne par mois.
 
 
 . Passez en revue les calculs et les recommandations fournis sur la page.
 +
-De plus, faites défiler jusqu'au bas de la page jusqu'à *Exporter PDF*.
+De plus, faites défiler jusqu'au bas de la page jusqu'à *Exporter au format PDF* ou *Afficher les calculs*.
 
 
 
+--
+.Explorer les économies manuellement
+--
+Vous pouvez personnaliser les paramètres de Microsoft SQL Server, Amazon EC2 et Elastic Block Store pour explorer les économies manuellement.
+
+.Étapes
+. Connectez-vous au link:https://console.workloads.netapp.com["Console Workload Factory"^].
+. Dans la mosaïque bases de données, sélectionnez *aller à l'inventaire des bases de données*.
+. Sélectionnez l'onglet *Explorer les économies*.
+. Sous exploration manuelle des économies, cliquez sur *Explorer les économies manuellement*.
+. Sur la page Explorer les économies manuellement, fournissez les informations suivantes :
++
+.. *Région* : sélectionnez une région dans le menu déroulant.
+.. *Modèle de déploiement* : sélectionnez un modèle de déploiement dans le menu déroulant.
+.. *Edition SQL Server* : sélectionnez l'édition SQL Server dans le menu déroulant.
+.. *Taux mensuel de modification des données (%)* : saisissez le pourcentage de changements des données de clonage et d'instantané en moyenne par mois.
+.. *Fréquence d'instantané* : sélectionnez une fréquence d'instantané dans le menu déroulant.
+.. *Nombre de copies clonées* : entrez le nombre de copies clonées dans la configuration EBS.
+.. Selon les spécifications EC2, fournir les éléments suivants :
++
+*** *Description de la machine* : si vous le souhaitez, entrez un nom pour décrire la machine.
+*** *Type d'instance* : sélectionnez le type d'instance EC2 dans le menu déroulant.
+
+
+.. Sous types de volume, fournissez les détails suivants pour au moins un type de volume. Les IOPS et le débit s'appliquent à certains volumes de type de disque.
++
+*** *Nombre de volumes*
+*** *Quantité de stockage par volume (Gio)*
+*** *IOPS provisionnées par volume*
+*** *Débit Mo/s*
+
+
+.. Si vous avez sélectionné le modèle de déploiement disponibilité permanente, fournissez des détails sur *les spécifications EC2 secondaires* et *les types de volume*.
+
+
+. Passez en revue les calculs et les recommandations fournis sur la page.
++
+De plus, faites défiler jusqu'au bas de la page jusqu'à *Exporter au format PDF* ou *Afficher les calculs*.
+
+
+
+--
+====
 
 
 == Déployez FSX pour les systèmes de fichiers ONTAP
 
 Si vous souhaitez passer à FSX pour ONTAP pour réaliser des économies, cliquez sur *Créer* pour créer le(s) système(s) de fichiers directement à partir de l'assistant Créer un système de fichiers FSX pour ONTAP ou cliquez sur *Enregistrer* pour enregistrer la/les configuration(s) recommandée(s) ultérieurement.
+
+Workload Factory ne prend pas en charge l'enregistrement ou la création de plusieurs systèmes de fichiers FSX pour ONTAP.
 
 Méthodes de déploiement:: En _automate_ mode, vous pouvez déployer le système de fichiers FSX for ONTAP directement à partir de Workload Factory. Vous pouvez également copier le contenu de la fenêtre Codebox et déployer le système à l'aide de l'une des méthodes Codebox.
 +

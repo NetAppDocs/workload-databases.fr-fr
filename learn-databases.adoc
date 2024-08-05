@@ -145,7 +145,7 @@ image:diagram-SAZ-database-architecture.png["Diagramme d'architecture autonome a
 .Plusieurs zones de disponibilité
 Le diagramme ci-dessous présente une architecture haute disponibilité (HA) à deux nœuds avec un cluster d'instance de cluster de basculement (FCI) dans une seule région.
 
-image:diagram-MAZ-database-architecture.png["diagramme de l'architecture haute disponibilité à deux nœuds avec cluster d'instances de cluster de basculement dans une seule région"]
+image:diagram-MAZ-database-architecture.png["Diagramme de l'architecture haute disponibilité à deux nœuds avec cluster d'instances de cluster de basculement dans une seule région"]
 
 
 
