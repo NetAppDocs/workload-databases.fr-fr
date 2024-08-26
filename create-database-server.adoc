@@ -30,6 +30,11 @@ Les systèmes de fichiers FSX pour ONTAP disposent de deux modèles de déploiem
 
 
 --
+Configuration d'E/S multi-chemins Microsoft:: Les modèles de déploiement Microsoft SQL Server nécessitent tous deux la création de LUN à l'aide du protocole de stockage iSCSI. Workload Factory configure Microsoft MPIO (Multi-Path I/O) dans le cadre de la configuration des LUN pour SQL Server sur FSX pour ONTAP. MPIO est configuré en fonction des bonnes pratiques AWS et NetApp.
+
+
+Pour plus d'informations, reportez-vous link:https://aws.amazon.com/blogs/modernizing-with-aws/sql-server-high-availability-amazon-fsx-for-netapp-ontap/["Déploiements de haute disponibilité SQL Server avec Amazon FSX pour NetApp ONTAP"^]à .
+
 Active Directory:: Les événements suivants se produisent pour Active Directory (AD) pendant le déploiement :
 +
 --
@@ -173,6 +178,14 @@ Pour les répertoires actifs gérés par AWS, les adresses IP DNS apparaissent d
 Un nouveau système de fichiers FSX pour ONTAP peut ajouter 30 minutes ou plus de temps d'installation.
 
 ... *Sélectionnez une FSX pour ONTAP* existante : sélectionnez le nom de FSX pour ONTAP dans le menu déroulant et entrez un nom d'utilisateur et un mot de passe pour le système de fichiers.
++
+Pour les systèmes de fichiers FSX for ONTAP existants, vérifiez les points suivants :
+
++
+**** Le groupe de routage rattaché à FSX pour ONTAP permet d'utiliser les routes vers les sous-réseaux pour le déploiement.
+**** Le groupe de sécurité autorise le trafic à partir des sous-réseaux utilisés pour le déploiement, en particulier les ports TCP HTTPS (443) et iSCSI (3260).
+
+
 
 
 .. *Taille du lecteur de données* : entrez la capacité du lecteur de données et sélectionnez l'unité de capacité.
@@ -264,7 +277,7 @@ Trois groupes de sécurité sont rattachés aux nœuds SQL (instances EC2) lors 
 ... Dans le cas d'Active Directory géré par AWS, le groupe de sécurité rattaché au service d'annuaire est automatiquement ajouté aux nœuds Microsoft SQL pour permettre la communication avec Active Directory.
 ... Pour un système de fichiers FSX for ONTAP existant, le groupe de sécurité qui lui est associé est automatiquement ajouté aux nœuds SQL qui permettent la communication avec le système de fichiers. Lorsqu'un nouveau système FSX pour ONTAP est créé, un nouveau groupe de sécurité est créé pour le système de fichiers FSX pour ONTAP et le même groupe de sécurité est également rattaché aux nœuds SQL.
 +
-Pour un Active Directory géré par l'utilisateur, vous pouvez sélectionner un groupe de sécurité qui autorise le trafic à partir de vos systèmes existants qui doivent se connecter à la base de données. Le groupe de sécurité doit permettre la communication avec les contrôleurs de domaine Active Directory à partir des sous-réseaux où les instances EC2 pour Microsoft SQL sont configurées.
+Pour un Active Directory géré par l'utilisateur, assurez-vous que le groupe de sécurité configuré sur l'instance AD autorise le trafic à partir des sous-réseaux utilisés pour le déploiement. Le groupe de sécurité doit permettre la communication avec les contrôleurs de domaine Active Directory à partir des sous-réseaux où les instances EC2 pour Microsoft SQL sont configurées.
 
 
 
@@ -325,6 +338,14 @@ Pour les répertoires actifs gérés par AWS, les adresses IP DNS apparaissent d
 Un nouveau système de fichiers FSX pour ONTAP peut ajouter 30 minutes ou plus de temps d'installation.
 
 ... *Sélectionnez une FSX pour ONTAP* existante : sélectionnez le nom de FSX pour ONTAP dans le menu déroulant et entrez un nom d'utilisateur et un mot de passe pour le système de fichiers.
++
+Pour les systèmes de fichiers FSX for ONTAP existants, vérifiez les points suivants :
+
++
+**** Le groupe de routage rattaché à FSX pour ONTAP permet d'utiliser les routes vers les sous-réseaux pour le déploiement.
+**** Le groupe de sécurité autorise le trafic à partir des sous-réseaux utilisés pour le déploiement, en particulier les ports TCP HTTPS (443) et iSCSI (3260).
+
+
 
 
 .. *Règle Snapshot* : activée par défaut. Les snapshots sont pris tous les jours et disposent d'une période de conservation de 7 jours.
