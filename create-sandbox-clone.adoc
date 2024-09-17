@@ -49,7 +49,23 @@ Base de données source:: Une base de données source est nécessaire pour le cl
 .. *Base de données cible* : saisissez un nom pour le clone sandbox.
 
 
-. *Mount* : sélectionnez *affecter automatiquement le point de montage* ou *définir le chemin du point de montage*. Si vous sélectionnez *définir le chemin du point de montage*, entrez le chemin du point de montage.
+. *Mount* : lors du clonage d'une base de données SQL contenant plusieurs fichiers journaux et/ou données, Workload Factory clone tous les fichiers sous la lettre de lecteur attribuée ou définie automatiquement.
++
+Sélectionnez l'une des options suivantes :
+
++
+.. *Affectation automatique du point de montage*
+.. *Définir le chemin du point de montage*
++
+Pour définir le chemin du point de montage, procédez comme suit :
+
++
+*** Entrez la lettre du lecteur correspondant au chemin du fichier de données.
+*** Entrez la lettre du lecteur correspondant au chemin du fichier journal.
+
+
+
+
 . *Définir la balise* : sélectionnez une balise pour définir le clone sandbox.
 . Cliquez sur *Créer*.
 

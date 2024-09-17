@@ -233,7 +233,6 @@
   <block id="b6b9aec3a98d2a803dfd7a3e7b836cb2" category="list-text">*Hôte de base de données cible* : sélectionnez un hôte de base de données cible pour le clone sandbox qui se trouve dans le même VPC et qui possède le même système de fichiers FSX pour ONTAP que l'hôte source.</block>
   <block id="04bd2b110b2a3aaa82dccc7fe837f151" category="list-text">*Instance de base de données cible* : sélectionnez l'instance de base de données cible pour le clone sandbox.</block>
   <block id="26e615a604b088a660581f026763c30b" category="list-text">*Base de données cible* : saisissez un nom pour le clone sandbox.</block>
-  <block id="7f63d4b83f27b850d1eb970cfa4666b3" category="list-text">*Mount* : sélectionnez *affecter automatiquement le point de montage* ou *définir le chemin du point de montage*. Si vous sélectionnez *définir le chemin du point de montage*, entrez le chemin du point de montage.</block>
   <block id="f3346b0efa80289c47d4e6113a73a3ab" category="list-text">*Définir la balise* : sélectionnez une balise pour définir le clone sandbox.</block>
   <block id="34775e5e4b0b832c45a2707ae9b18f95" category="paragraph">Pour vérifier la progression du travail, accédez à l'onglet *surveillance du travail*.</block>
   <block id="18a852f2a54ab28755adc6bcf4897e75" category="summary">Supprimez un clone sandbox lorsque vous n'en avez plus besoin.</block>
@@ -781,4 +780,11 @@
   <block id="e6ae9aa516c09658fbcbb0830276915c" category="paragraph">En mode _Basic_, vous pouvez copier le contenu de la fenêtre Codebox et déployer la configuration recommandée à l'aide de l'une des méthodes Codebox.</block>
   <block id="0bbe82b56668e820bcb7722aa8566ea5" category="list-text">La création de sandbox n'est pas prise en charge lorsque la base de données source contient plusieurs fichiers de données répartis sur plus de 2 disques.</block>
   <block id="b5cef683aab00353096b98823a237e69" category="section-title">1er septembre 2024</block>
+  <block id="969e7140d33129e87f01e95c59fed40f" category="list-text">*Mount* : lors du clonage d'une base de données SQL contenant plusieurs fichiers journaux et/ou données, Workload Factory clone tous les fichiers sous la lettre de lecteur attribuée ou définie automatiquement.</block>
+  <block id="ed09bad7864ec765b3bccff9b87f25fb" category="paragraph">Sélectionnez l'une des options suivantes :</block>
+  <block id="f5154bf526cc04b2839db0c72b2a7c22" category="list-text">*Affectation automatique du point de montage*</block>
+  <block id="c9e660490143e459ec13d72934832f2c" category="list-text">*Définir le chemin du point de montage*</block>
+  <block id="8dc9fd2e016e27559302505db1795c2c" category="paragraph">Pour définir le chemin du point de montage, procédez comme suit :</block>
+  <block id="431673d13b715d86ce4d92ad7cf17f75" category="list-text">Entrez la lettre du lecteur correspondant au chemin du fichier de données.</block>
+  <block id="d8cf051243077cb10ccd52dd0de9d181" category="list-text">Entrez la lettre du lecteur correspondant au chemin du fichier journal.</block>
 </blocks>
