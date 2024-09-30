@@ -35,6 +35,14 @@ Pour effectuer l'une de ces tâches, vous devez link:detect-host.html["détecter
 
 Gérer les instances Microsoft SQL Server détectées ou non gérées pour un hôte.
 
+Pour gérer une instance hôte dans un réseau privé sans connectivité externe, les terminaux suivants doivent être disponibles dans le VPC en association avec les sous-réseaux où sont présents les serveurs SQL. Assurez-vous que les points de terminaison de l'interface autorisent le port 443 dans le groupe de sécurité connecté.
+
+* `S3 Gateway/endpoint`
+* `ssm`
+* `ssmmessages`
+* `fsx`
+
+
 .Avant de commencer
 Avant de commencer, remplissez les conditions préalables suivantes :
 

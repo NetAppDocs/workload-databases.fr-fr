@@ -78,25 +78,19 @@ Un modèle CloudFormation téléchargé ou copié généré par Codebox (fichier
 
 == Prise en charge de sandbox
 
-* Le nombre maximum de clones sandbox pouvant être créés à partir d'un serveur de base de données est de 50.
-* La création de sandbox n'est pas prise en charge lorsque la base de données source contient plusieurs fichiers de données répartis sur plus de 2 disques.
-
+Le nombre maximum de clones sandbox pouvant être créés à partir d'un serveur de base de données est de 50.
 
 
 
 == Détection et gestion de Microsoft SQL Server
 
-* La détection et la gestion des instances de Microsoft SQL ne sont pas prises en charge lors de l'utilisation d'un réseau privé sans connectivité externe.
-* La détection de Microsoft SQL Server n'est pas enregistrée. Chaque fois que vous accédez aux bases de données dans Workload Factory, la détection de Microsoft SQL Server s'exécute à nouveau pour identifier les installations SQL dans la région.
-
+La détection de Microsoft SQL Server n'est pas enregistrée. Chaque fois que vous accédez aux bases de données dans Workload Factory, la détection de Microsoft SQL Server s'exécute à nouveau pour identifier les installations SQL dans la région.
 
 
 
 == Découvrez les économies
 
-* Dans l'onglet Inventaire, le coût estimé affiché pour chaque instance de Microsoft SQL est calculé au niveau du système de fichiers FSX pour ONTAP et non pour les volumes hébergeant l'instance SQL.
-* Les calculs d'économies explore ne sont pas pris en charge pour FSX for Windows File Server.
-
+Dans l'onglet Inventaire, le coût estimé affiché pour chaque instance de Microsoft SQL est calculé au niveau du système de fichiers FSX pour ONTAP et non pour les volumes hébergeant l'instance SQL.
 
 
 

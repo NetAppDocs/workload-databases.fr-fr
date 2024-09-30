@@ -23,11 +23,11 @@ Si Workload Factory détermine que vous pourriez économiser de l'argent en exé
 
 == Options de calculatrice
 
-Deux options de calculateur sont disponibles pour établir une comparaison des coûts entre vos systèmes et FSX pour ONTAP, avec la personnalisation et la détection automatique pour vos environnements de stockage Amazon.
+Deux options de calculateur sont disponibles pour établir une comparaison des coûts entre vos systèmes et FSX for ONTAP — personnalisation et détection.
 
 Explorer les économies via la personnalisation : vous fournissez les paramètres de configuration de Microsoft SQL Server sur Amazon EC2 avec EBS ou FSX pour Windows File Server, notamment la région, le modèle de déploiement, l'édition SQL Server, le taux de modification mensuel des données, la fréquence des snapshots et bien plus encore.
 
-Découvrez les économies réalisées pour les environnements de stockage détectés : Workload Factory établit un lien vers vos environnements de stockage AWS existants et extrait le calculateur de comparaison automatique. Vous devrez accorder des autorisations d'automatisation pour utiliser cette option de calculatrice. Vous pouvez modifier le cas d'utilisation, mais tous les autres détails sont automatiquement déterminés dans le calcul.
+Explorer les économies pour les hôtes détectés : Workload Factory établit un lien vers vos serveurs Microsoft SQL existants et extrait les détails du calculateur pour une comparaison automatique. Vous devrez accorder des autorisations d'automatisation pour utiliser cette option de calculatrice. Vous pouvez modifier le cas d'utilisation, mais tous les autres détails sont automatiquement déterminés dans le calcul.
 
 
 
@@ -111,23 +111,31 @@ De plus, faites défiler jusqu'au bas de la page jusqu'à *Exporter au format PD
 ====
 
 
-== Découvrez les économies réalisées grâce à la détection d'hôtes EBS
+== Découvrez les économies réalisées pour les hôtes détectés
 
-Workload Factory saisit les caractéristiques d'hôte Elastic Block Store détectées afin de vous permettre d'explorer automatiquement les économies réalisées.
+Workload Factory entre les caractéristiques d'hôte Elastic Block Store et FSX for Windows File Server détectées afin de vous permettre d'explorer automatiquement les économies réalisées.
 
 .Avant de commencer
 Avant de commencer, remplissez les conditions préalables suivantes :
 
-* Vérifiez que vous link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["accorder des autorisations _automatiser_"^] utilisez votre compte AWS pour détecter les systèmes Elastic Block Store (EBS) dans l'inventaire de vos bases de données.
-* Détection des hôtes du stockage EBS dans l'inventaire de vos bases de données. link:detect-host.html["Découvrez comment détecter des hôtes"].
+* Assurez-vous que link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["accorder des autorisations _automatiser_"^]votre compte AWS détecte les systèmes Elastic Block Store (EBS) et FSX pour Windows dans l'inventaire de vos bases de données.
+* Détectez les hôtes du stockage EBS et FSX pour Windows dans l'inventaire de vos bases de données. link:detect-host.html["Découvrez comment détecter des hôtes"].
 
 
+Suivez les étapes de l'onglet correspondant à votre type de stockage.
+
+[role="tabbed-block"]
+====
+.Amazon Elastic Block Store (EBS)
+--
 .Étapes
 . Connectez-vous au link:https://console.workloads.netapp.com["Console Workload Factory"^].
-. A partir des bases de données, sélectionnez *aller à l'inventaire des bases de données*.
-. Sélectionnez l'onglet *Explorer les économies*.
-. Cliquez sur *Explorer les économies* pour le serveur de base de données utilisant le stockage EBS.
-. Fournissez éventuellement les informations suivantes sur les clones et les snapshots de votre stockage EBS pour une estimation plus précise des économies.
+. Dans la mosaïque bases de données, sélectionnez *Explorer les économies* puis *Microsoft SQL Server sur FSX pour Windows* dans le menu déroulant.
++
+Si Workload Factory détecte des hôtes EBS, vous serez redirigé vers l'onglet Explore les économies. Si Workload Factory ne détecte pas d'hôtes EBS, vous serez redirigé vers le calculateur à <<Explorer les économies via la personnalisation,explorer les économies via la personnalisation>>.
+
+. Dans l'onglet Explorer les économies, cliquez sur *Explorer les économies* du serveur de base de données utilisant le stockage EBS.
+. Dans le calculateur d'économies, en option, fournissez les informations suivantes sur les clones et les copies Snapshot de votre stockage EBS pour une estimation plus précise des économies réalisables.
 +
 .. *Fréquence d'instantané* : sélectionnez une fréquence d'instantané dans le menu déroulant.
 .. *Fréquence d'actualisation des clones* : sélectionnez la fréquence d'actualisation des clones dans le menu déroulant.
@@ -141,6 +149,35 @@ De plus, faites défiler jusqu'au bas de la page jusqu'à *Exporter au format PD
 
 
 
+--
+.Amazon FSX pour serveur de fichiers Windows
+--
+.Étapes
+. Connectez-vous au link:https://console.workloads.netapp.com["Console Workload Factory"^].
+. Dans la mosaïque bases de données, sélectionnez *Explorer les économies* puis *Microsoft SQL Server sur FSX pour Windows* dans le menu déroulant.
++
+Si Workload Factory détecte FSX pour les hôtes Windows, vous serez redirigé vers l'onglet Explorer les économies. Si Workload Factory ne détecte pas les hôtes FSX pour Windows, vous serez redirigé vers le calculateur <<Explorer les économies via la personnalisation,explorer les économies via la personnalisation>>.
+
+. Dans l'onglet Explorer les économies, cliquez sur *Explorer les économies* du serveur de base de données utilisant le stockage FSX pour serveur de fichiers Windows.
+. Dans le calculateur d'économies, éventuellement, fournissez les informations suivantes sur les clones (clichés instantanés) et les snapshots dans votre stockage FSX pour Windows afin d'obtenir une estimation plus précise des économies.
++
+.. *Fréquence d'instantané* : sélectionnez une fréquence d'instantané dans le menu déroulant.
++
+Si des clichés instantanés FSX pour Windows sont détectés, la valeur par défaut est *Daily*. Si les clichés instantanés ne sont pas détectés, la valeur par défaut est *pas de fréquence d'instantanés*.
+
+.. *Fréquence d'actualisation des clones* : sélectionnez la fréquence d'actualisation des clones dans le menu déroulant.
+.. *Nombre de copies clonées* : entrez le nombre de copies clonées dans la configuration FSX pour Windows.
+.. *Taux de modification mensuel* : saisissez le pourcentage de changements de données de clonage et d'instantanés en moyenne par mois.
+
+
+. Passez en revue les calculs et les recommandations fournis sur la page.
++
+De plus, faites défiler jusqu'au bas de la page jusqu'à *Exporter au format PDF* ou *Afficher les calculs*.
+
+
+
+--
+====
 
 
 == Déployez Microsoft SQL Server sur AWS EC2 à l'aide de FSX pour ONTAP
