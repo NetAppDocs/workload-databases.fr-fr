@@ -24,6 +24,6 @@ indexpage:
   - title: Connaissances et support
     links:
     - title: S'inscrire pour obtenir de l'aide
-      url: "/support-registration-databases.html"
+      url: "/support-registration.html"
     - title: Obtenez de l'aide
-      url: "/get-help-databases.html"
+      url: "/get-help.html"
