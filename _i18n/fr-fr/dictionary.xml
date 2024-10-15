@@ -386,7 +386,6 @@
   <block id="8705a3301d5f73e6ea84b65029e83433" category="section-title">Modèle CloudFormation</block>
   <block id="744086615b7afe69eb64b5ed9b1b2fc2" category="paragraph">Un modèle CloudFormation téléchargé ou copié généré par Codebox (fichier YAML) a une période de conservation limitée de sept jours.</block>
   <block id="0d966ee7b6d851b13a0a1f2ed24a24f2" category="section-title">Prise en charge de sandbox</block>
-  <block id="db3c885c5e8af2c0a6d13c3c191c6317" category="list-text">Le nombre maximum de clones sandbox pouvant être créés à partir d'un serveur de base de données est de 50.</block>
   <block id="16af4c40ef745904a4b9f7f47ce1554d" category="section-title">Détection et gestion de Microsoft SQL Server</block>
   <block id="cf48d7891f28d92c4308fb5debb574b0" category="section-title">Découvrez les économies</block>
   <block id="dc1fe4aeb4ef49ddd2886b9ad39d5fa0" category="list-text">Dans l'onglet Inventaire, le coût estimé affiché pour chaque instance de Microsoft SQL est calculé au niveau du système de fichiers FSX pour ONTAP et non pour les volumes hébergeant l'instance SQL.</block>
@@ -798,4 +797,5 @@
   <block id="9a178ca3815f6aeb284a65e10447f086" category="paragraph"><block ref="9a178ca3815f6aeb284a65e10447f086" category="inline-link-macro-rx"></block></block>
   <block id="7d6d6d8a97f883d860bff04c0be1019c" category="inline-link-macro">Découvrez les économies réalisées avec FSX for ONTAP pour les workloads de bases de données</block>
   <block id="293758d509326f8da42abf75db2d37e6" category="paragraph"><block ref="293758d509326f8da42abf75db2d37e6" category="inline-link-macro-rx"></block></block>
+  <block id="fbcbba8054f71f57fa8e2b950179bb23" category="paragraph">Le nombre maximum de clones sandbox pouvant être créés à partir d'un serveur de base de données est de 90.</block>
 </blocks>

@@ -78,7 +78,7 @@ Un modèle CloudFormation téléchargé ou copié généré par Codebox (fichier
 
 == Prise en charge de sandbox
 
-Le nombre maximum de clones sandbox pouvant être créés à partir d'un serveur de base de données est de 50.
+Le nombre maximum de clones sandbox pouvant être créés à partir d'un serveur de base de données est de 90.
 
 
 
