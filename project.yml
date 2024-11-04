@@ -11,7 +11,7 @@ settings:
   rss_page: whats-new.html
   release_notes_autogen:
     release_notes_repo: workload-relnotes
-  langs: fr-fr,us-en,de-de,es-es,it-it,pt-br,ja-jp,ko-kr,zh-cn,zh-tw
+  langs: fr-fr,us-en,ja-jp,ko-kr,zh-cn,zh-tw,de-de,es-es,it-it
 sidebar:
   entries:
   - title: Documents relatifs aux workloads de base de données
@@ -64,6 +64,12 @@ sidebar:
         url: "/delete-clone.html"
     - title: Surveiller les bases de données
       url: "/monitor-databases.html"
+    - title: Optimisez SQL Server
+      entries:
+      - title: Présentation de l'optimisation continue
+        url: optimize-overview.html
+      - title: Optimiser les configurations
+        url: optimize-configurations.html
   - title: Connaissances et support
     entries:
     - title: S'inscrire pour obtenir de l'aide

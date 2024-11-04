@@ -97,3 +97,9 @@ Dans l'onglet Inventaire, le coût estimé affiché pour chaque instance de Micr
 == Plusieurs solutions FSX pour les systèmes de fichiers ONTAP
 
 Workload Factory ne prend pas en charge la création ou l'enregistrement de configurations pour Microsoft SQL Server avec plusieurs systèmes de fichiers FSX pour ONTAP. Un seul déploiement de configuration de système de fichiers FSX pour ONTAP est pris en charge.
+
+
+
+== Disponibilité régionale pour le déploiement de Microsoft SQL Server dans un réseau privé avec Terraform
+
+Le déploiement de Microsoft SQL Server dans un réseau privé sans connectivité sortante via Terraform est uniquement pris en charge dans la région US-East-1 (N. Virginia).

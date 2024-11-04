@@ -91,7 +91,10 @@ Active Directory:: Lorsque vous vous connectez à Active Directory, vous devez d
 
 == Étape 1 : création d'un serveur de base de données
 
-Vous pouvez utiliser les modes de déploiement _Quick CREATE_ ou _Advanced CREATE_ pour effectuer cette tâche dans Workload Factory avec des autorisations de mode _automate_.
+Vous pouvez utiliser les modes de déploiement _Quick CREATE_ ou _Advanced CREATE_ pour effectuer cette tâche dans Workload Factory avec des autorisations de mode _automate_. Vous pouvez également utiliser les outils suivants disponibles dans la Codebox : API REST, CloudFormation et Terraform. link:https://docs.netapp.com/us-en/workload-setup-admin/use-codebox.html#how-to-use-codebox["Découvrez comment utiliser Codebox pour l'automatisation"^].
+
+
+NOTE: Lorsque vous utilisez Terraform à partir de Codebox, le code que vous copiez ou téléchargez se cache `fsxadmin` et `vsadmin` passe. Vous devrez saisir à nouveau les mots de passe lorsque vous exécuterez le code. Vous devrez inclure les autorisations suivantes pour le compte d'utilisateur en plus des autorisations _automate_ mode : `iam:TagRole` et `iam:TagInstanceProfile`.
 
 [role="tabbed-block"]
 ====

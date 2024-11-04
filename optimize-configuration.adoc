@@ -1,0 +1,65 @@
+---
+sidebar: sidebar 
+permalink: optimize-configurations.html 
+keywords: optimize, configuration, storage, compute, application, resiliency assessment, scan, optimization, Microsoft SQL Server, host, instance, FSx for ONTAP 
+summary: 'Les bases de données analysent les configurations de stockage des serveurs Microsoft SQL et fournissent des informations et des recommandations pour vous aider à atteindre l"excellence opérationnelle.' 
+---
+= Optimisez les configurations pour les déploiements Microsoft SQL Server
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Fabrique de workloads BlueXP  pour les bases de données analyse et évalue en continu les configurations de déploiement de Microsoft SQL Server qui s'exécutent sur Amazon FSX pour NetApp ONTAP. Grâce aux évaluations, vous bénéficiez d'informations exploitables, de recommandations et d'optimisations pour atteindre l'excellence opérationnelle.
+
+.Description de la tâche
+L'évaluation s'exécute automatiquement et en continu une fois par jour pour les instances de Microsoft SQL Server avec FSX pour le stockage ONTAP géré en usine de workloads. Les rapports d'évaluation sont disponibles dans le tableau de bord d'optimisation uniquement si une tâche planifiée quotidienne s'est exécutée après le déploiement ou après la gestion d'une instance.
+
+Workload Factory fournit des recommandations détaillées pour optimiser les configurations en fonction des meilleures pratiques de stockage FSX pour ONTAP.
+
+Ce qui est numérisé:: Workload Factory évalue l'état d'optimisation des configurations suivantes pour les instances Microsoft SQL Server :
++
+--
+* Dimensionnement du stockage : inclut le niveau de stockage, la marge du système de fichiers, la taille du disque du journal et la taille du disque TempDB
+* Disposition du stockage : inclut le placement des fichiers de données utilisateur, le placement des fichiers journaux et le placement de TempDB
+* Configuration du stockage : inclut la gestion de la capacité, le provisionnement fin, la règle de hiérarchisation, les snapshots, l'état des E/S à chemins d'accès multiples, la règle et les sessions, etc
+* Calcul : inclut le dimensionnement approprié
+
+
+--
+
+
+.Avant de commencer
+* Vous devez disposer d'informations d'identification avec des autorisations de lecture ou d'automatisation.
+* Pour évaluer le stockage d'une instance de Microsoft SQL Server, l'instance doit être gérée par usine de workloads et le type de stockage doit être FSX pour ONTAP.
+* Assurez-vous de revoir attentivement chaque recommandation avant de choisir d'optimiser un paramètre ou une configuration.
+
+
+.Étapes
+. Connectez-vous au link:https://console.workloads.netapp.com["Console Workload Factory"^].
+. Dans la mosaïque bases de données, sélectionnez *aller à bases de données Inventaire*.
+. Dans bases de données, sélectionnez l'onglet *Inventaire*.
+. Cliquez sur la flèche déroulante pour développer la ligne de l'hôte et afficher ses instances gérées.
++
+L'hôte se développe et les instances hôtes s'affichent.
+
+. Sélectionnez le menu des trois points de l'instance à analyser, puis sélectionnez *optimiser*.
+. Sur la page optimiser l'instance de l'hôte, examinez les résultats de l'évaluation du stockage.
++
+Les filtres sont disponibles pour trier par catégories, sous-catégories, état, gravité et balises.
+
++
+Si nécessaire, vous pouvez télécharger un rapport des résultats en sélectionnant *Exporter PDF*.
+
+. Sélectionnez la flèche déroulante pour afficher les recommandations pour une configuration. Assurez-vous de revoir attentivement la recommandation.
++
+Cette recommandation présente les meilleures pratiques et les obstacles potentiels liés aux configurations non optimisées.
+
+. Sélectionnez pour *optimiser* les configurations non optimisées.
+. Passez en revue le résumé de l'optimisation et les éléments d'action qui apparaissent dans la boîte de dialogue d'optimisation pour savoir ce qui se passe si vous choisissez d'optimiser. Certaines opérations d'optimisation peuvent entraîner des temps d'indisponibilité d'instance ou des interruptions de service.
+. Sélectionnez *Continuer* pour optimiser la configuration.
+
+
+.Résultat
+Le processus d'optimisation démarre. Sélectionnez l'onglet *surveillance des travaux* pour afficher l'état de l'opération.
