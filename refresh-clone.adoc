@@ -2,16 +2,16 @@
 sidebar: sidebar 
 permalink: refresh-clone.html 
 keywords: refresh clone, sync, update, database, Microsoft SQL 
-summary: Actualisez un clone sandbox dans Workload Factory pour les bases de données. 
+summary: 'Actualisez un clone sandbox dans l"usine de workloads BlueXP  pour les bases de données.' 
 ---
-= Actualisez un clone sandbox dans Workload Factory pour les bases de données
+= Actualisez un clone sandbox dans l'usine de workloads BlueXP  pour les bases de données
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-Actualisez un clone de base de données de sorte qu'il soit équivalent à la base de données source au moment actuel ou à un point dans le temps précédent.
+Actualisez un clone de base de données dans l'usine de charges de travail BlueXP  pour les bases de données de sorte qu'il soit équivalent à la base de données source au moment actuel ou à un point dans le temps précédent.
 
 .Description de la tâche
 L'actualisation d'un clone met à jour le clone soit vers la base de données source au moment actuel, soit vers un instantané de la base de données source pris à un moment antérieur. Toutes les modifications apportées au clone sandbox seront supprimées.
@@ -22,7 +22,7 @@ Une actualisation n'est possible que lorsque la base de données source est acti
 Pour actualiser un clone de base de données à partir d'un instantané, la base de données source doit disposer d'au moins un instantané pour l'opération.
 
 .Étapes
-. Connectez-vous au link:https://console.workloads.netapp.com["Console Workload Factory"^].
+. Connectez-vous à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
 . Dans la mosaïque bases de données, sélectionnez *aller à bases de données Inventaire*.
 . Dans bases de données, sélectionnez l'onglet *sandbox*.
 . Dans l'onglet sandbox, cliquez sur le menu trois points du clone sandbox à actualiser.

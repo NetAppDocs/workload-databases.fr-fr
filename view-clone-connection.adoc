@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: view-clone-connection.html 
 keywords: view clone connection, copy connection information 
-summary: 'Afficher et copier les informations de connexion d"un clone sandbox.' 
+summary: 'Affichez et copiez les informations de connexion d"un clone sandbox dans l"usine de workloads BlueXP  pour les bases de données.' 
 ---
 = Afficher les informations de connexion d'un clone sandbox
 :allow-uri-read: 
@@ -11,10 +11,10 @@ summary: 'Afficher et copier les informations de connexion d"un clone sandbox.'
 
 
 [role="lead"]
-Afficher et copier les informations de connexion d'un clone sandbox.
+Affichez et copiez les informations de connexion d'un clone sandbox dans l'usine de workloads BlueXP  pour les bases de données.
 
 .Étapes
-. Connectez-vous au link:https://console.workloads.netapp.com["Console Workload Factory"^].
+. Connectez-vous à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
 . Dans la mosaïque bases de données, sélectionnez *aller à bases de données Inventaire*.
 . Dans bases de données, sélectionnez l'onglet *sandbox*.
 . Dans l'onglet sandbox, cliquez sur le menu trois points du clone sandbox pour afficher ses informations de connexion.

@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: check-clone-integrity.html 
 keywords: integrity check, data corruption 
-summary: 'Exécutez un contrôle d"intégrité pour déterminer si les données des clones du bac à sable sont intactes ou corrompues.' 
+summary: 'Exécutez un contrôle d"intégrité pour déterminer si les données des clones sandbox sont intactes ou corrompues dans l"usine de workloads BlueXP  pour les bases de données.' 
 ---
 = Vérifiez l'intégrité des données d'un clone sandbox
 :allow-uri-read: 
@@ -11,13 +11,13 @@ summary: 'Exécutez un contrôle d"intégrité pour déterminer si les données 
 
 
 [role="lead"]
-Exécutez un contrôle d'intégrité pour déterminer si les données des clones du bac à sable sont intactes ou corrompues.
+Exécutez un contrôle d'intégrité pour déterminer si les données des clones sandbox sont intactes ou corrompues dans l'usine de workloads BlueXP  pour les bases de données.
 
 .Description de la tâche
 Lorsque vous créez un clone sandbox à partir d'une base de données source alors qu'il est occupé, les données du clone peuvent ne pas être synchronisées avec l'instantané le plus récent de la base de données source. Cette opération vérifie l'intégrité de tous les objets du clone sandbox pour déterminer si les données du clone sandbox sont à jour.
 
 .Étapes
-. Connectez-vous au link:https://console.workloads.netapp.com["Console Workload Factory"^].
+. Connectez-vous à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
 . Dans la mosaïque bases de données, sélectionnez *aller à bases de données Inventaire*.
 . Dans bases de données, sélectionnez l'onglet *sandbox*.
 . Dans l'onglet sandbox, cliquez sur le menu trois points du clone sandbox pour vérifier son intégrité.

@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: detect-host.html 
 keywords: detect, detect server instance, instance, detect a database host, instance 
-summary: Détectez une instance Microsoft SQL Server dans Workload Factory pour les bases de données. 
+summary: 'Détectez une instance Microsoft SQL Server dans l"usine de workloads BlueXP  pour les bases de données.' 
 ---
 = Détecter une instance de Microsoft SQL Server
 :allow-uri-read: 
@@ -11,12 +11,12 @@ summary: Détectez une instance Microsoft SQL Server dans Workload Factory pour 
 
 
 [role="lead"]
-Détectez une instance Microsoft SQL Server dans Workload Factory pour les bases de données.
+Détectez une instance Microsoft SQL Server dans l'usine de workloads BlueXP  pour les bases de données.
 
 Cette tâche permet de détecter une instance _non détectée_.
 
 .Description de la tâche
-Lorsque des identifiants AWS sont associés à Workload Factory, les bases de données permettent de détecter automatiquement les serveurs Microsoft SQL Server, à partir de SQL Server 2016, avec les types de stockage AWS suivants :
+Lorsque les identifiants AWS sont associés dans l'usine de workloads, les bases de données permettent une détection automatisée des serveurs Microsoft SQL Server, à partir de SQL Server 2016, avec les types de stockage AWS suivants :
 
 * FSX pour ONTAP
 * EBS (Elastic Block Store)
@@ -25,22 +25,22 @@ Lorsque des identifiants AWS sont associés à Workload Factory, les bases de do
 
 Dans les bases de données, les instances découvertes sont classées comme suit :
 
-* _Instances non détectées_: Instances non détectées qui ont été automatiquement découvertes par Workload Factory. Les instances ne sont pas détectées dans les cas suivants :
+* _Instances non détectées_: Instances non détectées qui ont été automatiquement découvertes par l'usine de la charge de travail. Les instances ne sont pas détectées dans les cas suivants :
 +
 ** Échec de l'authentification Microsoft SQL Server.
-** Le système de fichiers FSX for ONTAP pour Microsoft SQL Server n'est pas enregistré avec votre compte dans Workload Factory.
+** Le système de fichiers FSX pour ONTAP pour Microsoft SQL Server n'est pas enregistré avec votre compte en usine de workloads.
 
 
-* _Instances non gérées_ : instances détectées qui ne sont pas gérées par Workload Factory
-* _Managed instances_ : instances détectées gérées par Workload Factory
+* _Instances non gérées_ : instances détectées qui ne sont pas gérées par l'usine de la charge de travail
+* _Managed instances_ : instances détectées qui sont gérées par l'usine de workloads
 
 
-La première étape de la gestion d'une instance de Microsoft SQL Server, ou instance hôte, dans Workload Factory pour les bases de données est la détection d'une instance de serveur de base de données non détectée.
+La première étape pour gérer une instance de Microsoft SQL Server, ou une instance hôte, en usine de charge de travail pour les bases de données est la détection d'une instance de serveur de base de données non détectée.
 
 .Avant de commencer
 Les conditions requises pour détecter une instance de serveur de base de données non détectée sont les suivantes :
 
-* Vous devez link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Identifiants de compte AWS"^] détecter une instance de serveur de base de données dans Workload Factory.
+* Vous devez link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Identifiants de compte AWS"^]détecter une instance de serveur de base de données en usine de charge de travail.
 * Le type de stockage de l'instance doit être l'un des suivants :
 +
 ** FSX pour ONTAP
@@ -55,7 +55,7 @@ Lorsqu'une instance Microsoft SQL est détectée, l'environnement existant n'est
 
 
 .Étapes
-. Connectez-vous au link:https://console.workloads.netapp.com["Console Workload Factory"^].
+. Connectez-vous à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
 . Dans la mosaïque bases de données, sélectionnez *aller à bases de données Inventaire*.
 . Dans bases de données, sélectionnez l'onglet *Inventaire*.
 . Cliquez sur la flèche déroulante pour développer la ligne de l'hôte à détecter.
@@ -66,10 +66,10 @@ L'hôte se développe et les instances hôte s'affichent.
 . Cliquez sur *détecter*.
 . Dans la boîte de dialogue *Detect instance*, indiquez le nom d'utilisateur et le mot de passe Microsoft SQL Server ou le nom d'utilisateur et le mot de passe FSX for ONTAP.
 +
-Workload Factory essaie de valider vos informations d'identification Microsoft SQL ou FSX for ONTAP.
+En usine de workloads, valide vos informations d'identification Microsoft SQL ou FSX pour ONTAP.
 
 +
-Si l'une de ces informations d'identification n'est pas disponible, Workload Factory tente d'installer le `aws.tools.SimpleSystemsManagement` module dans PowerShell.
+Si l'une de ces informations d'identification n'est pas disponible, l'usine de la charge de travail tente d'installer le `aws.tools.SimpleSystemsManagement` module dans PowerShell.
 
 . Cliquez sur *détecter*.
 +
@@ -80,4 +80,4 @@ Les informations sur l'instance détectée s'affichent.
 
 
 .Et la suite
-Lorsque le type de stockage de l'instance hôte est FSX pour ONTAP, vous pouvez link:manage-server.html["Gérez l'instance via Workload Factory"].
+Lorsque le type de stockage de l'instance hôte est FSX pour ONTAP, vous pouvez link:manage-server.html["gérez l'instance via l'usine de workloads"].

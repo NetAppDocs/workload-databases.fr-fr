@@ -2,16 +2,16 @@
 sidebar: sidebar 
 permalink: manage-server.html 
 keywords: Microsoft SQL Server instance, server instance, manage host, view host, database host, database instance, manage, unmanage 
-summary: Gérez les instances Microsoft SQL Server dans Workload Factory pour les bases de données. 
+summary: 'Gérez les instances Microsoft SQL Server dans l"usine de workloads BlueXP  pour les bases de données.' 
 ---
-= Gestion des instances Microsoft SQL Server
+= Gérez les instances Microsoft SQL Server dans l'usine de workloads BlueXP 
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-Gérez des instances Microsoft SQL Server pour surveiller l'état des instances et des bases de données, l'utilisation des ressources, la protection et les performances du stockage dans Workload Factory pour les bases de données.
+Gérez des instances Microsoft SQL Server pour surveiller l'état des instances et des bases de données, l'utilisation des ressources, la protection et les performances du stockage dans l'usine de workloads BlueXP  pour les bases de données.
 
 Les bases de données peuvent uniquement gérer les instances de Microsoft SQL Server avec le stockage du système de fichiers FSX for ONTAP.
 
@@ -61,7 +61,7 @@ Avant de commencer, remplissez les conditions préalables suivantes :
 
 
 .Étapes
-. Connectez-vous au link:https://console.workloads.netapp.com["Console Workload Factory"^].
+. Connectez-vous à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
 . Dans la mosaïque bases de données, sélectionnez *aller à bases de données Inventaire*.
 . Dans bases de données, sélectionnez l'onglet *Inventaire*.
 . Cliquez sur *gérer* dans la ligne de l'hôte à gérer.
@@ -78,7 +78,7 @@ L'opération échoue lorsque Microsoft SQL Server manque certains modules PowerS
 Vous pouvez afficher une instance gérée en suivant ces étapes.
 
 .Étapes
-. Connectez-vous au link:https://console.workloads.netapp.com["Console Workload Factory"^].
+. Connectez-vous à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
 . Dans la mosaïque bases de données, sélectionnez *aller à bases de données Inventaire*.
 . Dans bases de données, sélectionnez l'onglet *Inventaire*.
 . Cliquez sur la flèche déroulante pour développer la ligne de l'hôte et afficher ses instances gérées.
@@ -98,7 +98,7 @@ La vue d'ensemble de l'instance s'affiche dans l'onglet Inventaire.
 Vous pouvez afficher les bases de données gérées par l'instance gérée en suivant ces étapes.
 
 .Étapes
-. Connectez-vous au link:https://console.workloads.netapp.com["Console Workload Factory"^].
+. Connectez-vous à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
 . Dans la mosaïque bases de données, sélectionnez *aller à bases de données Inventaire*.
 . Dans bases de données, sélectionnez l'onglet *Inventaire*.
 . Cliquez sur la flèche déroulante pour développer la ligne de l'hôte et afficher ses bases de données.
@@ -119,7 +119,7 @@ La liste des bases de données de l'instance s'affiche dans l'onglet Inventaire.
 Annulez la gestion d'une instance hôte en suivant ces étapes.
 
 .Étapes
-. Connectez-vous au link:https://console.workloads.netapp.com["Console Workload Factory"^].
+. Connectez-vous à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
 . Dans la mosaïque bases de données, sélectionnez *aller à bases de données Inventaire*.
 . Dans bases de données, sélectionnez l'onglet *Inventaire*.
 . Cliquez sur la flèche déroulante pour développer la ligne de l'instance hôte à gérer.
