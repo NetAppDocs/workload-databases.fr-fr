@@ -1,0 +1,184 @@
+---
+sidebar: sidebar 
+permalink: create-postgresql-server.html 
+keywords: create, server, PostgreSQL, deploy, host, deploy a database host, database host 
+summary: 'Créez un nouveau serveur SQL PostgreSQL dans l"usine de charges de travail BlueXP  pour les bases de données.' 
+---
+= Créez un serveur PostgreSQL en usine de charges de travail BlueXP 
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+La création d'un nouveau serveur PostgreSQL, ou hôte de base de données, en usine de charges de travail BlueXP  pour les bases de données nécessite un déploiement de système de fichiers FSX pour ONTAP et des ressources pour Active Directory.
+
+.Description de la tâche
+Vous aurez besoin des identifiants de compte AWS et des autorisations _automate_.
+
+Avant de commencer, découvrez les types de déploiement de stockage disponibles pour la configuration des hôtes de base de données, le déploiement d'Active Directory, les modes de fonctionnement par défaut des charges de travail et les conditions requises pour effectuer cette opération.
+
+FSX pour les déploiements de systèmes de fichiers ONTAP:: La création d'un nouveau serveur PostgreSQL requiert un système de fichiers FSX pour ONTAP en tant que système back-end de stockage. Vous pouvez utiliser un système de fichiers FSX pour ONTAP existant ou créer un nouveau système de fichiers. Si vous sélectionnez un système de fichiers FSX pour ONTAP existant comme back-end de stockage du serveur de base de données, nous créons une nouvelle VM de stockage pour les charges de travail PostgreSQL.
+
+
+Les systèmes de fichiers FSX pour ONTAP prennent en charge les déploiements _autonomes_ pour PostgreSQL. La fabrique de workloads crée un système de fichiers FSX pour ONTAP à zone de disponibilité unique en plus de séparer les volumes et les LUN pour les fichiers de données, de journaux et tempdb.
+
+Modes de fonctionnement d'usine de la charge de travail:: L'usine de workloads propose trois modes opérationnels qui dépendent du niveau de confort avec lequel vous laissez les workloads gérer vos ressources AWS.
+
+
+*_Basic_ mode* : dans ce mode de fonctionnement, vous n'avez pas besoin d'associer des informations d'identification de compte AWS dans l'usine de la charge de travail. Vous pouvez copier ou télécharger un modèle YAML partiellement rempli à partir de la Codebox pour l'effectuer en dehors de l'usine de la charge de travail.
+
+*_Read_ mode* : dans ce mode de fonctionnement, vous fournissez les informations d'identification du compte AWS avec des autorisations de lecture qui vous permettent de remplir le formulaire _Quick create_ ou _Advanced create_, puis de le copier ou de le télécharger. Vous pouvez également rediriger vers CloudFormation à partir de l'usine de la charge de travail avec les détails du formulaire rempli. Vous pourrez également gérer le serveur de base de données déployé en usine.
+
+*_automate_ mode* : dans ce mode de fonctionnement, vous fournissez les informations d'identification du compte AWS avec des autorisations d'automatisation qui vous permettent de créer et de gérer des ressources AWS en usine de workloads.
+
+.Avant de commencer
+Assurez-vous de disposer des conditions préalables suivantes avant de créer un nouvel hôte de base de données.
+
+Informations d'identification et autorisations:: Vous devez link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Identifiants de compte AWS et autorisations de mode automatisées"^]créer un nouvel hôte de base de données en usine de la charge de travail.
++
+--
+Vous pouvez également utiliser la Codebox pour copier un modèle vide ou créer un modèle complet. Vous pouvez ainsi déployer une base de données hors de l'usine des workloads à l'aide de l'API REST, de l'interface de ligne de commande AWS ou d'AWS CloudFormation. link:https://docs.netapp.com/us-en/workload-setup-admin/codebox-automation.html["En savoir plus sur l'automatisation de Codebox"^].
+
+--
+
+
+
+
+== Créez un serveur de base de données
+
+Vous pouvez utiliser les modes de déploiement _Quick CREATE_ ou _Advanced CREATE_ pour effectuer cette tâche en usine avec des autorisations de mode _automate_. Vous pouvez également utiliser les outils suivants disponibles dans la Codebox : API REST et CloudFormation. link:https://docs.netapp.com/us-en/workload-setup-admin/use-codebox.html#how-to-use-codebox["Découvrez comment utiliser Codebox pour l'automatisation"^].
+
++
+
+.Étapes
+. Connectez-vous à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
+. Dans la mosaïque Databases, sélectionnez *Deploy database host*, puis sélectionnez *PostgreSQL* dans le menu déroulant.
+. Sélectionnez *création avancée*.
+. Pour *Deployment Model*, *Standalone instance* est la valeur par défaut.
+. Sous *paramètres AWS*, fournissez les informations suivantes :
++
+.. *Informations d'identification AWS* : sélectionnez les informations d'identification AWS avec des autorisations d'automatisation pour déployer le nouvel hôte de base de données.
++
+Les identifiants AWS avec autorisations _automatiser_ permettent à la charge de travail de déployer et de gérer en usine le nouvel hôte de base de données à partir de votre compte AWS dans l'usine de la charge de travail.
+
++
+Les identifiants AWS avec des autorisations _read_ permettent à l'usine de workloads de générer un modèle CloudFormation que vous pouvez utiliser dans la console AWS CloudFormation.
+
++
+Si vous ne disposez pas d'informations d'identification AWS associées à l'usine de la charge de travail et que vous souhaitez créer le nouveau serveur en usine de la charge de travail, suivez *option 1* pour accéder à la page informations d'identification. Ajoutez manuellement les informations d'identification et les autorisations requises pour _automate_ mode pour les charges de travail de la base de données.
+
++
+Si vous souhaitez remplir le formulaire Créer un nouveau serveur en usine de charges de travail afin de télécharger un modèle de fichier YAML complet pour le déploiement dans AWS CloudFormation, suivez *option 2* pour vous assurer que vous disposez des autorisations requises pour créer le nouveau serveur dans AWS CloudFormation. Ajoutez manuellement les informations d'identification et les autorisations requises pour _read_ mode pour les charges de travail de base de données.
+
++
+Vous pouvez également télécharger un modèle de fichier YAML partiellement rempli à partir de la Codebox pour créer la pile en dehors de l'usine de la charge de travail sans informations d'identification ni autorisations. Sélectionnez *CloudFormation* dans la liste déroulante de la zone de code pour télécharger le fichier YAML.
+
+.. *Région et VPC* : sélectionnez une région et un réseau VPC.
++
+Assurez-vous que les groupes de sécurité d'un noeud final d'interface existant autorisent l'accès au protocole HTTPS (443) aux sous-réseaux sélectionnés.
+
++
+Terminaux de l'interface de services AWS (SQS, FSX, EC2, CloudWatch, formation du cloud, SSM) et le noeud final de la passerelle S3 sont créés lors du déploiement s'ils sont introuvables.
+
++
+Les attributs DNS VPC `EnableDnsSupport` et `EnableDnsHostnames` sont modifiés pour activer la résolution de l'adresse du point de terminaison si ce n'est pas déjà fait sur `true`.
+
+.. *Zones de disponibilité* : sélectionnez les zones de disponibilité et les sous-réseaux.
++
+Pour les déploiements à instance unique::
++
+--
+... Dans le champ *Configuration du cluster - nœud 1*, sélectionnez une zone de disponibilité dans le menu déroulant *zone de disponibilité* et un sous-réseau dans le menu déroulant *sous-réseau*.
+
+
+--
+
+
+.. *Groupe de sécurité* : sélectionnez un groupe de sécurité existant ou créez un nouveau groupe de sécurité.
++
+Deux groupes de sécurité sont rattachés aux nœuds SQL (instances EC2) lors du déploiement du nouveau serveur.
+
++
+... Un groupe de sécurité des charges de travail est créé pour autoriser les ports et les protocoles requis pour PostgreSQL.
+... Pour un système de fichiers FSX for ONTAP existant, le groupe de sécurité qui lui est associé est automatiquement ajouté au nœud PostgreSQL, ce qui permet la communication avec le système de fichiers. Lorsqu'un nouveau système FSX pour ONTAP est créé, un nouveau groupe de sécurité est créé pour le système de fichiers FSX pour ONTAP et le même groupe de sécurité est également attaché au nœud SQL.
+
+
+
+
+. Sous *Paramètres de l'application*, fournissez les informations suivantes :
++
+.. Sélectionnez *système d'exploitation* dans le menu déroulant.
+.. Sélectionnez *PostgreSQL version* dans le menu déroulant.
+.. *Nom du serveur de base de données* : entrez le nom du cluster de base de données.
+.. *Informations d'identification de la base de données* : saisissez un nom d'utilisateur et un mot de passe pour un nouveau compte de service ou utilisez les informations d'identification de compte de service existantes dans Active Directory.
+
+
+. Sous *connectivité*, sélectionnez une paire de clés pour vous connecter en toute sécurité à votre instance.
+. Sous *Paramètres d'infrastructure*, fournissez les informations suivantes :
++
+.. *Type d'instance DB* : sélectionnez le type d'instance de base de données dans le menu déroulant.
+.. *FSX pour système ONTAP* : créez un nouveau système de fichiers FSX pour ONTAP ou utilisez un système de fichiers FSX pour ONTAP existant.
++
+... *Créer une nouvelle FSX pour ONTAP* : entrez le nom d'utilisateur et le mot de passe.
++
+Un nouveau système de fichiers FSX pour ONTAP peut ajouter 30 minutes ou plus de temps d'installation.
+
+... *Sélectionnez une FSX pour ONTAP* existante : sélectionnez le nom de FSX pour ONTAP dans le menu déroulant et entrez un nom d'utilisateur et un mot de passe pour le système de fichiers.
++
+Pour les systèmes de fichiers FSX for ONTAP existants, vérifiez les points suivants :
+
++
+**** Le groupe de routage rattaché à FSX pour ONTAP permet d'utiliser les routes vers les sous-réseaux pour le déploiement.
+**** Le groupe de sécurité autorise le trafic à partir des sous-réseaux utilisés pour le déploiement, en particulier les ports TCP HTTPS (443) et iSCSI (3260).
+
+
+
+
+.. *Règle Snapshot* : activée par défaut. Les snapshots sont pris tous les jours et disposent d'une période de conservation de 7 jours.
++
+Les snapshots sont affectés aux volumes créés pour les charges de travail PostgreSQL.
+
+.. *Taille du lecteur de données* : entrez la capacité du lecteur de données et sélectionnez l'unité de capacité.
+.. *IOPS approvisionnées* : sélectionnez *automatique* ou *utilisateur-provisionné*. Si vous sélectionnez *utilisateur-provisionné*, entrez la valeur d'IOPS.
+.. *Capacité de débit* : sélectionnez la capacité de débit dans le menu déroulant.
++
+Dans certaines régions, vous pouvez sélectionner une capacité de débit de 4 Gbit/s. Pour provisionner une capacité de débit de 4 Gbit/s, votre système de fichiers FSX for ONTAP doit être configuré avec une capacité de stockage SSD d'au moins 5,120 Gio et 160,000 IOPS SSD.
+
+.. *Cryptage* : sélectionnez une clé de votre compte ou une clé d'un autre compte. Vous devez entrer la clé de cryptage ARN d'un autre compte.
++
+Les clés de chiffrement personnalisées FSX pour ONTAP ne sont pas répertoriées en fonction de l'applicabilité du service. Sélectionnez une clé de chiffrement FSX appropriée. Les clés de chiffrement non-FSX entraînent un échec de la création du serveur.
+
++
+Les clés gérées par AWS sont filtrées en fonction de l'applicabilité du service.
+
+.. *Tags*: Vous pouvez éventuellement ajouter jusqu'à 40 tags.
+.. *Simple notification Service* : vous pouvez éventuellement activer le service SNS (simple notification Service) pour cette configuration en sélectionnant une rubrique SNS pour Microsoft SQL Server dans le menu déroulant.
++
+... Activez le service de notification simple.
+... Sélectionnez un ARN dans le menu déroulant.
+
+
+.. *Surveillance de CloudWatch* : vous pouvez éventuellement activer la surveillance de CloudWatch.
++
+Nous vous recommandons d'activer CloudWatch pour le débogage en cas de défaillance. Les événements qui apparaissent dans la console AWS CloudFormation sont de haut niveau et ne spécifient pas la cause première. Tous les journaux détaillés sont enregistrés dans le `C:\cfn\logs` dossier des instances EC2.
+
++
+Dans CloudWatch, un groupe de journaux est créé avec le nom de la pile. Un flux de journaux pour chaque noeud de validation et noeud SQL apparaît sous le groupe de journaux. CloudWatch affiche la progression du script et fournit des informations pour vous aider à comprendre si et quand le déploiement échoue.
+
+.. *Annulation de ressources* : cette fonction n'est pas prise en charge actuellement.
+
+
+. Récapitulatif
++
+.. *Coût estimé* : fournit une estimation des frais que vous pourriez engager si vous avez déployé les ressources indiquées.
+
+
+. Cliquez sur *Créer* pour déployer le nouvel hôte de base de données.
++
+Vous pouvez également enregistrer la configuration.
+
+
+
+.Et la suite
+Maintenant vous pouvez link:create-database.html["Créez une base de données en usine de workloads BlueXP  pour les bases de données"].

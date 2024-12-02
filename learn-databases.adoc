@@ -104,6 +104,7 @@ En savoir plus sur link:https://docs.netapp.com/us-en/workload-setup-admin/opera
 
 Vous pouvez utiliser l'usine de workloads BlueXP  avec les outils suivants :
 
+* *Console BlueXP * : la console BlueXP  offre une interface hybride pour que vous puissiez utiliser la fabrique de workloads BlueXP  avec d'autres services BlueXP
 * *Workload Factory console*: La console de fabrique de charge de travail fournit une interface visuelle qui vous donne une vue globale de vos applications et projets
 * *API REST* : les API REST d'usine de workloads vous permettent de déployer et de gérer Microsoft SQL Server et d'autres ressources AWS
 * *CloudFormation* : le code AWS CloudFormation vous permet d'effectuer les actions que vous avez définies dans la console d'usine de la charge de travail pour modéliser, provisionner et gérer les ressources AWS et tierces à partir de la pile CloudFormation de votre compte AWS.

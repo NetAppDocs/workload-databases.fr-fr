@@ -57,7 +57,6 @@
   <block id="15d1ade99815746ab0088981bd7585d3" category="section-title">Étape 1 : création d'un serveur de base de données</block>
   <block id="956eaa6186169471a13345860cad0757" category="open-title">Création rapide</block>
   <block id="542af019e2aa3ef9ca4b187a71c918bb" category="admonition">Dans _Quick create_, FCI est le modèle de déploiement par défaut, Windows 2016 est la version par défaut de Windows et SQL 2019 Standard Edition est la version par défaut de SQL.</block>
-  <block id="b26136a388864ee3f9e813ac8f6109ee" category="list-text">Dans la mosaïque bases de données, sélectionnez *Deploy database host*.</block>
   <block id="6139861719bbe0b1fa9017ee94fd4e8e" category="list-text">Sélectionnez *création rapide*.</block>
   <block id="cc3305aa1264f3bb3f5edf4bbf7f1ab1" category="list-text">Sous *paramètres AWS*, fournissez les informations suivantes :</block>
   <block id="0ddee9622b04a20edcfe59424067f924" category="list-text">*Informations d'identification AWS* : sélectionnez les informations d'identification AWS avec des autorisations d'automatisation pour déployer le nouvel hôte de base de données.</block>
@@ -398,14 +397,6 @@
   <block id="2352c4e1f4d0024ade0869e00e6243f4" category="paragraph"><block ref="2352c4e1f4d0024ade0869e00e6243f4" category="inline-link-macro-rx"></block></block>
   <block id="c0227cef6f07a8cd2ac72f2945b031aa" category="section-title">Source ouverte</block>
   <block id="9b73989307c1975dfa4d5e1581e4afe8" category="paragraph">Les fichiers de notification fournissent des informations sur les droits d'auteur et les licences de tiers utilisés dans le logiciel NetApp.</block>
-  <block id="22e5a7336ebe77138f0282cedcb069ab" category="inline-link">Usine de charges de travail</block>
-  <block id="7ffcbeca3b450b8d05f9cf0eedb617f8" category="list-text"><block ref="7ffcbeca3b450b8d05f9cf0eedb617f8" category="inline-link-rx"></block></block>
-  <block id="887f800d53dc2cd5a7894464a6f60a6b" category="inline-link">Workload Factory pour bases de données</block>
-  <block id="7e505d4c691d86e5bd415f9ccb849966" category="list-text"><block ref="7e505d4c691d86e5bd415f9ccb849966" category="inline-link-rx"></block></block>
-  <block id="9591e2d54c998ae1c9d48fd5be7762e9" category="inline-link">Workload Factory pour GenAI</block>
-  <block id="f38c7416013fc239c3dd3288d40a40c0" category="list-text"><block ref="f38c7416013fc239c3dd3288d40a40c0" category="inline-link-rx"></block></block>
-  <block id="404a5efb62a3a3f22b02593091042608" category="inline-link">Workload Factory pour VMware</block>
-  <block id="9a211183d3fa82368d76fdbab5abdeda" category="list-text"><block ref="9a211183d3fa82368d76fdbab5abdeda" category="inline-link-rx"></block></block>
   <block id="6130b5542240619621b88baf10547d84" category="paragraph">Les bases de données peuvent uniquement gérer les instances de Microsoft SQL Server avec le stockage du système de fichiers FSX for ONTAP.</block>
   <block id="b43307219a7b65a8301c057d6f6b5478" category="section-title">Gestion des instances Microsoft SQL Server</block>
   <block id="7c6c9edd9611134efa9dc1ed2f630486" category="paragraph">La gestion des instances de Microsoft SQL Server comprend les tâches suivantes :</block>
@@ -866,4 +857,38 @@
   <block id="9d57e52330b97c81921959c45b7d8a7c" category="sidebar">Déployez les configurations Microsoft SQL Server et gérez les environnements de base de données en plus du stockage du système de fichiers FSX pour ONTAP dans l'usine de workloads BlueXP .</block>
   <block id="e214e71355e2ee8687f09c83bfbdaabc" category="sidebar">Fabrique de workloads BlueXP  pour la documentation des bases de données</block>
   <block id="f3ffe4a909ed7f4cc0f396f199ae3471" category="sidebar">Découvrez l'usine de workloads pour les bases de données</block>
+  <block id="18caf85143cff2e29943f7fa50a9d531" category="doc">L'optimisation continue permet de résoudre les problèmes de calcul et d'évaluer</block>
+  <block id="275b08f4e33388b6598899e256fe46b3" category="paragraph">Les bases de données offrent désormais des informations et des recommandations pour vous aider à optimiser les ressources de calcul des instances Microsoft SQL Server. Nous mesurons l'utilisation du processeur et nous nous appuyons sur le service AWS Compute Optimizer pour recommander des types d'instances optimaux et correctement dimensionnés, et vous informer des correctifs disponibles sur le système d'exploitation. L'optimisation des ressources de calcul vous aide à prendre des décisions avisées sur les types d'instances, ce qui vous permet de réaliser des économies et d'utiliser efficacement les ressources.</block>
+  <block id="9aa94e25ba754a44d094b78775213e48" category="inline-link-macro">Optimisez les configurations des ressources de calcul</block>
+  <block id="25a5dc6deeba5d476ff665ad9c968a2b" category="paragraph"><block ref="25a5dc6deeba5d476ff665ad9c968a2b" category="inline-link-macro-rx"></block></block>
+  <block id="f3cfd7c95d3ff2b556d90beb191fa77a" category="section-title">Prise en charge de PostgreSQL</block>
+  <block id="49db1f79602c9ba8e5704a68010c4023" category="paragraph">Vous pouvez désormais déployer et gérer des déploiements de serveurs PostgreSQL autonomes dans des bases de données.</block>
+  <block id="3627a14d7dc2feba3834d63a37ebb394" category="inline-link-macro">Créez un serveur PostgreSQL</block>
+  <block id="02b7dd87f2a54e2b540ac84598c20252" category="paragraph"><block ref="02b7dd87f2a54e2b540ac84598c20252" category="inline-link-macro-rx"></block></block>
+  <block id="a08c0d26c5f5640f1f5e9c497b9e6819" category="paragraph">Vous pouvez également utiliser la Codebox pour copier un modèle vide ou créer un modèle complet. Vous pouvez ainsi déployer une base de données hors de l'usine des workloads à l'aide de l'API REST, de l'interface de ligne de commande AWS et d'AWS CloudFormation. <block ref="2d990d14c53331d19396f393ba4ea98c" category="inline-link-macro-rx"></block>.</block>
+  <block id="6a5525182ed1f6bca47fea4ee51a3e58" category="list-text">Dans la mosaïque Databases, sélectionnez *Deploy database host*, puis sélectionnez *Microsoft SQL Server* dans le menu déroulant.</block>
+  <block id="16982b5e2c79b1d8f052bfa663a64d77" category="summary">Créez un nouveau serveur SQL PostgreSQL dans l'usine de charges de travail BlueXP  pour les bases de données.</block>
+  <block id="c4f70f11159098cce8873623bffb07aa" category="doc">Créez un serveur PostgreSQL en usine de charges de travail BlueXP </block>
+  <block id="5f8d928d8901c8b01302b1c3be720b44" category="paragraph">La création d'un nouveau serveur PostgreSQL, ou hôte de base de données, en usine de charges de travail BlueXP  pour les bases de données nécessite un déploiement de système de fichiers FSX pour ONTAP et des ressources pour Active Directory.</block>
+  <block id="7a65409a338637d9c410720ad6eb8500" category="list-text">La création d'un nouveau serveur PostgreSQL requiert un système de fichiers FSX pour ONTAP en tant que système back-end de stockage. Vous pouvez utiliser un système de fichiers FSX pour ONTAP existant ou créer un nouveau système de fichiers. Si vous sélectionnez un système de fichiers FSX pour ONTAP existant comme back-end de stockage du serveur de base de données, nous créons une nouvelle VM de stockage pour les charges de travail PostgreSQL.</block>
+  <block id="0f691a321e4cb91f0a8529931ba7bd47" category="paragraph">Les systèmes de fichiers FSX pour ONTAP prennent en charge les déploiements _autonomes_ pour PostgreSQL. La fabrique de workloads crée un système de fichiers FSX pour ONTAP à zone de disponibilité unique en plus de séparer les volumes et les LUN pour les fichiers de données, de journaux et tempdb.</block>
+  <block id="2fd4d401e5c831dec7c9d6e1b557896e" category="paragraph">Vous pouvez utiliser les modes de déploiement _Quick CREATE_ ou _Advanced CREATE_ pour effectuer cette tâche en usine avec des autorisations de mode _automate_. Vous pouvez également utiliser les outils suivants disponibles dans la Codebox : API REST et CloudFormation. <block ref="e0a3467dce43941c7b863cc8d6f0a62a" category="inline-link-macro-rx"></block>.</block>
+  <block id="26b17225b626fb9238849fd60eabdf60" category="paragraph">+</block>
+  <block id="dc1a4c3a44cba39fe1ecdcc15fe01cc7" category="list-text">Dans la mosaïque Databases, sélectionnez *Deploy database host*, puis sélectionnez *PostgreSQL* dans le menu déroulant.</block>
+  <block id="26bef182e4e84557ce657df6398df5a0" category="list-text">Pour *Deployment Model*, *Standalone instance* est la valeur par défaut.</block>
+  <block id="75b39c0795d7295af69b1d13bbf82285" category="list-text">*Zones de disponibilité* : sélectionnez les zones de disponibilité et les sous-réseaux.</block>
+  <block id="d576650f664651e9b2569ccb346b6649" category="list-text">Dans le champ *Configuration du cluster - nœud 1*, sélectionnez une zone de disponibilité dans le menu déroulant *zone de disponibilité* et un sous-réseau dans le menu déroulant *sous-réseau*.</block>
+  <block id="720301aea3fac96d94759700c949e15f" category="paragraph">Deux groupes de sécurité sont rattachés aux nœuds SQL (instances EC2) lors du déploiement du nouveau serveur.</block>
+  <block id="f8473adfeac8aca2a2eaa799d6cde778" category="list-text">Un groupe de sécurité des charges de travail est créé pour autoriser les ports et les protocoles requis pour PostgreSQL.</block>
+  <block id="a405e08f97e410f1eb5924541a4cb30c" category="list-text">Pour un système de fichiers FSX for ONTAP existant, le groupe de sécurité qui lui est associé est automatiquement ajouté au nœud PostgreSQL, ce qui permet la communication avec le système de fichiers. Lorsqu'un nouveau système FSX pour ONTAP est créé, un nouveau groupe de sécurité est créé pour le système de fichiers FSX pour ONTAP et le même groupe de sécurité est également attaché au nœud SQL.</block>
+  <block id="5d48b45f2ad58c8e1145b474d95593f9" category="list-text">Sélectionnez *système d'exploitation* dans le menu déroulant.</block>
+  <block id="6dd53f240f48678994cf9b0109fa0ec2" category="list-text">Sélectionnez *PostgreSQL version* dans le menu déroulant.</block>
+  <block id="d456e032669379ad4e2388045a89301d" category="list-text">*Nom du serveur de base de données* : entrez le nom du cluster de base de données.</block>
+  <block id="b4d85afb201cbf3edb4623ef0d8da5e6" category="list-text">Sous *connectivité*, sélectionnez une paire de clés pour vous connecter en toute sécurité à votre instance.</block>
+  <block id="54d16066caaf498f7f6443098c30a2be" category="paragraph">Les snapshots sont affectés aux volumes créés pour les charges de travail PostgreSQL.</block>
+  <block id="428b0b39be2352757edeb5f9f12a7bdd" category="inline-link">Usine de workloads BlueXP</block>
+  <block id="7cf449620aa459bc5c449db69b07e507" category="paragraph"><block ref="7cf449620aa459bc5c449db69b07e507" category="inline-link-rx"></block></block>
+  <block id="6ad17d07338dffda7982d8efdad3a276" category="section-title">01 décembre 2024</block>
+  <block id="d35a0f72475ce4ac5dbb2e790338586d" category="sidebar">Créez Microsoft SQL Server</block>
+  <block id="b7414b1741661cf43c6fb35227e98183" category="sidebar">Créer un serveur PostgreSQL</block>
 </blocks>
