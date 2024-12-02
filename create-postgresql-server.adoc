@@ -19,37 +19,34 @@ Vous aurez besoin des identifiants de compte AWS et des autorisations _automate_
 Avant de commencer, découvrez les types de déploiement de stockage disponibles pour la configuration des hôtes de base de données, le déploiement d'Active Directory, les modes de fonctionnement par défaut des charges de travail et les conditions requises pour effectuer cette opération.
 
 FSX pour les déploiements de systèmes de fichiers ONTAP:: La création d'un nouveau serveur PostgreSQL requiert un système de fichiers FSX pour ONTAP en tant que système back-end de stockage. Vous pouvez utiliser un système de fichiers FSX pour ONTAP existant ou créer un nouveau système de fichiers. Si vous sélectionnez un système de fichiers FSX pour ONTAP existant comme back-end de stockage du serveur de base de données, nous créons une nouvelle VM de stockage pour les charges de travail PostgreSQL.
-
-
++
+--
 Les systèmes de fichiers FSX pour ONTAP prennent en charge les déploiements _autonomes_ pour PostgreSQL. La fabrique de workloads crée un système de fichiers FSX pour ONTAP à zone de disponibilité unique en plus de séparer les volumes et les LUN pour les fichiers de données, de journaux et tempdb.
 
+--
 Modes de fonctionnement d'usine de la charge de travail:: L'usine de workloads propose trois modes opérationnels qui dépendent du niveau de confort avec lequel vous laissez les workloads gérer vos ressources AWS.
-
-
++
+--
 *_Basic_ mode* : dans ce mode de fonctionnement, vous n'avez pas besoin d'associer des informations d'identification de compte AWS dans l'usine de la charge de travail. Vous pouvez copier ou télécharger un modèle YAML partiellement rempli à partir de la Codebox pour l'effectuer en dehors de l'usine de la charge de travail.
 
 *_Read_ mode* : dans ce mode de fonctionnement, vous fournissez les informations d'identification du compte AWS avec des autorisations de lecture qui vous permettent de remplir le formulaire _Quick create_ ou _Advanced create_, puis de le copier ou de le télécharger. Vous pouvez également rediriger vers CloudFormation à partir de l'usine de la charge de travail avec les détails du formulaire rempli. Vous pourrez également gérer le serveur de base de données déployé en usine.
 
 *_automate_ mode* : dans ce mode de fonctionnement, vous fournissez les informations d'identification du compte AWS avec des autorisations d'automatisation qui vous permettent de créer et de gérer des ressources AWS en usine de workloads.
 
+--
+
+
 .Avant de commencer
 Assurez-vous de disposer des conditions préalables suivantes avant de créer un nouvel hôte de base de données.
 
 Informations d'identification et autorisations:: Vous devez link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Identifiants de compte AWS et autorisations de mode automatisées"^]créer un nouvel hôte de base de données en usine de la charge de travail.
-+
---
-Vous pouvez également utiliser la Codebox pour copier un modèle vide ou créer un modèle complet. Vous pouvez ainsi déployer une base de données hors de l'usine des workloads à l'aide de l'API REST, de l'interface de ligne de commande AWS ou d'AWS CloudFormation. link:https://docs.netapp.com/us-en/workload-setup-admin/codebox-automation.html["En savoir plus sur l'automatisation de Codebox"^].
-
---
 
 
 
 
 == Créez un serveur de base de données
 
-Vous pouvez utiliser les modes de déploiement _Quick CREATE_ ou _Advanced CREATE_ pour effectuer cette tâche en usine avec des autorisations de mode _automate_. Vous pouvez également utiliser les outils suivants disponibles dans la Codebox : API REST et CloudFormation. link:https://docs.netapp.com/us-en/workload-setup-admin/use-codebox.html#how-to-use-codebox["Découvrez comment utiliser Codebox pour l'automatisation"^].
-
-+
+Vous pouvez utiliser le mode de déploiement _Advanced create_ pour effectuer cette tâche en usine de la charge de travail avec des autorisations _automate_ mode. Vous pouvez également utiliser les outils suivants disponibles dans la Codebox : l'API REST, l'interface de ligne de commande AWS et AWS CloudFormation. link:https://docs.netapp.com/us-en/workload-setup-admin/use-codebox.html#how-to-use-codebox["Découvrez comment utiliser Codebox pour l'automatisation"^].
 
 .Étapes
 . Connectez-vous à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
@@ -179,6 +176,3 @@ Dans CloudWatch, un groupe de journaux est créé avec le nom de la pile. Un flu
 Vous pouvez également enregistrer la configuration.
 
 
-
-.Et la suite
-Maintenant vous pouvez link:create-database.html["Créez une base de données en usine de workloads BlueXP  pour les bases de données"].
