@@ -176,3 +176,6 @@ Dans CloudWatch, un groupe de journaux est créé avec le nom de la pile. Un flu
 Vous pouvez également enregistrer la configuration.
 
 
+
+.Et la suite
+Vous pouvez configurer manuellement les utilisateurs, l'accès à distance et les bases de données sur le serveur PostgreSQL déployé.
