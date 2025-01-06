@@ -18,9 +18,9 @@ Lorsque vous clonez une base de données, le clone à la création est un clone 
 
 .Étapes
 . Connectez-vous à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
-. Dans la mosaïque bases de données, sélectionnez *aller à bases de données Inventaire*.
+. Dans la mosaïque bases de données, sélectionnez *aller à l'inventaire des bases de données*.
 . Dans bases de données, sélectionnez l'onglet *sandbox*.
-. Dans l'onglet sandbox, cliquez sur le menu trois points du clone sandbox à rétablir.
+. Dans l'onglet sandbox, cliquez sur le menu à trois points du clone sandbox à rétablir.
 . Sélectionnez *Re-Baseline*.
 . Dans la boîte de dialogue Re-Baseline, cliquez sur *Re-Baseline*.
 

@@ -38,4 +38,4 @@ Enfin, si vous choisissez de fonctionner en _automate_ mode, vous devez link:cre
 .Et la suite
 Lorsque vous avez des hôtes gérés FSX pour ONTAP dans votre inventaire de bases de données, vous pouvez link:create-database.html["créer une base de données utilisateur"] ou link:create-sandbox-clone.html["cloner votre hôte pour créer un sandbox"].
 
-Lorsque vous avez des hôtes Elastic Block Store dans votre inventaire de bases de données, vous pouvez link:explore-savings.html["Découvrez les économies réalisées grâce au calculateur d'économies de stockage"].
+Lorsque vous avez des hôtes Elastic Block Store ou FSX for Windows File Server dans votre inventaire de bases de données, vous pouvez link:explore-savings.html["découvrez les économies réalisées grâce au calculateur d'économies"].

@@ -8,9 +8,7 @@
   <block id="bbe48fb854ea022537208eeeff822f91" category="paragraph-title">Description de la tâche</block>
   <block id="6a2235a7d08e9218e23793c114adf3a3" category="paragraph">Lorsque vous créez un clone sandbox à partir d'une base de données source alors qu'il est occupé, les données du clone peuvent ne pas être synchronisées avec l'instantané le plus récent de la base de données source. Cette opération vérifie l'intégrité de tous les objets du clone sandbox pour déterminer si les données du clone sandbox sont à jour.</block>
   <block id="f3a29486bed19a90f2da6d007818b427" category="list-title">Étapes</block>
-  <block id="a22aeb541c430c47c35bcc20690ea51a" category="list-text">Dans la mosaïque bases de données, sélectionnez *aller à bases de données Inventaire*.</block>
   <block id="a1029809e498e81eaada752a6b08cd7c" category="list-text">Dans bases de données, sélectionnez l'onglet *sandbox*.</block>
-  <block id="627f12b5ce917853e0580a84a419249f" category="list-text">Dans l'onglet sandbox, cliquez sur le menu trois points du clone sandbox pour vérifier son intégrité.</block>
   <block id="4959cbb15c588c0b15ed2cb6bf243a79" category="list-text">Sélectionnez *Exécuter le contrôle d'intégrité*.</block>
   <block id="655a2ef85749dcbb368e1b8b32300552" category="list-text">Dans la boîte de dialogue Vérification d'intégrité, cliquez sur *Vérification d'intégrité*.</block>
   <block id="d2212da19c03bb2b369faeaf9d65f109" category="list-text">Vérifiez l'état de la vérification d'intégrité dans les sandbox ou dans la surveillance des travaux.</block>
@@ -18,7 +16,6 @@
   <block id="4d347b6072ee47e025ccdfd378498ab5" category="summary">Connectez un clone sandbox à un pipeline ci/CD avec du code API REST pour améliorer la distribution des logiciels via l'automatisation.</block>
   <block id="2af2cf99863645202599afd2708773e2" category="doc">Connectez un clone sandbox aux outils ci/CD</block>
   <block id="bc71cf96586c8edb703f886cce218a0c" category="paragraph">Pour livrer automatiquement une nouvelle version du logiciel au clone de votre base de données, vous devez vous connecter à un pipeline ci/CD. Utilisez le code API REST fourni par cette opération pour établir la connexion.</block>
-  <block id="efb5b5e68dc2811878125ac310982a90" category="list-text">Dans l'onglet sandbox, cliquez sur le menu trois points du clone sandbox pour vous connecter aux outils ci/CD.</block>
   <block id="452804eac893658bcf658126b3087551" category="list-text">Sélectionnez *se connecter aux outils ci/CD*.</block>
   <block id="8191f4b1aee7fafe827afe8814de01a6" category="list-text">Dans la boîte de dialogue ci/CD, copiez ou téléchargez le code API REST nécessaire pour vous connecter aux outils ci/CD.</block>
   <block id="00a06b08857b60c805bcaf007a9ddc9c" category="list-text">Cliquez sur *Fermer*.</block>
@@ -160,7 +157,6 @@
   <block id="1271a3d360115d2332889fc326f89944" category="section-title">Créer une base de données</block>
   <block id="ceef677928e7c6188983fdf4dd271a6e" category="list-text">Dans bases de données, sélectionnez l'onglet *Inventaire*.</block>
   <block id="8b882c3fbdc1d7d9a3892836061c41c2" category="list-text">Dans l'onglet Inventaire, sélectionnez un serveur de base de données avec une instance de serveur SQL gérée dans laquelle créer la base de données.</block>
-  <block id="d5db8d6216dad5bc8022812b7a525fca" category="list-text">Cliquez sur le menu à trois points de l'instance gérée, puis sélectionnez *Créer une base de données utilisateur*.</block>
   <block id="16b7e1ed68be5b41e619ec00b93a3de0" category="list-text">Sur la page Créer une base de données utilisateur, sous informations sur la base de données, fournissez les informations suivantes :</block>
   <block id="a657ad1c8328b5552791626de3484dcb" category="list-text">*Nom de la base de données* : entrez le nom de la base de données.</block>
   <block id="16aa8185bcc829996f58f9ef641ffca9" category="list-text">*Classement* : sélectionnez un classement pour la base de données. Le classement par défaut SQL_Latin1_General_CP1_ci_AS » sur Microsoft SQL Server est sélectionné.</block>
@@ -195,8 +191,6 @@
   <block id="f3346b0efa80289c47d4e6113a73a3ab" category="list-text">*Définir la balise* : sélectionnez une balise pour définir le clone sandbox.</block>
   <block id="34775e5e4b0b832c45a2707ae9b18f95" category="paragraph">Pour vérifier la progression du travail, accédez à l'onglet *surveillance du travail*.</block>
   <block id="5697f3fa0c3bfd3435b1268d395d044b" category="doc">Fractionner un clone sandbox à partir de la base de données source</block>
-  <block id="cae7cdfa55ee9d21054e32871fcf98f8" category="list-text">Dans la mosaïque bases de données, cliquez sur *aller à bases de données Inventory*.</block>
-  <block id="60fd4df454072e2b3067c30385649e4a" category="list-text">Cliquez sur le menu des trois points du clone sandbox à supprimer.</block>
   <block id="0f024621e0673f1f4e657983682d6e72" category="list-text">Sélectionnez *Supprimer*.</block>
   <block id="1aef21babcea64bea2aff92468198535" category="list-text">Dans la boîte de dialogue Supprimer, cliquez sur *Supprimer*.</block>
   <block id="107c83bbd5efd331077f3ba178a657b5" category="doc">Détecter une instance de Microsoft SQL Server</block>
@@ -214,7 +208,6 @@
   <block id="a218784743407787312891b174efa23d" category="paragraph">Lorsqu'une instance Microsoft SQL est détectée, l'environnement existant n'est pas modifié. La détection se fait via AWS Systems Manager session Manager (SSM). Sans le profil d'instance IAM droit, la détection échouera. <block ref="6d65103434cb07e7afb870839cad8f12" category="inline-link-macro-rx"></block>.</block>
   <block id="95b565a5e9864d62ea1fb7e39b926b3b" category="list-text">Cliquez sur la flèche déroulante pour développer la ligne de l'hôte à détecter.</block>
   <block id="8dbec57fc4c47759d905a8c83da70c0f" category="paragraph">L'hôte se développe et les instances hôte s'affichent.</block>
-  <block id="2cb6ba113505ade5a7c3bcb4dd91f24a" category="list-text">Cliquez sur le menu des trois points de l'instance à détecter.</block>
   <block id="a01b2b217874340f2cbed78113cf3f07" category="list-text">Cliquez sur *détecter*.</block>
   <block id="52f93363b11de846f37617dc280f35b6" category="list-text">Dans la boîte de dialogue *Detect instance*, indiquez le nom d'utilisateur et le mot de passe Microsoft SQL Server ou le nom d'utilisateur et le mot de passe FSX for ONTAP.</block>
   <block id="aee0a08114ee057480ece887eabe9d05" category="paragraph">Les informations sur l'instance détectée s'affichent.</block>
@@ -226,29 +219,22 @@
   <block id="201c4d58b6fa62f021a1865e894234ef" category="list-text">*Taux de modification mensuel* : saisissez le pourcentage de changements de données de clonage et d'instantanés en moyenne par mois.</block>
   <block id="6b08b43202e1e504a7c87375b1a13b76" category="list-text">Passez en revue les calculs et les recommandations fournis sur la page.</block>
   <block id="f31ed490fd3768dff2a1121a0a06095c" category="list-text">Méthodes de déploiement</block>
-  <block id="3c6efe0ce159fb5b8ee4882bcf3ad973" category="summary">NetApp prend en charge Workload Factory et ses services cloud de différentes manières. De nombreuses options d'auto-assistance gratuites sont disponibles 24 h/24 et 7 j/7, comme des articles de la base de connaissances (KB) et un forum communautaire. Votre inscription au support inclut un support technique à distance via la création de tickets en ligne.</block>
   <block id="fabfc25ef8996fd90836e58a4c0b26b6" category="doc">Obtenez de l'aide</block>
   <block id="6a7b2c9c4cec65ad972b108fa0a1192b" category="section-title">Bénéficiez du support de FSX pour ONTAP</block>
-  <block id="4435b263dd1a35bcd8dfda050db92b3b" category="paragraph">Pour obtenir un support technique concernant FSX for ONTAP, son infrastructure ou toute solution utilisant le service, reportez-vous à la section « obtention d'aide » de la documentation Workload Factory de ce produit.</block>
   <block id="18cf072964a583150dd247485ba75b92" category="inline-link-macro">Amazon FSX pour ONTAP</block>
   <block id="9d06990508d25d367d9158c6558eb9c8" category="paragraph"><block ref="9d06990508d25d367d9158c6558eb9c8" category="inline-link-macro-rx"></block></block>
   <block id="35f9849ffdd809bda11d0fc56e1e3583" category="paragraph">Pour bénéficier du support technique spécifique à Workload Factory et à ses solutions et services de stockage, utilisez les options de support décrites ci-dessous.</block>
   <block id="edd15fbeb7b2dffa163336ecd4f3e80c" category="section-title">Utilisation d'options de support en libre-service</block>
   <block id="5e4b821a1a82558dead1ef6961e90666" category="paragraph">Ces options sont disponibles gratuitement, 24 heures sur 24, 7 jours sur 7 :</block>
   <block id="5b6cf869265c13af8566f192b4ab3d2a" category="list-text">Documentation</block>
-  <block id="d935525f4850c4638cbf48ae53fb4686" category="paragraph">La documentation Workload Factory que vous consultez actuellement.</block>
   <block id="19111351b69b6b15668130b38b7f6038" category="inline-link">Base de connaissances</block>
   <block id="436f63b446dba5a418c698d49bd39718" category="list-text"><block ref="436f63b446dba5a418c698d49bd39718" category="inline-link-rx"></block></block>
-  <block id="ba6274b9c9d1f81bb3a648fa289986b8" category="paragraph">Recherchez dans la base de connaissances de Workload Factory des articles utiles pour résoudre les problèmes.</block>
   <block id="14526abd8bda5af347775025cd5342cf" category="inline-link">Communautés</block>
   <block id="410fdb9caa9c64da2ff3f88f4836960d" category="list-text"><block ref="410fdb9caa9c64da2ff3f88f4836960d" category="inline-link-rx"></block></block>
-  <block id="7faef90df03399696ba9d4815b37171a" category="paragraph">Rejoignez la communauté Workload Factory pour suivre les discussions en cours ou en créer de nouvelles.</block>
   <block id="d88bacf2a9fdcbbc844edcba97c34e30" category="section-title">Créez un dossier de demande de support auprès du support NetApp</block>
   <block id="82812db645b6ff5e9c2a24ddfb66c8d6" category="paragraph">Outre les options d'auto-support mentionnées ci-dessus, vous pouvez travailler avec un spécialiste du support NetApp pour résoudre tous les problèmes après avoir activé le service de support.</block>
   <block id="8fece025a1a8fef7018449bf104a2527" category="paragraph-title">Avant de commencer</block>
   <block id="e2a733504c4088b809813bbb35a3ddfd" category="inline-link-macro">Découvrez comment vous inscrire à de l'aide</block>
-  <block id="a12ea39ddf1c98adfd7f751299705efa" category="paragraph">Pour utiliser la fonction *Créer un cas*, vous devez d'abord vous inscrire au support. Associez vos informations d'identification du site de support NetApp à votre identifiant Workload Factory. <block ref="d9fea24984986beabae03291c4b721de" category="inline-link-macro-rx"></block>.</block>
-  <block id="356c88ac4b0ec3f7689cc91f54701fef" category="list-text">Dans le coin supérieur droit de la console Workload Factory, sélectionnez *aide &gt; support*.</block>
   <block id="aadd86a3fadf19221852692c6e4adc2f" category="paragraph">La sélection de cette option ouvre un nouvel onglet de navigateur sur la console BlueXP et charge le tableau de bord de support.</block>
   <block id="08d96fdd1a845d80db99e6e1dffb8bc7" category="list-text">Sur la page *Ressources*, choisissez l'une des options disponibles sous support technique :</block>
   <block id="6a1b74969231967ed071d465206b15c7" category="list-text">Sélectionnez *appelez-nous* si vous souhaitez parler avec quelqu'un au téléphone. Vous serez dirigé vers une page netapp.com qui répertorie les numéros de téléphone que vous pouvez appeler.</block>
@@ -423,34 +409,28 @@
   <block id="c08e85e895d76938ea6dece5bb44d66e" category="paragraph">Vous pouvez afficher une instance gérée en suivant ces étapes.</block>
   <block id="8719fc3365176d7b81bdcbf4c1ff4a2f" category="list-text">Cliquez sur la flèche déroulante pour développer la ligne de l'hôte et afficher ses instances gérées.</block>
   <block id="7a85061671bf8d085efe2cb8dfd1c79e" category="paragraph">L'hôte se développe et les instances hôtes s'affichent.</block>
-  <block id="d389f01b8dde275b0dcea0f5988294e9" category="list-text">Cliquez sur le menu à trois points de l'instance à afficher, puis sélectionnez *Afficher l'instance*.</block>
   <block id="8eea62084ca7e541d918e823422bd82e" category="paragraph-title">Résultat</block>
   <block id="124a4b88b8d9e1fc268a022789dfa437" category="paragraph">La vue d'ensemble de l'instance s'affiche dans l'onglet Inventaire.</block>
   <block id="12d2adb5a33b1aa2d5dffa5f023e36e4" category="paragraph">Vous pouvez afficher les bases de données gérées par l'instance gérée en suivant ces étapes.</block>
   <block id="ca6b20c311193d70fa95150e9aadfeff" category="list-text">Cliquez sur la flèche déroulante pour développer la ligne de l'hôte et afficher ses bases de données.</block>
-  <block id="80dfa1b683b7a7caa12e2cd38f13eb9e" category="list-text">Cliquez sur le menu à trois points de l'instance contenant les bases de données à afficher.</block>
   <block id="bab47e98a40b74089a0df1373390d048" category="list-text">Sélectionnez *Afficher les bases de données*.</block>
   <block id="c86b7424c07159a13fb442303997ee5e" category="paragraph">La liste des bases de données de l'instance s'affiche dans l'onglet Inventaire.</block>
   <block id="1654b38c29f5708868d01a77911262a6" category="paragraph">Annulez la gestion d'une instance hôte en suivant ces étapes.</block>
   <block id="65cc39a76868117dd307472ad16886fe" category="list-text">Cliquez sur la flèche déroulante pour développer la ligne de l'instance hôte à gérer.</block>
-  <block id="2c5e94e7fb3f058dd79551c37346e05f" category="list-text">Cliquez sur le menu des trois points de l'instance à gérer.</block>
   <block id="15dbb4d45ce02c5b74e74fc25c85c667" category="list-text">Sélectionnez *Unmanage*.</block>
   <block id="96a30701e83b6fe09ce36fcd863cb65b" category="paragraph">L'instance hôte n'est plus gérée.</block>
   <block id="252215232d636a7c096b2327e9a20b42" category="doc">Surveiller les bases de données</block>
-  <block id="8e6a6b95adffc91a47a882f2247cc6b3" category="paragraph">Les bases de données permettent de surveiller la progression des tâches et de diagnostiquer et dépanner en cas de défaillance. En outre, filtre par type et par état, la fonction de recherche et l'option permettant de télécharger l'aide de la table des travaux avec la navigation et le reporting des travaux de base de données.</block>
   <block id="67b0a66954400448325457f930e0f82b" category="paragraph">La surveillance des tâches prend en charge jusqu'à trois niveaux de surveillance selon le travail. Par exemple, pour la création de nouvelles bases de données et de clones sandbox, la surveillance des tâches suit les travaux et sous-travaux parents.</block>
   <block id="b830a8f027299af6d1d8ffbb130bcc58" category="list-text">Niveaux de surveillance des tâches</block>
   <block id="f52bf93027629736a089ef7f590091e0" category="list-text">Niveau 1 (travail parent) : assure le suivi du travail de déploiement de l'hôte.</block>
   <block id="0954e42bf0119b1189263290f1e567d2" category="list-text">Niveau 2 (sous-travail) : assure le suivi des sous-travaux liés au travail parent de déploiement hôte.</block>
   <block id="df942ff3756f5cbd24f42b521acc64f8" category="list-text">Niveau 3 (tâche) : liste la séquence des actions entreprises sur chaque ressource.</block>
   <block id="79ea79a1991592553b64d7ab6d30bdc0" category="list-text">État des tâches</block>
-  <block id="b281132bb97bdf5fa0ee45a03264aa8b" category="list-text">La fonction de surveillance des tâches effectue le suivi des tâches _en cours_, _terminées_ et _échouées_ tous les jours, toutes les semaines, toutes les deux semaines et tous les mois.</block>
   <block id="5c7a83ffcacee6b5f8b97e61c20dc908" category="list-text">Conservation des événements de travail</block>
   <block id="a4c455fbdb91b6c5a283d4a40626cd5b" category="list-text">Les événements de surveillance des travaux sont conservés dans l'interface utilisateur pendant 30 jours.</block>
   <block id="4639d0e2e2909a747265c2f704128bca" category="section-title">Surveiller les tâches</block>
   <block id="96ea9efb359a91a00480c8f67e682c8f" category="list-text">Dans bases de données, sélectionnez l'onglet *surveillance des travaux*.</block>
   <block id="59d6e1b8f6bd894db211d6ad27845f97" category="list-text">Dans l'onglet surveillance des travaux, utilisez les filtres ou la recherche pour affiner les résultats des travaux. Vous pouvez également télécharger un rapport de travaux.</block>
-  <block id="3edf792d0146bcfb61f393f728075b2a" category="list-text">Cliquez sur le menu des trois points du travail et cliquez sur *aller à CloudFormation* pour afficher le journal du travail dans la console AWS CloudFormation.</block>
   <block id="22358702cb945913fe9b03fc1642777a" category="summary">Les bases de données ont trois modes différents qui ont des exigences différentes.</block>
   <block id="06c2cea18679d64399783748fa367bdd" category="inline-image-macro">Une seule</block>
   <block id="aada29daee1d64ed0fe907043855cb7e" category="inline-image-macro">Deux</block>
@@ -467,12 +447,9 @@
   <block id="76e0353f7732c65129a16b1dee5f98f2" category="inline-link-macro">créer une base de données utilisateur</block>
   <block id="9099614931eafcd02d62211a634872c7" category="inline-link-macro">cloner votre hôte pour créer un sandbox</block>
   <block id="64cae7d199a0b43d21cb5921156fe660" category="paragraph">Lorsque vous avez des hôtes gérés FSX pour ONTAP dans votre inventaire de bases de données, vous pouvez <block ref="3d11347aa47327ab2988d0d3d3d6bd99" category="inline-link-macro-rx"></block> ou <block ref="e4dc5f068f234adb2616993ddf9e76bc" category="inline-link-macro-rx"></block>.</block>
-  <block id="62fb4ddd9c2ed78b886998ecd2d0e7c9" category="inline-link-macro">Découvrez les économies réalisées grâce au calculateur d'économies de stockage</block>
-  <block id="46e1e62b294ac077d36c03536775e77e" category="paragraph">Lorsque vous avez des hôtes Elastic Block Store dans votre inventaire de bases de données, vous pouvez <block ref="83cf511a46d8dbc3be6811900e4a471e" category="inline-link-macro-rx"></block>.</block>
   <block id="24ba9febbdf4f0bdec223ad9cf7f746f" category="paragraph">L'actualisation d'un clone met à jour le clone soit vers la base de données source au moment actuel, soit vers un instantané de la base de données source pris à un moment antérieur. Toutes les modifications apportées au clone sandbox seront supprimées.</block>
   <block id="397fb4bed63b1f030827aee0d3d2a9f3" category="paragraph">Une actualisation n'est possible que lorsque la base de données source est active.</block>
   <block id="745d72e1ba4e4047caaf9e8b73eca0e0" category="paragraph">Pour actualiser un clone de base de données à partir d'un instantané, la base de données source doit disposer d'au moins un instantané pour l'opération.</block>
-  <block id="cab3779344e3617fc74d747eece40a4b" category="list-text">Dans l'onglet sandbox, cliquez sur le menu trois points du clone sandbox à actualiser.</block>
   <block id="112777b2a7f0a6d4155f3e87ae0eb154" category="list-text">Sélectionnez *Rafraîchir*.</block>
   <block id="8d614611d1796186ed0a5e31381198f3" category="list-text">Dans la boîte de dialogue Actualiser, sélectionnez l'une des options suivantes :</block>
   <block id="566e9d53702323dfc23f81cbdc95c142" category="list-text">*Actualiser à l'heure actuelle*</block>
@@ -480,17 +457,13 @@
   <block id="a9b30d5aec7c9f917986ea976c3be0c1" category="paragraph">Pour cette option, sélectionnez l'instantané de la base de données dans le menu déroulant pour l'actualiser.</block>
   <block id="d687cb57e7c0a2bc72631659265b9d28" category="list-text">Cliquez sur *Actualiser*.</block>
   <block id="36bfe5aa9dbfbad068e6721ddea626bb" category="paragraph">Lorsque vous clonez une base de données, le clone à la création est un clone _baseline_. Les données de la base de données clonée sont les mêmes que celles de la base de données source au moment de la création. Au fur et à mesure que les données d'un clone de base de données sandbox changent au fil du temps, vous pouvez rétablir les données à la base lors de la création du clone. Cette opération s'appelle la redéfinition de la base d'un clone. La redéfinition de la base d'un clone plutôt que de créer un nouveau clone permet de gagner de l'espace. Toutefois, toute modification apportée au clone sandbox sera supprimée.</block>
-  <block id="e25b967c54d3008b230ffd4e18be90cb" category="list-text">Dans l'onglet sandbox, cliquez sur le menu trois points du clone sandbox à rétablir.</block>
   <block id="0975db7a2f5f2be54dab36d8b76af890" category="list-text">Sélectionnez *Re-Baseline*.</block>
   <block id="ee39d3157a6b84476b1e530c43e7e0af" category="list-text">Dans la boîte de dialogue Re-Baseline, cliquez sur *Re-Baseline*.</block>
   <block id="bad5772919d73bf3b17433524b58ead6" category="inline-link-macro">augmenter la capacité du système de fichiers</block>
   <block id="eed30e1e95c32e95da513640e3e7e215" category="paragraph">Évaluez la capacité de stockage nécessaire pour la nouvelle base de données. Si nécessaire, <block ref="ecf193ca0846a4137269dac878e92281" category="inline-link-macro-rx"></block> pour le système de fichiers FSX pour ONTAP avant de commencer.</block>
-  <block id="be0c57159940db106da8c592b3a6f1a7" category="list-text">Dans l'onglet sandbox, cliquez sur le menu trois points du clone sandbox que vous souhaitez fractionner.</block>
   <block id="54e2c4dd2b9e992b761540f131754e81" category="list-text">Sélectionnez *Fractionner*.</block>
   <block id="05b751f4cbd4ae2611783e6ab193a961" category="list-text">Dans la boîte de dialogue Fractionner, cliquez sur *Fractionner*.</block>
   <block id="42748df9eaa0be17ddc5cc1593cf57ab" category="doc">S'inscrire pour obtenir de l'aide</block>
-  <block id="996ad73a480311d4f86d6946935389d2" category="paragraph">Le support doit être enregistré pour bénéficier du support technique spécifique à Workload Factory et à ses solutions et services de stockage. Vous devez vous inscrire au support depuis la console BlueXP, qui est une console web distincte de Workload Factory.</block>
-  <block id="c552970fd4dc8118ba1806da596acad9" category="paragraph">L'inscription au support n'active pas le support NetApp pour un service de fichiers de fournisseur cloud. Pour obtenir un support technique concernant un service de fichiers d'un fournisseur cloud, son infrastructure ou toute solution utilisant le service, reportez-vous à la section « obtention d'aide » de la documentation Workload Factory de ce produit.</block>
   <block id="0b0e252af8897fbe981ec6682d2aa33b" category="section-title">Présentation de l'inscription au support</block>
   <block id="d7e4bb081bf4ec4814d83edcfbdb8b96" category="paragraph">L'enregistrement de votre abonnement au support ID de compte (votre numéro de série 960xxxxxxxxx à 20 chiffres, disponible sur la page des ressources de support de BlueXP) sert d'ID d'abonnement au support. Chaque abonnement au support BlueXP au niveau du compte doit être enregistré.</block>
   <block id="f9e05c2b383e3f11e3b4bebbe8952225" category="paragraph">L'enregistrement permet de proposer des fonctionnalités telles que l'ouverture de tickets de support et la génération automatique de tickets de support. L'inscription est terminée en ajoutant des comptes du site de support NetApp (NSS) à BlueXP, comme décrit ci-dessous.</block>
@@ -530,7 +503,6 @@
   <block id="684375e279a289295b72a006d93e2c4c" category="paragraph">NetApp devrait vous contacter au cours de ce processus. Il s'agit d'un exercice d'intégration unique pour les nouveaux utilisateurs.</block>
   <block id="5cdee814e2d9ba3490a8f16d00c65759" category="paragraph">Une fois que vous possédez votre compte sur le site de support NetApp, associez-le à votre connexion BlueXP en suivant les étapes décrites sous <block ref="2f3aba04ec49ee5f0573a6c80a1b9df2" category="inline-xref-macro-rx"></block>.</block>
   <block id="5e121c3e57ce0f4b69bb4130bd318d27" category="doc">Afficher les informations de connexion d'un clone sandbox</block>
-  <block id="5a329dc3d14f5744534c14ef1f73aee2" category="list-text">Dans l'onglet sandbox, cliquez sur le menu trois points du clone sandbox pour afficher ses informations de connexion.</block>
   <block id="43c2cf40a7db4f77b2c6c793066c47a5" category="list-text">Sélectionnez *Afficher infos connexion*.</block>
   <block id="383d22dfa0525ab8f4cf0db98c16e30f" category="list-text">Dans la boîte de dialogue Afficher les informations de connexion, copiez les informations de connexion si nécessaire.</block>
   <block id="e180b7ca8fea43e3b6bee94a5f547753" category="paragraph">Découvrez les nouveautés des bases de données.</block>
@@ -668,10 +640,8 @@
   <block id="11cb17d1b990bbf37a24337d5692efa1" category="list-text"><block ref="11cb17d1b990bbf37a24337d5692efa1" category="inline-link-macro-rx"></block></block>
   <block id="c7f1094806f4a7907a28dc01a1473f90" category="inline-link-macro">Découvrez comment utiliser Codebox pour l'automatisation</block>
   <block id="b2636246cf1e5e567e3ded4a9d65b1da" category="section-title">Disponibilité régionale pour le déploiement de Microsoft SQL Server dans un réseau privé avec Terraform</block>
-  <block id="eb4fca182b3b78e9a38aa1f6f59c8857" category="paragraph">Le déploiement de Microsoft SQL Server dans un réseau privé sans connectivité sortante via Terraform est uniquement pris en charge dans la région US-East-1 (N. Virginia).</block>
   <block id="0937bd87e3f84605f28e13c1956980d3" category="list-text">*Optimisation continue* : analyse en continu votre environnement Microsoft SQL Server hors ligne, vous fournissant un rapport complet des informations, opportunités et recommandations pour vous aider à atteindre l'excellence opérationnelle.</block>
   <block id="13025ba9f92de77af2aeaf1af07a4aa8" category="doc">Optimisez les configurations pour les déploiements Microsoft SQL Server</block>
-  <block id="a843374a240a6303e99f9130260dec04" category="paragraph">Fabrique de workloads BlueXP  pour les bases de données analyse et évalue en continu les configurations de déploiement de Microsoft SQL Server qui s'exécutent sur Amazon FSX pour NetApp ONTAP. Grâce aux évaluations, vous bénéficiez d'informations exploitables, de recommandations et d'optimisations pour atteindre l'excellence opérationnelle.</block>
   <block id="6f2bcb2f8d4f34c036395a199095be9a" category="paragraph">L'évaluation s'exécute automatiquement et en continu une fois par jour pour les instances de Microsoft SQL Server avec FSX pour le stockage ONTAP géré en usine de workloads. Les rapports d'évaluation sont disponibles dans le tableau de bord d'optimisation uniquement si une tâche planifiée quotidienne s'est exécutée après le déploiement ou après la gestion d'une instance.</block>
   <block id="72e34efcd5e12ef888a19ad8bd33c28b" category="paragraph">Workload Factory fournit des recommandations détaillées pour optimiser les configurations en fonction des meilleures pratiques de stockage FSX pour ONTAP.</block>
   <block id="246db1206cb640c61b32f7cea2560b8e" category="list-text">Ce qui est numérisé</block>
@@ -679,14 +649,9 @@
   <block id="04dff47f9a41cfa54b616dd86a4a6043" category="list-text">Dimensionnement du stockage : inclut le niveau de stockage, la marge du système de fichiers, la taille du disque du journal et la taille du disque TempDB</block>
   <block id="b1107628010e55afc5ec740439838f10" category="list-text">Disposition du stockage : inclut le placement des fichiers de données utilisateur, le placement des fichiers journaux et le placement de TempDB</block>
   <block id="8bc38d27c74401312cd5c45bfd8a7d05" category="list-text">Configuration du stockage : inclut la gestion de la capacité, le provisionnement fin, la règle de hiérarchisation, les snapshots, l'état des E/S à chemins d'accès multiples, la règle et les sessions, etc</block>
-  <block id="96ca9ac0bd1d71d3fe0162c29b8a4ff3" category="list-text">Calcul : inclut le dimensionnement approprié</block>
   <block id="1a0e703f0bdb101f4848a5510dd8ec1c" category="list-text">Vous devez disposer d'informations d'identification avec des autorisations de lecture ou d'automatisation.</block>
   <block id="86bd4600548ee1b734f704338ab13665" category="list-text">Pour évaluer le stockage d'une instance de Microsoft SQL Server, l'instance doit être gérée par usine de workloads et le type de stockage doit être FSX pour ONTAP.</block>
   <block id="40213188bf240529a1293728c4187a56" category="list-text">Assurez-vous de revoir attentivement chaque recommandation avant de choisir d'optimiser un paramètre ou une configuration.</block>
-  <block id="1833c64ed881d7aac5733a15a8116354" category="list-text">Sélectionnez le menu des trois points de l'instance à analyser, puis sélectionnez *optimiser*.</block>
-  <block id="3adf495aa133934a4330d99e0ad90fc1" category="list-text">Sur la page optimiser l'instance de l'hôte, examinez les résultats de l'évaluation du stockage.</block>
-  <block id="a09500dc3402d71be1fe58158c5cdfc9" category="paragraph">Les filtres sont disponibles pour trier par catégories, sous-catégories, état, gravité et balises.</block>
-  <block id="49aaa10529fcf35af76ba4e06450bb15" category="paragraph">Si nécessaire, vous pouvez télécharger un rapport des résultats en sélectionnant *Exporter PDF*.</block>
   <block id="5f4f392649432d3064fdf2a04015472b" category="list-text">Sélectionnez la flèche déroulante pour afficher les recommandations pour une configuration. Assurez-vous de revoir attentivement la recommandation.</block>
   <block id="c9e425055996f71ecfc858708d926276" category="paragraph">Cette recommandation présente les meilleures pratiques et les obstacles potentiels liés aux configurations non optimisées.</block>
   <block id="ea3bf0643d3540c97b9b92a3fb2bbf75" category="list-text">Sélectionnez pour *optimiser* les configurations non optimisées.</block>
@@ -773,7 +738,6 @@
   <block id="64fc7ef1abfec5624461bb34e030bb56" category="paragraph">Lorsque le type de stockage de l'instance hôte est FSX pour ONTAP, vous pouvez <block ref="ff12e6f62a651f5b7e33780a9c5be656" category="inline-link-macro-rx"></block>.</block>
   <block id="51bdfc0a469b2ea10ef9ab2e5263224e" category="doc">Découvrez les économies réalisées grâce à l'usine de workloads BlueXP  pour les bases de données</block>
   <block id="4237b026a2f2298ebdf4286d1e4746ed" category="paragraph">Découvrez les économies réalisées grâce à l'usine de workloads BlueXP  pour les bases de données pour vos workloads de bases de données, en comparant les coûts liés à l'utilisation d'Amazon Elastic Block Store (EBS) et FSX pour le stockage des serveurs de fichiers Windows avec FSX pour le stockage ONTAP.</block>
-  <block id="a1917d6ff4e9175797a62d227c1e958a" category="paragraph">L'usine de workloads fournit un calculateur d'économies. Vous pouvez donc comparer les différents composants de coûts liés à l'exécution des workloads Microsoft SQL Server, tels que le stockage, le calcul, la licence SQL, les snapshots et les clones pour vos workloads de base de données sur les systèmes de fichiers FSX pour ONTAP avec Elastic Block Store (EBS) et FSX pour le stockage serveur de fichiers Windows. Selon vos besoins en stockage, vous constaterez peut-être que les systèmes de fichiers FSX pour ONTAP sont les plus économiques pour vos workloads de base de données. Le calculateur indique si le stockage des workloads de base de données sur ces serveurs Microsoft SQL coûterait moins cher si vous utilisez un système de fichiers FSX pour ONTAP.</block>
   <block id="900c2260545f89be7eb6271a29d450e1" category="paragraph">Si l'usine de workloads détermine que vous pourriez économiser de l'argent en exécutant ces workloads sur un système de fichiers FSX pour ONTAP, vous pouvez déployer Microsoft SQL sur FSX pour ONTAP directement à partir du calculateur de l'usine de workloads. Si vous avez plusieurs instances de Microsoft SQL Server sur le stockage Elastic Block Store ou FSX pour le serveur de fichiers Windows, nous vous recommandons une configuration FSX pour ONTAP avec une seule instance SQL.</block>
   <block id="c0265d0f691fe5773c4ffeb0c523daf8" category="paragraph">Explorer les économies pour les hôtes détectés : les liens d'usine des charges de travail vers vos serveurs Microsoft SQL existants et extrait les détails du calculateur pour une comparaison automatique. Vous devrez accorder des autorisations d'automatisation pour utiliser cette option de calculatrice. Vous pouvez modifier le cas d'utilisation, mais tous les autres détails sont automatiquement déterminés dans le calcul.</block>
   <block id="5817c5b26a2a7f4c1334dc3c03403f64" category="paragraph">L'usine de workloads saisit les caractéristiques d'hôte Elastic Block Store et FSX pour serveur de fichiers Windows détectées pour explorer automatiquement les économies réalisées.</block>
@@ -829,7 +793,6 @@
   <block id="23528eaa34e1b5044421f8a835380bbd" category="paragraph">L'opération échoue lorsque Microsoft SQL Server manque certains modules PowerShell et scripts de gestion. Workload Factory déclenche un travail de ressource de préparation pour installer les modules et les scripts manquants que vous pouvez afficher dans l'onglet surveillance des travaux. Une fois la tâche terminée, réessayez de gérer l'instance hôte.</block>
   <block id="72f7ef1037108c5eeefad1bcee23a0a8" category="summary">Suivez les tâches de base de données et surveillez les bases de données au sein de l'usine de workloads BlueXP .</block>
   <block id="671ef5b67f2b7cbf660faa04c3d4622a" category="doc">Surveillez les bases de données en usine de workloads BlueXP </block>
-  <block id="e39ca1c265a18be9c20bb49d3258ca1d" category="summary">L'usine de workloads BlueXP  pour les bases de données analyse les configurations de stockage des serveurs Microsoft SQL et fournit des informations et des recommandations pour vous aider à atteindre l'excellence opérationnelle.</block>
   <block id="a4ed8b9b5c07e17e147e982e5e6be7b7" category="doc">Démarrage rapide de l'usine de workloads BlueXP  pour les bases de données</block>
   <block id="a84f8251adb867b65a51f661db71e24f" category="paragraph">Avec BlueXP  Workload Factory pour bases de données, vous pouvez commencer immédiatement en _Basic_ mode. Si vous souhaitez utiliser l'usine de workloads pour détecter les hôtes, gérer les ressources, etc., vous pouvez commencer en quelques étapes.</block>
   <block id="eb7ed5d3b1a2ff72006245ad37f9817b" category="paragraph">Vous devez disposer d'un compte AWS pour utiliser les bases de données.</block>
@@ -890,5 +853,77 @@
   <block id="81a9b579c806be28ed6e048084a47b52" category="inline-link-macro">Découvrez comment utiliser Terraform à partir de Codebox</block>
   <block id="0ec2c706568900a3077d2c43bb52bde7" category="admonition">Lorsque vous utilisez Terraform à partir de Codebox, le code que vous copiez ou téléchargez se cache<block ref="679500f227997b45be97e3ca8115c678" prefix=" " category="inline-code"></block> et<block ref="6173aa5206484b5224450952747c7148" prefix=" " category="inline-code"></block> passe. Vous devrez saisir à nouveau les mots de passe lorsque vous exécuterez le code. Vous devrez inclure les autorisations suivantes pour le compte d'utilisateur en plus des autorisations _automate_ mode :<block ref="7f862a4b8fc22b0af5dda5c9ababa346" prefix=" " category="inline-code"></block> et<block ref="319bffed0f518819193d82ffe99b1444" prefix=" " category="inline-code"></block>. <block ref="916d5d5f037ba2ec9358c38001da7d8f" category="inline-link-macro-rx"></block>.</block>
   <block id="037f00cd2eafb994bfbd866e78bb7bc3" category="paragraph">Vous pouvez configurer manuellement les utilisateurs, l'accès à distance et les bases de données sur le serveur PostgreSQL déployé.</block>
-  <block id="3b801b5b7ccdf00990044d1e2711d31e" category="paragraph">PostgreSQL ne prend pas en charge Amazon CloudWatch ni le déploiement dans un réseau privé.</block>
+  <block id="f418f614e126c9d215de85f00b5b7a7e" category="doc">Améliorations du tableau de bord bases de données</block>
+  <block id="c18a3eee23770f4e57bfa9ffe245c428" category="paragraph">Une nouvelle conception du tableau de bord inclut les graphiques et améliorations suivants :</block>
+  <block id="47ecffc6ee3a1f9bca5a81d55169b8b6" category="list-text">Le graphique de distribution des hôtes indique le nombre d'hôtes Microsoft SQL Server et d'hôtes PostgreSQL</block>
+  <block id="ec506ecd03b96cac2e19d3abac7aa16e" category="list-text">Les détails de la distribution des instances comprennent le nombre total d'instances détectées et le nombre d'instances gérées de Microsoft SQL Server et PostgreSQL</block>
+  <block id="9bb5ee528a11ed94b071f88a078be55e" category="list-text">Les détails de distribution des bases de données incluent le nombre total de bases de données et le nombre de bases de données Microsoft SQL Server et PostgreSQL gérées</block>
+  <block id="01fe24ee345a62672acb8a16826117d0" category="list-text">Score et États d'optimisation pour les instances gérées et en ligne</block>
+  <block id="341934677d47967f5c6e737476247396" category="list-text">Détails d'optimisation pour les catégories de stockage, de calcul et d'applications</block>
+  <block id="fb2f60a13243e168f321a9de2af52d51" category="list-text">Détails d'optimisation pour les configurations d'instances Microsoft SQL Server, telles que le dimensionnement du stockage, l'infrastructure de stockage, le stockage ONTAP, le calcul et les applications</block>
+  <block id="18168aa68b74c030711fe95b2b74afac" category="list-text">Économies potentielles pour les workloads de base de données s'exécutant sur les environnements de stockage Amazon Elastic Block Store et FSX pour serveur de fichiers Windows par rapport au stockage Amazon FSX pour NetApp ONTAP</block>
+  <block id="1886db6545ee593b7bf9014a318fd354" category="section-title">Nouveau statut « terminé avec problèmes » dans surveillance des travaux</block>
+  <block id="ddd4a54acb0820f07017dcad26528779" category="paragraph">La fonction de surveillance des travaux pour les bases de données fournit désormais le nouvel état « terminé avec problèmes » pour vous permettre d'apprendre quels sous-travaux ont rencontré des problèmes et quels sont les problèmes.</block>
+  <block id="c72aad21ecf48b0a4f27430d70c166da" category="inline-link-macro">Surveillez vos bases de données</block>
+  <block id="5c89f4f6af1a71c2ed6cfac605e94c16" category="paragraph"><block ref="5c89f4f6af1a71c2ed6cfac605e94c16" category="inline-link-macro-rx"></block></block>
+  <block id="fd3039d7fbe9d24b3141aca3c62383a2" category="section-title">Évaluation et optimisation des licences Microsoft SQL Server surprovisionnées</block>
+  <block id="f90a806c02db45741274868bc065ab90" category="paragraph">Le calculateur d'économies évalue maintenant si Enterprise Edition est nécessaire pour votre déploiement Microsoft SQL Server. Si une licence est surprovisionnée, le calculateur recommande la mise à niveau vers une version antérieure. Vous pourrez rétrograder automatiquement la licence dans les bases de données en optimisant l'application.</block>
+  <block id="f319ba887c03b66fa6a83807c78f65e9" category="list-text">Dans la mosaïque bases de données, sélectionnez *aller à l'inventaire des bases de données*.</block>
+  <block id="89beb934231f6ea165d992b7e0925877" category="list-text">Dans l'onglet sandbox, cliquez sur le menu à trois points du clone sandbox pour vérifier son intégrité.</block>
+  <block id="5b8419bd5ee6af2c2f5fd0ef8e3ca4a9" category="list-text">Dans l'onglet sandbox, cliquez sur le menu à trois points du clone sandbox pour vous connecter aux outils ci/CD.</block>
+  <block id="5e85f9bc067e4ee023078ba85e21857b" category="list-text">Cliquez sur le menu à trois points de l'instance gérée, puis sélectionnez *Créer une base de données utilisateur*.</block>
+  <block id="934fed95fff79f45510cc744c25ff3f4" category="list-text">Dans la mosaïque bases de données, cliquez sur *aller à l'inventaire des bases de données*.</block>
+  <block id="6e07e3cf1d291785f594756e71522cfe" category="list-text">Cliquez sur le menu à trois points du clone du sandbox que vous souhaitez supprimer.</block>
+  <block id="ff3a68054c116e7f9e9ea8cf123e0963" category="list-text">Cliquez sur le menu à trois points de l'instance à détecter.</block>
+  <block id="5656d5e94b1fd6f866e48df7c3bf45b3" category="paragraph">L'usine de workloads fournit un calculateur d'économies. Vous pouvez donc comparer les différents composants de coûts liés à l'exécution des workloads Microsoft SQL Server, tels que le stockage, le calcul, la licence SQL, les snapshots et les clones pour vos workloads de base de données sur les systèmes de fichiers FSX pour ONTAP avec Elastic Block Store (EBS) et FSX pour le stockage serveur de fichiers Windows. Selon vos besoins en stockage, vous constaterez peut-être que les systèmes de fichiers FSX pour ONTAP sont les plus économiques pour vos workloads de base de données.</block>
+  <block id="2c84d2f326a80650e1f5b43257e48421" category="paragraph">Le calculateur indique si le stockage des workloads de base de données sur ces serveurs Microsoft SQL coûterait moins cher si vous utilisez un système de fichiers FSX pour ONTAP.</block>
+  <block id="770dee3f954306dca2e369d2ef823c94" category="section-title">Analyse du déploiement de SQL Server</block>
+  <block id="1d93f11e5331c46990f076ad4257106e" category="paragraph">Le calculateur effectue une analyse complète de votre déploiement SQL Server afin de s'assurer que les ressources et les fonctionnalités utilisées sont adaptées à l'édition SQL Server. Voici les facteurs et conditions clés que le calculateur vérifie avant de recommander une mise à niveau vers l'édition Standard :</block>
+  <block id="a0e3089d312c100208595d685b4104d2" category="list-text">Modèle de déploiement</block>
+  <block id="9c67ec91896556f3bd46fddd92093d04" category="list-text">Le calculateur évalue le modèle de déploiement et indique si l'édition Enterprise est requise.</block>
+  <block id="1ca7013158d8416bb0a3239a9a7e8910" category="list-text">Ressources allouées</block>
+  <block id="9812aa4803326e6a5401134b4e94a3d3" category="list-text">Le calculateur évalue les conditions des ressources allouées dépendant de la licence suivantes :</block>
+  <block id="4b810d3bd37142aca8bc7441044ac6e1" category="list-text">Instance cible vCPU : l'instance possède 48 processeurs virtuels ou moins.</block>
+  <block id="3152b3044e87ba29a0ef483b2905447f" category="list-text">Allocation de mémoire : l'instance dispose de 128 Go ou moins de mémoire.</block>
+  <block id="509a14e7eed7c8c8d42162d9af93a1ec" category="list-text">Utilisation des fonctionnalités d'entreprise</block>
+  <block id="4fdb074e0b83810d198c8cb5f3b2752e" category="list-text">Le calculateur vérifie si l'une des fonctions Enterprise suivantes est utilisée :</block>
+  <block id="0337db3af77375f3eca40ab259fad71c" category="list-text">Fonctionnalités d'entreprise au niveau de la base de données</block>
+  <block id="3d01a99bca7dfee0c24b05774c636f2b" category="list-text">Opérations d'index en ligne</block>
+  <block id="a042028704aa193c37c291b87325adba" category="list-text">Gouverneur de ressources</block>
+  <block id="bde0cb834299864818961ff69bf50c2a" category="list-text">Réplication Oracle ou peer-to-peer</block>
+  <block id="11abd4a419be10d4141e0034d99314af" category="list-text">Extensions R/Python</block>
+  <block id="b4cc3328bb29447a4e3bfe42f68c706e" category="list-text">Base de données de temps optimisée pour la mémoire</block>
+  <block id="931f2fcd53e5a10ccfc806cb89a2b27c" category="paragraph">Si l'instance SQL Server évaluée n'utilise aucune des fonctionnalités d'entreprise ci-dessus et répond aux contraintes de ressources, la calculatrice recommande de rétrograder la licence vers l'édition Standard. Cette recommandation est faite pour vous aider à optimiser vos coûts de licence SQL Server sans compromettre les performances ou les fonctionnalités.</block>
+  <block id="b6a4501cc05e54e2e5a513c3b552183a" category="paragraph">NetApp prend en charge de nombreuses manières l'usine de workloads BlueXP  et ses services cloud. De nombreuses options d'auto-assistance gratuites sont disponibles 24 h/24 et 7 j/7, comme des articles de la base de connaissances (KB) et un forum communautaire. Votre inscription au support inclut un support technique à distance via la création de tickets en ligne.</block>
+  <block id="261966eaf033c38f6934f2c8fc36d79c" category="paragraph">Pour obtenir un support technique concernant FSX for ONTAP, son infrastructure ou toute solution utilisant le service, reportez-vous à la section « obtention d'aide » de la documentation d'usine des charges de travail de ce produit.</block>
+  <block id="5b49df4e58e2a4750acd8bfa8687ccd6" category="paragraph">La documentation d'usine de la charge de travail que vous consultez actuellement.</block>
+  <block id="ba51332e265e54eb4295d6e7d057bad8" category="paragraph">Effectuez des recherches dans la base de connaissances de l'usine de workloads pour trouver des articles utiles permettant de résoudre les problèmes.</block>
+  <block id="fc3e8f3c2017c33d444d483913a485ba" category="paragraph">Rejoignez la communauté d'usines de charge de travail pour suivre les discussions en cours ou en créer de nouvelles.</block>
+  <block id="ffa18fada5deeeb1e533786297855e7d" category="paragraph">Pour utiliser la fonction *Créer un cas*, vous devez d'abord vous inscrire à l'assistance. Associez vos informations d'identification du site de support NetApp à votre identifiant d'usine de charge de travail. <block ref="d9fea24984986beabae03291c4b721de" category="inline-link-macro-rx"></block>.</block>
+  <block id="e13a5649dfef3a1c76c4be8e463226d7" category="list-text">Dans le coin supérieur droit de la console d'usine de la charge de travail, sélectionnez *aide &gt; support*.</block>
+  <block id="eb3607016e0d79a6f82dfbbdd3422282" category="paragraph">Le déploiement de Microsoft SQL Server dans un réseau privé sans connectivité sortante via Terraform est uniquement pris en charge dans la région US-East-1 (N. Virginia). PostgreSQL ne prend pas en charge Amazon CloudWatch ni le déploiement dans un réseau privé.</block>
+  <block id="e75c7b17297b3cf3a7564e3033ef939f" category="list-text">Cliquez sur le menu à trois points de l'instance à afficher, puis sélectionnez *Afficher l'instance*.</block>
+  <block id="6b30d701929b5a35aad77b847528d165" category="list-text">Cliquez sur le menu à trois points de l'instance contenant les bases de données à afficher.</block>
+  <block id="77b932b7ecf2d2b3689c445fe72bb66a" category="list-text">Cliquez sur le menu à trois points de l'instance à gérer.</block>
+  <block id="5f08a8bbfa89b18958e70a8c6cbc44c3" category="paragraph">Les bases de données permettent de surveiller la progression des tâches et de diagnostiquer et dépanner en cas de défaillance. Vous pouvez filtrer les travaux par type et par état, rechercher des travaux à l'aide de la fonction de recherche et télécharger la table des travaux.</block>
+  <block id="5ade2a57e46cf328c900013574754aa9" category="list-text">La fonction de surveillance des tâches effectue le suivi des tâches _en cours_, _terminées_, _terminées avec des problèmes_, et _échouées_, quotidiennes, hebdomadaires, bimensuelles et mensuelles.</block>
+  <block id="10f9689e79d67ec4a1651805229939e6" category="list-text">Cliquez sur le menu à trois points du travail et cliquez sur *aller à CloudFormation* pour afficher le journal du travail dans la console AWS CloudFormation.</block>
+  <block id="820e39a5de0a231b1bdee7ce11de7c77" category="summary">L'usine de charges de travail BlueXP  pour les bases de données analyse les configurations de Microsoft SQL Server et fournit des informations et des recommandations pour vous aider à atteindre l'excellence opérationnelle.</block>
+  <block id="d156d1de362b4c66bc3effc1835aafe1" category="paragraph">Fabrique de workloads BlueXP  pour les bases de données analyse et évalue en continu les configurations de déploiement de Microsoft SQL Server qui s'exécutent sur Amazon FSX pour NetApp ONTAP. Cette fonctionnalité fournit des informations et des recommandations avec la possibilité d'optimiser automatiquement les configurations non optimisées afin que les workloads de bases de données puissent atteindre l'excellence opérationnelle.</block>
+  <block id="31930d30084ccfe65cbf1bef8898f9a1" category="list-text">Calcul : inclut le dimensionnement approprié et les correctifs du système d'exploitation</block>
+  <block id="2a998f4a900b2db1c9b1028e9f7ff6f4" category="list-text">Applications : inclut les licences Microsoft SQL Server</block>
+  <block id="53c8dd8acbb0f2913fab098279485e71" category="list-text">Dans l'onglet *Inventory*, sélectionnez la flèche déroulante pour développer la ligne de l'hôte et afficher ses instances gérées.</block>
+  <block id="14237fbd8e1fcf850f132ae839f0337b" category="list-text">Sélectionnez le menu à trois points de l'instance, puis sélectionnez *optimiser*.</block>
+  <block id="162d1fe2bfd40fdaf4d1507dff7ac010" category="list-text">Sur la page optimiser l'instance de SQL Server, examinez les résultats de l'évaluation.</block>
+  <block id="1d40c1f145e4257a51df779ce509811e" category="paragraph">Vous pouvez filtrer par catégories, sous-catégories, état, gravité et balises.</block>
+  <block id="2c43db36710e9c59ec3e8117665a6dd6" category="paragraph">Vous pouvez également télécharger un rapport des résultats de l'évaluation en sélectionnant *Exporter PDF*.</block>
+  <block id="7bbfa484f6d4f2fd489e0f9cbab2b174" category="inline-link-macro">découvrez les économies réalisées grâce au calculateur d'économies</block>
+  <block id="7634b96d2de45d4657e04dff8ecded5f" category="paragraph">Lorsque vous avez des hôtes Elastic Block Store ou FSX for Windows File Server dans votre inventaire de bases de données, vous pouvez <block ref="481992ff67d8db3be48d151b768f7ce5" category="inline-link-macro-rx"></block>.</block>
+  <block id="1f14f9d15a2087e9bbf3c4dd4b699191" category="list-text">Dans l'onglet sandbox, cliquez sur le menu à trois points du clone sandbox à actualiser.</block>
+  <block id="e464b3f9b68caf988cec7cd7b5263281" category="list-text">Dans l'onglet sandbox, cliquez sur le menu à trois points du clone sandbox à rétablir.</block>
+  <block id="07755964277c2a6aa1a5c2e771d7dbe0" category="list-text">Dans l'onglet sandbox, cliquez sur le menu à trois points du clone sandbox que vous souhaitez fractionner.</block>
+  <block id="ce638fcfafd4d79a49524062225d7fbc" category="paragraph">Le support doit être enregistré pour recevoir le support technique spécifique à l'usine de workloads BlueXP  ainsi qu'à ses solutions et services de stockage. Vous devez vous inscrire au support depuis la console BlueXP , qui est une console web distincte de la fabrique des charges de travail.</block>
+  <block id="2cbcc262b0a39ec19c5f69bffccb70fb" category="paragraph">L'inscription au support n'active pas le support NetApp pour un service de fichiers de fournisseur cloud. Pour obtenir de l'aide technique concernant un service de fichiers d'un fournisseur cloud, son infrastructure ou toute solution utilisant le service, reportez-vous à la section « obtention d'aide » de la documentation d'usine de la charge de travail de ce produit.</block>
+  <block id="195066d54d760bc240b0879aa7a483bf" category="list-text">Dans l'onglet sandbox, cliquez sur le menu à trois points du clone sandbox pour afficher ses informations de connexion.</block>
+  <block id="13ac5039f81a1aa4ae7419bf17b5b6a0" category="section-title">06 janvier 2025</block>
 </blocks>

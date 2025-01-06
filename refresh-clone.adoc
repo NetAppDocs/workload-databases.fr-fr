@@ -23,9 +23,9 @@ Pour actualiser un clone de base de données à partir d'un instantané, la base
 
 .Étapes
 . Connectez-vous à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
-. Dans la mosaïque bases de données, sélectionnez *aller à bases de données Inventaire*.
+. Dans la mosaïque bases de données, sélectionnez *aller à l'inventaire des bases de données*.
 . Dans bases de données, sélectionnez l'onglet *sandbox*.
-. Dans l'onglet sandbox, cliquez sur le menu trois points du clone sandbox à actualiser.
+. Dans l'onglet sandbox, cliquez sur le menu à trois points du clone sandbox à actualiser.
 . Sélectionnez *Rafraîchir*.
 . Dans la boîte de dialogue Actualiser, sélectionnez l'une des options suivantes :
 +

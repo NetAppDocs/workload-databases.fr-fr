@@ -18,9 +18,9 @@ Pour livrer automatiquement une nouvelle version du logiciel au clone de votre b
 
 .Étapes
 . Connectez-vous à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
-. Dans la mosaïque bases de données, sélectionnez *aller à bases de données Inventaire*.
+. Dans la mosaïque bases de données, sélectionnez *aller à l'inventaire des bases de données*.
 . Dans bases de données, sélectionnez l'onglet *sandbox*.
-. Dans l'onglet sandbox, cliquez sur le menu trois points du clone sandbox pour vous connecter aux outils ci/CD.
+. Dans l'onglet sandbox, cliquez sur le menu à trois points du clone sandbox pour vous connecter aux outils ci/CD.
 . Sélectionnez *se connecter aux outils ci/CD*.
 . Dans la boîte de dialogue ci/CD, copiez ou téléchargez le code API REST nécessaire pour vous connecter aux outils ci/CD.
 . Cliquez sur *Fermer*.

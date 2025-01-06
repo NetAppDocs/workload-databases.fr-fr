@@ -102,10 +102,4 @@ Workload Factory ne prend pas en charge la création ou l'enregistrement de conf
 
 == Disponibilité régionale pour le déploiement de Microsoft SQL Server dans un réseau privé avec Terraform
 
-Le déploiement de Microsoft SQL Server dans un réseau privé sans connectivité sortante via Terraform est uniquement pris en charge dans la région US-East-1 (N. Virginia).
-
-
-
-== Prise en charge de PostgreSQL
-
-PostgreSQL ne prend pas en charge Amazon CloudWatch ni le déploiement dans un réseau privé.
+Le déploiement de Microsoft SQL Server dans un réseau privé sans connectivité sortante via Terraform est uniquement pris en charge dans la région US-East-1 (N. Virginia). PostgreSQL ne prend pas en charge Amazon CloudWatch ni le déploiement dans un réseau privé.

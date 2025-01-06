@@ -56,13 +56,13 @@ Lorsqu'une instance Microsoft SQL est détectée, l'environnement existant n'est
 
 .Étapes
 . Connectez-vous à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
-. Dans la mosaïque bases de données, sélectionnez *aller à bases de données Inventaire*.
+. Dans la mosaïque bases de données, sélectionnez *aller à l'inventaire des bases de données*.
 . Dans bases de données, sélectionnez l'onglet *Inventaire*.
 . Cliquez sur la flèche déroulante pour développer la ligne de l'hôte à détecter.
 +
 L'hôte se développe et les instances hôte s'affichent.
 
-. Cliquez sur le menu des trois points de l'instance à détecter.
+. Cliquez sur le menu à trois points de l'instance à détecter.
 . Cliquez sur *détecter*.
 . Dans la boîte de dialogue *Detect instance*, indiquez le nom d'utilisateur et le mot de passe Microsoft SQL Server ou le nom d'utilisateur et le mot de passe FSX for ONTAP.
 +

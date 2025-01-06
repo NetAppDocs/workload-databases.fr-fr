@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: optimize-configurations.html 
 keywords: optimize, configuration, storage, compute, application, resiliency assessment, scan, optimization, Microsoft SQL Server, host, instance, FSx for ONTAP 
-summary: 'L"usine de workloads BlueXP  pour les bases de données analyse les configurations de stockage des serveurs Microsoft SQL et fournit des informations et des recommandations pour vous aider à atteindre l"excellence opérationnelle.' 
+summary: 'L"usine de charges de travail BlueXP  pour les bases de données analyse les configurations de Microsoft SQL Server et fournit des informations et des recommandations pour vous aider à atteindre l"excellence opérationnelle.' 
 ---
 = Optimisez les configurations pour les déploiements Microsoft SQL Server
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: 'L"usine de workloads BlueXP  pour les bases de données analyse les c
 
 
 [role="lead"]
-Fabrique de workloads BlueXP  pour les bases de données analyse et évalue en continu les configurations de déploiement de Microsoft SQL Server qui s'exécutent sur Amazon FSX pour NetApp ONTAP. Grâce aux évaluations, vous bénéficiez d'informations exploitables, de recommandations et d'optimisations pour atteindre l'excellence opérationnelle.
+Fabrique de workloads BlueXP  pour les bases de données analyse et évalue en continu les configurations de déploiement de Microsoft SQL Server qui s'exécutent sur Amazon FSX pour NetApp ONTAP. Cette fonctionnalité fournit des informations et des recommandations avec la possibilité d'optimiser automatiquement les configurations non optimisées afin que les workloads de bases de données puissent atteindre l'excellence opérationnelle.
 
 .Description de la tâche
 L'évaluation s'exécute automatiquement et en continu une fois par jour pour les instances de Microsoft SQL Server avec FSX pour le stockage ONTAP géré en usine de workloads. Les rapports d'évaluation sont disponibles dans le tableau de bord d'optimisation uniquement si une tâche planifiée quotidienne s'est exécutée après le déploiement ou après la gestion d'une instance.
@@ -24,7 +24,8 @@ Ce qui est numérisé:: Workload Factory évalue l'état d'optimisation des conf
 * Dimensionnement du stockage : inclut le niveau de stockage, la marge du système de fichiers, la taille du disque du journal et la taille du disque TempDB
 * Disposition du stockage : inclut le placement des fichiers de données utilisateur, le placement des fichiers journaux et le placement de TempDB
 * Configuration du stockage : inclut la gestion de la capacité, le provisionnement fin, la règle de hiérarchisation, les snapshots, l'état des E/S à chemins d'accès multiples, la règle et les sessions, etc
-* Calcul : inclut le dimensionnement approprié
+* Calcul : inclut le dimensionnement approprié et les correctifs du système d'exploitation
+* Applications : inclut les licences Microsoft SQL Server
 
 
 --
@@ -38,19 +39,18 @@ Ce qui est numérisé:: Workload Factory évalue l'état d'optimisation des conf
 
 .Étapes
 . Connectez-vous à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
-. Dans la mosaïque bases de données, sélectionnez *aller à bases de données Inventaire*.
-. Dans bases de données, sélectionnez l'onglet *Inventaire*.
-. Cliquez sur la flèche déroulante pour développer la ligne de l'hôte et afficher ses instances gérées.
+. Dans la mosaïque bases de données, sélectionnez *aller à l'inventaire des bases de données*.
+. Dans l'onglet *Inventory*, sélectionnez la flèche déroulante pour développer la ligne de l'hôte et afficher ses instances gérées.
 +
-L'hôte se développe et les instances hôtes s'affichent.
+L'hôte se développe et les instances hôte s'affichent.
 
-. Sélectionnez le menu des trois points de l'instance à analyser, puis sélectionnez *optimiser*.
-. Sur la page optimiser l'instance de l'hôte, examinez les résultats de l'évaluation du stockage.
+. Sélectionnez le menu à trois points de l'instance, puis sélectionnez *optimiser*.
+. Sur la page optimiser l'instance de SQL Server, examinez les résultats de l'évaluation.
 +
-Les filtres sont disponibles pour trier par catégories, sous-catégories, état, gravité et balises.
+Vous pouvez filtrer par catégories, sous-catégories, état, gravité et balises.
 
 +
-Si nécessaire, vous pouvez télécharger un rapport des résultats en sélectionnant *Exporter PDF*.
+Vous pouvez également télécharger un rapport des résultats de l'évaluation en sélectionnant *Exporter PDF*.
 
 . Sélectionnez la flèche déroulante pour afficher les recommandations pour une configuration. Assurez-vous de revoir attentivement la recommandation.
 +

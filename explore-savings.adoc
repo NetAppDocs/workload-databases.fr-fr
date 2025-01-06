@@ -13,11 +13,48 @@ summary: 'Comparez les coûts liés à l"utilisation d"Amazon Elastic Block Stor
 [role="lead"]
 Découvrez les économies réalisées grâce à l'usine de workloads BlueXP  pour les bases de données pour vos workloads de bases de données, en comparant les coûts liés à l'utilisation d'Amazon Elastic Block Store (EBS) et FSX pour le stockage des serveurs de fichiers Windows avec FSX pour le stockage ONTAP.
 
-L'usine de workloads fournit un calculateur d'économies. Vous pouvez donc comparer les différents composants de coûts liés à l'exécution des workloads Microsoft SQL Server, tels que le stockage, le calcul, la licence SQL, les snapshots et les clones pour vos workloads de base de données sur les systèmes de fichiers FSX pour ONTAP avec Elastic Block Store (EBS) et FSX pour le stockage serveur de fichiers Windows. Selon vos besoins en stockage, vous constaterez peut-être que les systèmes de fichiers FSX pour ONTAP sont les plus économiques pour vos workloads de base de données. Le calculateur indique si le stockage des workloads de base de données sur ces serveurs Microsoft SQL coûterait moins cher si vous utilisez un système de fichiers FSX pour ONTAP.
+
+
+== Description de la tâche
+
+L'usine de workloads fournit un calculateur d'économies. Vous pouvez donc comparer les différents composants de coûts liés à l'exécution des workloads Microsoft SQL Server, tels que le stockage, le calcul, la licence SQL, les snapshots et les clones pour vos workloads de base de données sur les systèmes de fichiers FSX pour ONTAP avec Elastic Block Store (EBS) et FSX pour le stockage serveur de fichiers Windows. Selon vos besoins en stockage, vous constaterez peut-être que les systèmes de fichiers FSX pour ONTAP sont les plus économiques pour vos workloads de base de données.
+
+Le calculateur indique si le stockage des workloads de base de données sur ces serveurs Microsoft SQL coûterait moins cher si vous utilisez un système de fichiers FSX pour ONTAP.
 
 image:screenshot-ebs-savings-calculator.png["Une capture d'écran de la page du calculateur d'économies montre la configuration Microsoft SQL Server sélectionnée sur Amazon Elastic Block Store à gauche avec l'option de personnalisation des valeurs de snapshot et de clone. Les économies réalisées en pourcentage et en montant, ainsi que le coût mensuel total pour l'utilisation de Microsoft SQL Server sur FSX pour ONTAP et du stockage Elastic Block Store s'affichent à gauche."]
 
 Si l'usine de workloads détermine que vous pourriez économiser de l'argent en exécutant ces workloads sur un système de fichiers FSX pour ONTAP, vous pouvez déployer Microsoft SQL sur FSX pour ONTAP directement à partir du calculateur de l'usine de workloads. Si vous avez plusieurs instances de Microsoft SQL Server sur le stockage Elastic Block Store ou FSX pour le serveur de fichiers Windows, nous vous recommandons une configuration FSX pour ONTAP avec une seule instance SQL.
+
+
+
+== Analyse du déploiement de SQL Server
+
+Le calculateur effectue une analyse complète de votre déploiement SQL Server afin de s'assurer que les ressources et les fonctionnalités utilisées sont adaptées à l'édition SQL Server. Voici les facteurs et conditions clés que le calculateur vérifie avant de recommander une mise à niveau vers l'édition Standard :
+
+Modèle de déploiement:: Le calculateur évalue le modèle de déploiement et indique si l'édition Enterprise est requise.
+Ressources allouées:: Le calculateur évalue les conditions des ressources allouées dépendant de la licence suivantes :
++
+--
+* Instance cible vCPU : l'instance possède 48 processeurs virtuels ou moins.
+* Allocation de mémoire : l'instance dispose de 128 Go ou moins de mémoire.
+
+
+--
+Utilisation des fonctionnalités d'entreprise:: Le calculateur vérifie si l'une des fonctions Enterprise suivantes est utilisée :
++
+--
+* Fonctionnalités d'entreprise au niveau de la base de données
+* Opérations d'index en ligne
+* Gouverneur de ressources
+* Réplication Oracle ou peer-to-peer
+* Extensions R/Python
+* Base de données de temps optimisée pour la mémoire
+
+
+--
+
+
+Si l'instance SQL Server évaluée n'utilise aucune des fonctionnalités d'entreprise ci-dessus et répond aux contraintes de ressources, la calculatrice recommande de rétrograder la licence vers l'édition Standard. Cette recommandation est faite pour vous aider à optimiser vos coûts de licence SQL Server sans compromettre les performances ou les fonctionnalités.
 
 
 
@@ -31,7 +68,7 @@ Explorer les économies pour les hôtes détectés : les liens d'usine des charg
 
 
 
-== Explorer les économies via la personnalisation
+=== Explorer les économies via la personnalisation
 
 Suivez les étapes de l'onglet correspondant à votre type de stockage.
 
@@ -111,7 +148,7 @@ De plus, faites défiler jusqu'au bas de la page jusqu'à *Exporter au format PD
 ====
 
 
-== Découvrez les économies réalisées pour les hôtes détectés
+=== Découvrez les économies réalisées pour les hôtes détectés
 
 L'usine de workloads saisit les caractéristiques d'hôte Elastic Block Store et FSX pour serveur de fichiers Windows détectées pour explorer automatiquement les économies réalisées.
 

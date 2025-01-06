@@ -18,9 +18,9 @@ Lorsque vous créez un clone sandbox à partir d'une base de données source alo
 
 .Étapes
 . Connectez-vous à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
-. Dans la mosaïque bases de données, sélectionnez *aller à bases de données Inventaire*.
+. Dans la mosaïque bases de données, sélectionnez *aller à l'inventaire des bases de données*.
 . Dans bases de données, sélectionnez l'onglet *sandbox*.
-. Dans l'onglet sandbox, cliquez sur le menu trois points du clone sandbox pour vérifier son intégrité.
+. Dans l'onglet sandbox, cliquez sur le menu à trois points du clone sandbox pour vérifier son intégrité.
 . Sélectionnez *Exécuter le contrôle d'intégrité*.
 . Dans la boîte de dialogue Vérification d'intégrité, cliquez sur *Vérification d'intégrité*.
 . Vérifiez l'état de la vérification d'intégrité dans les sandbox ou dans la surveillance des travaux.

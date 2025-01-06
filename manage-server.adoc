@@ -62,7 +62,7 @@ Avant de commencer, remplissez les conditions préalables suivantes :
 
 .Étapes
 . Connectez-vous à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
-. Dans la mosaïque bases de données, sélectionnez *aller à bases de données Inventaire*.
+. Dans la mosaïque bases de données, sélectionnez *aller à l'inventaire des bases de données*.
 . Dans bases de données, sélectionnez l'onglet *Inventaire*.
 . Cliquez sur *gérer* dans la ligne de l'hôte à gérer.
 . Sélectionnez une ou plusieurs instances hôtes à gérer.
@@ -79,7 +79,7 @@ Vous pouvez afficher une instance gérée en suivant ces étapes.
 
 .Étapes
 . Connectez-vous à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
-. Dans la mosaïque bases de données, sélectionnez *aller à bases de données Inventaire*.
+. Dans la mosaïque bases de données, sélectionnez *aller à l'inventaire des bases de données*.
 . Dans bases de données, sélectionnez l'onglet *Inventaire*.
 . Cliquez sur la flèche déroulante pour développer la ligne de l'hôte et afficher ses instances gérées.
 +
@@ -99,7 +99,7 @@ Vous pouvez afficher les bases de données gérées par l'instance gérée en su
 
 .Étapes
 . Connectez-vous à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
-. Dans la mosaïque bases de données, sélectionnez *aller à bases de données Inventaire*.
+. Dans la mosaïque bases de données, sélectionnez *aller à l'inventaire des bases de données*.
 . Dans bases de données, sélectionnez l'onglet *Inventaire*.
 . Cliquez sur la flèche déroulante pour développer la ligne de l'hôte et afficher ses bases de données.
 +
@@ -120,13 +120,13 @@ Annulez la gestion d'une instance hôte en suivant ces étapes.
 
 .Étapes
 . Connectez-vous à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
-. Dans la mosaïque bases de données, sélectionnez *aller à bases de données Inventaire*.
+. Dans la mosaïque bases de données, sélectionnez *aller à l'inventaire des bases de données*.
 . Dans bases de données, sélectionnez l'onglet *Inventaire*.
 . Cliquez sur la flèche déroulante pour développer la ligne de l'instance hôte à gérer.
 +
 L'hôte se développe et les instances hôtes s'affichent.
 
-. Cliquez sur le menu des trois points de l'instance à gérer.
+. Cliquez sur le menu à trois points de l'instance à gérer.
 . Sélectionnez *Unmanage*.
 
 

@@ -32,7 +32,7 @@ Base de données source:: Une base de données source est nécessaire pour le cl
 
 .Étapes
 . Connectez-vous à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
-. Dans la mosaïque bases de données, sélectionnez *aller à bases de données Inventaire*.
+. Dans la mosaïque bases de données, sélectionnez *aller à l'inventaire des bases de données*.
 . Dans bases de données, sélectionnez l'onglet *sandbox*.
 . Dans l'onglet sandbox, sélectionnez *Créer un nouveau bac à sable*.
 . Sur la page Créer un nouveau sandbox, sous Source de base de données, fournissez les éléments suivants :

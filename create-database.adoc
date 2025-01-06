@@ -49,7 +49,7 @@ Vous pouvez utiliser les modes de déploiement _Quick CREATE_ ou _Advanced CREAT
 --
 .Étapes
 . Connectez-vous à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
-. Dans la mosaïque bases de données, sélectionnez *aller à bases de données Inventaire*.
+. Dans la mosaïque bases de données, sélectionnez *aller à l'inventaire des bases de données*.
 . Dans bases de données, sélectionnez l'onglet *Inventaire*.
 . Dans l'onglet Inventaire, sélectionnez un serveur de base de données avec une instance de serveur SQL gérée dans laquelle créer la base de données.
 . Cliquez sur le menu à trois points de l'instance gérée, puis sélectionnez *Créer une base de données utilisateur*.
@@ -82,7 +82,7 @@ Sinon, si vous voulez modifier l'un de ces paramètres par défaut maintenant, c
 --
 .Étapes
 . Connectez-vous à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
-. Dans la mosaïque bases de données, sélectionnez *aller à bases de données Inventaire*.
+. Dans la mosaïque bases de données, sélectionnez *aller à l'inventaire des bases de données*.
 . Dans bases de données, sélectionnez l'onglet *Inventaire*.
 . Dans l'onglet Inventaire, sélectionnez un serveur de base de données avec une instance de serveur SQL gérée dans laquelle créer la base de données.
 . Cliquez sur le menu à trois points de l'instance gérée, puis sélectionnez *Créer une base de données utilisateur*.
