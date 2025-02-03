@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar 
 permalink: explore-savings.html 
-keywords: cost, savings, compare costs, EBS, FSx for ONTAP 
-summary: 'Comparez les coûts liés à l"utilisation d"Amazon Elastic Block Store (EBS) et du stockage FSX pour serveur de fichiers Windows avec FSX pour le stockage ONTAP et les économies réalisées pour les workloads de bases de données.' 
+keywords: cost, savings, compare costs, EBS, FSx for Windows File Server, SQL Server on-premises, on-premises, FSx for ONTAP 
+summary: 'Comparez les coûts liés à l"utilisation d"Amazon Elastic Block Store (EBS), de FSX pour serveur de fichiers Windows et du stockage de base de données sur site SQL Server avec le stockage FSX pour ONTAP.' 
 ---
 = Découvrez les économies réalisées grâce à l'usine de workloads BlueXP  pour les bases de données
 :allow-uri-read: 
@@ -11,19 +11,19 @@ summary: 'Comparez les coûts liés à l"utilisation d"Amazon Elastic Block Stor
 
 
 [role="lead"]
-Découvrez les économies réalisées grâce à l'usine de workloads BlueXP  pour les bases de données pour vos workloads de bases de données, en comparant les coûts liés à l'utilisation d'Amazon Elastic Block Store (EBS) et FSX pour le stockage des serveurs de fichiers Windows avec FSX pour le stockage ONTAP.
+Découvrez les économies réalisées grâce à l'usine de workloads BlueXP  pour les bases de données de vos workloads de bases de données en comparant les coûts d'utilisation de Microsoft SQL Server sur Amazon Elastic Block Store (EBS), FSX pour serveur de fichiers Windows et du stockage sur site avec FSX pour ONTAP.
 
 
 
 == Description de la tâche
 
-L'usine de workloads fournit un calculateur d'économies. Vous pouvez donc comparer les différents composants de coûts liés à l'exécution des workloads Microsoft SQL Server, tels que le stockage, le calcul, la licence SQL, les snapshots et les clones pour vos workloads de base de données sur les systèmes de fichiers FSX pour ONTAP avec Elastic Block Store (EBS) et FSX pour le stockage serveur de fichiers Windows. Selon vos besoins en stockage, vous constaterez peut-être que les systèmes de fichiers FSX pour ONTAP sont les plus économiques pour vos workloads de base de données.
+L'usine de workloads fournit un calculateur d'économies. Vous pouvez donc comparer les différents composants de coûts liés à l'exécution des workloads Microsoft SQL Server, tels que le stockage, le calcul, la licence SQL, les snapshots et les clones pour vos workloads de base de données sur les systèmes de fichiers FSX pour ONTAP avec Elastic Block Store (EBS), FSX pour serveur de fichiers Windows et le stockage sur site. Selon vos besoins en stockage, vous constaterez peut-être que les systèmes de fichiers FSX pour ONTAP sont les plus économiques pour vos workloads de base de données.
 
 Le calculateur indique si le stockage des workloads de base de données sur ces serveurs Microsoft SQL coûterait moins cher si vous utilisez un système de fichiers FSX pour ONTAP.
 
 image:screenshot-ebs-savings-calculator.png["Une capture d'écran de la page du calculateur d'économies montre la configuration Microsoft SQL Server sélectionnée sur Amazon Elastic Block Store à gauche avec l'option de personnalisation des valeurs de snapshot et de clone. Les économies réalisées en pourcentage et en montant, ainsi que le coût mensuel total pour l'utilisation de Microsoft SQL Server sur FSX pour ONTAP et du stockage Elastic Block Store s'affichent à gauche."]
 
-Si l'usine de workloads détermine que vous pourriez économiser de l'argent en exécutant ces workloads sur un système de fichiers FSX pour ONTAP, vous pouvez déployer Microsoft SQL sur FSX pour ONTAP directement à partir du calculateur de l'usine de workloads. Si vous avez plusieurs instances de Microsoft SQL Server sur le stockage Elastic Block Store ou FSX pour le serveur de fichiers Windows, nous vous recommandons une configuration FSX pour ONTAP avec une seule instance SQL.
+Si l'usine de workloads détermine que vous pourriez économiser de l'argent en exécutant ces workloads sur un système de fichiers FSX pour ONTAP, vous pouvez déployer Microsoft SQL sur FSX pour ONTAP directement à partir du calculateur de l'usine de workloads. Si vous avez plusieurs instances de Microsoft SQL Server sur Elastic Block Store, FSX pour serveur de fichiers Windows ou sur site, nous vous recommandons une configuration FSX pour ONTAP avec une seule instance SQL.
 
 
 
@@ -204,6 +204,45 @@ Si des clichés instantanés FSX pour Windows sont détectés, la valeur par dé
 
 .. *Fréquence d'actualisation des clones* : sélectionnez la fréquence d'actualisation des clones dans le menu déroulant.
 .. *Nombre de copies clonées* : entrez le nombre de copies clonées dans la configuration FSX pour Windows.
+.. *Taux de modification mensuel* : saisissez le pourcentage de changements de données de clonage et d'instantanés en moyenne par mois.
+
+
+. Passez en revue les calculs et les recommandations fournis sur la page.
++
+De plus, faites défiler jusqu'au bas de la page jusqu'à *Exporter au format PDF* ou *Afficher les calculs*.
+
+
+
+--
+.Microsoft SQL Server sur site
+--
+.Étapes
+. Connectez-vous à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
+. Dans la mosaïque bases de données, sélectionnez *Explorer les économies* puis *Microsoft SQL Server sur site* dans le menu déroulant.
+. Dans l'onglet sur site de SQL Server, téléchargez le script pour évaluer vos environnements SQL Server sur site.
++
+.. Téléchargez le script d'évaluation. Le script est un outil de collecte de données basé sur PowerShell. Il collecte, puis télécharge les données de configuration et de performance SQL Server vers l'usine de workloads BlueXP . Le conseiller en migration évalue les données et planifie le déploiement de FSX pour ONTAP dans votre environnement SQL Server.
++
+image:screenshot-download-script-on-premises.png["Une capture d'écran de l'onglet sur site de SQL Server montre l'option de téléchargement du script d'évaluation."]
+
+.. Exécutez le script sur l'hôte SQL Server.
+.. Chargez la sortie du script dans l'onglet SQL Server on-prlocale de l'usine de la charge de travail.
++
+image:screenshot-upload-script-on-premises.png["Une capture d'écran de l'onglet sur site de SQL Server montre l'option de téléchargement du script d'évaluation."]
+
+
+
+. Dans l'onglet SQL Server sur site, sélectionnez *Explorer les économies* pour exécuter une analyse des coûts de l'hôte SQL Server sur site par rapport à FSX pour ONTAP.
+. Dans le calculateur d'économies, sélectionnez la région de l'hôte sur site.
+. Pour des résultats plus précis, mettez à jour les informations de calcul et les informations sur le stockage et les performances.
+. Éventuellement, fournissez les informations suivantes sur les clones (clichés instantanés) et les snapshots dans votre environnement de base de données sur site pour une estimation plus précise des économies réalisables.
++
+.. *Fréquence d'instantané* : sélectionnez une fréquence d'instantané dans le menu déroulant.
++
+Si des clichés instantanés FSX pour Windows sont détectés, la valeur par défaut est *Daily*. Si les clichés instantanés ne sont pas détectés, la valeur par défaut est *pas de fréquence d'instantanés*.
+
+.. *Fréquence d'actualisation des clones* : sélectionnez la fréquence d'actualisation des clones dans le menu déroulant.
+.. *Nombre de copies clonées* : entrez le nombre de copies clonées dans la configuration sur site.
 .. *Taux de modification mensuel* : saisissez le pourcentage de changements de données de clonage et d'instantanés en moyenne par mois.
 
 

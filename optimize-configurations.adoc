@@ -16,7 +16,7 @@ Fabrique de workloads BlueXP  pour les bases de données analyse et évalue en 
 .Description de la tâche
 L'évaluation s'exécute automatiquement et en continu une fois par jour pour les instances de Microsoft SQL Server avec FSX pour le stockage ONTAP géré en usine de workloads. Les rapports d'évaluation sont disponibles dans le tableau de bord d'optimisation uniquement si une tâche planifiée quotidienne s'est exécutée après le déploiement ou après la gestion d'une instance.
 
-Workload Factory fournit des recommandations détaillées pour optimiser les configurations en fonction des meilleures pratiques de stockage FSX pour ONTAP.
+Workload Factory fournit des recommandations détaillées pour optimiser les configurations en fonction des meilleures pratiques de stockage FSX pour ONTAP. Vous pouvez consulter les recommandations et choisir d'optimiser les configurations non optimisées.
 
 Ce qui est numérisé:: Workload Factory évalue l'état d'optimisation des configurations suivantes pour les instances Microsoft SQL Server :
 +
@@ -24,8 +24,8 @@ Ce qui est numérisé:: Workload Factory évalue l'état d'optimisation des conf
 * Dimensionnement du stockage : inclut le niveau de stockage, la marge du système de fichiers, la taille du disque du journal et la taille du disque TempDB
 * Disposition du stockage : inclut le placement des fichiers de données utilisateur, le placement des fichiers journaux et le placement de TempDB
 * Configuration du stockage : inclut la gestion de la capacité, le provisionnement fin, la règle de hiérarchisation, les snapshots, l'état des E/S à chemins d'accès multiples, la règle et les sessions, etc
-* Calcul : inclut le dimensionnement approprié et les correctifs du système d'exploitation
-* Applications : inclut les licences Microsoft SQL Server
+* Calcul : inclut le dimensionnement approprié, les correctifs du système d'exploitation et les paramètres de la carte réseau tels que le RSS (Receive Side Scaling) et le déchargement TCP
+* Applications : inclut les licences Microsoft SQL Server, le correctif Microsoft SQL Server et les paramètres MAXDOP
 
 
 --
@@ -34,8 +34,11 @@ Ce qui est numérisé:: Workload Factory évalue l'état d'optimisation des conf
 .Avant de commencer
 * Vous devez disposer d'informations d'identification avec des autorisations de lecture ou d'automatisation.
 * Pour évaluer le stockage d'une instance de Microsoft SQL Server, l'instance doit être gérée par usine de workloads et le type de stockage doit être FSX pour ONTAP.
-* Assurez-vous de revoir attentivement chaque recommandation avant de choisir d'optimiser un paramètre ou une configuration.
+* Assurez-vous de revoir attentivement chaque recommandation avant de choisir d'optimiser un paramètre ou une configuration. Pour les paramètres RSS et MAXDOP, nous vous suggérons de tester les paramètres recommandés pour déterminer les améliorations de performances avant d'apporter des modifications à votre environnement de production.
 
+
+
+NOTE: Le processus d'optimisation peut entraîner des temps d'indisponibilité d'instance ou des interruptions de service. Vérifiez le résumé de l'optimisation et les éléments d'action avant de choisir d'optimiser une configuration.
 
 .Étapes
 . Connectez-vous à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
