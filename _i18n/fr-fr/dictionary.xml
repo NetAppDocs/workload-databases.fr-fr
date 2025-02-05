@@ -958,4 +958,9 @@
   <block id="7a4fa85db3c457278cffd34e817477ab" category="list-text">Assurez-vous de revoir attentivement chaque recommandation avant de choisir d'optimiser un paramètre ou une configuration. Pour les paramètres RSS et MAXDOP, nous vous suggérons de tester les paramètres recommandés pour déterminer les améliorations de performances avant d'apporter des modifications à votre environnement de production.</block>
   <block id="926cb4c482170392f69cc268b20f8346" category="admonition">Le processus d'optimisation peut entraîner des temps d'indisponibilité d'instance ou des interruptions de service. Vérifiez le résumé de l'optimisation et les éléments d'action avant de choisir d'optimiser une configuration.</block>
   <block id="1c8d307950dbef59ce61b6bc729fdb52" category="section-title">03 février 2025</block>
+  <block id="382e51924c0a806fea2a0017322199a5" category="section-title">Limitations de l'optimisation</block>
+  <block id="d65e48d2f6a810cde4c31e5a88aecedb" category="section-title">Optimisation de la configuration ONTAP et OS</block>
+  <block id="8e29c0a71b0719e3f6ed28d4a7c0b30d" category="paragraph">L'optimisation en bloc de plusieurs instances SQL Server n'est pas prise en charge pour la configuration ONTAP et la configuration du système d'exploitation.</block>
+  <block id="7dd6090f4d4627220763b41db74bb898" category="section-title">Calcul des économies sur site</block>
+  <block id="9fb10d1d0413bc062aa3f807aa200e53" category="paragraph">Les calculs des économies et des pourcentages de la taille du volume pour le stockage sur site Microsoft SQL Server ne sont pas pris en compte.</block>
 </blocks>

@@ -100,12 +100,28 @@ Workload Factory ne prend pas en charge la création ou l'enregistrement de conf
 
 
 
-== Évaluation des correctifs du système d'exploitation pour l'optimisation
+== Limitations de l'optimisation
+
+
+
+=== Optimisation du dimensionnement approprié des ressources de calcul
+
+Lors du passage à certains types d'instances, la configuration réseau peut être réinitialisée, ce qui peut entraîner un échec de la connexion au nœud pendant l'optimisation et entraîner l'échec du travail. Une intervention manuelle peut être nécessaire pour vérifier et mettre à jour le paramètre DNS et les sessions iSCSI. Pour plus d'informations sur les limites de redimensionnement EC2, reportez-vous à la sectionlink:https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/resize-limitations.html["Documentation d'Amazon Elastic Compute Cloud"^].
+
+
+
+=== Optimisation de la configuration ONTAP et OS
+
+L'optimisation en bloc de plusieurs instances SQL Server n'est pas prise en charge pour la configuration ONTAP et la configuration du système d'exploitation.
+
+
+
+=== Évaluation des correctifs du système d'exploitation pour l'optimisation
 
 L'évaluation des correctifs du système d'exploitation effectuée à des fins d'optimisation peut ne pas fonctionner sur un réseau privé. L'évaluation repose sur AWS Patch Manager. Pour savoir comment appliquer des correctifs aux instances Windows EC2 dans un réseau privé, reportez-vous à la section link:https://aws.amazon.com/blogs/mt/how-to-patch-windows-ec2-instances-in-private-subnets-using-aws-systems-manager/["Blog AWS Cloud Operations « Comment corriger les instances Windows EC2 dans des sous-réseaux privés à l'aide d'AWS Systems Manager »"^].
 
 
 
-== Optimisation du dimensionnement approprié des ressources de calcul
+== Calcul des économies sur site
 
-Lors du passage à certains types d'instances, la configuration réseau peut être réinitialisée, ce qui peut entraîner un échec de la connexion au nœud pendant l'optimisation et entraîner l'échec du travail. Une intervention manuelle peut être nécessaire pour vérifier et mettre à jour le paramètre DNS et les sessions iSCSI. Pour plus d'informations sur les limites de redimensionnement EC2, reportez-vous à la sectionlink:https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/resize-limitations.html["Documentation d'Amazon Elastic Compute Cloud"^].
+Les calculs des économies et des pourcentages de la taille du volume pour le stockage sur site Microsoft SQL Server ne sont pas pris en compte.
