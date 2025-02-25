@@ -43,6 +43,14 @@ Pour gérer une instance hôte dans un réseau privé sans connectivité externe
 * `fsx`
 
 
+Si vous utilisez un serveur proxy pour toutes les connexions sortantes des instances EC2, vous devez autoriser l'accès aux domaines suivants afin que les opérations de gestion fonctionnent :
+
+* ``.microsoft.com``
+* ``.powershellgallery.com``
+* ``.aws.amazon.com``
+* ``.amazonaws.com``
+
+
 .Avant de commencer
 Avant de commencer, remplissez les conditions préalables suivantes :
 
