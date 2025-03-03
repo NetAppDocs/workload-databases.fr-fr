@@ -14,9 +14,7 @@ summary: 'Créez un nouveau serveur Microsoft SQL Server au sein de l"usine de c
 La création d'un nouvel hôte de base de données ou serveur Microsoft SQL Server dans l'usine de workloads BlueXP  pour les bases de données nécessite un déploiement de système de fichiers FSX pour ONTAP et des ressources pour Active Directory.
 
 .Description de la tâche
-Vous aurez besoin des identifiants de compte AWS et des autorisations _automate_.
-
-Avant de commencer, découvrez les types de déploiement de stockage disponibles pour la configuration des hôtes de base de données, le déploiement d'Active Directory, les modes de fonctionnement par défaut des charges de travail et les conditions requises pour effectuer cette opération.
+Avant de créer un serveur Microsoft SQL Server à partir d'une usine de charges de travail, découvrez les types de déploiement de stockage disponibles pour la configuration de l'hôte de base de données, le déploiement d'Active Directory, les modes de fonctionnement par défaut des charges de travail et les conditions requises pour effectuer cette opération.
 
 Après le déploiement, vous devrez <<Étape 2 : activez la connexion à distance sur Microsoft SQL Server,Activez la connexion à distance sur Microsoft SQL Server>>.
 

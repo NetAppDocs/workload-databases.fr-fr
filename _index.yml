@@ -15,12 +15,16 @@ indexpage:
       url: "/quick-start-databases.html"
   - title: Utilisez des bases de données
     links:
-    - title: Créez un serveur de base de données
+    - title: Découvrez les économies
+      url: "/explore-savings.html"
+    - title: Créez un serveur Microsoft SQL
       url: "/create-database-server.html"
+    - title: Créez un serveur PostgreSQL
+      url: "/create-postgresql-server.html"
     - title: Créer une base de données
       url: "/create-database.html"
-    - title: Surveiller une base de données
-      url: "/monitor-databases.html"
+    - title: Optimiser les configurations
+      url: "/optimize-configurations.html"
   - title: Connaissances et support
     links:
     - title: S'inscrire pour obtenir de l'aide

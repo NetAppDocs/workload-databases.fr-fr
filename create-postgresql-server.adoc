@@ -14,14 +14,16 @@ summary: 'Créez un nouveau serveur SQL PostgreSQL dans l"usine de charges de tr
 La création d'un nouveau serveur PostgreSQL, ou hôte de base de données, en usine de charges de travail BlueXP  pour les bases de données nécessite un déploiement de système de fichiers FSX pour ONTAP et des ressources pour Active Directory.
 
 .Description de la tâche
-Vous aurez besoin des identifiants de compte AWS et des autorisations _automate_.
-
-Avant de commencer, découvrez les types de déploiement de stockage disponibles pour la configuration des hôtes de base de données, le déploiement d'Active Directory, les modes de fonctionnement par défaut des charges de travail et les conditions requises pour effectuer cette opération.
+Avant de créer un serveur PostgreSQL à partir de l'usine de charges de travail BlueXP , découvrez les types de déploiement du stockage disponibles pour la configuration des hôtes de base de données, les modes de fonctionnement de l'usine des charges de travail et les conditions requises pour réaliser cette opération.
 
 FSX pour les déploiements de systèmes de fichiers ONTAP:: La création d'un nouveau serveur PostgreSQL requiert un système de fichiers FSX pour ONTAP en tant que système back-end de stockage. Vous pouvez utiliser un système de fichiers FSX pour ONTAP existant ou créer un nouveau système de fichiers. Si vous sélectionnez un système de fichiers FSX pour ONTAP existant comme back-end de stockage du serveur de base de données, nous créons une nouvelle VM de stockage pour les charges de travail PostgreSQL.
 +
 --
-Les systèmes de fichiers FSX pour ONTAP prennent en charge les déploiements _autonomes_ pour PostgreSQL. La fabrique de workloads crée un système de fichiers FSX pour ONTAP à zone de disponibilité unique en plus de séparer les volumes et les LUN pour les fichiers de données, de journaux et tempdb.
+Les systèmes de fichiers FSX pour ONTAP disposent de deux modèles de déploiement de serveur PostgreSQL : _haute disponibilité (HA)_ ou _instance unique_. Différentes ressources sont créées pour le système de fichiers FSX pour ONTAP selon le modèle de déploiement de FSX pour ONTAP que vous sélectionnez.
+
+* *Déploiement haute disponibilité (HA)* : un système de fichiers FSX pour NetApp ONTAP à plusieurs zones de disponibilité est déployé lorsqu'un nouveau système de fichiers FSX pour ONTAP est sélectionné pour le déploiement haute disponibilité. Des volumes et des LUN distincts sont créés pour les fichiers de données, de journaux et de tempdb pour un déploiement HA. Un volume et une LUN supplémentaires sont créés pour quorum ou disque témoin pour le cluster Windows. Le déploiement HAUTE DISPONIBILITÉ configure la réplication de flux entre les serveurs PostgreSQL principaux et secondaires.
+* *Déploiement d'une instance unique* : un système de fichiers FSX pour ONTAP à zone de disponibilité unique est créé lors de la création d'un nouveau serveur PostgreSQL. De plus, des volumes et des LUN distincts sont créés pour les fichiers de données, de journaux et de tempdb.
+
 
 --
 Modes de fonctionnement d'usine de la charge de travail:: L'usine de workloads propose trois modes opérationnels qui dépendent du niveau de confort avec lequel vous laissez les workloads gérer vos ressources AWS.
@@ -46,14 +48,113 @@ Informations d'identification et autorisations:: Vous devez link:https://docs.ne
 
 == Créez un serveur de base de données
 
-Vous pouvez utiliser le mode de déploiement _Advanced create_ pour effectuer cette tâche en usine de la charge de travail avec des autorisations _automate_ mode. Vous pouvez également utiliser les outils suivants disponibles dans la Codebox : l'API REST, l'interface de ligne de commande AWS et AWS CloudFormation. link:https://docs.netapp.com/us-en/workload-setup-admin/use-codebox.html#how-to-use-codebox["Découvrez comment utiliser Codebox pour l'automatisation"^].
+Vous pouvez utiliser les modes de déploiement _Quick CREATE_ ou _Advanced CREATE_ pour effectuer cette tâche en usine avec des autorisations de mode _automate_. Vous pouvez également utiliser les outils suivants disponibles dans la Codebox : l'API REST, la CLI AWS, AWS CloudFormation et Terraform. link:https://docs.netapp.com/us-en/workload-setup-admin/use-codebox.html#how-to-use-codebox["Découvrez comment utiliser Codebox pour l'automatisation"^].
+
+
+NOTE: Lorsque vous utilisez Terraform à partir de Codebox, le code que vous copiez ou téléchargez se cache `fsxadmin` et `vsadmin` passe. Vous devrez saisir à nouveau les mots de passe lorsque vous exécuterez le code. Vous devrez inclure les autorisations suivantes pour le compte d'utilisateur en plus des autorisations _automate_ mode : `iam:TagRole` et `iam:TagInstanceProfile`. link:https://docs.netapp.com/us-en/workload-setup-admin/use-codebox.html#use-terraform-from-codebox["Découvrez comment utiliser Terraform à partir de Codebox"^].
+
+[role="tabbed-block"]
+====
+.Création rapide
+--
+
+NOTE: Dans _Quick create_, HA est le modèle de déploiement par défaut, Windows 2016 est la version par défaut de Windows et SQL 2019 Standard Edition est la version par défaut de SQL.
 
 .Étapes
 . Connectez-vous à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
-. Dans la mosaïque Databases, sélectionnez *Deploy database host*, puis sélectionnez *PostgreSQL* dans le menu déroulant.
+. Dans la mosaïque Databases, sélectionnez *Deploy database host*, puis sélectionnez *PostgreSQL Server* dans le menu déroulant.
+. Sélectionnez *création rapide*.
+. Sous *zone d'atterrissage*, fournissez les informations suivantes :
++
+.. *Informations d'identification AWS* : sélectionnez les informations d'identification AWS avec des autorisations d'automatisation pour déployer le nouvel hôte de base de données.
++
+Les identifiants AWS avec autorisations _automatiser_ permettent à la charge de travail de déployer et de gérer en usine le nouvel hôte de base de données à partir de votre compte AWS dans l'usine de la charge de travail.
+
++
+Les identifiants AWS avec des autorisations _read_ permettent à l'usine de workloads de générer un modèle CloudFormation que vous pouvez utiliser dans la console AWS CloudFormation.
+
++
+Si vous ne disposez pas d'informations d'identification AWS associées à l'usine de la charge de travail et que vous souhaitez créer le nouveau serveur en usine de la charge de travail, suivez *option 1* pour accéder à la page informations d'identification. Ajoutez manuellement les informations d'identification et les autorisations requises pour _automate_ mode pour les charges de travail de la base de données.
+
++
+Si vous souhaitez remplir le formulaire Créer un nouveau serveur en usine de charges de travail afin de télécharger un modèle de fichier YAML complet pour le déploiement dans AWS CloudFormation, suivez *option 2* pour vous assurer que vous disposez des autorisations requises pour créer le nouveau serveur dans AWS CloudFormation. Ajoutez manuellement les informations d'identification et les autorisations requises pour _read_ mode pour les charges de travail de base de données.
+
++
+Vous pouvez également télécharger un modèle de fichier YAML partiellement rempli à partir de la Codebox pour créer la pile en dehors de l'usine de la charge de travail sans informations d'identification ni autorisations. Sélectionnez *CloudFormation* dans la liste déroulante de la zone de code pour télécharger le fichier YAML.
+
+.. *Région et VPC* : sélectionnez une région et un réseau VPC.
++
+Assurez-vous que les groupes de sécurité d'un noeud final d'interface existant autorisent l'accès au protocole HTTPS (443) aux sous-réseaux sélectionnés.
+
++
+Terminaux de l'interface de services AWS (SQS, FSX, EC2, CloudWatch, CloudFormation, SSM) et le noeud final de la passerelle S3 sont créés pendant le déploiement s'ils sont introuvables.
+
++
+Les attributs DNS VPC `EnableDnsSupport` et `EnableDnsHostnames` sont modifiés pour activer la résolution de l'adresse du terminal s'ils ne sont pas déjà définis sur `true`.
+
+.. *Zones de disponibilité* : sélectionnez les zones de disponibilité et les sous-réseaux.
++
+
+NOTE: Les déploiements HAUTE DISPONIBILITÉ ne sont pris en charge que dans plusieurs configurations FSX pour ONTAP avec plusieurs zones de disponibilité (MAZ).
+
++
+Les sous-réseaux ne doivent pas partager la même table de routage pour la haute disponibilité.
+
++
+... Dans le champ *Configuration du cluster - nœud 1*, sélectionnez la zone de disponibilité principale de la configuration MAZ FSX pour ONTAP dans le menu déroulant *zone de disponibilité* et un sous-réseau dans la zone de disponibilité principale dans le menu déroulant *sous-réseau*.
+... Dans le champ *Configuration du cluster - nœud 2*, sélectionnez la zone de disponibilité secondaire pour la configuration MAZ FSX pour ONTAP dans le menu déroulant *zone de disponibilité* et un sous-réseau dans la zone de disponibilité secondaire dans le menu déroulant *sous-réseau*.
+
+
+
+
+. Sous *Paramètres de l'application*, entrez un nom d'utilisateur et un mot de passe pour *informations d'identification de la base de données*.
+. Sous *connectivité*, sélectionnez une paire de clés pour vous connecter en toute sécurité à votre instance.
+. Sous *Paramètres d'infrastructure*, fournissez les informations suivantes :
++
+.. *FSX pour système ONTAP* : créez un nouveau système de fichiers FSX pour ONTAP ou utilisez un système de fichiers FSX pour ONTAP existant.
++
+... *Créer une nouvelle FSX pour ONTAP* : entrez le nom d'utilisateur et le mot de passe.
++
+Un nouveau système de fichiers FSX pour ONTAP peut ajouter 30 minutes ou plus de temps d'installation.
+
+... *Sélectionnez une FSX pour ONTAP* existante : sélectionnez le nom de FSX pour ONTAP dans le menu déroulant et entrez un nom d'utilisateur et un mot de passe pour le système de fichiers.
++
+Pour les systèmes de fichiers FSX for ONTAP existants, vérifiez les points suivants :
+
++
+**** Le groupe de routage rattaché à FSX pour ONTAP permet d'utiliser les routes vers les sous-réseaux pour le déploiement.
+**** Le groupe de sécurité autorise le trafic à partir des sous-réseaux utilisés pour le déploiement, en particulier les ports TCP HTTPS (443) et iSCSI (3260).
+
+
+
+
+.. *Taille du lecteur de données* : entrez la capacité du lecteur de données et sélectionnez l'unité de capacité.
+
+
+. Résumé :
++
+.. *Prévisualisation par défaut* : consultez les configurations par défaut définies par création rapide.
+.. *Coût estimé* : fournit une estimation des frais que vous pourriez engager si vous avez déployé les ressources indiquées.
+
+
+. Cliquez sur *Créer*.
++
+Sinon, si vous souhaitez modifier l'un de ces paramètres par défaut maintenant, créez le serveur de base de données avec Advanced create.
+
++
+Vous pouvez également sélectionner *Enregistrer la configuration* pour déployer l'hôte ultérieurement.
+
+
+
+--
+.Création avancée
+--
+.Étapes
+. Connectez-vous à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
+. Dans la mosaïque Databases, sélectionnez *Deploy database host*, puis sélectionnez *PostgreSQL Server* dans le menu déroulant.
 . Sélectionnez *création avancée*.
-. Pour *Deployment Model*, *Standalone instance* est la valeur par défaut.
-. Sous *paramètres AWS*, fournissez les informations suivantes :
+. Sous *modèle de déploiement*, sélectionnez *instance autonome* ou *haute disponibilité (HA)*.
+. Sous *zone d'atterrissage*, fournissez les informations suivantes :
 +
 .. *Informations d'identification AWS* : sélectionnez les informations d'identification AWS avec des autorisations d'automatisation pour déployer le nouvel hôte de base de données.
 +
@@ -86,7 +187,14 @@ Les attributs DNS VPC `EnableDnsSupport` et `EnableDnsHostnames` sont modifiés 
 Pour les déploiements à instance unique::
 +
 --
-... Dans le champ *Configuration du cluster - nœud 1*, sélectionnez une zone de disponibilité dans le menu déroulant *zone de disponibilité* et un sous-réseau dans le menu déroulant *sous-réseau*.
+Dans le champ *Configuration du cluster - nœud 1*, sélectionnez une zone de disponibilité dans le menu déroulant *zone de disponibilité* et un sous-réseau dans le menu déroulant *sous-réseau*.
+
+--
+Pour les déploiements HA::
++
+--
+... Dans le champ *Configuration du cluster - nœud 1*, sélectionnez la zone de disponibilité principale de la configuration MAZ FSX pour ONTAP dans le menu déroulant *zone de disponibilité* et un sous-réseau dans la zone de disponibilité principale dans le menu déroulant *sous-réseau*.
+... Dans le champ *Configuration du cluster - nœud 2*, sélectionnez la zone de disponibilité secondaire pour la configuration MAZ FSX pour ONTAP dans le menu déroulant *zone de disponibilité* et un sous-réseau dans la zone de disponibilité secondaire dans le menu déroulant *sous-réseau*.
 
 
 --
@@ -98,7 +206,7 @@ Deux groupes de sécurité sont rattachés aux nœuds SQL (instances EC2) lors d
 
 +
 ... Un groupe de sécurité des charges de travail est créé pour autoriser les ports et les protocoles requis pour PostgreSQL.
-... Pour un système de fichiers FSX for ONTAP existant, le groupe de sécurité qui lui est associé est automatiquement ajouté au nœud PostgreSQL, ce qui permet la communication avec le système de fichiers. Lorsqu'un nouveau système FSX pour ONTAP est créé, un nouveau groupe de sécurité est créé pour le système de fichiers FSX pour ONTAP et le même groupe de sécurité est également attaché au nœud SQL.
+... Pour un nouveau système de fichiers FSX for ONTAP, un nouveau groupe de sécurité est créé et rattaché au nœud SQL. Pour un système de fichiers FSX for ONTAP existant, le groupe de sécurité qui lui est associé est automatiquement ajouté au nœud PostgreSQL, ce qui permet la communication avec le système de fichiers.
 
 
 
@@ -177,5 +285,7 @@ Vous pouvez également enregistrer la configuration.
 
 
 
+--
+====
 .Et la suite
 Vous pouvez configurer manuellement les utilisateurs, l'accès à distance et les bases de données sur le serveur PostgreSQL déployé.

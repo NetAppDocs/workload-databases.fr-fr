@@ -26,6 +26,7 @@ Ce qui est numérisé:: Workload Factory évalue l'état d'optimisation des conf
 * Configuration du stockage : inclut la gestion de la capacité, le provisionnement fin, la règle de hiérarchisation, les snapshots, l'état des E/S à chemins d'accès multiples, la règle et les sessions, etc
 * Calcul : inclut le dimensionnement approprié, les correctifs du système d'exploitation et les paramètres de la carte réseau tels que le RSS (Receive Side Scaling) et le déchargement TCP
 * Applications : inclut les licences Microsoft SQL Server, le correctif Microsoft SQL Server et les paramètres MAXDOP
+* Résilience : inclut les snapshots locaux
 
 
 --
