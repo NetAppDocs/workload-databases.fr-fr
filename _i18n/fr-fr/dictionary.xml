@@ -619,9 +619,7 @@
   <block id="cfa54b7dd19dd91bb87ede68126951eb" category="list-text"><block ref="25f6388206f436c2d1de63216302b13d" prefix="" category="inline-code"></block></block>
   <block id="8d461d34b0f2c02565383f3301044282" category="list-text"><block ref="fea0543b0b4b9d4c240c6219de0db41c" prefix="" category="inline-code"></block></block>
   <block id="26e6f4cc71039ce95ddbb0acdad6891d" category="section-title">29 septembre 2024</block>
-  <block id="9a178ca3815f6aeb284a65e10447f086" category="paragraph"><block ref="9a178ca3815f6aeb284a65e10447f086" category="inline-link-macro-rx"></block></block>
   <block id="7d6d6d8a97f883d860bff04c0be1019c" category="inline-link-macro">Découvrez les économies réalisées avec FSX for ONTAP pour les workloads de bases de données</block>
-  <block id="293758d509326f8da42abf75db2d37e6" category="paragraph"><block ref="293758d509326f8da42abf75db2d37e6" category="inline-link-macro-rx"></block></block>
   <block id="fbcbba8054f71f57fa8e2b950179bb23" category="paragraph">Le nombre maximum de clones sandbox pouvant être créés à partir d'un serveur de base de données est de 90.</block>
   <block id="0928468cb2283b21e6802a78c6a64e3a" category="doc">Optimisez en continu vos workloads Microsoft SQL Server avec les bases de données</block>
   <block id="e73fa899152fb6836032fef4e1c95da4" category="paragraph">La fabrique de workloads BlueXP  propose des conseils continus et des rambardes afin d'assurer une optimisation continue et le respect des meilleures pratiques pour le composant de stockage de vos workloads Microsoft SQL Server sur Amazon FSX pour NetApp ONTAP. Cette fonctionnalité analyse en continu votre environnement Microsoft SQL Server hors ligne et vous fournit un rapport complet d'informations, d'opportunités et de recommandations pour vous aider à atteindre des niveaux de performance, de rentabilité et de conformité élevés.</block>
@@ -629,9 +627,7 @@
   <block id="72d1af9ffdd277a1cf7789b588da9b4d" category="paragraph"><block ref="72d1af9ffdd277a1cf7789b588da9b4d" category="inline-link-macro-rx"></block></block>
   <block id="efa42d5c66cb9948f402ee559611e12d" category="section-title">Prise en charge de Terraform</block>
   <block id="822802a1673e79cb7dbd54947e4dc32c" category="paragraph">Vous pouvez maintenant utiliser Terraform à partir de la Codebox pour déployer Microsoft SQL Server.</block>
-  <block id="d83b54de9b50110195e4bf3c1f3c6a67" category="list-text"><block ref="d83b54de9b50110195e4bf3c1f3c6a67" category="inline-link-macro-rx"></block></block>
   <block id="2532cd63354e6e99119077d45134b5ef" category="inline-link-macro">Utiliser Terraform à partir de Codebox</block>
-  <block id="11cb17d1b990bbf37a24337d5692efa1" category="list-text"><block ref="11cb17d1b990bbf37a24337d5692efa1" category="inline-link-macro-rx"></block></block>
   <block id="c7f1094806f4a7907a28dc01a1473f90" category="inline-link-macro">Découvrez comment utiliser Codebox pour l'automatisation</block>
   <block id="0937bd87e3f84605f28e13c1956980d3" category="list-text">*Optimisation continue* : analyse en continu votre environnement Microsoft SQL Server hors ligne, vous fournissant un rapport complet des informations, opportunités et recommandations pour vous aider à atteindre l'excellence opérationnelle.</block>
   <block id="13025ba9f92de77af2aeaf1af07a4aa8" category="doc">Optimisez les configurations pour les déploiements Microsoft SQL Server</block>
@@ -669,7 +665,6 @@
   <block id="35c4b7b7975b86786b96de60f8d9159c" category="doc">Version initiale de l'usine de workloads BlueXP  pour les bases de données</block>
   <block id="fe582581097e432c4b1b3f3135f39b72" category="paragraph">La version initiale permet d'explorer les possibilités d'économies avec Amazon FSX for NetApp ONTAP en tant qu'environnement de stockage pour vos workloads de base de données, de détecter, de gérer et de déployer des serveurs Microsoft SQL Server, de déployer et de cloner des bases de données, et de surveiller ces tâches au sein de l'usine de workloads.</block>
   <block id="e5d3c7248ff4540f88c13fbf9252d0a3" category="inline-link-macro">console d'usine de charge de travail</block>
-  <block id="e93e8519fa9c34d76ec0735119a46866" category="paragraph">Vous pouvez maintenant accéder au calculateur d'économies à partir de la <block ref="fe6e1b2479e1125e03c713ad62b5343f" category="inline-link-macro-rx"></block>page d'accueil. Pour commencer, faites votre choix dans Elastic Block Store et FSX for Windows File Server.</block>
   <block id="ab1e050e49bbc49befbca952f74f0443" category="inline-image-macro">capture d'écran de la page d'accueil de la console d'usine de la charge de travail. L'image montre la mosaïque bases de données avec un nouveau bouton Explorer les économies. Cliquez sur le bouton pour ouvrir un menu déroulant. Le menu déroulant comporte deux options : Microsoft SQL Server sur EBS et Microsoft SQL Server sur FSX pour serveur de fichiers Windows.</block>
   <block id="923f11c15ceba3bc0e4d37309ab27ed2" category="paragraph"><block ref="923f11c15ceba3bc0e4d37309ab27ed2" category="inline-image-macro-rx" type="image"></block></block>
   <block id="8e73a65c2de8a6be7664465f03b5fb30" category="doc">Automatisez l'utilisation de Codebox dans l'usine de workloads BlueXP  pour les bases de données</block>
@@ -963,7 +958,6 @@
   <block id="1414de2121340ce91492c56f7800fcc7" category="section-title">Prise en charge de Terraform pour la création de serveur PostgreSQL</block>
   <block id="9156ac6cc60e32ed114af1a49af0ffed" category="paragraph">Vous pouvez maintenant utiliser Terraform à partir de Codebox pour déployer PostgreSQL.</block>
   <block id="7a5745faeabd31c33609adf25373d8a1" category="inline-link-macro">Créez un serveur de base de données PostgreSQL</block>
-  <block id="61b5b69de9c821f5e486ec9c30a821a4" category="list-text"><block ref="61b5b69de9c821f5e486ec9c30a821a4" category="inline-link-macro-rx"></block></block>
   <block id="6a7893eb24462b3da7dd0a66586c5738" category="section-title">Évaluation de la résilience pour la planification des snapshots locaux</block>
   <block id="677bceea5ebbea10cf85a91ebf42050e" category="paragraph">Une nouvelle évaluation de la résilience est disponible pour les charges de travail de la base de données. Nous évaluons si les volumes de vos instances Microsoft SQL Server disposent de règles de snapshot planifiées valides. Les copies Snapshot sont des copies instantanées de vos données et contribuent à la résilience de vos environnements de base de données en cas de perte de données.</block>
   <block id="90814442b7f0694d712f43efffe9c178" category="section-title">Correction MAXDOP pour les charges de travail de base de données</block>
@@ -1005,4 +999,9 @@
   <block id="593a4cc0b797fa5f4354bae99e3fa42d" category="list-text">Résilience : inclut les snapshots locaux</block>
   <block id="4fbdcdf3c2d8694d5e358b3175b867da" category="section-title">03 mars 2025</block>
   <block id="5b9ce98e8b3125f8d921be7829ab8a26" category="sidebar">Créez un serveur Microsoft SQL</block>
+  <block id="25b3aca23d0668827e396e11779fd3e8" category="paragraph"><block ref="25b3aca23d0668827e396e11779fd3e8" category="inline-link-macro-rx"></block></block>
+  <block id="0cff8121f4037cd80252c2bfd1bbc480" category="paragraph">Vous pouvez maintenant accéder au calculateur d'économies à partir de la <block ref="9086d555f1d70469f26e2dfccd9f366f" category="inline-link-macro-rx"></block>page d'accueil. Pour commencer, faites votre choix dans Elastic Block Store et FSX for Windows File Server.</block>
+  <block id="05e1e00bdb39e9c766a6a0f69a222a3b" category="list-text"><block ref="05e1e00bdb39e9c766a6a0f69a222a3b" category="inline-link-macro-rx"></block></block>
+  <block id="7115d78353263dbb2dbe063624f9f601" category="list-text"><block ref="7115d78353263dbb2dbe063624f9f601" category="inline-link-macro-rx"></block></block>
+  <block id="4666cc74583e6d5c1f202a52bee57a9b" category="list-text"><block ref="4666cc74583e6d5c1f202a52bee57a9b" category="inline-link-macro-rx"></block></block>
 </blocks>
