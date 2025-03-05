@@ -42,6 +42,14 @@ Active Directory:: Les événements suivants se produisent pour Active Directory
 
 
 --
+
+
+
+
+== Groupes de sécurité Active Directory gérés par l'utilisateur
+
+Si vous sélectionnez « Active Directory géré par l'utilisateur » lors du déploiement de Microsoft SQL Server en usine de la charge de travail, vous devez fournir un groupe de sécurité qui autorise le trafic entre les instances EC2 et le service d'annuaire pour le déploiement. La fabrique de workloads ne connecte pas automatiquement le groupe de sécurité pour Active Directory géré par l'utilisateur, comme elle le fait pour Microsoft AD géré par AWS.
+
 Restauration des ressources:: Si vous décidez de restaurer vos ressources DNS (Domain Name System), les enregistrements de ressources dans AD et DNS ne sont pas supprimés automatiquement. Vous pouvez supprimer les enregistrements du serveur DNS et d'AD comme suit.
 +
 --
@@ -258,10 +266,7 @@ Pour les déploiements FCI::
 --
 
 
-.. *Groupe de sécurité* : sélectionnez un groupe de sécurité existant ou créez un nouveau groupe de sécurité.
-+
-Trois groupes de sécurité sont rattachés aux nœuds SQL (instances EC2) lors du déploiement du nouveau serveur.
-
+.. *Groupe de sécurité* : sélectionnez un groupe de sécurité existant ou créez un nouveau groupe de sécurité. Trois groupes de sécurité sont rattachés aux nœuds SQL (instances EC2) lors du déploiement du nouveau serveur.
 +
 ... Un groupe de sécurité de la charge de travail est créé pour autoriser les ports et les protocoles requis pour les communications de cluster Microsoft SQL et Windows sur les nœuds.
 ... Dans le cas d'Active Directory géré par AWS, le groupe de sécurité rattaché au service d'annuaire est automatiquement ajouté aux nœuds Microsoft SQL pour permettre la communication avec Active Directory.

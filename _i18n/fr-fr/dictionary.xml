@@ -98,7 +98,6 @@
   <block id="8738f299dd52a2650f23bf1ae30694fa" category="list-text">Dans le champ *Configuration du cluster - nœud 1*, sélectionnez une zone de disponibilité dans le menu déroulant *zone de disponibilité* et un sous-réseau dans le menu déroulant *sous-réseau*.</block>
   <block id="9c622025b2f6aaf628ede7de56df481b" category="list-text">Pour les déploiements FCI</block>
   <block id="5ac7c1b392927ce429f17a8855e854b5" category="list-text">*Groupe de sécurité* : sélectionnez un groupe de sécurité existant ou créez un nouveau groupe de sécurité.</block>
-  <block id="a2c08d4b7f2bbde30396036629003448" category="paragraph">Trois groupes de sécurité sont rattachés aux nœuds SQL (instances EC2) lors du déploiement du nouveau serveur.</block>
   <block id="ba4f09fe932ad91d759a5dd3636acec6" category="list-text">Un groupe de sécurité de la charge de travail est créé pour autoriser les ports et les protocoles requis pour les communications de cluster Microsoft SQL et Windows sur les nœuds.</block>
   <block id="1f653bdd2a02e3ebdc4f28328a96b00f" category="list-text">Dans le cas d'Active Directory géré par AWS, le groupe de sécurité rattaché au service d'annuaire est automatiquement ajouté aux nœuds Microsoft SQL pour permettre la communication avec Active Directory.</block>
   <block id="84c62c2707904a024819612ef450ef1d" category="list-text">Pour un système de fichiers FSX for ONTAP existant, le groupe de sécurité qui lui est associé est automatiquement ajouté aux nœuds SQL qui permettent la communication avec le système de fichiers. Lorsqu'un nouveau système FSX pour ONTAP est créé, un nouveau groupe de sécurité est créé pour le système de fichiers FSX pour ONTAP et le même groupe de sécurité est également rattaché aux nœuds SQL.</block>
@@ -1004,4 +1003,5 @@
   <block id="05e1e00bdb39e9c766a6a0f69a222a3b" category="list-text"><block ref="05e1e00bdb39e9c766a6a0f69a222a3b" category="inline-link-macro-rx"></block></block>
   <block id="7115d78353263dbb2dbe063624f9f601" category="list-text"><block ref="7115d78353263dbb2dbe063624f9f601" category="inline-link-macro-rx"></block></block>
   <block id="4666cc74583e6d5c1f202a52bee57a9b" category="list-text"><block ref="4666cc74583e6d5c1f202a52bee57a9b" category="inline-link-macro-rx"></block></block>
+  <block id="b344730cd36668c36266c1d50c447eea" category="list-text">*Groupe de sécurité* : sélectionnez un groupe de sécurité existant ou créez un nouveau groupe de sécurité. Trois groupes de sécurité sont rattachés aux nœuds SQL (instances EC2) lors du déploiement du nouveau serveur.</block>
 </blocks>

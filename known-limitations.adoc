@@ -58,12 +58,6 @@ En usine de charges de travail, la gestion des configurations de groupes de disp
 
 
 
-== Groupes de sécurité Active Directory gérés par l'utilisateur
-
-Si vous sélectionnez « Active Directory géré par l'utilisateur » lors du déploiement de Microsoft SQL Server en usine de la charge de travail, vous devez fournir un groupe de sécurité qui autorise le trafic entre les instances EC2 et le service d'annuaire pour le déploiement. La fabrique de workloads ne connecte pas automatiquement le groupe de sécurité pour Active Directory géré par l'utilisateur, comme elle le fait pour Microsoft AD géré par AWS.
-
-
-
 == Clés de chiffrement personnalisées
 
 Les clés de chiffrement personnalisées pour FSX pour ONTAP ne sont pas répertoriées en fonction de l'applicabilité du service. Vous devez choisir la clé appropriée. Les clés gérées AWS sont filtrées en fonction de leur applicabilité au service.
