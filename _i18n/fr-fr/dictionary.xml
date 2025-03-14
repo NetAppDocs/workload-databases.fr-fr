@@ -1001,4 +1001,8 @@
   <block id="372b286436aa00cac0e53fa1f2a9c659" category="paragraph">Vous pouvez utiliser le mode de déploiement _Advanced create_ pour effectuer cette tâche en usine de la charge de travail avec des autorisations _automate_ mode. Vous pouvez également utiliser les outils suivants disponibles dans la Codebox : l'API REST, la CLI AWS, AWS CloudFormation et Terraform. <block ref="e0a3467dce43941c7b863cc8d6f0a62a" category="inline-link-macro-rx"></block>.</block>
   <block id="292e876f4d1d5af73b815913bd3d9b26" category="doc">Configuration PostgreSQL haute disponibilité</block>
   <block id="047e8f86b83bb2e8d4c34b1dc560257b" category="paragraph">Vous pouvez maintenant déployer une configuration haute disponibilité pour le serveur PostgreSQL.</block>
+  <block id="813011e2103649bb71f124adedcc10ea" category="sidebar">Blogs et communauté</block>
+  <block id="dd490b81914dd945601e442a41cb4222" category="sidebar">Communauté NetApp</block>
+  <block id="abd0fe91ce589ecf3c7bad0543ccad16" category="sidebar">Blogs BlueXP</block>
+  <block id="ad203e818e0c9d7f42f1c260b33875f3" category="sidebar">Webinaires sur le cloud</block>
 </blocks>
