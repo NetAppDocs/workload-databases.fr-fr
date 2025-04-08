@@ -119,3 +119,17 @@ L'évaluation des correctifs du système d'exploitation effectuée à des fins d
 == Calcul des économies sur site
 
 Les calculs des économies et des pourcentages de la taille du volume pour le stockage sur site Microsoft SQL Server ne sont pas pris en compte.
+
+
+
+== Évaluation de la réplication entre les régions
+
+* L'évaluation d'optimisation ne peut pas déterminer si la réplication interrégionale (CRR) est utilisée lorsque le système de fichiers FSX pour ONTAP cible se trouve dans un autre compte AWS.
+* L'usine de charge de travail évalue uniquement la configuration CRR du système de fichiers source FSX pour ONTAP.
+
+
+
+
+== Nombre de bases de données dans les instances de SQL Server
+
+Dans l'onglet Inventaire et dans le tableau de bord, la fabrique de workloads prend en charge jusqu'à 850 bases de données au sein d'instances SQL Server.

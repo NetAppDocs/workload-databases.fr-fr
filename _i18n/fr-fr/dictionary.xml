@@ -989,7 +989,6 @@
   <block id="3902a76bb589f831b404ce1ec9865654" category="list-text">*Afficher les calculs*</block>
   <block id="68bfcbb9e0f73d04499c64e0bc23d369" category="inline-xref">Déployez Microsoft SQL Server sur AQS EC2 à l'aide des systèmes de fichiers FSX pour ONTAP</block>
   <block id="a8aa5970e795fc6acbc94959e79d385e" category="paragraph">Pour passer à FSX pour ONTAP, suivez les instructions à <block ref="111c1b12d181a36b3809e884a469d22f" category="inline-xref-macro-rx"></block>.</block>
-  <block id="593a4cc0b797fa5f4354bae99e3fa42d" category="list-text">Résilience : inclut les snapshots locaux</block>
   <block id="4fbdcdf3c2d8694d5e358b3175b867da" category="section-title">03 mars 2025</block>
   <block id="5b9ce98e8b3125f8d921be7829ab8a26" category="sidebar">Créez un serveur Microsoft SQL</block>
   <block id="25b3aca23d0668827e396e11779fd3e8" category="paragraph"><block ref="25b3aca23d0668827e396e11779fd3e8" category="inline-link-macro-rx"></block></block>
@@ -998,11 +997,37 @@
   <block id="7115d78353263dbb2dbe063624f9f601" category="list-text"><block ref="7115d78353263dbb2dbe063624f9f601" category="inline-link-macro-rx"></block></block>
   <block id="4666cc74583e6d5c1f202a52bee57a9b" category="list-text"><block ref="4666cc74583e6d5c1f202a52bee57a9b" category="inline-link-macro-rx"></block></block>
   <block id="b344730cd36668c36266c1d50c447eea" category="list-text">*Groupe de sécurité* : sélectionnez un groupe de sécurité existant ou créez un nouveau groupe de sécurité. Trois groupes de sécurité sont rattachés aux nœuds SQL (instances EC2) lors du déploiement du nouveau serveur.</block>
-  <block id="372b286436aa00cac0e53fa1f2a9c659" category="paragraph">Vous pouvez utiliser le mode de déploiement _Advanced create_ pour effectuer cette tâche en usine de la charge de travail avec des autorisations _automate_ mode. Vous pouvez également utiliser les outils suivants disponibles dans la Codebox : l'API REST, la CLI AWS, AWS CloudFormation et Terraform. <block ref="e0a3467dce43941c7b863cc8d6f0a62a" category="inline-link-macro-rx"></block>.</block>
   <block id="292e876f4d1d5af73b815913bd3d9b26" category="doc">Configuration PostgreSQL haute disponibilité</block>
   <block id="047e8f86b83bb2e8d4c34b1dc560257b" category="paragraph">Vous pouvez maintenant déployer une configuration haute disponibilité pour le serveur PostgreSQL.</block>
   <block id="813011e2103649bb71f124adedcc10ea" category="sidebar">Blogs et communauté</block>
   <block id="dd490b81914dd945601e442a41cb4222" category="sidebar">Communauté NetApp</block>
   <block id="abd0fe91ce589ecf3c7bad0543ccad16" category="sidebar">Blogs BlueXP</block>
   <block id="ad203e818e0c9d7f42f1c260b33875f3" category="sidebar">Webinaires sur le cloud</block>
+  <block id="8bb788607f31f673e25d0ba34b09a14d" category="doc">Optimisation améliorée</block>
+  <block id="7e9a755c644cbdbaab2927671606cf89" category="paragraph">Lors de l'optimisation de vos environnements de base de données, de nouvelles évaluations d'optimisation, des corrections et l'affichage de plusieurs ressources sont disponibles.</block>
+  <block id="3cde2cfbcdbdd79a3c1d3d6b547ab80d" category="section-title">Évaluations de résilience</block>
+  <block id="218733e992141498b68631094f232446" category="paragraph">Ces améliorations incluent de nouvelles évaluations de la résilience pour vérifier que les fonctionnalités de redondance des données et de reprise d'activité sont configurées pour vos environnements de base de données.</block>
+  <block id="a8b36cbcd13facdcd526df9ca0c4aba5" category="list-text">Sauvegardes FSX pour ONTAP : analyse si les systèmes de fichiers FSX pour ONTAP qui desservent les volumes de l'instance SQL Server sont configurés avec des sauvegardes FSX pour ONTAP planifiées.</block>
+  <block id="3ddd695d01877806196cb9bc8be009da" category="list-text">Réplication interrégionale : vérifie si les systèmes de fichiers FSX pour ONTAP qui servent des instances de Microsoft SQL Server sont configurés avec la réplication interrégionale.</block>
+  <block id="233f3c54635152d78b375495cd0b5580" category="section-title">Résolution des problèmes de calcul</block>
+  <block id="c4b982d56748631e5cf80fe05312f901" category="paragraph">La correction RSS (Receive Side Scaling) configure RSS pour distribuer le traitement réseau sur plusieurs processeurs et assurer une distribution de charge efficace.</block>
+  <block id="9ed609dc6760dae060dbad52b3aa2d42" category="section-title">Correction locale des snapshots</block>
+  <block id="229b55b063b8208ec58911841f6bad18" category="paragraph">La correction locale des snapshots définit des règles de snapshot pour les volumes de vos instances Microsoft SQL Server afin de préserver la résilience de vos environnements de base de données en cas de perte de données.</block>
+  <block id="14684cd0a52a7f7301e2400ff9ce8c16" category="section-title">Prise en charge de la sélection de plusieurs ressources</block>
+  <block id="909e5b19987da9dd66e288802ac9729e" category="paragraph">Lors de l'optimisation des configurations de base de données, vous pouvez désormais sélectionner des ressources spécifiques au lieu de toutes les ressources.</block>
+  <block id="d36362545a72cd1eef4186ca8a99dca1" category="section-title">Vue Inventaire améliorée</block>
+  <block id="9f3b67d6f0d3de869a895be1df755a3b" category="paragraph">L'onglet Inventaire de la console d'usine des workloads a été rationalisé de sorte qu'il ne contienne que les serveurs SQL s'exécutant sur Amazon FSX pour NetApp ONTAP. Vous trouverez maintenant des serveurs SQL sur site et s'exécutant sur Amazon Elastic Block Store et Amazon FSX pour Windows File Server dans l'onglet économies Explore.</block>
+  <block id="b66e93ffc0672f74db831d8f9d81fdba" category="section-title">Création rapide disponible pour le déploiement du serveur PostgreSQL</block>
+  <block id="f7d019f8da84eee0771921896cbb0cd5" category="paragraph">Vous pouvez utiliser cette option de déploiement rapide pour créer un serveur PostgreSQL avec une configuration haute disponibilité et les meilleures pratiques intégrées.</block>
+  <block id="5963667f9fe01282fae9030cccbd24a3" category="paragraph"><block ref="5963667f9fe01282fae9030cccbd24a3" category="inline-link-macro-rx"></block></block>
+  <block id="958f5530e9f1db947c4f18b3cc30b2e9" category="admonition">Dans _Quick create_, HA est le modèle de déploiement par défaut, Windows 2016 est la version par défaut de Windows et SQL 2019 Standard Edition est la version par défaut de SQL.</block>
+  <block id="a18df64f6d327d9f4d8ffd9736b846f6" category="admonition">Les déploiements HAUTE DISPONIBILITÉ ne sont pris en charge que dans plusieurs configurations FSX pour ONTAP avec plusieurs zones de disponibilité (MAZ).</block>
+  <block id="b06b1cc67628f13db38ca890693627fb" category="section-title">Évaluation de la réplication entre les régions</block>
+  <block id="425a11288e6c089ecf9966b89b9be4eb" category="list-text">L'évaluation d'optimisation ne peut pas déterminer si la réplication interrégionale (CRR) est utilisée lorsque le système de fichiers FSX pour ONTAP cible se trouve dans un autre compte AWS.</block>
+  <block id="a73971e47314d5a9302d6e0e452948e6" category="list-text">L'usine de charge de travail évalue uniquement la configuration CRR du système de fichiers source FSX pour ONTAP.</block>
+  <block id="af64c2575cf7c41d9a388382dfd2aef2" category="section-title">Nombre de bases de données dans les instances de SQL Server</block>
+  <block id="b4f10df58cb8c1f0e0b30bd6fc637ddd" category="paragraph">Dans l'onglet Inventaire et dans le tableau de bord, la fabrique de workloads prend en charge jusqu'à 850 bases de données au sein d'instances SQL Server.</block>
+  <block id="fb090b715eaceea73761a137a2eb45c0" category="list-text">Résilience : inclut les snapshots locaux, les sauvegardes FSX pour ONTAP et la réplication interrégionale (CRR)</block>
+  <block id="765282496f8377d23a4dec7887b9cea8" category="paragraph">*Sélectionner tout* est la valeur par défaut, mais vous pouvez sélectionner des ressources spécifiques à optimiser.</block>
+  <block id="c69c68bea63a58faad0233887cb8a9aa" category="section-title">04 avril 2025</block>
 </blocks>
