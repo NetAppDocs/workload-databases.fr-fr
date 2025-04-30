@@ -72,7 +72,7 @@ Deux options de calculateur sont disponibles pour établir une comparaison des c
 
 Explorer les économies via la personnalisation : vous fournissez les paramètres de configuration de Microsoft SQL Server sur Amazon EC2 avec EBS ou FSX pour Windows File Server, notamment la région, le modèle de déploiement, l'édition SQL Server, le taux de modification mensuel des données, la fréquence des snapshots et bien plus encore.
 
-Explorer les économies pour les hôtes détectés : les liens d'usine des charges de travail vers vos serveurs Microsoft SQL existants et extrait les détails du calculateur pour une comparaison automatique. Vous devrez accorder des autorisations d'automatisation pour utiliser cette option de calculatrice. Vous pouvez modifier le cas d'utilisation, mais tous les autres détails sont automatiquement déterminés dans le calcul.
+Explorer les économies pour les hôtes détectés : les liens d'usine des charges de travail vers vos serveurs Microsoft SQL existants et extrait les détails du calculateur pour une comparaison automatique. Vous devrez accorder des autorisations _lecture seule_ ou _lecture/écriture_ pour utiliser cette option de calculatrice. Vous pouvez modifier le cas d'utilisation, mais tous les autres détails sont automatiquement déterminés dans le calcul.
 
 En outre, vous pouvez link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Ajoutez des identifiants AWS"^]améliorer la précision de l'analyse de la calculatrice. Sélectionnez *calculer les économies en fonction des ressources existantes*. Vous serez redirigé vers la page Ajouter des informations d'identification. Après avoir ajouté des informations d'identification, sélectionnez les ressources existantes à comparer avec FSX pour ONTAP, puis sélectionnez *Explorer les économies*.
 
@@ -168,7 +168,7 @@ L'usine de workloads saisit les caractéristiques d'hôte Elastic Block Store et
 .Avant de commencer
 Avant de commencer, remplissez les conditions préalables suivantes :
 
-* Assurez-vous que link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["accorder des autorisations _automatiser_"^]votre compte AWS détecte les systèmes Elastic Block Store (EBS) et FSX pour Windows dans l'inventaire de vos bases de données.
+* link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Accorder des autorisations _lecture seule_ ou _lecture/écriture_"^] Sur votre compte AWS, pour détecter les systèmes Elastic Block Store (EBS) et FSX pour Windows sous l'onglet *Explorer les économies* et pour afficher le calcul des économies dans le calculateur d'économies.
 * Détectez les hôtes du stockage EBS et FSX pour Windows dans l'inventaire de vos bases de données. link:detect-host.html["Découvrez comment détecter des hôtes"].
 
 
