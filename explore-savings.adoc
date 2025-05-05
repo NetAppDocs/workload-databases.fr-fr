@@ -266,6 +266,9 @@ De plus, faites défiler jusqu'au bas de la page pour afficher le rapport en sé
 
 Pour passer à FSX pour ONTAP, suivez les instructions à <<Déployez Microsoft SQL Server sur AWS EC2 à l'aide de FSX pour ONTAP,Déployez Microsoft SQL Server sur AQS EC2 à l'aide des systèmes de fichiers FSX pour ONTAP>>.
 
+Retrait d'hôte sur site:: Après avoir étudié les économies réalisées pour un hôte sur site Microsoft SQL Server, vous avez la possibilité de supprimer l'enregistrement hôte sur site de l'usine de charge de travail BlueXP . Sélectionnez le menu à trois points de l'hôte sur site Microsoft SQL Server, puis sélectionnez *Supprimer*.
+
+
 
 
 == Déployez Microsoft SQL Server sur AWS EC2 à l'aide de FSX pour ONTAP

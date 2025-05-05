@@ -74,6 +74,8 @@ sidebar:
         url: "/optimize-overview.html"
       - title: Optimiser les configurations
         url: "/optimize-configurations.html"
+      - title: Reporter l'analyse de la configuration
+        url: "/postpone-analysis.html"
   - title: Connaissances et support
     entries:
     - title: S'inscrire pour obtenir de l'aide

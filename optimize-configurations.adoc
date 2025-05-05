@@ -27,6 +27,7 @@ Ce qui est numérisé:: Workload Factory évalue l'état d'optimisation des conf
 * Calcul : inclut le dimensionnement approprié, les correctifs du système d'exploitation et les paramètres de la carte réseau tels que le RSS (Receive Side Scaling) et le déchargement TCP
 * Applications : inclut les licences Microsoft SQL Server, le correctif Microsoft SQL Server et les paramètres MAXDOP
 * Résilience : inclut les snapshots locaux, les sauvegardes FSX pour ONTAP et la réplication interrégionale (CRR)
+* Clones : inclut des options d'actualisation et de suppression des clones (sandbox) antérieurs à 60 jours
 
 
 --
@@ -44,11 +45,8 @@ NOTE: Le processus d'optimisation peut entraîner des temps d'indisponibilité d
 .Étapes
 . Connectez-vous à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
 . Dans la mosaïque bases de données, sélectionnez *aller à l'inventaire des bases de données*.
-. Dans l'onglet *Inventory*, sélectionnez la flèche déroulante pour développer la ligne de l'hôte et afficher ses instances gérées.
-+
-L'hôte se développe et les instances hôte s'affichent.
-
-. Sélectionnez le menu à trois points de l'instance, puis sélectionnez *optimiser*.
+. Dans l'onglet *Inventaire*, sélectionnez l'onglet *instances*.
+. Sélectionnez le menu à trois points de l'instance à optimiser, puis sélectionnez *optimiser*.
 . Sur la page optimiser l'instance de SQL Server, examinez les résultats de l'évaluation.
 +
 Vous pouvez filtrer par catégories, sous-catégories, état, gravité et balises.
@@ -64,7 +62,16 @@ Cette recommandation présente les meilleures pratiques et les obstacles potenti
 +
 *Sélectionner tout* est la valeur par défaut, mais vous pouvez sélectionner des ressources spécifiques à optimiser.
 
-. Passez en revue le résumé de l'optimisation et les éléments d'action qui apparaissent dans la boîte de dialogue d'optimisation pour savoir ce qui se passe si vous choisissez d'optimiser. Certaines opérations d'optimisation peuvent entraîner des temps d'indisponibilité d'instance ou des interruptions de service.
++
+.. Pour toutes les configurations, à l'exception du nettoyage des clones, consultez les détails de l'optimisation dans la boîte de dialogue d'optimisation pour savoir ce qui se passe si vous choisissez d'optimiser. Certaines opérations d'optimisation peuvent entraîner des temps d'indisponibilité d'instance ou des interruptions de service.
+.. Pour le nettoyage des clones, sélectionnez les bases de données clonées (sandbox) à actualiser ou à supprimer.
++
+*** L'actualisation d'un clone le synchronise avec sa base de données source. L'actualisation est uniquement disponible pour les clones créés en usine de la charge de travail.
+*** La suppression d'un clone le supprime définitivement, libère de l'espace de stockage et réduit les coûts. Vous pouvez supprimer les clones créés dans et en dehors de l'usine de la charge de travail.
+
+
+
+
 . Sélectionnez *Continuer* pour optimiser la configuration.
 
 
