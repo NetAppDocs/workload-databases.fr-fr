@@ -38,9 +38,9 @@ Les instructions suivantes décrivent comment reporter, rejeter ou réactiver un
 [role="tabbed-block"]
 ====
 .Reporter
+--
 Délai de 30 jours avant l'arrêt d'une analyse de configuration. Au bout de 30 jours, l'analyse redémarre automatiquement.
 
---
 .Étapes
 . Connectez-vous à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
 . Dans la mosaïque bases de données, sélectionnez *aller à l'inventaire des bases de données*.
@@ -53,9 +53,9 @@ L'analyse de la configuration s'arrête pendant 30 jours.
 
 --
 .Rejeter
+--
 Ignorer pour arrêter indéfiniment une analyse de configuration. Vous pouvez redémarrer l'analyse si nécessaire.
 
---
 .Étapes
 . Connectez-vous à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
 . Dans la mosaïque bases de données, sélectionnez *aller à l'inventaire des bases de données*.
@@ -68,9 +68,9 @@ L'analyse de la configuration s'arrête.
 
 --
 .Réactiver
+--
 Réactiver à tout moment une analyse de configuration différée ou rejetée.
 
---
 .Étapes
 . Connectez-vous à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
 . Dans la mosaïque bases de données, sélectionnez *aller à l'inventaire des bases de données*.
