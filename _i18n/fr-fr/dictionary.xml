@@ -1006,7 +1006,6 @@
   <block id="425a11288e6c089ecf9966b89b9be4eb" category="list-text">L'évaluation d'optimisation ne peut pas déterminer si la réplication interrégionale (CRR) est utilisée lorsque le système de fichiers FSX pour ONTAP cible se trouve dans un autre compte AWS.</block>
   <block id="a73971e47314d5a9302d6e0e452948e6" category="list-text">L'usine de charge de travail évalue uniquement la configuration CRR du système de fichiers source FSX pour ONTAP.</block>
   <block id="af64c2575cf7c41d9a388382dfd2aef2" category="section-title">Nombre de bases de données dans les instances de SQL Server</block>
-  <block id="b4f10df58cb8c1f0e0b30bd6fc637ddd" category="paragraph">Dans l'onglet Inventaire et dans le tableau de bord, la fabrique de workloads prend en charge jusqu'à 850 bases de données au sein d'instances SQL Server.</block>
   <block id="fb090b715eaceea73761a137a2eb45c0" category="list-text">Résilience : inclut les snapshots locaux, les sauvegardes FSX pour ONTAP et la réplication interrégionale (CRR)</block>
   <block id="765282496f8377d23a4dec7887b9cea8" category="paragraph">*Sélectionner tout* est la valeur par défaut, mais vous pouvez sélectionner des ressources spécifiques à optimiser.</block>
   <block id="c69c68bea63a58faad0233887cb8a9aa" category="section-title">04 avril 2025</block>
@@ -1081,4 +1080,5 @@
   <block id="dfbf98e5a4263fb93c5b851bfc384ae3" category="list-text">*API REST* : utilisez les API REST d'usine pour déployer et gérer vos systèmes de fichiers FSX pour ONTAP et d'autres ressources AWS.</block>
   <block id="57f4ce64453b6cd8aa398c4f88d38c2e" category="list-text">*CloudFormation* : utilisez le code AWS CloudFormation pour effectuer les actions que vous avez définies dans la console d'usine de la charge de travail afin de modéliser, de provisionner et de gérer les ressources AWS et tierces à partir de la pile CloudFormation de votre compte AWS.</block>
   <block id="06c2e2277da374dd2cc7b735a1d1e848" category="list-text">*Terraform BlueXP  Workload Factory Provider* : utilisez Terraform pour créer et gérer les flux de travail d'infrastructure générés dans la console d'usine de la charge de travail.</block>
+  <block id="5614519834733a69bfb8911eae5d33b8" category="paragraph">Dans l'onglet Inventaire et dans le tableau de bord, la fabrique de workloads prend en charge jusqu'à 1 500 bases de données au sein d'instances SQL Server.</block>
 </blocks>
