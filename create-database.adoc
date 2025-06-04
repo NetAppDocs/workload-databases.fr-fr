@@ -26,7 +26,7 @@ NOTE: Les serveurs Microsoft SQL utilisant le protocole SMB ne prennent pas en c
 .Avant de commencer
 Assurez-vous de remplir les conditions préalables suivantes avant de créer une nouvelle base de données.
 
-Informations d'identification et autorisations:: Vous devez link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Informations d'identification du compte AWS et autorisations _read_ ou _automate_ mode"^]créer une nouvelle base de données dans l'usine de la charge de travail.
+Informations d'identification et autorisations:: Vous devez link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Informations d'identification du compte AWS et autorisations en mode _lecture seule_ ou _lecture/écriture_"^]créer une nouvelle base de données dans l'usine de la charge de travail.
 +
 --
 Vous pouvez également utiliser la Codebox pour copier un modèle afin de déployer une base de données hors de l'usine de la charge de travail à l'aide de l'API REST. link:https://docs.netapp.com/us-en/workload-setup-admin/codebox-automation.html["En savoir plus sur l'automatisation de Codebox"^].
@@ -41,7 +41,7 @@ AWS Systems Manager:: Vérifiez que le `NT Authority\SYSTEM user` privilège est
 
 == Créer une base de données
 
-Vous pouvez utiliser les modes de déploiement _Quick CREATE_ ou _Advanced CREATE_ pour effectuer cette tâche en usine de la charge de travail avec des autorisations de mode _READ_ ou _automate_.
+Vous pouvez utiliser les modes de déploiement _Création rapide_ ou _Création avancée_ pour effectuer cette tâche dans la fabrique de charges de travail avec des autorisations en mode _lecture seule_ ou _lecture/écriture_.
 
 [role="tabbed-block"]
 ====

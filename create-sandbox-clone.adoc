@@ -19,7 +19,7 @@ Un clone sandbox est créé à partir de l'instantané le plus récent de la bas
 .Avant de commencer
 Assurez-vous de remplir les conditions préalables suivantes avant de créer un clone sandbox.
 
-Informations d'identification et autorisations:: Vous devez link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Informations d'identification du compte AWS et autorisations _read_ ou _automate_ mode"^]créer un clone sandbox en usine de la charge de travail.
+Informations d'identification et autorisations:: Vous devez link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Informations d'identification du compte AWS et autorisations en mode _lecture seule_ ou _lecture/écriture_"^]créer un clone sandbox en usine de la charge de travail.
 +
 --
 Vous pouvez également utiliser la Codebox pour copier un modèle partiellement terminé ou créer un modèle terminé afin de créer le clone sandbox en dehors de l'usine de la charge de travail à l'aide de l'API REST. link:https://docs.netapp.com/us-en/workload-setup-admin/codebox-automation.html["En savoir plus sur l'automatisation de Codebox"^].

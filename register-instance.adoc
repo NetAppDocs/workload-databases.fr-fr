@@ -50,7 +50,7 @@ Si vous utilisez un serveur proxy pour toutes les connexions sortantes des insta
 
 == Avant de commencer
 
-L'hôte de l'instance doit apparaître dans l'onglet Inventaire. Pour qu'il apparaisse dans l'inventaire, link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["vous devez ajouter les informations d'identification du compte AWS et les autorisations de mode _lecture_ ou _automatisation_"^] .
+L'hôte de l'instance doit apparaître dans l'onglet Inventaire. Pour qu'il apparaisse dans l'inventaire, link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["vous devez ajouter les informations d'identification du compte AWS et les autorisations en mode _lecture seule_ ou _lecture/écriture_"^] .
 
 
 

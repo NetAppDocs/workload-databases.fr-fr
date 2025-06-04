@@ -102,13 +102,13 @@ NOTE: Dans _Quick create_, FCI est le modèle de déploiement par défaut, Windo
 +
 .. *Informations d'identification AWS* : sélectionnez les informations d'identification AWS avec des autorisations d'automatisation pour déployer le nouvel hôte de base de données.
 +
-Les identifiants AWS avec autorisations _automatiser_ permettent à la charge de travail de déployer et de gérer en usine le nouvel hôte de base de données à partir de votre compte AWS dans l'usine de la charge de travail.
+Les informations d'identification AWS avec des autorisations de lecture/écriture permettent à Workload Factory de déployer et de gérer le nouvel hôte de base de données à partir de votre compte AWS dans Workload Factory.
 
 +
-Les identifiants AWS avec des autorisations _read_ permettent à l'usine de workloads de générer un modèle CloudFormation que vous pouvez utiliser dans la console AWS CloudFormation.
+Les informations d'identification AWS avec des autorisations en lecture seule permettent à Workload Factory de générer un modèle CloudFormation que vous pouvez utiliser dans la console AWS CloudFormation.
 
 +
-Si vous ne disposez pas d'informations d'identification AWS associées à l'usine de la charge de travail et que vous souhaitez créer le nouveau serveur en usine de la charge de travail, suivez *option 1* pour accéder à la page informations d'identification. Ajoutez manuellement les informations d'identification et les autorisations requises pour _automate_ mode pour les charges de travail de la base de données.
+Si vous ne disposez pas d'informations d'identification AWS associées à l'usine de la charge de travail et que vous souhaitez créer le nouveau serveur en usine de la charge de travail, suivez *option 1* pour accéder à la page informations d'identification. Ajoutez manuellement les informations d’identification et les autorisations requises pour le mode _lecture/écriture_ pour les charges de travail de base de données.
 
 +
 Si vous souhaitez remplir le formulaire Créer un nouveau serveur en usine de charges de travail afin de télécharger un modèle de fichier YAML complet pour le déploiement dans AWS CloudFormation, suivez *option 2* pour vous assurer que vous disposez des autorisations requises pour créer le nouveau serveur dans AWS CloudFormation. Ajoutez manuellement les informations d'identification et les autorisations requises pour _read_ mode pour les charges de travail de base de données.
@@ -212,16 +212,16 @@ Vous pouvez également sélectionner *Enregistrer la configuration* pour déploy
 +
 .. *Informations d'identification AWS* : sélectionnez les informations d'identification AWS avec des autorisations d'automatisation pour déployer le nouvel hôte de base de données.
 +
-Les identifiants AWS avec autorisations _automatiser_ permettent à la charge de travail de déployer et de gérer en usine le nouvel hôte de base de données à partir de votre compte AWS dans l'usine de la charge de travail.
+Les informations d'identification AWS avec des autorisations de lecture/écriture permettent à Workload Factory de déployer et de gérer le nouvel hôte de base de données à partir de votre compte AWS dans Workload Factory.
 
 +
-Les identifiants AWS avec des autorisations _read_ permettent à l'usine de workloads de générer un modèle CloudFormation que vous pouvez utiliser dans la console AWS CloudFormation.
+Les informations d'identification AWS avec des autorisations en lecture seule permettent à Workload Factory de générer un modèle CloudFormation que vous pouvez utiliser dans la console AWS CloudFormation.
 
 +
-Si vous ne disposez pas d'informations d'identification AWS associées à l'usine de la charge de travail et que vous souhaitez créer le nouveau serveur en usine de la charge de travail, suivez *option 1* pour accéder à la page informations d'identification. Ajoutez manuellement les informations d'identification et les autorisations requises pour _automate_ mode pour les charges de travail de la base de données.
+Si vous ne disposez pas d'informations d'identification AWS associées à l'usine de la charge de travail et que vous souhaitez créer le nouveau serveur en usine de la charge de travail, suivez *option 1* pour accéder à la page informations d'identification. Ajoutez manuellement les informations d’identification et les autorisations requises pour le mode _lecture/écriture_ pour les charges de travail de base de données.
 
 +
-Si vous souhaitez remplir le formulaire Créer un nouveau serveur en usine de charges de travail afin de télécharger un modèle de fichier YAML complet pour le déploiement dans AWS CloudFormation, suivez *option 2* pour vous assurer que vous disposez des autorisations requises pour créer le nouveau serveur dans AWS CloudFormation. Ajoutez manuellement les informations d'identification et les autorisations requises pour _read_ mode pour les charges de travail de base de données.
+Si vous souhaitez remplir le formulaire Créer un nouveau serveur en usine de charges de travail afin de télécharger un modèle de fichier YAML complet pour le déploiement dans AWS CloudFormation, suivez *option 2* pour vous assurer que vous disposez des autorisations requises pour créer le nouveau serveur dans AWS CloudFormation. Ajoutez manuellement les informations d’identification et les autorisations requises pour le mode _lecture seule_ pour les charges de travail de base de données.
 
 +
 Vous pouvez également télécharger un modèle de fichier YAML partiellement rempli à partir de la Codebox pour créer la pile en dehors de l'usine de la charge de travail sans informations d'identification ni autorisations. Sélectionnez *CloudFormation* dans la liste déroulante de la zone de code pour télécharger le fichier YAML.
