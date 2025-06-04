@@ -26,22 +26,12 @@ Les systèmes de fichiers FSX pour ONTAP disposent de deux modèles de déploiem
 
 
 --
-Modes de fonctionnement d'usine de la charge de travail:: L'usine de workloads propose trois modes opérationnels qui dépendent du niveau de confort avec lequel vous laissez les workloads gérer vos ressources AWS.
-+
---
-*_Basic_ mode* : dans ce mode de fonctionnement, vous n'avez pas besoin d'associer des informations d'identification de compte AWS dans l'usine de la charge de travail. Vous pouvez copier ou télécharger un modèle YAML partiellement rempli à partir de la Codebox pour l'effectuer en dehors de l'usine de la charge de travail.
-
-*_Read_ mode* : dans ce mode de fonctionnement, vous fournissez les informations d'identification du compte AWS avec des autorisations de lecture qui vous permettent de remplir le formulaire _Quick create_ ou _Advanced create_, puis de le copier ou de le télécharger. Vous pouvez également rediriger vers CloudFormation à partir de l'usine de la charge de travail avec les détails du formulaire rempli. Vous pourrez également gérer le serveur de base de données déployé en usine.
-
-*_automate_ mode* : dans ce mode de fonctionnement, vous fournissez les informations d'identification du compte AWS avec des autorisations d'automatisation qui vous permettent de créer et de gérer des ressources AWS en usine de workloads.
-
---
 
 
 .Avant de commencer
 Assurez-vous de disposer des conditions préalables suivantes avant de créer un nouvel hôte de base de données.
 
-Informations d'identification et autorisations:: Vous devez link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Identifiants de compte AWS et autorisations de mode automatisées"^]créer un nouvel hôte de base de données en usine de la charge de travail.
+Informations d'identification et autorisations:: Vous devez link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Informations d'identification du compte AWS et autorisations en mode _lecture/écriture_"^]créer un nouvel hôte de base de données en usine de la charge de travail.
 
 
 

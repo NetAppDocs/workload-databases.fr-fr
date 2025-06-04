@@ -1,17 +1,17 @@
 ---
 sidebar: sidebar 
 permalink: quick-start-databases.html 
-keywords: requirements, basic mode, read mode, automate mode 
-summary: Les bases de données ont trois modes différents qui ont des exigences différentes. 
+keywords: requirements, basic mode, read-only mode, read/write mode 
+summary: 'Commencez avec Workload Factory pour les bases de données pour utiliser des extraits d"infrastructure en tant que code, découvrir des hôtes, gérer des ressources, etc.' 
 ---
-= Démarrage rapide de l'usine de workloads BlueXP  pour les bases de données
+= Démarrage rapide de Workload Factory pour les bases de données
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-Avec BlueXP  Workload Factory pour bases de données, vous pouvez commencer immédiatement en _Basic_ mode. Si vous souhaitez utiliser l'usine de workloads pour détecter les hôtes, gérer les ressources, etc., vous pouvez commencer en quelques étapes.
+Avec Workload Factory pour les bases de données, vous pouvez démarrer immédiatement en mode _basic_. Si vous souhaitez utiliser l'usine de workloads pour détecter les hôtes, gérer les ressources, etc., vous pouvez commencer en quelques étapes.
 
 Vous devez disposer d'un compte AWS pour utiliser les bases de données.
 
@@ -23,19 +23,19 @@ Vous devez vous link:https://docs.netapp.com/us-en/workload-setup-admin/sign-up-
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["Deux"] Ajoutez des informations d'identification et des autorisations
 [role="quick-margin-para"]
-Choisissez entre link:https://docs.netapp.com/us-en/workload-setup-admin/operational-modes.html["modes opérationnels _basic_, _read_ et _automate_"^].
+Choisissez entre link:https://docs.netapp.com/us-en/workload-setup-admin/operational-modes.html["modes de fonctionnement _de base_, _lecture seule_ et _lecture/écriture_"^].
 
 [role="quick-margin-para"]
 Si vous utilisez le mode _Basic_, vous n'avez pas besoin d'aller plus loin. Vous pouvez commencer à utiliser des bases de données pour copier des exemples de code partiellement remplis. Dans la mosaïque bases de données, cliquez sur *déployer l'hôte de base de données*. link:create-database-server.html["Apprenez à déployer un serveur de base de données"].
 
 [role="quick-margin-para"]
-Si vous utilisez le mode _READ_ ou _automate_, vous devrez link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["ajoutez manuellement des informations d'identification à un compte"^]sélectionner les fonctionnalités de charge de travail, telles que les bases de données et GenAI, et créer les stratégies IAM pour vous assurer que vous disposez des autorisations appropriées pour fonctionner en mode _READ_ ou _automate_.
+Si vous travaillez en mode _lecture seule_ ou _lecture/écriture_, vous devrez link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["ajoutez manuellement des informations d'identification à un compte"^] ce qui inclut la sélection des capacités de charge de travail, telles que les bases de données et GenAI, et la création des politiques IAM pour garantir que vous disposez des autorisations appropriées pour fonctionner en mode _lecture seule_ ou _lecture/écriture_.
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["Trois"] Déployer un serveur de base de données
 [role="quick-margin-para"]
-Enfin, si vous choisissez de fonctionner en _automate_ mode, vous devez link:create-database-server.html["déploiement"] ou link:detect-host.html["détecter un serveur de base de données"] pour gérer vos ressources hôtes et avant d'ajouter des bases de données utilisateur.
+Enfin, si vous choisissez de fonctionner en mode _lecture/écriture_, vous devez link:create-database-server.html["déployer un serveur hôte"] ou link:register-instance.html["enregistrer une instance"] pour gérer vos ressources d'hébergement et avant d'ajouter des bases de données utilisateur.
 
 .Et la suite
-Lorsque vous avez des hôtes gérés FSX pour ONTAP dans votre inventaire de bases de données, vous pouvez link:create-database.html["créer une base de données utilisateur"] ou link:create-sandbox-clone.html["cloner votre hôte pour créer un sandbox"].
+Lorsque vous avez enregistré des instances d'hôte avec FSx pour le stockage du système de fichiers ONTAP dans votre inventaire de bases de données, vous pouvez link:create-database.html["créer une base de données utilisateur"] ou link:create-sandbox-clone.html["cloner votre hôte pour créer un sandbox"] .
 
 Lorsque vous avez des hôtes Elastic Block Store ou FSX for Windows File Server dans votre inventaire de bases de données, vous pouvez link:explore-savings.html["découvrez les économies réalisées grâce au calculateur d'économies"].

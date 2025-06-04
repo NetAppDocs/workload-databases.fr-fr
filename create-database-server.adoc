@@ -4,17 +4,17 @@ permalink: create-database-server.html
 keywords: create, server, Microsoft SQL, deploy, host, deploy a database host, database host 
 summary: 'Créez un nouveau serveur Microsoft SQL Server au sein de l"usine de charges de travail BlueXP  pour les bases de données.' 
 ---
-= Créez un serveur de base de données en usine de charges de travail BlueXP  pour les bases de données
+= Créer un serveur Microsoft SQL dans une usine de charge de travail pour les bases de données
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-La création d'un nouvel hôte de base de données ou serveur Microsoft SQL Server dans l'usine de workloads BlueXP  pour les bases de données nécessite un déploiement de système de fichiers FSX pour ONTAP et des ressources pour Active Directory.
+La création d'un nouveau serveur Microsoft SQL ou d'un hôte de base de données dans la fabrique de charges de travail pour les bases de données nécessite un déploiement de système de fichiers FSx pour ONTAP et des ressources pour Active Directory.
 
 .Description de la tâche
-Avant de créer un serveur Microsoft SQL Server à partir d'une usine de charges de travail, découvrez les types de déploiement de stockage disponibles pour la configuration de l'hôte de base de données, le déploiement d'Active Directory, les modes de fonctionnement par défaut des charges de travail et les conditions requises pour effectuer cette opération.
+Avant de créer un serveur Microsoft SQL Server à partir d'une usine de charges de travail, découvrez les types de déploiement de stockage disponibles pour la configuration de l'hôte de base de données, la configuration d'E/S multi-chemins Microsoft, le déploiement d'Active Directory, les détails de mise en réseau et les exigences pour effectuer cette opération.
 
 Après le déploiement, vous devrez <<Étape 2 : activez la connexion à distance sur Microsoft SQL Server,Activez la connexion à distance sur Microsoft SQL Server>>.
 
@@ -58,19 +58,12 @@ Restauration des ressources:: Si vous décidez de restaurer vos ressources DNS (
 
 
 --
-Modes de fonctionnement d'usine de la charge de travail:: L'usine de workloads propose trois modes opérationnels qui dépendent du niveau de confort avec lequel vous laissez les workloads gérer vos ressources AWS.
 
-
-*_Basic_ mode* : dans ce mode de fonctionnement, vous n'avez pas besoin d'associer des informations d'identification de compte AWS dans l'usine de la charge de travail. Vous pouvez copier ou télécharger un modèle YAML partiellement rempli à partir de la Codebox pour l'effectuer en dehors de l'usine de la charge de travail.
-
-*_Read_ mode* : dans ce mode de fonctionnement, vous fournissez les informations d'identification du compte AWS avec des autorisations de lecture qui vous permettent de remplir le formulaire _Quick create_ ou _Advanced create_, puis de le copier ou de le télécharger. Vous pouvez également rediriger vers CloudFormation à partir de l'usine de la charge de travail avec les détails du formulaire rempli. Vous pourrez également gérer le serveur de base de données déployé en usine.
-
-*_automate_ mode* : dans ce mode de fonctionnement, vous fournissez les informations d'identification du compte AWS avec des autorisations d'automatisation qui vous permettent de créer et de gérer des ressources AWS en usine de workloads.
 
 .Avant de commencer
 Assurez-vous de disposer des conditions préalables suivantes avant de créer un nouvel hôte de base de données.
 
-Informations d'identification et autorisations:: Vous devez link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Identifiants de compte AWS et autorisations de mode automatisées"^]créer un nouvel hôte de base de données en usine de la charge de travail.
+Informations d'identification et autorisations:: Vous devez link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Informations d'identification du compte AWS et autorisations en mode _lecture/écriture_"^]créer un nouvel hôte de base de données en usine de la charge de travail.
 Active Directory:: Lorsque vous vous connectez à Active Directory, vous devez disposer d'un accès administrateur avec des autorisations pour effectuer les opérations suivantes :
 +
 --
@@ -125,13 +118,16 @@ Vous pouvez également télécharger un modèle de fichier YAML partiellement re
 
 .. *Région et VPC* : sélectionnez une région et un réseau VPC.
 +
-Assurez-vous que les groupes de sécurité d'un noeud final d'interface existant autorisent l'accès au protocole HTTPS (443) aux sous-réseaux sélectionnés.
+Assurez-vous que les sous-réseaux de déploiement sont associés aux points de terminaison d'interface existants et que les groupes de sécurité autorisent l'accès au protocole HTTPS (443) aux sous-réseaux sélectionnés.
 
 +
 Terminaux de l'interface de services AWS (SQS, FSX, EC2, CloudWatch, CloudFormation, SSM) et le noeud final de la passerelle S3 sont créés pendant le déploiement s'ils sont introuvables.
 
 +
 Les attributs DNS VPC `EnableDnsSupport` et `EnableDnsHostnames` sont modifiés pour activer la résolution de l'adresse du terminal s'ils ne sont pas déjà définis sur `true`.
+
++
+Lors de l'utilisation d'un DNS inter-VPC, le groupe de sécurité des points de terminaison de l'autre VPC où réside le DNS doit autoriser le port 443 pour les sous-réseaux de déploiement. Dans le cas contraire, vous devez fournir un résolveur DNS du VPC local lors de la connexion à un Active Directory inter-VPC. Dans un environnement de contrôleurs de domaine répliqués multiples, si certains contrôleurs de domaine ne sont pas accessibles depuis le sous-réseau, vous pouvez effectuer une redirection vers CloudFormation et saisir  `Preferred domain controller` pour se connecter à Active Directory.
 
 .. *Zones de disponibilité* : sélectionnez les zones de disponibilité et les sous-réseaux en fonction du modèle de déploiement de l'instance de cluster de basculement (FCI).
 +

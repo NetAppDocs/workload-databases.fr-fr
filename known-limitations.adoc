@@ -15,6 +15,12 @@ Les limitations connues identifient les plateformes, les périphériques ou les 
 
 
 
+== Prise en charge de la détection d'instance d'hôte
+
+Workload Factory prend en charge la détection des instances PostgreSQL exécutées uniquement sur les systèmes d'exploitation Amazon Linux et des instances Oracle exécutées uniquement sur Red Hat Enterprise Linux.
+
+
+
 == Prise en charge de la version d'image ami
 
 Nous n'affichons que quatre versions ou révisions récentes d'images ami pour chaque version SQL. Nous n'autorisons pas l'installation à partir d'une image ami antérieure aux quatre dernières versions.
@@ -127,9 +133,3 @@ Les calculs des économies et des pourcentages de la taille du volume pour le st
 * L'évaluation d'optimisation ne peut pas déterminer si la réplication interrégionale (CRR) est utilisée lorsque le système de fichiers FSX pour ONTAP cible se trouve dans un autre compte AWS.
 * L'usine de charge de travail évalue uniquement la configuration CRR du système de fichiers source FSX pour ONTAP.
 
-
-
-
-== Nombre de bases de données dans les instances de SQL Server
-
-Dans l'onglet Inventaire et dans le tableau de bord, la fabrique de workloads prend en charge jusqu'à 1 500 bases de données au sein d'instances SQL Server.

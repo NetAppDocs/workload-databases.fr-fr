@@ -4,21 +4,21 @@ permalink: optimize-configurations.html
 keywords: optimize, configuration, storage, compute, application, resiliency assessment, scan, optimization, Microsoft SQL Server, host, instance, FSx for ONTAP 
 summary: 'L"usine de charges de travail BlueXP  pour les bases de données analyse les configurations de Microsoft SQL Server et fournit des informations et des recommandations pour vous aider à atteindre l"excellence opérationnelle.' 
 ---
-= Optimisez les configurations pour les déploiements Microsoft SQL Server
+= Implémenter des configurations de base de données bien architecturées dans Workload Factory
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-Fabrique de workloads BlueXP  pour les bases de données analyse et évalue en continu les configurations de déploiement de Microsoft SQL Server qui s'exécutent sur Amazon FSX pour NetApp ONTAP. Cette fonctionnalité fournit des informations et des recommandations avec la possibilité d'optimiser automatiquement les configurations non optimisées afin que les workloads de bases de données puissent atteindre l'excellence opérationnelle.
+Grâce aux analyses de configuration et aux recommandations, exploitez Workload Factory pour mettre en œuvre les meilleures pratiques pour vos configurations de base de données. Vous pouvez facilement identifier les problèmes et prendre des mesures pour améliorer l'architecture des configurations qui ne sont pas optimisées en termes de fiabilité, de sécurité, d'efficacité, de performances et de coût.
 
 .Description de la tâche
-L'évaluation s'exécute automatiquement et en continu une fois par jour pour les instances de Microsoft SQL Server avec FSX pour le stockage ONTAP géré en usine de workloads. Les rapports d'évaluation sont disponibles dans le tableau de bord d'optimisation uniquement si une tâche planifiée quotidienne s'est exécutée après le déploiement ou après la gestion d'une instance.
+Workload Factory analyse quotidiennement les configurations de bases de données. Cette analyse fournit des informations et des recommandations, ainsi que des options pour corriger automatiquement les problèmes de configuration afin que vos configurations soient conformes aux meilleures pratiques.
 
-Workload Factory fournit des recommandations détaillées pour optimiser les configurations en fonction des meilleures pratiques de stockage FSX pour ONTAP. Vous pouvez consulter les recommandations et choisir d'optimiser les configurations non optimisées.
+Vous disposez d'options pour examiner les recommandations relatives aux problèmes de configuration et résoudre ces problèmes à partir de l'inventaire des bases de données dans la console de l'usine de charge de travail.
 
-Ce qui est numérisé:: Workload Factory évalue l'état d'optimisation des configurations suivantes pour les instances Microsoft SQL Server :
+Ce qui est analysé:: Workload Factory analyse l'état bien architecturé des configurations suivantes pour les instances Microsoft SQL Server :
 +
 --
 * Dimensionnement du stockage : inclut le niveau de stockage, la marge du système de fichiers, la taille du disque du journal et la taille du disque TempDB
@@ -27,43 +27,40 @@ Ce qui est numérisé:: Workload Factory évalue l'état d'optimisation des conf
 * Calcul : inclut le dimensionnement approprié, les correctifs du système d'exploitation et les paramètres de la carte réseau tels que le RSS (Receive Side Scaling) et le déchargement TCP
 * Applications : inclut les licences Microsoft SQL Server, le correctif Microsoft SQL Server et les paramètres MAXDOP
 * Résilience : inclut les snapshots locaux, les sauvegardes FSX pour ONTAP et la réplication interrégionale (CRR)
-* Clones : inclut des options d'actualisation et de suppression des clones (sandbox) antérieurs à 60 jours
+* Clones : inclut des options pour actualiser et supprimer les clones (bacs à sable) qui ont été créés dans ou en dehors de l'usine de charge de travail et qui datent de plus de 60 jours
 
 
 --
 
 
 .Avant de commencer
-* Vous devez disposer d'informations d'identification avec des autorisations de lecture ou d'automatisation.
-* Pour évaluer le stockage d'une instance de Microsoft SQL Server, l'instance doit être gérée par usine de workloads et le type de stockage doit être FSX pour ONTAP.
-* Assurez-vous de revoir attentivement chaque recommandation avant de choisir d'optimiser un paramètre ou une configuration. Pour les paramètres RSS et MAXDOP, nous vous suggérons de tester les paramètres recommandés pour déterminer les améliorations de performances avant d'apporter des modifications à votre environnement de production.
+* Vous devez avoir link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Informations d'identification du compte AWS et autorisations de lecture/écriture"^] pour analyser vos configurations de base de données.
+* Pour évaluer le stockage d’une instance Microsoft SQL Server, l’instance doit être enregistrée dans la fabrique de charges de travail et le type de stockage doit être FSx pour ONTAP. link:register-instance.html["Découvrez comment enregistrer une instance d’hôte."]
+* Vérifiez attentivement chaque recommandation avant de choisir de corriger un paramètre ou une configuration. Pour les paramètres RSS et MAXDOP, nous vous suggérons de tester les paramètres recommandés pour déterminer les améliorations de performances avant d'apporter des modifications à votre environnement de production.
 
 
 
-NOTE: Le processus d'optimisation peut entraîner des temps d'indisponibilité d'instance ou des interruptions de service. Vérifiez le résumé de l'optimisation et les éléments d'action avant de choisir d'optimiser une configuration.
+NOTE: Le processus de correction peut entraîner des temps d'indisponibilité d'instance ou des interruptions de service. Assurez-vous de lire attentivement la recommandation avant de choisir de corriger une configuration.
 
 .Étapes
 . Connectez-vous à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
 . Dans la mosaïque bases de données, sélectionnez *aller à l'inventaire des bases de données*.
 . Dans l'onglet *Inventaire*, sélectionnez l'onglet *instances*.
-. Sélectionnez le menu à trois points de l'instance à optimiser, puis sélectionnez *optimiser*.
-. Sur la page optimiser l'instance de SQL Server, examinez les résultats de l'évaluation.
+. Sélectionnez *Résoudre les problèmes* pour afficher les problèmes de configuration de l'instance.
+. Sur la page d’état Bien architecturé de l’instance hôte, examinez les résultats de l’analyse.
 +
-Vous pouvez filtrer par catégories, sous-catégories, état, gravité et balises.
+Vous pouvez filtrer les problèmes de configuration par catégories, sous-catégories, statut, gravité et balises.
 
 +
-Vous pouvez également télécharger un rapport des résultats de l'évaluation en sélectionnant *Exporter PDF*.
+Vous pouvez également télécharger un rapport des résultats en sélectionnant *Exporter PDF*.
 
-. Sélectionnez la flèche déroulante pour afficher les recommandations pour une configuration. Assurez-vous de revoir attentivement la recommandation.
-+
-Cette recommandation présente les meilleures pratiques et les obstacles potentiels liés aux configurations non optimisées.
-
-. Sélectionnez pour *optimiser* les configurations non optimisées.
+. Sélectionnez la flèche déroulante pour afficher les recommandations pour une configuration. Les recommandations incluent les meilleures pratiques, les pièges potentiels des configurations non optimisées et des considérations importantes. Assurez-vous de revoir attentivement la recommandation.
+. Sélectionnez pour *Afficher et corriger* les problèmes de configuration lorsque l'option est disponible.
 +
 *Sélectionner tout* est la valeur par défaut, mais vous pouvez sélectionner des ressources spécifiques à optimiser.
 
 +
-.. Pour toutes les configurations, à l'exception du nettoyage des clones, consultez les détails de l'optimisation dans la boîte de dialogue d'optimisation pour savoir ce qui se passe si vous choisissez d'optimiser. Certaines opérations d'optimisation peuvent entraîner des temps d'indisponibilité d'instance ou des interruptions de service.
+.. Pour toutes les configurations, à l'exception du nettoyage des clones, consultez les recommandations pour savoir ce qui se passera si vous choisissez l'optimisation. Certaines opérations de correction peuvent entraîner des interruptions de service ou des temps d'arrêt des instances.
 .. Pour le nettoyage des clones, sélectionnez les bases de données clonées (sandbox) à actualiser ou à supprimer.
 +
 *** L'actualisation d'un clone le synchronise avec sa base de données source. L'actualisation est uniquement disponible pour les clones créés en usine de la charge de travail.
@@ -72,8 +69,8 @@ Cette recommandation présente les meilleures pratiques et les obstacles potenti
 
 
 
-. Sélectionnez *Continuer* pour optimiser la configuration.
+. Sélectionnez *Continuer* pour résoudre le problème de configuration.
 
 
 .Résultat
-Le processus d'optimisation démarre. Sélectionnez l'onglet *surveillance des travaux* pour afficher l'état de l'opération.
+Le processus de remédiation démarre. Sélectionnez l'onglet *surveillance des travaux* pour afficher l'état de l'opération.

@@ -1,0 +1,31 @@
+---
+sidebar: sidebar 
+permalink: deregister-instance.html 
+keywords: Microsoft SQL Server instance, PostgreSQL server instance, Oracle host instance, deregister instance, unregister instance, remove instance 
+summary: 'Annulez l"enregistrement d"une instance d"hôte si vous ne souhaitez plus déployer ou surveiller les ressources de l"instance.' 
+---
+= Annuler l'enregistrement d'une instance d'hôte dans la fabrique de charges de travail
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Désenregistrez une instance hôte si vous ne souhaitez plus déployer ni surveiller ses ressources. La désinscription d'instances supprime également la capacité de stockage utilisée par l'instance hôte.
+
+Vous pouvez réenregistrer l'instance ultérieurement.
+
+.Étapes
+. Connectez-vous à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
+. Dans la mosaïque bases de données, sélectionnez *aller à l'inventaire des bases de données*.
+. Dans bases de données, sélectionnez l'onglet *Inventaire*.
+. Cliquez sur la flèche déroulante pour développer la ligne de l’instance d’hôte à désinscrire.
++
+L'hôte se développe et les instances hôtes s'affichent.
+
+. Cliquez sur le menu à trois points de l’instance à désinscrire.
+. Sélectionnez *Se désinscrire*.
+
+
+.Résultat
+L'instance hôte est désormais désenregistrée. Vous pourrez la réenregistrer ultérieurement.

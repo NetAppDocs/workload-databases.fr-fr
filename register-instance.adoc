@@ -1,0 +1,91 @@
+---
+sidebar: sidebar 
+permalink: register-instance.html 
+keywords: Microsoft SQL Server instance, PostgreSQL server instance, Oracle host instance, manage host, view host, database host, database instance, manage, unregister 
+summary: 'Gérez les instances Microsoft SQL Server dans l"usine de workloads BlueXP  pour les bases de données.' 
+---
+= Enregistrer des instances dans la fabrique de charges de travail pour les bases de données
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Enregistrez les instances d'hôte afin de pouvoir surveiller l'état de l'instance et de la base de données, l'utilisation des ressources, la protection et les performances de stockage dans la fabrique de charges de travail pour les bases de données.
+
+Les bases de données ne peuvent enregistrer des instances qu'avec FSx pour le stockage du système de fichiers ONTAP.
+
+
+
+== À propos de la tâche
+
+L'enregistrement d'une instance d'hôte comprend deux étapes : l'authentification de l'instance et la préparation de l'instance en s'assurant que tous les modules AWS, NetApp et PowerShell sont installés sur l'instance.
+
+Vous pouvez authentifier les liens à l’aide des informations d’identification SQL Server ou des informations d’identification Windows.
+
+
+NOTE: Workload Factory prend uniquement en charge l'enregistrement et la gestion des instances d'hôte Microsoft SQL Server. Selon les informations d'identification du compte AWS sélectionnées dans Workload Factory, les hôtes PostgreSQL et Oracle peuvent apparaître dans l'inventaire. Actuellement, Workload Factory prend en charge les instances PostgreSQL non enregistrées exécutées uniquement sur les systèmes d'exploitation Amazon Linux et les instances Oracle exécutées uniquement sur Red Hat Enterprise Linux.
+
+
+
+== Enregistrement d'une instance d'hôte dans un réseau privé
+
+Pour enregistrer une instance d’hôte dans un réseau privé sans connectivité externe, les points de terminaison suivants doivent être disponibles dans le VPC avec une association aux sous-réseaux où les serveurs SQL sont présents. Assurez-vous que les points de terminaison de l'interface autorisent le port 443 dans le groupe de sécurité connecté.
+
+* `S3 Gateway/endpoint`
+* `ssm`
+* `ssmmessages`
+* `fsx`
+
+
+Si vous utilisez un serveur proxy pour toutes les connexions sortantes des instances EC2, vous devez autoriser l'accès aux domaines suivants afin que les opérations de gestion fonctionnent :
+
+* ``.microsoft.com``
+* ``.powershellgallery.com``
+* ``.aws.amazon.com``
+* ``.amazonaws.com``
+
+
+
+
+== Avant de commencer
+
+L'hôte de l'instance doit apparaître dans l'onglet Inventaire. Pour qu'il apparaisse dans l'inventaire, link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["vous devez ajouter les informations d'identification du compte AWS et les autorisations de mode _lecture_ ou _automatisation_"^] .
+
+
+
+== Enregistrer une instance d'hôte
+
+L'enregistrement d'une instance d'hôte inclut l'authentification et la préparation de l'instance.
+
+.Étapes
+. Connectez-vous à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
+. Dans la mosaïque bases de données, sélectionnez *aller à l'inventaire des bases de données*.
+. Dans bases de données, sélectionnez l'onglet *Inventaire*.
+. Dans l'onglet Inventaire, sélectionnez l'onglet *Instances*.
+. Accédez à l'instance à gérer et sélectionnez *Enregistrer l'instance*.
+. Sur la page Enregistrer l'instance, entrez le nom d'utilisateur et le mot de passe SQL Server, ainsi que le nom d'utilisateur et le mot de passe du système de fichiers FSx for ONTAP.
+. Sélectionnez *Suivant*.
+. Préparez l'instance en vous assurant qu'elle répond aux prérequis. Si tous les modules requis sont installés et que les prérequis sont remplis, sélectionnez « Suivant » pour enregistrer l'instance. Si vous devez effectuer une action, suivez ces étapes.
++
+.. S'il manque, sélectionnez l'usine de charge de travail pour *Installer les modules AWS et NetApp PowerShell manquants*.
+.. S'il est manquant, sélectionnez la fabrique de charges de travail pour *Installer le module PowerShell 7 manquant*. L'installation du module PowerShell 7 manquant nécessite un redémarrage du système.
+.. Consultez la liste des prérequis pour les fonctionnalités suivantes. Un prérequis doit être rempli pour enregistrer l'instance.
++
+*** *Examiner les problèmes et recommandations bien architecturés*
+*** *Résoudre les problèmes bien architecturés*
+*** *Créer une base de données*
+*** *Créer des copies de base de données (bac à sable)*
++
+La réalisation des prérequis inclut la mise à jour de vos autorisations de stratégie AWS IAM, des autorisations de profil d’instance EC2 IAM, des autorisations SQL Server et des modules PowerShell.
+
+
+
+.. Remplissez au moins un prérequis manquant pour continuer.
+.. Lorsqu'une ou plusieurs conditions préalables sont remplies et que les vérifications sont *Prêtes*, vous pouvez choisir d'*Enregistrer* l'instance.
+
+
+
+
+.Résultat
+La demande d'enregistrement de l'instance est lancée. Sélectionnez l'onglet *Surveillance des tâches* pour suivre la progression.

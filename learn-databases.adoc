@@ -2,22 +2,22 @@
 sidebar: sidebar 
 permalink: learn-databases.html 
 keywords: Databases 
-summary: 'L"usine de workloads BlueXP  pour bases de données est un service complet de déploiement et de maintenance de bases de données qui intègre les meilleures pratiques en matière d"optimisation, de clonage fin automatique et de contrôle et de résolution.' 
+summary: 'Workload Factory for Databases est un service de déploiement et de maintenance de base de données de bout en bout avec des meilleures pratiques intégrées pour l"optimisation, le clonage fin automatique et les capacités de surveillance et de résolution.' 
 ---
-= Découvrez l'usine de workloads BlueXP  pour bases de données
+= Découvrez l'usine de workloads pour les bases de données
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-L'usine de workloads BlueXP  pour bases de données est un service complet de déploiement et de maintenance de bases de données qui intègre les meilleures pratiques en matière d'optimisation, de clonage fin automatique et de contrôle et de résolution.
+Workload Factory for Databases est un service de déploiement et de maintenance de base de données de bout en bout avec des meilleures pratiques intégrées pour l'optimisation, le clonage fin automatique et les capacités de surveillance et de résolution.
 
 
 
-== Quelle est l'usine de workloads BlueXP  pour les bases de données ?
+== Qu'est-ce que Workload Factory pour les bases de données ?
 
-L'usine de workloads BlueXP  pour les bases de données détecte, évalue, planifie, provisionne et déplace les données Microsoft SQL Server vers des déploiements Amazon FSX pour NetApp ONTAP (FSX pour ONTAP) optimisés pour répondre à vos attentes de performances et de coûts, tout en respectant les bonnes pratiques du secteur. Tout au long du cycle de vie, l'usine de workloads assure l'optimisation et la gestion continues des bases de données sur FSX pour ONTAP.
+Workload Factory for Databases détecte, évalue, planifie, provisionne et déplace les données Microsoft SQL Server vers des déploiements Amazon FSx for NetApp ONTAP (FSx for ONTAP) optimisés pour répondre à vos attentes en matière de performances et de coûts tout en adhérant aux meilleures pratiques du secteur. Tout au long du cycle de vie, l'usine de workloads assure l'optimisation et la gestion continues des bases de données sur FSX pour ONTAP.
 
 Pour plus d'informations sur l'usine de charge de travail, reportez-vous au link:https://docs.netapp.com/us-en/workload-setup-admin/workload-factory-overview.html["présentation de l'usine des charges de travail"^].
 
@@ -81,7 +81,7 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/learn-fsx-ontap.html["Déc
 
 === Modes de fonctionnement en usine de la charge de travail
 
-Trois modes opérationnels différents - _Basic_, _read_ et _automate_ - offrent des options flexibles pour le déploiement à l'intérieur et à l'extérieur de l'usine de charge de travail. Obtenez une valeur immédiate à zéro confiance en _Basic_ mode avec des extraits de code pour une utilisation en dehors de l'usine de la charge de travail. Bénéficiez d'une valeur incrémentielle avec une confiance incrémentale en modes _read_ et _automate_.
+Trois modes de fonctionnement différents (de base, en lecture seule et en lecture/écriture) offrent des options de déploiement flexibles à l'intérieur et à l'extérieur de Workload Factory. Obtenez une valeur immédiate à zéro confiance en _Basic_ mode avec des extraits de code pour une utilisation en dehors de l'usine de la charge de travail. Bénéficiez d'une valeur ajoutée grâce à une confiance accrue en modes lecture seule et lecture/écriture.
 
 En savoir plus sur link:https://docs.netapp.com/us-en/workload-setup-admin/operational-modes.html["modes de fonctionnement en usine de la charge de travail"^].
 
