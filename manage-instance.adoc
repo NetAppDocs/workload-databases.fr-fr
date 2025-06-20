@@ -20,6 +20,5 @@ Les tâches de gestion comprennent :
 * link:create-database.html["Création d'une base de données"]
 * link:create-sandbox-clone.html["Création d'un clone de base de données (sandbox)"]
 * link:view-databases.html["Affichage des bases de données"]
-* link:monitor-databases.html["Surveillance des opérations de la base de données"]
 * link:optimize-configurations.html["Mise en œuvre de configurations de bases de données bien architecturées"]
 

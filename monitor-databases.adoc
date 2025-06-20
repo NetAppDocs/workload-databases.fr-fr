@@ -2,16 +2,16 @@
 sidebar: sidebar 
 permalink: monitor-databases.html 
 keywords: monitor databases, monitor jobs, track database jobs 
-summary: 'Suivez les tâches de base de données et surveillez les bases de données au sein de l"usine de workloads BlueXP .' 
+summary: 'Suivez les tâches de base de données et surveillez les bases de données dans l"usine de charge de travail pour les bases de données.' 
 ---
-= Surveillez les bases de données en usine de workloads BlueXP 
+= Surveiller les tâches de base de données dans Workload Factory
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-Suivez les tâches de base de données et surveillez les bases de données au sein de l'usine de workloads BlueXP .
+Suivez les tâches de base de données et surveillez les bases de données dans l'usine de charge de travail pour les bases de données.
 
 .Description de la tâche
 Les bases de données permettent de surveiller la progression des tâches et de diagnostiquer et dépanner en cas de défaillance. Vous pouvez filtrer les travaux par type et par état, rechercher des travaux à l'aide de la fonction de recherche et télécharger la table des travaux.
