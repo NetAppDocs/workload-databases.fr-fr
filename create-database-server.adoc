@@ -87,6 +87,8 @@ Vous pouvez utiliser les modes de déploiement _Quick CREATE_ ou _Advanced CREAT
 
 NOTE: Lorsque vous utilisez Terraform à partir de Codebox, le code que vous copiez ou téléchargez se cache `fsxadmin` et `vsadmin` passe. Vous devrez saisir à nouveau les mots de passe lorsque vous exécuterez le code. Vous devrez inclure les autorisations suivantes pour le compte d'utilisateur en plus des autorisations _automate_ mode : `iam:TagRole` et `iam:TagInstanceProfile`. link:https://docs.netapp.com/us-en/workload-setup-admin/use-codebox.html#use-terraform-from-codebox["Découvrez comment utiliser Terraform à partir de Codebox"^].
 
+Lors du déploiement, Workload Factory active CredSSP pour la délégation des informations d'identification aux scripts de provisionnement SQL. Lorsque la délégation CredSSP est bloquée pour tous les ordinateurs du domaine avec la stratégie de groupe, le déploiement échoue. Après le déploiement, Workload Factory désactive CredSSP.
+
 [role="tabbed-block"]
 ====
 .Création rapide

@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: optimize-configurations.html 
 keywords: optimize, configuration, storage, compute, application, resiliency assessment, scan, optimization, Microsoft SQL Server, host, instance, FSx for ONTAP 
-summary: 'L"usine de charges de travail BlueXP  pour les bases de données analyse les configurations de Microsoft SQL Server et fournit des informations et des recommandations pour vous aider à atteindre l"excellence opérationnelle.' 
+summary: 'Workload Factory for Databases analyse les configurations Microsoft SQL Server en fournissant des informations et des recommandations pour vous aider à atteindre l"excellence opérationnelle.' 
 ---
 = Implémenter des configurations de base de données bien architecturées dans Workload Factory
 :allow-uri-read: 
@@ -23,7 +23,7 @@ Ce qui est analysé:: Workload Factory analyse l'état bien architecturé des co
 --
 * Dimensionnement du stockage : inclut le niveau de stockage, la marge du système de fichiers, la taille du disque du journal et la taille du disque TempDB
 * Disposition du stockage : inclut le placement des fichiers de données utilisateur, le placement des fichiers journaux et le placement de TempDB
-* Configuration du stockage : inclut la gestion de la capacité, le provisionnement fin, la règle de hiérarchisation, les snapshots, l'état des E/S à chemins d'accès multiples, la règle et les sessions, etc
+* Configuration du stockage : inclut la gestion de la capacité, le provisionnement léger, la politique de hiérarchisation, les instantanés, l'état Microsoft Multipath I/O (MPIO) et le paramètre de délai d'expiration MPIO
 * Calcul : inclut le dimensionnement approprié, les correctifs du système d'exploitation et les paramètres de la carte réseau tels que le RSS (Receive Side Scaling) et le déchargement TCP
 * Applications : inclut les licences Microsoft SQL Server, le correctif Microsoft SQL Server et les paramètres MAXDOP
 * Résilience : inclut les snapshots locaux, les sauvegardes FSX pour ONTAP et la réplication interrégionale (CRR)
@@ -57,10 +57,10 @@ Vous pouvez également télécharger un rapport des résultats en sélectionnant
 . Sélectionnez la flèche déroulante pour afficher les recommandations pour une configuration. Les recommandations incluent les meilleures pratiques, les pièges potentiels des configurations non optimisées et des considérations importantes. Assurez-vous de revoir attentivement la recommandation.
 . Sélectionnez pour *Afficher et corriger* les problèmes de configuration lorsque l'option est disponible.
 +
-*Sélectionner tout* est la valeur par défaut, mais vous pouvez sélectionner des ressources spécifiques à optimiser.
+*Sélectionner tout* est la valeur par défaut, mais vous pouvez sélectionner des ressources spécifiques à corriger.
 
 +
-.. Pour toutes les configurations, à l'exception du nettoyage des clones, consultez les recommandations pour savoir ce qui se passera si vous choisissez l'optimisation. Certaines opérations de correction peuvent entraîner des interruptions de service ou des temps d'arrêt des instances.
+.. Pour toutes les configurations, à l’exception du nettoyage des clones, consultez les détails de la recommandation pour savoir ce qui se passera si vous choisissez de résoudre le problème. Certaines opérations de correction peuvent entraîner des interruptions de service ou des temps d'arrêt des instances.
 .. Pour le nettoyage des clones, sélectionnez les bases de données clonées (sandbox) à actualiser ou à supprimer.
 +
 *** L'actualisation d'un clone le synchronise avec sa base de données source. L'actualisation est uniquement disponible pour les clones créés en usine de la charge de travail.
@@ -73,4 +73,4 @@ Vous pouvez également télécharger un rapport des résultats en sélectionnant
 
 
 .Résultat
-Le processus de remédiation démarre. Sélectionnez l'onglet *surveillance des travaux* pour afficher l'état de l'opération.
+Workload Factory commence à résoudre le(s) problème(s). Sélectionnez l'onglet *surveillance des travaux* pour afficher l'état de l'opération.

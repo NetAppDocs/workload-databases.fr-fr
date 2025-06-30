@@ -11,7 +11,7 @@ summary: 'Gérez les instances Microsoft SQL Server dans l"usine de workloads Bl
 
 
 [role="lead"]
-Enregistrez les instances d'hôte afin de pouvoir surveiller l'état de l'instance et de la base de données, l'utilisation des ressources, la protection et les performances de stockage dans la fabrique de charges de travail pour les bases de données.
+Enregistrez les instances afin de pouvoir surveiller l'état de l'instance et de la base de données, l'utilisation des ressources, la protection et les performances de stockage dans la fabrique de charges de travail pour les bases de données.
 
 Les bases de données ne peuvent enregistrer des instances qu'avec FSx pour le stockage du système de fichiers ONTAP.
 
@@ -19,18 +19,18 @@ Les bases de données ne peuvent enregistrer des instances qu'avec FSx pour le s
 
 == À propos de la tâche
 
-L'enregistrement d'une instance d'hôte comprend deux étapes : l'authentification de l'instance et la préparation de l'instance en s'assurant que tous les modules AWS, NetApp et PowerShell sont installés sur l'instance.
+L'enregistrement d'une instance comprend deux étapes : l'authentification de l'instance et la préparation de l'instance en s'assurant que tous les modules AWS, NetApp et PowerShell sont installés sur l'instance.
 
 Vous pouvez authentifier les liens à l’aide des informations d’identification SQL Server ou des informations d’identification Windows.
 
 
-NOTE: Workload Factory prend uniquement en charge l'enregistrement et la gestion des instances d'hôte Microsoft SQL Server. Selon les informations d'identification du compte AWS sélectionnées dans Workload Factory, les hôtes PostgreSQL et Oracle peuvent apparaître dans l'inventaire. Actuellement, Workload Factory prend en charge les instances PostgreSQL non enregistrées exécutées uniquement sur les systèmes d'exploitation Amazon Linux et les instances Oracle exécutées uniquement sur Red Hat Enterprise Linux.
+NOTE: Workload Factory prend uniquement en charge l’enregistrement et la gestion des instances Microsoft SQL Server. Selon les informations d'identification du compte AWS sélectionnées dans Workload Factory, les hôtes PostgreSQL et Oracle peuvent apparaître dans l'inventaire. Actuellement, Workload Factory prend en charge les instances PostgreSQL non enregistrées exécutées uniquement sur les systèmes d'exploitation Amazon Linux et les instances Oracle exécutées uniquement sur Red Hat Enterprise Linux.
 
 
 
-== Enregistrement d'une instance d'hôte dans un réseau privé
+== Enregistrement d'une instance dans un réseau privé
 
-Pour enregistrer une instance d’hôte dans un réseau privé sans connectivité externe, les points de terminaison suivants doivent être disponibles dans le VPC avec une association aux sous-réseaux où les serveurs SQL sont présents. Assurez-vous que les points de terminaison de l'interface autorisent le port 443 dans le groupe de sécurité connecté.
+Pour enregistrer une instance dans un réseau privé sans connectivité externe, les points de terminaison suivants doivent être disponibles dans le VPC avec une association aux sous-réseaux où les serveurs SQL sont présents. Assurez-vous que les points de terminaison de l'interface autorisent le port 443 dans le groupe de sécurité connecté.
 
 * `S3 Gateway/endpoint`
 * `ssm`
@@ -50,23 +50,44 @@ Si vous utilisez un serveur proxy pour toutes les connexions sortantes des insta
 
 == Avant de commencer
 
-L'hôte de l'instance doit apparaître dans l'onglet Inventaire. Pour qu'il apparaisse dans l'inventaire, link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["vous devez ajouter les informations d'identification du compte AWS et les autorisations en mode _lecture seule_ ou _lecture/écriture_"^] .
+Tenez compte des éléments suivants avant d’enregistrer une instance :
+
+* L'hôte de l'instance doit apparaître dans l'onglet Inventaire. Pour qu'il apparaisse dans l'inventaire, link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["vous devez ajouter les informations d'identification du compte AWS et les autorisations en mode _lecture seule_ ou _lecture/écriture_"^] .
+* Lors de l'utilisation des identifiants d'utilisateur de domaine Windows pour l'authentification des opérations de gestion SQL Server, Workload Factory active la délégation CredSSP sur les nœuds SQL. Si la délégation CredSSP est bloquée pour tous les ordinateurs du domaine avec la stratégie de groupe, l'authentification avec les identifiants d'utilisateur Windows ne fonctionne pas.
 
 
 
-== Enregistrer une instance d'hôte
 
-L'enregistrement d'une instance d'hôte inclut l'authentification et la préparation de l'instance.
+== Enregistrer une instance
+
+L'enregistrement d'une instance inclut l'authentification et la préparation de l'instance.
 
 .Étapes
 . Connectez-vous à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
 . Dans la mosaïque bases de données, sélectionnez *aller à l'inventaire des bases de données*.
 . Dans bases de données, sélectionnez l'onglet *Inventaire*.
 . Dans l'onglet Inventaire, sélectionnez l'onglet *Instances*.
-. Accédez à l'instance à gérer et sélectionnez *Enregistrer l'instance*.
-. Sur la page Enregistrer l'instance, entrez le nom d'utilisateur et le mot de passe SQL Server, ainsi que le nom d'utilisateur et le mot de passe du système de fichiers FSx for ONTAP.
-. Sélectionnez *Suivant*.
-. Préparez l'instance en vous assurant qu'elle répond aux prérequis. Si tous les modules requis sont installés et que les prérequis sont remplis, sélectionnez « Suivant » pour enregistrer l'instance. Si vous devez effectuer une action, suivez ces étapes.
+. Sélectionnez pour enregistrer une seule instance ou enregistrer plusieurs instances.
++
+.. Enregistrement d'instance unique : accédez à l'instance à gérer et sélectionnez *Enregistrer l'instance*.
+.. Enregistrement d'instances multiples : sélectionnez le bouton *Enregistrer plusieurs instances*.
++
+Deux options sont disponibles pour enregistrer plusieurs instances. Dans les deux cas, les instances doivent partager le même statut d'authentification (non authentifié ou authentifié).
+
++
+*** Instances non authentifiées : sélectionnez plusieurs instances non authentifiées à enregistrer. Ces instances doivent partager les mêmes informations d'authentification et les mêmes identifiants FSx for ONTAP. Sélectionnez « Appliquer » puis « Suivant ».
+*** Instances authentifiées : sélectionnez plusieurs instances authentifiées à enregistrer, puis sélectionnez *Suivant*.
+
+
+
+
+. À l'étape 2 de la page « Enregistrer les instances », sélectionnez le mode d'authentification de l'instance, saisissez les informations suivantes, puis cliquez sur « Suivant ». Si les instances sont déjà authentifiées, cliquez sur « Suivant ».
++
+** *Authentification SQL Server* : saisissez le nom d'utilisateur et le mot de passe SQL Server, ainsi que le nom d'utilisateur et le mot de passe du système de fichiers FSx for ONTAP.
+** *Authentification Windows* : saisissez le nom d'utilisateur et le mot de passe Windows, ainsi que le nom d'utilisateur et le mot de passe du système de fichiers FSx for ONTAP.
+
+
+. À l’étape 3, préparez l’instance en vous assurant qu’elle répond aux conditions préalables requises. Si tous les modules requis sont installés et que les prérequis sont remplis, sélectionnez « Suivant » pour enregistrer l'instance. Si vous devez effectuer une action, suivez ces étapes.
 +
 .. S'il manque, sélectionnez l'usine de charge de travail pour *Installer les modules AWS et NetApp PowerShell manquants*.
 .. S'il est manquant, sélectionnez la fabrique de charges de travail pour *Installer le module PowerShell 7 manquant*. L'installation du module PowerShell 7 manquant nécessite un redémarrage du système.

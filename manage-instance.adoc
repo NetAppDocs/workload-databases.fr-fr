@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: manage-instance.html 
-keywords: host instance, instance management, FSx for ONTAP, instance, manage host, view host, database host, database instance, manage 
+keywords: instance, instance management, FSx for ONTAP, instance, manage host, view host, database host, database instance, manage 
 summary: Découvrez la gestion des instances dans Workload Factory pour les bases de données. 
 ---
 = Gestion des instances dans Workload Factory pour les bases de données
@@ -11,9 +11,9 @@ summary: Découvrez la gestion des instances dans Workload Factory pour les base
 
 
 [role="lead"]
-La gestion des instances d'hôtes enregistrées dans Workload Factory inclut le déploiement de ressources pour vos instances, comme la création de bases de données et de clones de bases de données, ainsi que la surveillance de leur état, de l'utilisation des ressources, de leur protection et des performances de stockage. De plus, vous pouvez analyser l'état de vos configurations de bases de données et mettre en œuvre les meilleures pratiques de configuration pour améliorer les performances et réduire les coûts opérationnels. La gestion des instances est réservée aux instances avec stockage de système de fichiers FSx for ONTAP.
+La gestion des instances enregistrées dans Workload Factory inclut le déploiement de ressources pour vos instances, comme la création de bases de données et de clones de bases de données, ainsi que la surveillance de l'état des instances et des bases de données, de l'utilisation des ressources, de la protection et des performances de stockage. De plus, vous pouvez analyser l'état de vos configurations de bases de données et mettre en œuvre les meilleures pratiques de configuration pour améliorer les performances et réduire les coûts opérationnels. La gestion des instances est réservée aux instances avec stockage de système de fichiers FSx for ONTAP.
 
-Vous devez link:register-instance.html["enregistrer une instance d'hôte"] effectuer l’une des tâches de gestion suivantes.
+Vous devez link:register-instance.html["enregistrer une instance"] effectuer l’une des tâches de gestion suivantes.
 
 Les tâches de gestion comprennent :
 
