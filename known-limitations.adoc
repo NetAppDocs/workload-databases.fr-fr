@@ -15,7 +15,7 @@ Les limitations connues identifient les plateformes, les périphériques ou les 
 
 
 
-== Prise en charge de la détection d'instance d'hôte
+== Prise en charge de la détection d'instance
 
 Workload Factory prend en charge la détection des instances PostgreSQL exécutées uniquement sur les systèmes d'exploitation Amazon Linux et des instances Oracle exécutées uniquement sur Red Hat Enterprise Linux.
 

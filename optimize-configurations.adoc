@@ -35,7 +35,7 @@ Ce qui est analysé:: Workload Factory analyse l'état bien architecturé des co
 
 .Avant de commencer
 * Vous devez avoir link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Informations d'identification du compte AWS et autorisations de lecture/écriture"^] pour analyser vos configurations de base de données.
-* Pour évaluer le stockage d’une instance Microsoft SQL Server, l’instance doit être enregistrée dans la fabrique de charges de travail et le type de stockage doit être FSx pour ONTAP. link:register-instance.html["Découvrez comment enregistrer une instance d’hôte."]
+* Pour évaluer le stockage d’une instance Microsoft SQL Server, l’instance doit être enregistrée dans la fabrique de charges de travail et le type de stockage doit être FSx pour ONTAP. link:register-instance.html["Apprenez à enregistrer une instance."]
 * Vérifiez attentivement chaque recommandation avant de choisir de corriger un paramètre ou une configuration. Pour les paramètres RSS et MAXDOP, nous vous suggérons de tester les paramètres recommandés pour déterminer les améliorations de performances avant d'apporter des modifications à votre environnement de production.
 
 
@@ -47,7 +47,7 @@ NOTE: Le processus de correction peut entraîner des temps d'indisponibilité d'
 . Dans la mosaïque bases de données, sélectionnez *aller à l'inventaire des bases de données*.
 . Dans l'onglet *Inventaire*, sélectionnez l'onglet *instances*.
 . Sélectionnez *Résoudre les problèmes* pour afficher les problèmes de configuration de l'instance.
-. Sur la page d’état Bien architecturé de l’instance hôte, examinez les résultats de l’analyse.
+. Sur la page d’état Bien architecturé de l’instance, examinez les résultats de l’analyse.
 +
 Vous pouvez filtrer les problèmes de configuration par catégories, sous-catégories, statut, gravité et balises.
 

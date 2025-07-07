@@ -36,6 +36,6 @@ Si vous travaillez en mode _lecture seule_ ou _lecture/écriture_, vous devrez l
 Enfin, si vous choisissez de fonctionner en mode _lecture/écriture_, vous devez link:create-database-server.html["déployer un serveur hôte"] ou link:register-instance.html["enregistrer une instance"] pour gérer vos ressources d'hébergement et avant d'ajouter des bases de données utilisateur.
 
 .Et la suite
-Lorsque vous avez enregistré des instances d'hôte avec FSx pour le stockage du système de fichiers ONTAP dans votre inventaire de bases de données, vous pouvez link:create-database.html["créer une base de données utilisateur"] ou link:create-sandbox-clone.html["cloner votre hôte pour créer un sandbox"] .
+Lorsque vous avez enregistré des instances avec FSx pour le stockage du système de fichiers ONTAP dans votre inventaire de bases de données, vous pouvez link:create-database.html["créer une base de données utilisateur"] ou link:create-sandbox-clone.html["cloner votre hôte pour créer un sandbox"] .
 
 Lorsque vous avez des hôtes Elastic Block Store ou FSX for Windows File Server dans votre inventaire de bases de données, vous pouvez link:explore-savings.html["découvrez les économies réalisées grâce au calculateur d'économies"].

@@ -48,9 +48,9 @@ Portée de l'analyse:: La portée de l'optimisation varie en fonction du composa
 
 == Exigences d'analyse
 
-Pour une analyse complète de l'environnement de base de données, les instances hôtes doivent être enregistrées et en ligne.
+Pour une analyse complète de l'environnement de base de données, les instances doivent être enregistrées et en ligne.
 
-link:register-instance.html["Découvrez comment enregistrer une instance d’hôte."]
+link:register-instance.html["Apprenez à enregistrer une instance."]
 
 .Et la suite
 link:optimize-configurations.html["Mettre en œuvre des configurations de base de données bien architecturées"]

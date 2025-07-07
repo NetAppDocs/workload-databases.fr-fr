@@ -14,8 +14,8 @@ summary: 'Pour obtenir un résumé des ressources de base de données dans Workl
 Pour obtenir un résumé des ressources de base de données dans Workload Factory, consultez toutes les bases de données de l'inventaire. Vous pouvez également consulter les bases de données par instance enregistrée.
 
 .Avant de commencer
-* Les instances d'hôte contenant des ressources de base de données doivent disposer de FSx pour le stockage du système de fichiers ONTAP.
-* Les instances d’hôte doivent être enregistrées dans la fabrique de charges de travail. Découvrez comment link:register-instance.html["enregistrer les instances d'hôte"].
+* Les instances contenant des ressources de base de données doivent disposer de FSx pour le stockage du système de fichiers ONTAP.
+* Les instances doivent être enregistrées dans la fabrique de charges de travail. Découvrez comment link:register-instance.html["enregistrer une instance"].
 
 
 .Étapes
@@ -28,7 +28,7 @@ Pour obtenir un résumé des ressources de base de données dans Workload Factor
 . Dans bases de données, sélectionnez l'onglet *Inventaire*.
 . Cliquez sur la flèche déroulante pour développer la ligne de l'hôte et afficher ses bases de données.
 +
-L'hôte se développe et les instances hôtes s'affichent.
+L'hôte se développe et les instances apparaissent.
 
 . Cliquez sur le menu à trois points de l'instance contenant les bases de données à afficher.
 . Sélectionnez *Afficher les bases de données*.
@@ -42,7 +42,7 @@ L'hôte se développe et les instances hôtes s'affichent.
 . Dans bases de données, sélectionnez l'onglet *Inventaire*.
 . Cliquez sur la flèche déroulante pour développer la ligne de l'hôte et afficher ses bases de données.
 +
-L'hôte se développe et les instances hôtes s'affichent.
+L'hôte se développe et les instances apparaissent.
 
 . Cliquez sur le menu à trois points de l'instance contenant les bases de données à afficher.
 . Sélectionnez *Afficher les bases de données*.
