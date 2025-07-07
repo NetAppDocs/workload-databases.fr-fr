@@ -13,7 +13,10 @@ summary: 'Créez un nouveau serveur Microsoft SQL Server au sein de l"usine de c
 [role="lead"]
 La création d'un nouveau serveur Microsoft SQL ou d'un hôte de base de données dans la fabrique de charges de travail pour les bases de données nécessite un déploiement de système de fichiers FSx pour ONTAP et des ressources pour Active Directory.
 
-.Description de la tâche
+
+
+== Description de la tâche
+
 Avant de créer un serveur Microsoft SQL Server à partir d'une usine de charges de travail, découvrez les types de déploiement de stockage disponibles pour la configuration de l'hôte de base de données, la configuration d'E/S multi-chemins Microsoft, le déploiement d'Active Directory, les détails de mise en réseau et les exigences pour effectuer cette opération.
 
 Après le déploiement, vous devrez <<Étape 2 : activez la connexion à distance sur Microsoft SQL Server,Activez la connexion à distance sur Microsoft SQL Server>>.
@@ -42,14 +45,7 @@ Active Directory:: Les événements suivants se produisent pour Active Directory
 
 
 --
-
-
-
-
-== Groupes de sécurité Active Directory gérés par l'utilisateur
-
-Si vous sélectionnez « Active Directory géré par l'utilisateur » lors du déploiement de Microsoft SQL Server en usine de la charge de travail, vous devez fournir un groupe de sécurité qui autorise le trafic entre les instances EC2 et le service d'annuaire pour le déploiement. La fabrique de workloads ne connecte pas automatiquement le groupe de sécurité pour Active Directory géré par l'utilisateur, comme elle le fait pour Microsoft AD géré par AWS.
-
+Groupes de sécurité Active Directory gérés par l'utilisateur:: Si vous sélectionnez « Active Directory géré par l'utilisateur » lors du déploiement de Microsoft SQL Server en usine de la charge de travail, vous devez fournir un groupe de sécurité qui autorise le trafic entre les instances EC2 et le service d'annuaire pour le déploiement. La fabrique de workloads ne connecte pas automatiquement le groupe de sécurité pour Active Directory géré par l'utilisateur, comme elle le fait pour Microsoft AD géré par AWS.
 Restauration des ressources:: Si vous décidez de restaurer vos ressources DNS (Domain Name System), les enregistrements de ressources dans AD et DNS ne sont pas supprimés automatiquement. Vous pouvez supprimer les enregistrements du serveur DNS et d'AD comme suit.
 +
 --
@@ -60,7 +56,10 @@ Restauration des ressources:: Si vous décidez de restaurer vos ressources DNS (
 --
 
 
-.Avant de commencer
+
+
+== Avant de commencer
+
 Assurez-vous de disposer des conditions préalables suivantes avant de créer un nouvel hôte de base de données.
 
 Informations d'identification et autorisations:: Vous devez link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Informations d'identification du compte AWS et autorisations en mode _lecture/écriture_"^]créer un nouvel hôte de base de données en usine de la charge de travail.

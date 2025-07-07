@@ -26,24 +26,23 @@ Vous pouvez authentifier les liens à l’aide des informations d’identificati
 
 NOTE: Workload Factory prend uniquement en charge l’enregistrement et la gestion des instances Microsoft SQL Server. Selon les informations d'identification du compte AWS sélectionnées dans Workload Factory, les hôtes PostgreSQL et Oracle peuvent apparaître dans l'inventaire. Actuellement, Workload Factory prend en charge les instances PostgreSQL non enregistrées exécutées uniquement sur les systèmes d'exploitation Amazon Linux et les instances Oracle exécutées uniquement sur Red Hat Enterprise Linux.
 
-
-
-== Enregistrement d'une instance dans un réseau privé
-
-Pour enregistrer une instance dans un réseau privé sans connectivité externe, les points de terminaison suivants doivent être disponibles dans le VPC avec une association aux sous-réseaux où les serveurs SQL sont présents. Assurez-vous que les points de terminaison de l'interface autorisent le port 443 dans le groupe de sécurité connecté.
-
+Enregistrement d'une instance dans un réseau privé:: Pour enregistrer une instance dans un réseau privé sans connectivité externe, les points de terminaison suivants doivent être disponibles dans le VPC avec une association aux sous-réseaux où les serveurs SQL sont présents. Assurez-vous que les points de terminaison de l'interface autorisent le port 443 dans le groupe de sécurité connecté.
++
+--
 * `S3 Gateway/endpoint`
 * `ssm`
 * `ssmmessages`
 * `fsx`
-
-
++
 Si vous utilisez un serveur proxy pour toutes les connexions sortantes des instances EC2, vous devez autoriser l'accès aux domaines suivants afin que les opérations de gestion fonctionnent :
 
 * ``.microsoft.com``
 * ``.powershellgallery.com``
 * ``.aws.amazon.com``
 * ``.amazonaws.com``
+
+
+--
 
 
 
