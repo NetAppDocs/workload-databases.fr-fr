@@ -11,10 +11,12 @@ summary: 'Workload Factory for Databases analyse les configurations Microsoft SQ
 
 
 [role="lead"]
-Grâce aux analyses de configuration et aux recommandations, exploitez Workload Factory pour mettre en œuvre les meilleures pratiques pour vos configurations de base de données. Vous pouvez facilement identifier les problèmes et prendre des mesures pour améliorer l'architecture des configurations qui ne sont pas optimisées en termes de fiabilité, de sécurité, d'efficacité, de performances et de coût.
+Grâce aux analyses de configuration et aux recommandations, exploitez Workload Factory pour mettre en œuvre les meilleures pratiques pour vos configurations de base de données. Vous pouvez facilement examiner l'état de l'architecture, en savoir plus sur les problèmes liés aux configurations de base de données et prendre des mesures pour améliorer les configurations qui ne sont pas optimisées pour la fiabilité, la sécurité, l'efficacité, les performances et le coût.
+
+link:optimize-overview.html["Découvrez l’analyse de configuration et l’état bien architecturé dans l’usine de charge de travail."]
 
 .Description de la tâche
-Workload Factory analyse quotidiennement les configurations de bases de données. Cette analyse fournit des informations et des recommandations, ainsi que des options pour corriger automatiquement les problèmes de configuration afin que vos configurations soient conformes aux meilleures pratiques.
+Workload Factory analyse quotidiennement les configurations de bases de données. L'analyse quotidienne fournit un état bien architecturé, ainsi que des informations et des recommandations avec des options pour résoudre automatiquement les problèmes de configuration afin que vos configurations répondent aux meilleures pratiques.
 
 Vous disposez d'options pour examiner les recommandations relatives aux problèmes de configuration et résoudre ces problèmes à partir de l'inventaire des bases de données dans la console de l'usine de charge de travail.
 
