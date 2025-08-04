@@ -28,7 +28,7 @@ Ce qui est analysé:: Workload Factory analyse l'état bien architecturé des co
 * Configuration du stockage : inclut la gestion de la capacité, le provisionnement léger, la politique de hiérarchisation, les instantanés, l'état Microsoft Multipath I/O (MPIO) et le paramètre de délai d'expiration MPIO
 * Calcul : inclut le dimensionnement approprié, les correctifs du système d'exploitation et les paramètres de la carte réseau tels que le RSS (Receive Side Scaling) et le déchargement TCP
 * Applications : inclut les licences Microsoft SQL Server, le correctif Microsoft SQL Server et les paramètres MAXDOP
-* Résilience : inclut les snapshots locaux, les sauvegardes FSX pour ONTAP et la réplication interrégionale (CRR)
+* Résilience : inclut les instantanés locaux, les sauvegardes FSx pour ONTAP , la réplication interrégionale (CRR) et la haute disponibilité Microsoft SQL.
 * Clones : inclut des options pour actualiser et supprimer les clones (bacs à sable) qui ont été créés dans ou en dehors de l'usine de charge de travail et qui datent de plus de 60 jours
 
 

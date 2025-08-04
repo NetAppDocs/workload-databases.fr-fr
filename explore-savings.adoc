@@ -234,10 +234,14 @@ Suivez les étapes de l'onglet correspondant à votre type de stockage.
 Si l'usine de charge de travail détecte des hôtes EBS, vous serez redirigé vers l'onglet économies Explore. Si l'usine de charge de travail ne détecte pas d'hôtes EBS, vous serez redirigé vers <<Explorer les économies via la personnalisation,explorer les économies via la personnalisation>>le calculateur à .
 
 . Dans l'onglet Explorer les économies, cliquez sur *Explorer les économies* du serveur de base de données utilisant le stockage EBS.
+. Si nécessaire, authentifiez l’hôte de la base de données avec les informations d’identification SQL Server, les informations d’identification Windows ou en ajoutant les autorisations SQL Server manquantes.
++
+Si la page Explorer les économies ne charge pas les données après une authentification réussie, sélectionnez l'onglet *Inventaire* pour recharger les données, puis sélectionnez à nouveau l'onglet *Explorer les économies*.
+
 . Dans le calculateur d'économies, en option, fournissez les informations suivantes sur les clones et les copies Snapshot de votre stockage EBS pour une estimation plus précise des économies réalisables.
 +
-.. *Fréquence d'instantané* : sélectionnez une fréquence d'instantané dans le menu déroulant.
-.. *Fréquence d'actualisation des clones* : sélectionnez la fréquence d'actualisation des clones dans le menu déroulant.
+.. *Fréquence d'instantané* : sélectionnez une fréquence d'instantané dans le menu.
+.. *Fréquence d'actualisation du clonage* : sélectionnez la fréquence d'actualisation des clones dans le menu.
 .. *Nombre de copies clonées* : entrez le nombre de copies clonées dans la configuration EBS.
 .. *Taux de modification mensuel* : saisissez le pourcentage de changements de données de clonage et d'instantanés en moyenne par mois.
 
@@ -249,18 +253,22 @@ Si l'usine de charge de travail détecte des hôtes EBS, vous serez redirigé ve
 --
 .Étapes
 . Connectez-vous à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
-. Dans la mosaïque bases de données, sélectionnez *Explorer les économies* puis *Microsoft SQL Server sur FSX pour Windows* dans le menu déroulant.
+. Dans la mosaïque Bases de données, sélectionnez *Explorer les économies* puis *Microsoft SQL Server sur FSx pour Windows* dans le menu.
 +
 Si l'usine de charge de travail détecte des hôtes FSX pour Windows, vous serez redirigé vers l'onglet Explorer les économies. Si l'usine de charge de travail ne détecte pas les hôtes FSX pour Windows, vous serez redirigé vers <<Explorer les économies via la personnalisation,explorer les économies via la personnalisation>>le calculateur .
 
-. Dans l'onglet Explorer les économies, cliquez sur *Explorer les économies* du serveur de base de données utilisant le stockage FSX pour serveur de fichiers Windows.
+. Dans l’onglet Explorer les économies, sélectionnez *Explorer les économies* de l’hôte de base de données utilisant FSx pour le stockage Windows File Server.
+. Si nécessaire, authentifiez l’hôte de la base de données avec les informations d’identification SQL Server, les informations d’identification Windows ou en ajoutant les autorisations SQL Server manquantes.
++
+Si la page Explorer les économies ne charge pas les données après une authentification réussie, sélectionnez l'onglet *Inventaire* pour recharger les données, puis sélectionnez à nouveau l'onglet *Explorer les économies*.
+
 . Dans le calculateur d'économies, éventuellement, fournissez les informations suivantes sur les clones (clichés instantanés) et les snapshots dans votre stockage FSX pour Windows afin d'obtenir une estimation plus précise des économies.
 +
-.. *Fréquence d'instantané* : sélectionnez une fréquence d'instantané dans le menu déroulant.
+.. *Fréquence d'instantané* : sélectionnez une fréquence d'instantané dans le menu.
 +
 Si des clichés instantanés FSX pour Windows sont détectés, la valeur par défaut est *Daily*. Si les clichés instantanés ne sont pas détectés, la valeur par défaut est *pas de fréquence d'instantanés*.
 
-.. *Fréquence d'actualisation des clones* : sélectionnez la fréquence d'actualisation des clones dans le menu déroulant.
+.. *Fréquence d'actualisation du clonage* : sélectionnez la fréquence d'actualisation des clones dans le menu.
 .. *Nombre de copies clonées* : entrez le nombre de copies clonées dans la configuration FSX pour Windows.
 .. *Taux de modification mensuel* : saisissez le pourcentage de changements de données de clonage et d'instantanés en moyenne par mois.
 
@@ -272,7 +280,7 @@ Si des clichés instantanés FSX pour Windows sont détectés, la valeur par dé
 --
 .Étapes
 . Connectez-vous à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
-. Dans la mosaïque bases de données, sélectionnez *Explorer les économies* puis *Microsoft SQL Server sur site* dans le menu déroulant.
+. Dans la mosaïque Bases de données, sélectionnez *Explorer les économies* puis *Microsoft SQL Server sur site* dans le menu.
 . Dans l'onglet sur site de SQL Server, téléchargez le script pour évaluer vos environnements SQL Server sur site.
 +
 .. Téléchargez le script d'évaluation. Le script est un outil de collecte de données basé sur PowerShell. Il collecte, puis télécharge les données de configuration et de performance SQL Server vers l'usine de workloads BlueXP . Le conseiller en migration évalue les données et planifie le déploiement de FSX pour ONTAP dans votre environnement SQL Server.
@@ -291,11 +299,11 @@ image:screenshot-upload-script-on-premises.png["Une capture d'écran de l'onglet
 . Pour des résultats plus précis, mettez à jour les informations de calcul et les informations sur le stockage et les performances.
 . Éventuellement, fournissez les informations suivantes sur les clones (clichés instantanés) et les snapshots dans votre environnement de base de données sur site pour une estimation plus précise des économies réalisables.
 +
-.. *Fréquence d'instantané* : sélectionnez une fréquence d'instantané dans le menu déroulant.
+.. *Fréquence d'instantané* : sélectionnez une fréquence d'instantané dans le menu.
 +
 Si des clichés instantanés FSX pour Windows sont détectés, la valeur par défaut est *Daily*. Si les clichés instantanés ne sont pas détectés, la valeur par défaut est *pas de fréquence d'instantanés*.
 
-.. *Fréquence d'actualisation des clones* : sélectionnez la fréquence d'actualisation des clones dans le menu déroulant.
+.. *Fréquence d'actualisation du clonage* : sélectionnez la fréquence d'actualisation des clones dans le menu.
 .. *Nombre de copies clonées* : entrez le nombre de copies clonées dans la configuration sur site.
 .. *Taux de modification mensuel* : saisissez le pourcentage de changements de données de clonage et d'instantanés en moyenne par mois.
 

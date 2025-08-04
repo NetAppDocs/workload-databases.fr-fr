@@ -15,7 +15,7 @@ Pour obtenir un résumé des ressources de base de données dans Workload Factor
 
 .Avant de commencer
 * Les instances contenant des ressources de base de données doivent disposer de FSx pour le stockage du système de fichiers ONTAP.
-* Les instances doivent être enregistrées dans la fabrique de charges de travail. Découvrez comment link:register-instance.html["enregistrer une instance"].
+* Vous devez enregistrer des instances dans Workload Factory pour afficher les bases de données. Découvrez comment link:register-instance.html["enregistrer une instance"] .
 
 
 .Étapes
@@ -26,13 +26,10 @@ Pour obtenir un résumé des ressources de base de données dans Workload Factor
 . Connectez-vous à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
 . Dans la mosaïque bases de données, sélectionnez *aller à l'inventaire des bases de données*.
 . Dans bases de données, sélectionnez l'onglet *Inventaire*.
-. Cliquez sur la flèche déroulante pour développer la ligne de l'hôte et afficher ses bases de données.
-+
-L'hôte se développe et les instances apparaissent.
+. Cliquez sur le menu à trois points de l'instance, puis sélectionnez *Afficher les bases de données*.
 
-. Cliquez sur le menu à trois points de l'instance contenant les bases de données à afficher.
-. Sélectionnez *Afficher les bases de données*.
 
+Les bases de données s'affichent pour l'instance unique dans l'onglet Bases de données.
 
 --
 .Afficher les bases de données pour toutes les instances
@@ -40,15 +37,11 @@ L'hôte se développe et les instances apparaissent.
 . Connectez-vous à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
 . Dans la mosaïque bases de données, sélectionnez *aller à l'inventaire des bases de données*.
 . Dans bases de données, sélectionnez l'onglet *Inventaire*.
-. Cliquez sur la flèche déroulante pour développer la ligne de l'hôte et afficher ses bases de données.
+. Sélectionnez l'onglet *Bases de données*.
 +
-L'hôte se développe et les instances apparaissent.
+Les bases de données s'affichent pour toutes les instances enregistrées.
 
-. Cliquez sur le menu à trois points de l'instance contenant les bases de données à afficher.
-. Sélectionnez *Afficher les bases de données*.
 
 
 --
 ====
-.Résultat
-Vous avez consulté les ressources de la base de données dans Workload Factory.

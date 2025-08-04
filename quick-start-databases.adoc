@@ -26,16 +26,22 @@ Vous devez vous link:https://docs.netapp.com/us-en/workload-setup-admin/sign-up-
 Choisissez entre link:https://docs.netapp.com/us-en/workload-setup-admin/operational-modes.html["modes de fonctionnement _de base_, _lecture seule_ et _lecture/écriture_"^].
 
 [role="quick-margin-para"]
-Si vous utilisez le mode _Basic_, vous n'avez pas besoin d'aller plus loin. Vous pouvez commencer à utiliser des bases de données pour copier des exemples de code partiellement remplis. Dans la mosaïque bases de données, cliquez sur *déployer l'hôte de base de données*. link:create-database-server.html["Apprenez à déployer un serveur de base de données"].
+Si vous travaillez en mode _lecture seule_ ou _lecture/écriture_, vous devrezlink:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["ajoutez manuellement des informations d'identification à un compte"^] sélectionnez les capacités de charge de travail, telles que les bases de données et GenAI, et créez des politiques IAM pour les autorisations requises.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["Trois"]Découvrir ou déployer des ressources
+[role="quick-margin-para"]
+Grâce aux informations d’identification et aux politiques IAM, vous pouvez découvrir les ressources de base de données existantes dans l’inventaire oulink:create-database-server.html["déployer un serveur hôte"] .  L'inventaire fournit une interface unifiée pour gérer les ressources.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png["Quatre"]Explorez les possibilités de réduction des coûts
+[role="quick-margin-para"]
+Lorsque vous avez des bases de données exécutées sur site ou sur AWS avec un stockage sur Amazon Elastic Block Store (EBS) ou FSx pour Windows File Server, vous pouvezlink:explore-savings.html["utilisez le calculateur d'économies Explore"] pour analyser les coûts et planifier efficacement les migrations.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-5.png["Cinq"]Mettre en œuvre des configurations de base de données bien architecturées
+[role="quick-margin-para"]
+Workload Factory for Databases analyse régulièrement les déploiements Microsoft SQL Server sur Amazon FSx for NetApp ONTAP à partir du tableau de bord Well-architectured.  Pour résoudre les problèmes à partir du tableau de bord bien conçu pour vos ressources de base de données, vous devez d'abordlink:register-instance.html["enregistrer des instances"] .
 
 [role="quick-margin-para"]
-Si vous travaillez en mode _lecture seule_ ou _lecture/écriture_, vous devrez link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["ajoutez manuellement des informations d'identification à un compte"^] ce qui inclut la sélection des capacités de charge de travail, telles que les bases de données et GenAI, et la création des politiques IAM pour garantir que vous disposez des autorisations appropriées pour fonctionner en mode _lecture seule_ ou _lecture/écriture_.
-
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["Trois"] Déployer un serveur de base de données
-[role="quick-margin-para"]
-Enfin, si vous choisissez de fonctionner en mode _lecture/écriture_, vous devez link:create-database-server.html["déployer un serveur hôte"] ou link:register-instance.html["enregistrer une instance"] pour gérer vos ressources d'hébergement et avant d'ajouter des bases de données utilisateur.
+Après avoir enregistré les instances, vous pouvez afficher l'état bien architecturé et prendre des mesures pourlink:https://docs.netapp.com/us-en/workload-databases/optimize-configurations.html["mettre en œuvre des configurations de base de données bien architecturées"] dans l'usine de charge de travail.
 
 .Et la suite
 Lorsque vous avez enregistré des instances avec FSx pour le stockage du système de fichiers ONTAP dans votre inventaire de bases de données, vous pouvez link:create-database.html["créer une base de données utilisateur"] ou link:create-sandbox-clone.html["cloner votre hôte pour créer un sandbox"] .
-
-Lorsque vous avez des hôtes Elastic Block Store ou FSX for Windows File Server dans votre inventaire de bases de données, vous pouvez link:explore-savings.html["découvrez les économies réalisées grâce au calculateur d'économies"].

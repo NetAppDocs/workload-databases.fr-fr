@@ -133,3 +133,9 @@ Les calculs des économies et des pourcentages de la taille du volume pour le st
 * L'évaluation d'optimisation ne peut pas déterminer si la réplication interrégionale (CRR) est utilisée lorsque le système de fichiers FSX pour ONTAP cible se trouve dans un autre compte AWS.
 * L'usine de charge de travail évalue uniquement la configuration CRR du système de fichiers source FSX pour ONTAP.
 
+
+
+
+== Authentification de l'hôte de la base de données dans Explore Savings
+
+Dans certains cas, avec des autorisations limitées, la page d'exploration des économies ne charge pas les données après une authentification réussie.
