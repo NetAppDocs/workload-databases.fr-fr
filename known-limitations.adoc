@@ -139,3 +139,9 @@ Les calculs des économies et des pourcentages de la taille du volume pour le st
 == Authentification de l'hôte de la base de données dans Explore Savings
 
 Dans certains cas, avec des autorisations limitées, la page d'exploration des économies ne charge pas les données après une authentification réussie.
+
+
+
+== Intégration avec la BlueXP backup and recovery
+
+Après avoir ajouté des hôtes à la sauvegarde et à la récupération BlueXP pour la protection, la découverte de la base de données échoue parfois.
