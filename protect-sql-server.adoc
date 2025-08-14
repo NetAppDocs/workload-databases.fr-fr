@@ -11,11 +11,13 @@ summary: Protégez les instances et les bases de données Microsoft SQL Server.
 
 
 [role="lead"]
-Protégez les données de vos applications Microsoft SQL Server à l’aide de la BlueXP backup and recovery à partir de la console de l’usine de charge de travail.  Les sauvegardes sont automatiquement générées et stockées dans un magasin d’objets de votre compte cloud public ou privé en fonction des politiques que vous créez.
+Protégez les données de vos applications Microsoft SQL Server à l’aide de la BlueXP backup and recovery à partir de la console de l’usine de charge de travail. Avec cette intégration, vous pouvez atteindre les objectifs de protection suivants : sauvegarder les charges de travail avec des snapshots locaux sur le stockage principal local Amazon FSx for NetApp ONTAP (FSx for ONTAP) et répliquer les charges de travail sur le stockage secondaire FSx for ONTAP .
 
 
 
 == Description de la tâche
+
+Workload Factory permet d'automatiser le processus de découverte des ressources d'instance et de base de données, de validation des prérequis et de configuration et d'installation du plug-in pour Microsoft SQL Server, qui font tous partie du processus de préparation pour la protection de vos charges de travail Microsoft SQL Server avec la BlueXP backup and recovery. Le plug-in est un composant côté hôte du logiciel NetApp qui vous permet de protéger vos charges de travail Microsoft SQL Server.
 
 La BlueXP backup and recovery s'appuient sur la technologie de réplication de données NetApp SnapMirror pour garantir que toutes les sauvegardes sont entièrement synchronisées en créant des copies instantanées et en les transférant vers les emplacements de sauvegarde.
 
@@ -46,9 +48,9 @@ Pour découvrir des bases de données, vous devez définir la résolution de l'h
 
 
 
-== Protégez les instances et les bases de données Microsoft SQL Server
+== Préparez-vous à la protection avec la BlueXP backup and recovery
 
-La protection des instances et des bases de données Microsoft SQL Server implique la découverte des ressources, la validation des prérequis, ainsi que la configuration et l’installation du plug-in pour Microsoft SQL Server.  Le plug-in est un composant côté hôte du logiciel NetApp qui vous permet de protéger vos charges de travail Microsoft SQL Server.
+Terminez le processus de préparation pour protéger vos ressources Microsoft SQL Server avec la BlueXP backup and recovery.
 
 .Étapes
 . Connectez-vous à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
