@@ -2,23 +2,23 @@
 sidebar: sidebar 
 permalink: manage-instance.html 
 keywords: instance, instance management, FSx for ONTAP, instance, manage host, view host, database host, database instance, manage 
-summary: Découvrez la gestion des instances dans Workload Factory pour les bases de données. 
+summary: Découvrez la gestion des instances et des bases de données dans Workload Factory pour les bases de données. 
 ---
-= Gestion des instances dans Workload Factory pour les bases de données
+= Gestion des ressources dans Workload Factory pour les bases de données
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-La gestion des instances enregistrées dans Workload Factory inclut le déploiement de ressources pour vos instances, comme la création de bases de données et de clones de bases de données, ainsi que la surveillance de l'état des instances et des bases de données, de l'utilisation des ressources, de la protection et des performances de stockage. De plus, vous pouvez analyser l'état de vos configurations de bases de données et mettre en œuvre les meilleures pratiques de configuration pour améliorer les performances et réduire les coûts opérationnels. La gestion des instances est réservée aux instances avec stockage de système de fichiers FSx for ONTAP.
+La gestion des ressources dans Workload Factory vous permet d'utiliser des fonctionnalités avancées, notamment la création de bases de données et de clones, l'utilisation et la surveillance des ressources.  De plus, vous pouvez analyser l’état bien architecturé de vos configurations de base de données et mettre en œuvre les meilleures pratiques de configuration pour améliorer les performances et réduire les coûts opérationnels.  La gestion des ressources est uniquement destinée aux environnements Microsoft SQL Server et Oracle exécutés sur FSx pour le stockage du système de fichiers ONTAP .
 
-Vous devez link:register-instance.html["enregistrer une instance"] effectuer l’une des tâches de gestion suivantes.
+Vous devezlink:register-instance.html["enregistrer les ressources"] effectuer l’une des tâches de gestion suivantes.
 
 Les tâches de gestion comprennent :
 
+* Affichage des bases de données à partir de l'inventaire
 * link:create-database.html["Création d'une base de données"]
 * link:create-sandbox-clone.html["Création d'un clone de base de données (sandbox)"]
-* link:view-databases.html["Affichage des bases de données"]
 * link:optimize-configurations.html["Mise en œuvre de configurations de bases de données bien architecturées"]
 

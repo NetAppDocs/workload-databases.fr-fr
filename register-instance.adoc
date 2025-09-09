@@ -1,49 +1,30 @@
 ---
 sidebar: sidebar 
 permalink: register-instance.html 
-keywords: Microsoft SQL Server instance, PostgreSQL server instance, Oracle instance, manage host, view host, database host, database instance, manage, unregister 
-summary: 'Gérez les instances Microsoft SQL Server dans l"usine de workloads BlueXP  pour les bases de données.' 
+keywords: manage, register, Microsoft SQL Server instance, Oracle database, manage database, manage instance 
+summary: 'Enregistrez les ressources afin de pouvoir surveiller l"état des ressources, leur utilisation, leur protection et les performances de stockage dans Workload Factory pour les bases de données.' 
 ---
-= Enregistrer des instances dans la fabrique de charges de travail pour les bases de données
+= Enregistrer les ressources dans la fabrique de charges de travail pour les bases de données
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-Enregistrez les instances afin de pouvoir surveiller l'état de l'instance et de la base de données, l'utilisation des ressources, la protection et les performances de stockage dans la fabrique de charges de travail pour les bases de données.
+Enregistrez des instances pour Microsoft SQL Server et des bases de données pour Oracle afin de pouvoir surveiller l'état de l'instance et de la base de données, l'utilisation des ressources, la protection et les performances de stockage dans la fabrique de charges de travail pour les bases de données.
 
-Les bases de données ne peuvent enregistrer des instances qu'avec FSx pour le stockage du système de fichiers ONTAP.
+L'enregistrement n'est possible que pour les moteurs de bases de données exécutés sur FSx pour le stockage du système de fichiers ONTAP .
 
 
 
 == À propos de la tâche
 
-L'enregistrement d'une instance comprend deux étapes : l'authentification de l'instance et la préparation de l'instance en s'assurant que tous les modules AWS, NetApp et PowerShell sont installés sur l'instance.
+L'enregistrement d'une instance (SQL Server) ou d'une base de données (Oracle) comprend deux étapes : l'authentification et la préparation.  La préparation consiste à s’assurer que tous les modules AWS, NetApp et PowerShell sont installés sur l’instance.
 
-Vous pouvez authentifier les liens à l’aide des informations d’identification SQL Server ou des informations d’identification Windows.
-
-
-NOTE: Workload Factory prend uniquement en charge l’enregistrement et la gestion des instances Microsoft SQL Server. Selon les informations d'identification du compte AWS sélectionnées dans Workload Factory, les hôtes PostgreSQL et Oracle peuvent apparaître dans l'inventaire. Actuellement, Workload Factory prend en charge les instances PostgreSQL non enregistrées exécutées uniquement sur les systèmes d'exploitation Amazon Linux et les instances Oracle exécutées uniquement sur Red Hat Enterprise Linux.
-
-Enregistrement d'une instance dans un réseau privé:: Pour enregistrer une instance dans un réseau privé sans connectivité externe, les points de terminaison suivants doivent être disponibles dans le VPC avec une association aux sous-réseaux où les serveurs SQL sont présents. Assurez-vous que les points de terminaison de l'interface autorisent le port 443 dans le groupe de sécurité connecté.
-+
---
-* `S3 Gateway/endpoint`
-* `ssm`
-* `ssmmessages`
-* `fsx`
-+
-Si vous utilisez un serveur proxy pour toutes les connexions sortantes des instances EC2, vous devez autoriser l'accès aux domaines suivants afin que les opérations de gestion fonctionnent :
-
-* ``.microsoft.com``
-* ``.powershellgallery.com``
-* ``.aws.amazon.com``
-* ``.amazonaws.com``
+Vous pouvez vous authentifier à l’aide des informations d’identification SQL Server ou des informations d’identification Windows.
 
 
---
-
+NOTE: Workload Factory prend uniquement en charge l'enregistrement et la gestion des instances Microsoft SQL Server et des bases de données Oracle.  Selon les informations d’identification du compte AWS que vous sélectionnez dans Workload Factory, les hôtes PostgreSQL peuvent apparaître dans l’inventaire.  Actuellement, Workload Factory prend en charge les instances PostgreSQL non enregistrées exécutées uniquement sur les systèmes d’exploitation Amazon Linux.
 
 
 
@@ -51,13 +32,30 @@ Si vous utilisez un serveur proxy pour toutes les connexions sortantes des insta
 
 Tenez compte des éléments suivants avant d’enregistrer une instance :
 
-* L'hôte de l'instance doit apparaître dans l'onglet Inventaire. Pour qu'il apparaisse dans l'inventaire, link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["vous devez ajouter les informations d'identification du compte AWS et les autorisations en mode _lecture seule_ ou _lecture/écriture_"^] .
-* Lors de l'utilisation des identifiants d'utilisateur de domaine Windows pour l'authentification des opérations de gestion SQL Server, Workload Factory active la délégation CredSSP sur les nœuds SQL. Si la délégation CredSSP est bloquée pour tous les ordinateurs du domaine avec la stratégie de groupe, l'authentification avec les identifiants d'utilisateur Windows ne fonctionne pas.
+L'hôte de l'instance ou de la base de données doit apparaître dans l'onglet Inventaire.  Pour que les hôtes apparaissent dans l'inventaire,link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["vous devez ajouter les informations d'identification du compte AWS et les autorisations en mode _lecture seule_ ou _lecture/écriture_"^] .
+
+
+
+=== Enregistrement d'une instance dans un réseau privé
+
+Pour enregistrer une instance (SQL Server) ou une base de données (Oracle) dans un réseau privé sans connectivité externe, les points de terminaison suivants doivent être disponibles dans le VPC avec une association aux sous-réseaux où les serveurs SQL sont présents.  Assurez-vous que les points de terminaison de l’interface autorisent le port 443 dans le groupe de sécurité attaché.
+
+* `S3 Gateway/endpoint`
+* `ssm`
+* `ssmmessages`
+* `fsx`
++
+Si vous utilisez un serveur proxy pour toutes les connexions sortantes des instances EC2, vous devez autoriser l'accès aux domaines suivants afin que les opérations de gestion fonctionnent :
+
+* ``.microsoft.com``(Serveur SQL)
+* ``.powershellgallery.com``(Serveur SQL)
+* ``.aws.amazon.com``
+* ``.amazonaws.com``
 
 
 
 
-== Enregistrer une instance
+== Enregistrer une instance SQL Server
 
 L'enregistrement d'une instance inclut l'authentification et la préparation de l'instance.
 
@@ -65,8 +63,9 @@ L'enregistrement d'une instance inclut l'authentification et la préparation de 
 . Connectez-vous à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
 . Dans la mosaïque bases de données, sélectionnez *aller à l'inventaire des bases de données*.
 . Dans bases de données, sélectionnez l'onglet *Inventaire*.
-. Dans l'onglet Inventaire, sélectionnez l'onglet *Instances*.
-. Sélectionnez pour enregistrer une seule instance ou enregistrer plusieurs instances.
+. Sélectionnez *Microsoft SQL Server* comme type de moteur.
+. Sélectionnez l'onglet *Instances*.
+. Sélectionnez pour enregistrer une seule instance ou plusieurs instances.
 +
 .. Enregistrement d'instance unique : accédez à l'instance à gérer et sélectionnez *Enregistrer l'instance*.
 .. Enregistrement d'instances multiples : sélectionnez le bouton *Enregistrer plusieurs instances*.
@@ -90,7 +89,7 @@ Deux options sont disponibles pour enregistrer plusieurs instances. Dans les deu
 +
 .. S'il manque, sélectionnez l'usine de charge de travail pour *Installer les modules AWS et NetApp PowerShell manquants*.
 .. S'il est manquant, sélectionnez la fabrique de charges de travail pour *Installer le module PowerShell 7 manquant*. L'installation du module PowerShell 7 manquant nécessite un redémarrage du système.
-.. Consultez la liste des prérequis pour les fonctionnalités suivantes. Un prérequis doit être rempli pour enregistrer l'instance.
+.. Consultez la liste des prérequis pour les capacités suivantes.  Assurez-vous de remplir toutes les conditions préalables par capacité pour enregistrer l'instance.
 +
 *** *Examiner les problèmes et recommandations bien architecturés*
 *** *Résoudre les problèmes bien architecturés*
@@ -101,11 +100,74 @@ La réalisation des prérequis inclut la mise à jour de vos autorisations de st
 
 
 
-.. Remplissez au moins un prérequis manquant pour continuer.
-.. Lorsqu'une ou plusieurs conditions préalables sont remplies et que les vérifications sont *Prêtes*, vous pouvez choisir d'*Enregistrer* l'instance.
+.. Lorsque les conditions préalables sont remplies et que les vérifications sont *Prêtes*, vous pouvez choisir d'*Enregistrer* l'instance.
 
 
 
 
 .Résultat
-La demande d'enregistrement de l'instance est lancée. Sélectionnez l'onglet *Surveillance des tâches* pour suivre la progression.
+L'enregistrement de l'instance démarre.  Sélectionnez l'onglet *Suivi des tâches* pour suivre la progression.
+
+
+
+== Enregistrer une base de données Oracle
+
+L'enregistrement d'une base de données comprend l'authentification et la préparation de l'instance.
+
+.Étapes
+. Connectez-vous à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
+. Dans la mosaïque bases de données, sélectionnez *aller à l'inventaire des bases de données*.
+. Dans bases de données, sélectionnez l'onglet *Inventaire*.
+. Dans l’onglet Inventaire, sélectionnez *Oracle* comme moteur de base de données.
+. Sélectionnez l'onglet *Bases de données*.
+. Sélectionnez pour enregistrer une seule base de données ou plusieurs bases de données.
++
+.. Enregistrement d'une base de données unique : accédez à la base de données à gérer et sélectionnez *Enregistrer la base de données*.
+.. Enregistrement de plusieurs bases de données : sélectionnez le bouton *Enregistrer plusieurs bases de données*.
++
+Deux options sont disponibles pour enregistrer plusieurs bases de données.  Dans les deux cas, les bases de données doivent partager le même statut d'authentification (non authentifié ou authentifié).
+
++
+*** Bases de données non authentifiées : sélectionnez plusieurs bases de données non authentifiées à enregistrer.  Ces bases de données doivent partager les mêmes informations d’identification d’authentification et les mêmes informations d’identification FSx pour ONTAP .  Sélectionnez *Appliquer* puis *Suivant*.
+*** Bases de données authentifiées : sélectionnez plusieurs bases de données authentifiées à enregistrer, puis sélectionnez *Suivant*.
+
+
+
+
+. À l'étape 2 de la page Enregistrer les bases de données, sélectionnez le mode d'authentification de la base de données, saisissez les détails suivants et sélectionnez *Suivant*.  Si les bases de données sont déjà authentifiées, sélectionnez *Suivant*.
++
+** *Authentification utilisateur Oracle* : saisissez le nom d'utilisateur et le mot de passe Oracle, ainsi que le nom d'utilisateur et le mot de passe du système de fichiers FSx for ONTAP .
+** *Authentification utilisateur Oracle ASM* : Facultatif.  Si la base de données Oracle utilise Automatic Storage Management (ASM), entrez le nom d'utilisateur et le mot de passe Oracle ASM (grille).
+
+
+. À l’étape 3, préparez la base de données en vous assurant qu’elle répond aux conditions préalables requises.  Si tous les modules requis sont installés et que les conditions préalables sont remplies, sélectionnez *Suivant* pour enregistrer la base de données.  Si vous devez agir, suivez ces étapes.
++
+.. Consultez la liste des prérequis pour la capacité suivante.  Toutes les conditions préalables pour une capacité unique doivent être remplies pour enregistrer la base de données.
++
+*** *Examiner les problèmes et recommandations bien architecturés*
+
+
+.. Remplissez les prérequis suivants :
++
+*** *Autorisations de la politique AWS IAM* : copiez et mettez à jour les autorisations AWS dans la console AWS.
+*** *Autorisations du profil d'instance IAM EC2* : copiez et mettez à jour les autorisations du profil d'instance IAM EC2 sur l'instance Amazon EC2 dans la console AWS.
+*** *Modules de déploiement* : si nécessaire, sélectionnez l'installation des modules dépendants qui incluent l'interface de ligne de commande AWS (AWS CLI), jq (processeur JSON de ligne de commande) et Python 3.12, si la version 3.6 ou supérieure n'est pas déjà installée.  Workload Factory installe automatiquement ces modules dans le cadre du processus d'enregistrement.
+*** *Autorisations utilisateur Oracle* : si nécessaire, mettez à jour les autorisations de l'utilisateur Oracle.
+
+
+.. Lorsque les prérequis sont remplis et que les vérifications sont *Prêtes*, vous pouvez choisir d'*Enregistrer* la base de données.
+
+
+
+
+.Résultat
+L'enregistrement de la base de données commence.  Sélectionnez l'onglet *Suivi des tâches* pour suivre la progression.
+
+.Et la suite
+Après l’enregistrement des ressources, vous pouvez effectuer les tâches suivantes.
+
+* Afficher les bases de données de l'inventaire
+* link:create-database.html["Créer une base de données"]
+* link:create-sandbox-clone.html["Créer un clone de base de données (bac à sable)"]
+* link:optimize-configurations.html["Mettre en œuvre des configurations de base de données bien architecturées"]
+

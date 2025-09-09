@@ -42,7 +42,6 @@ Pour découvrir des bases de données, vous devez définir la résolution de l'h
 
 
 * link:https://docs.netapp.com/us-en/bluexp-backup-recovery/br-start-licensing.html["Configurer les licences pour la BlueXP backup and recovery"^]
-* Dans la fabrique de charges de travail pour les bases de données, assurez-vous d’enregistrer les instances à l’aide des informations d’identification Windows.  Pour fournir les informations d’identification Windows, accédez à l’onglet Instances depuis l’inventaire.  Identifiez l'instance, sélectionnez *Gérer les instances*, puis sélectionnez *Tableau de bord des instances*.  Depuis le tableau de bord de l’instance, sélectionnez le menu à trois points, puis sélectionnez *Mettre à jour le mot de passe Microsoft SQL Server*.  Mettez à jour le mot de passe à l’aide de l’authentification Windows.
 
 
 
@@ -57,7 +56,11 @@ Terminez le processus de préparation pour protéger vos ressources Microsoft SQ
 . Dans bases de données, sélectionnez l'onglet *Inventaire*.
 . Filtrez le *Type de moteur* sur *Microsoft SQL Server*.
 . Sélectionnez *Protéger* dans le menu de l'instance à protéger.
-. Sélectionnez le *Connecteur* où vous souhaitez que la charge de travail soit enregistrée et protégée.
+. Si vous y êtes invité, fournissez les informations d’identification Windows avec accès administratif.
++
+Pour utiliser la BlueXP backup and recovery pour la protection, les instances SQL Server doivent être enregistrées dans la fabrique de charges de travail avec les informations d'identification Windows.
+
+. Si plusieurs connecteurs sont actifs et disponibles, sélectionnez le *Connecteur* où vous souhaitez que la charge de travail soit enregistrée et protégée.
 . Pour préparer la protection des données, Workload Factory enregistre automatiquement vos ressources SQL Server dans la BlueXP backup and recovery, configure et installe le plug-in pour Microsoft SQL Server et découvre les ressources pour répondre aux conditions préalables à la protection de votre instance SQL Server.  Sélectionnez *Démarrer* pour commencer le processus.
 . Après avoir rempli les conditions préalables, sélectionnez *Rediriger* pour accéder à la BlueXP backup and recovery.
 

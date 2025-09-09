@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: optimize-overview.html 
 keywords: database configuration issues, issues, analyze, scan, optimize, improve, database configuration, Amazon FSx for NetApp ONTAP, FSx for ONTAP, recommendation, recommendations, storage, compute, application, resiliency, scan, optimization, SQL Server, host, instance 
-summary: 'Workload Factory for Databases analyse régulièrement les configurations Microsoft SQL Server pour déterminer s"il existe des problèmes.' 
+summary: 'Workload Factory for Databases analyse régulièrement les configurations Microsoft SQL Server et Oracle pour déterminer s"il existe des problèmes.' 
 ---
 = Analyse de configuration pour les environnements de base de données dans Workload Factory
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: 'Workload Factory for Databases analyse régulièrement les configurati
 
 
 [role="lead"]
-Workload Factory for Databases analyse régulièrement les configurations de vos bases de données afin de détecter d'éventuels problèmes avec les déploiements Microsoft SQL Server sur Amazon FSx pour le stockage NetApp ONTAP. En cas de problème, Workload Factory vous en présente les causes et vous explique les modifications à apporter pour garantir des performances optimales, une rentabilité optimale et la conformité aux bonnes pratiques.
+Workload Factory for Databases analyse régulièrement les configurations de base de données pour déterminer s'il existe des problèmes avec les déploiements Microsoft SQL Server et Oracle sur le stockage Amazon FSx for NetApp ONTAP .  Lorsque des problèmes sont détectés, Workload Factory vous montre quels sont les problèmes et explique ce qui doit être modifié pour garantir que vos configurations de base de données atteignent des performances optimales, une rentabilité optimale et la conformité aux meilleures pratiques.
 
 Les fonctionnalités principales comprennent :
 
@@ -29,10 +29,18 @@ Les fonctionnalités principales comprennent :
 
 Dans la console d'usine des workloads au niveau du système de fichiers, un état bien conçu est indiqué pour tous les systèmes de fichiers FSX pour ONTAP. Les États bien conçus sont classés comme « problèmes », « non analysés » ou « bien conçus ». La sélection de l'état bien conçu vous redirige vers l'onglet d'état bien conçu du système de fichiers, où vous pouvez trouver le score bien conçu, les catégories de configuration, toutes les configurations du système de fichiers.
 
-Score bien conçu:: Le score inclut toutes les configurations actuellement analysées et apparaît sous forme de pourcentage. Un score de 25 % signifie que 25 % des configurations de système de fichiers sont bien conçues.
-Catégories de configuration:: Les configurations de système de fichiers sont organisées par catégories, en accord avec les cinq piliers du framework Well-Architected AWS.
-+
---
+
+
+== Score bien conçu
+
+Le score inclut toutes les configurations actuellement analysées et apparaît sous forme de pourcentage. Un score de 25 % signifie que 25 % des configurations de système de fichiers sont bien conçues.
+
+
+
+== Catégories de configuration
+
+Les configurations de système de fichiers sont organisées par catégories, en accord avec les cinq piliers du framework Well-Architected AWS.
+
 * _Reliability_ : garantit que les charges de travail exécutent correctement et de manière cohérente les fonctions prévues, même en cas de perturbations. Un exemple de configuration est FSX pour les sauvegardes ONTAP.
 * _Sécurité_ : met l'accent sur la protection des données, des systèmes et des ressources au moyen d'évaluations des risques et de stratégies d'atténuation.
 * _Excellence opérationnelle_ : met l'accent sur la fourniture de l'architecture et de la valeur métier les plus optimales.
@@ -40,17 +48,19 @@ Catégories de configuration:: Les configurations de système de fichiers sont o
 * _Efficacité des performances_ : se concentre sur l'utilisation efficace des ressources pour répondre aux exigences du système et pour maintenir des performances optimales au fur et à mesure de l'évolution de la demande.
 
 
---
-Portée de l'analyse:: La portée de l'optimisation varie en fonction du composant évalué. Par exemple, l'optimisation du stockage a lieu au niveau de l'instance SQL alors que l'optimisation du calcul a lieu au niveau de l'hôte.
 
+
+== Portée de l'analyse
+
+La portée de l'optimisation varie en fonction du composant évalué. Par exemple, l'optimisation du stockage a lieu au niveau de l'instance SQL alors que l'optimisation du calcul a lieu au niveau de l'hôte.
 
 
 
 == Exigences d'analyse
 
-Pour une analyse complète de l'environnement de base de données, les instances doivent être enregistrées et en ligne.
+Pour une analyse complète de l'environnement de base de données, les ressources doivent être enregistrées et en ligne.
 
-link:register-instance.html["Apprenez à enregistrer une instance."]
+link:register-instance.html["Apprenez à enregistrer des ressources."]
 
 .Et la suite
 link:optimize-configurations.html["Mettre en œuvre des configurations de base de données bien architecturées"]

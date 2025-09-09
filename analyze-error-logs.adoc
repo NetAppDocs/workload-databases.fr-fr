@@ -1,0 +1,58 @@
+---
+sidebar: sidebar 
+permalink: analyze-error-logs.html 
+keywords: analyze error logs, errors, error severity, Microsoft SQL Server error logs, smart analysis, Agentic AI 
+summary: 'Analyser les journaux d"erreurs dans l"usine de charge de travail pour les bases de données.' 
+---
+= Analyser les journaux d'erreurs dans Workload Factory
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Utilisez l’analyseur de journaux d’erreurs intelligent pour interpréter automatiquement les journaux d’erreurs Microsoft SQL Server afin de pouvoir identifier et résoudre rapidement les problèmes.  L'analyse basée sur l'IA Agentic nécessite l'intégration d'Amazon Bedrock.
+
+.Description de la tâche
+L’analyse et la correction du journal des erreurs aident à maintenir la santé et les performances des instances SQL Server.  L’interprétation efficace des journaux d’erreurs SQL Server nécessite une analyse minutieuse et une expertise.  La surveillance manuelle, la détection des erreurs et l’analyse des causes profondes prennent beaucoup de temps et sont sujettes aux erreurs.  Ces défis peuvent retarder la résolution des problèmes, augmenter les temps d’arrêt et entraîner des inefficacités opérationnelles.  L'analyseur de journaux d'erreurs intelligent répond à ces défis avec ces avantages clés :
+
+* Regroupement intelligent : consolide intelligemment les erreurs par unicité, gravité et catégorie, et simplifie le processus de dépannage pour des résolutions plus rapides et plus efficaces.
+* Enquête pilotée par l'IA : exploite l'IA pour analyser de manière proactive les erreurs, fournissant des informations claires et exploitables pour accélérer l'identification des problèmes sans nécessiter une expertise approfondie.
+* Enrichissement des erreurs : améliore les journaux d'erreurs avec des références externes, offrant une clarté contextuelle pour améliorer la compréhension et la prise de décision.
+* Correction des meilleures pratiques : fournit des recommandations de correction personnalisées pour les charges de travail SQL Server exécutées sur FSx for ONTAP, permettant aux utilisateurs de tous niveaux de compétence de résoudre les problèmes en toute confiance.
+
+
+Chaque fois que vous utilisez l'analyseur de journal d'erreurs intelligent, vous conservez un contrôle total sur votre environnement tout en bénéficiant d'une analyse IA avancée.
+
+Pour utiliser l'analyseur de journal d'erreurs intelligent, vous devez activer Amazon Bedrock, sélectionner le modèle utilisé par l'usine de charge de travail, créer un point de terminaison privé pour vous connecter à Amazon Bedrock, ajouter des autorisations et créer une licence d'entreprise.
+
+link:https://aws.amazon.com/bedrock/pricing/["Tarifs d'Amazon Bedrock"^]
+
+.Avant de commencer
+Pour utiliser l'analyseur de journal d'erreurs intelligent, vous devez remplir les conditions préalables suivantes :
+
+* Vous devez link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Informations d'identification du compte AWS et autorisations en mode _lecture/écriture_"^]créer un nouvel hôte de base de données en usine de la charge de travail.
+* link:https://docs.netapp.com/us-en/workload-databases/register-instance.html["Enregistrer une instance SQL Server"^]dans l'usine de charge de travail. *
+
+
+.Étapes
+. Connectez-vous à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
+. Dans la mosaïque bases de données, sélectionnez *aller à l'inventaire des bases de données*.
+. Dans bases de données, sélectionnez l'onglet *Inventaire*.
+. Sélectionnez *SQL Server* comme moteur de base de données.
+. Dans l’onglet Instances, recherchez l’instance SQL Server spécifique que vous souhaitez analyser, puis sélectionnez *Enquêter sur les erreurs* dans le menu.
+. À partir de l'onglet *Enquête sur les erreurs*, remplissez les conditions préalables suivantes comme décrit dans la console :
++
+** substrat rocheux de l'Amazonie
+** Réseau : point de terminaison privé pour Amazon Bedrock
+** Autorisations pour le rôle de profil d'instance EC2
+** Informations d'identification associées à la gestion de la base de données de charge de travail (wlmdb)
+
+
+. Lorsque les conditions préalables sont remplies, sélectionnez *Enquêter maintenant* pour utiliser l'analyseur de journaux d'erreurs intelligent afin d'obtenir des informations sur vos journaux d'erreurs SQL Server.
++
+Après l'analyse, les erreurs sont affichées dans la console, offrant une vue complète des problèmes détectés par l'analyseur de journal d'erreurs intelligent.
+
+. Utilisez des filtres pour affiner les erreurs affichées en fonction de critères tels que la gravité, la période et le code d'erreur.
+. Consultez les informations détaillées sur l’erreur, y compris le message d’erreur d’origine, l’explication basée sur l’IA et les étapes de correction suggérées pour résoudre les erreurs.
+

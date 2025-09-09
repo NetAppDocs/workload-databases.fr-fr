@@ -1,31 +1,24 @@
 ---
 sidebar: sidebar 
 permalink: deregister-instance.html 
-keywords: Microsoft SQL Server instance, PostgreSQL server instance, Oracle instance, deregister instance, unregister instance, remove instance 
-summary: 'Annulez l"enregistrement d"une instance si vous ne souhaitez plus déployer ou surveiller les ressources de l"instance.' 
+keywords: Microsoft SQL Server instance, PostgreSQL server instance, Oracle database, deregister instance, unregister instance, remove instance 
+summary: 'Annulez l"enregistrement d"une ressource si vous ne souhaitez plus déployer ou surveiller les ressources à partir de la console de l"usine de charge de travail.' 
 ---
-= Annuler l'enregistrement d'une instance dans la fabrique de charges de travail
+= Annuler l'enregistrement d'une ressource dans Workload Factory
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-Désenregistrez une instance si vous ne souhaitez plus déployer ni surveiller ses ressources. La désinscription d'instances supprime également la capacité de stockage utilisée par l'instance.
+Annulez l'enregistrement d'une ressource, telle qu'une instance Microsoft SQL Server ou une base de données Oracle, si vous ne souhaitez plus déployer ou surveiller les ressources à partir de la console de la fabrique de charges de travail.  La désinscription des ressources supprime également la quantité de capacité de stockage FSx for ONTAP utilisée par l'instance.
 
-Vous pouvez réenregistrer l'instance ultérieurement.
+Vous pouvez réenregistrer la ressource.
 
 .Étapes
 . Connectez-vous à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
 . Dans la mosaïque bases de données, sélectionnez *aller à l'inventaire des bases de données*.
 . Dans bases de données, sélectionnez l'onglet *Inventaire*.
-. Cliquez sur la flèche déroulante pour développer la ligne de l’instance à désinscrire.
-+
-L'hôte se développe et les instances apparaissent.
+. Dans l’inventaire, sélectionnez le type de moteur : Microsoft SQL Server, Oracle ou PostgreSQL.
+. Localisez la ressource que vous souhaitez désinscrire, sélectionnez le menu à trois points, puis sélectionnez *Désinscrire*.
 
-. Cliquez sur le menu à trois points de l’instance à désinscrire.
-. Sélectionnez *Se désinscrire*.
-
-
-.Résultat
-L'instance est désormais désenregistrée. Vous pourrez la réenregistrer ultérieurement.
