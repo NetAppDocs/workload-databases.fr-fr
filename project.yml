@@ -61,8 +61,6 @@ sidebar:
         url: "/optimize-overview.html"
       - title: Mettre en œuvre des configurations de base de données bien architecturées
         url: "/optimize-configurations.html"
-      - title: Reporter l'analyse de la configuration
-        url: "/postpone-analysis.html"
     - title: Analyser les journaux d'erreurs
       url: "/analyze-error-logs.html"
     - title: Gérer les clones
