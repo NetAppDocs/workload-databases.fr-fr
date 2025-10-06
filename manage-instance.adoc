@@ -2,16 +2,16 @@
 sidebar: sidebar 
 permalink: manage-instance.html 
 keywords: instance, instance management, FSx for ONTAP, instance, manage host, view host, database host, database instance, manage 
-summary: Découvrez la gestion des instances et des bases de données dans Workload Factory pour les bases de données. 
+summary: Découvrez la gestion des instances et des bases de données dans NetApp Workload Factory for Databases. 
 ---
-= Gestion des ressources dans Workload Factory pour les bases de données
+= Gestion des ressources dans NetApp Workload Factory pour les bases de données
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-La gestion des ressources dans Workload Factory vous permet d'utiliser des fonctionnalités avancées, notamment la création de bases de données et de clones, l'utilisation et la surveillance des ressources.  De plus, vous pouvez analyser l’état bien architecturé de vos configurations de base de données et mettre en œuvre les meilleures pratiques de configuration pour améliorer les performances et réduire les coûts opérationnels.  La gestion des ressources est uniquement destinée aux environnements Microsoft SQL Server et Oracle exécutés sur FSx pour le stockage du système de fichiers ONTAP .
+La gestion des ressources dans NetApp Workload Factory for Databases vous permet d'utiliser des fonctionnalités avancées, notamment la création de bases de données et de clones, l'utilisation et la surveillance des ressources. De plus, vous pouvez analyser l’état bien architecturé de vos configurations de base de données et mettre en œuvre les meilleures pratiques de configuration pour améliorer les performances et réduire les coûts opérationnels. La gestion des ressources est uniquement destinée aux environnements Microsoft SQL Server et Oracle exécutés sur FSx pour le stockage du système de fichiers ONTAP .
 
 Vous devezlink:register-instance.html["enregistrer les ressources"] effectuer l’une des tâches de gestion suivantes.
 

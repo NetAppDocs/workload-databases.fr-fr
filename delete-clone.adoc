@@ -2,22 +2,22 @@
 sidebar: sidebar 
 permalink: delete-clone.html 
 keywords: delete, clone 
-summary: 'Supprimez un clone sandbox dans l"usine de workloads BlueXP  lorsque vous n"en avez plus besoin.' 
+summary: 'Supprimez un clone sandbox dans NetApp Workload Factory for Databases lorsque vous n"en avez plus besoin et que vous souhaitez libérer de la capacité de stockage.' 
 ---
-= Fractionner un clone sandbox à partir de la base de données source
+= Supprimer un clone de base de données dans NetApp Workload Factory for Databases
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-Supprimez un clone sandbox dans l'usine de workloads BlueXP  pour les bases de données lorsque vous n'en avez plus besoin et que vous souhaitez libérer de la capacité de stockage.
+Supprimez un clone sandbox dans NetApp Workload Factory for Databases lorsque vous n'en avez plus besoin et que vous souhaitez libérer de la capacité de stockage.
 
 .Étapes
 . Connectez-vous à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
-. Dans la mosaïque bases de données, cliquez sur *aller à l'inventaire des bases de données*.
-. Dans bases de données, sélectionnez l'onglet *sandbox*.
-. Cliquez sur le menu à trois points du clone du sandbox que vous souhaitez supprimer.
+. Dans la mosaïque bases de données, sélectionnez *aller à l'inventaire des bases de données*.
+. Dans le menu Bases de données, sélectionnez *Bacs à sable*.
+. Dans Sandboxes, sélectionnez le menu d’action du clone de sandbox que vous souhaitez supprimer.
 . Sélectionnez *Supprimer*.
-. Dans la boîte de dialogue Supprimer, cliquez sur *Supprimer*.
+. Dans la boîte de dialogue Supprimer, sélectionnez *Supprimer* pour confirmer la suppression.
 

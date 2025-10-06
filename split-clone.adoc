@@ -2,16 +2,16 @@
 sidebar: sidebar 
 permalink: split-clone.html 
 keywords: split, clone, source, new database 
-summary: 'Séparez un clone sandbox de la base de données source pour créer une nouvelle base de données dans l"usine de workloads BlueXP  pour les bases de données.' 
+summary: Divisez un clone de base de données à partir de la base de données source pour créer une nouvelle base de données dans NetApp Workload Factory for Databases. 
 ---
-= Fractionner un clone sandbox à partir de la base de données source
+= Diviser un clone de base de données à partir de la base de données source
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-Dans l'usine de workloads BlueXP  pour les bases de données, le fractionnement d'un clone sandbox à partir de sa base de données source crée une nouvelle base de données qui consomme une certaine capacité de stockage. Le clone est supprimé lorsque le fractionnement est terminé et que la nouvelle base de données apparaît dans l'inventaire.
+Dans NetApp Workload Factory for Databases, la division d'un clone de base de données à partir de sa base de données source crée une nouvelle base de données qui consommera une certaine quantité de capacité de stockage.  Le clone est supprimé lorsque la division est terminée et la nouvelle base de données apparaît dans l'inventaire.
 
 .Avant de commencer
 Évaluez la capacité de stockage nécessaire pour la nouvelle base de données. Si nécessaire, link:https://docs.netapp.com/us-en/workload-fsx-ontap/increase-file-system-capacity.html["augmenter la capacité du système de fichiers"^] pour le système de fichiers FSX pour ONTAP avant de commencer.
@@ -19,8 +19,8 @@ Dans l'usine de workloads BlueXP  pour les bases de données, le fractionnement
 .Étapes
 . Connectez-vous à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
 . Dans la mosaïque bases de données, sélectionnez *aller à l'inventaire des bases de données*.
-. Dans bases de données, sélectionnez l'onglet *sandbox*.
-. Dans l'onglet sandbox, cliquez sur le menu à trois points du clone sandbox que vous souhaitez fractionner.
+. Dans le menu Bases de données, sélectionnez *Bacs à sable*.
+. Dans Sandboxes, sélectionnez le menu d’action du clone de base de données que vous souhaitez diviser.
 . Sélectionnez *Fractionner*.
-. Dans la boîte de dialogue Fractionner, cliquez sur *Fractionner*.
+. Dans la boîte de dialogue Fractionner, sélectionnez *Fractionner*.
 

@@ -2,23 +2,23 @@
 sidebar: sidebar 
 permalink: deregister-instance.html 
 keywords: Microsoft SQL Server instance, PostgreSQL server instance, Oracle database, deregister instance, unregister instance, remove instance 
-summary: 'Annulez l"enregistrement d"une ressource si vous ne souhaitez plus déployer ou surveiller les ressources à partir de la console de l"usine de charge de travail.' 
+summary: 'Annulez l"enregistrement d"une ressource si vous ne souhaitez plus déployer ou surveiller les ressources à partir de la console Workload Factory.' 
 ---
-= Annuler l'enregistrement d'une ressource dans Workload Factory
+= Annuler l'enregistrement d'une ressource dans NetApp Workload Factory
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-Annulez l'enregistrement d'une ressource, telle qu'une instance Microsoft SQL Server ou une base de données Oracle, si vous ne souhaitez plus déployer ou surveiller les ressources à partir de la console de la fabrique de charges de travail.  La désinscription des ressources supprime également la quantité de capacité de stockage FSx for ONTAP utilisée par l'instance.
+Annulez l'enregistrement d'une ressource, telle qu'une instance Microsoft SQL Server ou une base de données Oracle, si vous ne souhaitez plus déployer ou surveiller les ressources à partir de la console NetApp Workload Factory. La désinscription des ressources supprime également la quantité de capacité de stockage FSx for ONTAP utilisée par l'instance.
 
 Vous pouvez réenregistrer la ressource.
 
 .Étapes
 . Connectez-vous à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
 . Dans la mosaïque bases de données, sélectionnez *aller à l'inventaire des bases de données*.
-. Dans bases de données, sélectionnez l'onglet *Inventaire*.
-. Dans l’inventaire, sélectionnez le type de moteur : Microsoft SQL Server, Oracle ou PostgreSQL.
-. Localisez la ressource que vous souhaitez désinscrire, sélectionnez le menu à trois points, puis sélectionnez *Désinscrire*.
+. Dans le menu Bases de données, sélectionnez *Inventaire*.
+. Dans l'inventaire, sélectionnez le type de moteur : *Microsoft SQL Server*, *Oracle* ou *PostgreSQL*.
+. Localisez la ressource que vous souhaitez désinscrire, sélectionnez le menu d'action, puis sélectionnez *Désinscrire*.
 

@@ -2,16 +2,16 @@
 sidebar: sidebar 
 permalink: create-database.html 
 keywords: create, database, creation, Microsoft SQL 
-summary: Créez une base de données Microsoft SQL avec une usine de workloads BlueXP  pour les bases de données. 
+summary: Créez une base de données Microsoft SQL avec NetApp Workload Factory for Databases. 
 ---
-= Créez une base de données Microsoft SQL en usine de workloads BlueXP  pour les bases de données
+= Créer une base de données Microsoft SQL dans NetApp Workload Factory pour les bases de données
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-La création d'une nouvelle base de données Microsoft SQL vous permet de gérer la ressource au sein de l'usine de charges de travail BlueXP  pour les bases de données.
+La création d’une nouvelle base de données Microsoft SQL vous permet de gérer la ressource dans NetApp Workload Factory for Databases.
 
 .Description de la tâche
 Lors de la création de la base de données, deux nouveaux volumes sont créés dans le système de fichiers FSX pour ONTAP, composé de LUN indépendants qui hébergent les données et les fichiers journaux de la base de données. Les fichiers de base de données de la nouvelle base de données sont à provisionnement fin et ne consomment que quelques Mo de la taille totale allouée à la nouvelle base de données.
@@ -26,15 +26,13 @@ NOTE: Les serveurs Microsoft SQL utilisant le protocole SMB ne prennent pas en c
 .Avant de commencer
 Assurez-vous de remplir les conditions préalables suivantes avant de créer une nouvelle base de données.
 
-Informations d'identification et autorisations:: Vous devez link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Informations d'identification du compte AWS et autorisations en mode _lecture seule_ ou _lecture/écriture_"^]créer une nouvelle base de données dans l'usine de la charge de travail.
+* *Informations d'identification et autorisations* : Vous devez avoirlink:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Informations d'identification du compte AWS et autorisations en mode _lecture seule_ ou _lecture/écriture_"^] pour créer une nouvelle base de données dans Workload Factory.
 +
---
 Vous pouvez également utiliser la Codebox pour copier un modèle afin de déployer une base de données hors de l'usine de la charge de travail à l'aide de l'API REST. link:https://docs.netapp.com/us-en/workload-setup-admin/codebox-automation.html["En savoir plus sur l'automatisation de Codebox"^].
 
---
-Hôte Windows:: Vous devez disposer de suffisamment de lettres de lecteur disponibles sur Microsoft SQL Server pour créer de nouveaux lecteurs pour la nouvelle base de données si vous utilisez le mode _création rapide_.
-Microsoft SQL Server:: Vous devez disposer d'un serveur Microsoft SQL Server géré en usine pour que les bases de données puissent héberger la nouvelle base de données.
-AWS Systems Manager:: Vérifiez que le `NT Authority\SYSTEM user` privilège est activé sur l'hôte Microsoft SQL via AWS System Manager.
+* *Hôte Windows* : vous devez disposer de suffisamment de lettres de lecteur disponibles sur le serveur Microsoft SQL Server pour créer de nouveaux lecteurs pour la nouvelle base de données si vous utilisez le mode _Création rapide_.
+* *Microsoft SQL Server* : vous devez disposer d’un serveur Microsoft SQL Server géré dans la fabrique de charges de travail pour que les bases de données hébergent la nouvelle base de données.
+* *AWS Systems Manager* : Assurez-vous que `NT Authority\SYSTEM` le privilège utilisateur est activé dans l'hôte Microsoft SQL via AWS Systems Manager.
 
 
 
@@ -50,9 +48,10 @@ Vous pouvez utiliser les modes de déploiement _Création rapide_ ou _Création 
 .Étapes
 . Connectez-vous à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
 . Dans la mosaïque bases de données, sélectionnez *aller à l'inventaire des bases de données*.
-. Dans bases de données, sélectionnez l'onglet *Inventaire*.
-. Dans l'onglet Inventaire, sélectionnez un serveur de base de données avec une instance de serveur SQL gérée dans laquelle créer la base de données.
-. Cliquez sur le menu à trois points de l'instance gérée, puis sélectionnez *Créer une base de données utilisateur*.
+. Dans le menu Bases de données, sélectionnez *Inventaire*.
+. Dans l’inventaire, sélectionnez *Microsoft SQL Server* comme type de moteur de base de données.
+. Sélectionnez un serveur de base de données avec une instance de serveur SQL gérée pour créer la base de données.
+. Cliquez sur le menu d’action de l’instance gérée, puis sélectionnez *Créer une base de données utilisateur*.
 . Sur la page Créer une base de données utilisateur, sous informations sur la base de données, fournissez les informations suivantes :
 +
 .. *Nom de la base de données* : entrez le nom de la base de données.
@@ -83,9 +82,10 @@ Sinon, si vous voulez modifier l'un de ces paramètres par défaut maintenant, c
 .Étapes
 . Connectez-vous à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
 . Dans la mosaïque bases de données, sélectionnez *aller à l'inventaire des bases de données*.
-. Dans bases de données, sélectionnez l'onglet *Inventaire*.
-. Dans l'onglet Inventaire, sélectionnez un serveur de base de données avec une instance de serveur SQL gérée dans laquelle créer la base de données.
-. Cliquez sur le menu à trois points de l'instance gérée, puis sélectionnez *Créer une base de données utilisateur*.
+. Dans le menu Bases de données, sélectionnez *Inventaire*.
+. Dans l’inventaire, sélectionnez *Microsoft SQL Server* comme type de moteur de base de données.
+. Sélectionnez un serveur de base de données avec une instance de serveur SQL gérée pour créer la base de données.
+. Cliquez sur le menu d’action de l’instance gérée, puis sélectionnez *Créer une base de données utilisateur*.
 . Sélectionnez *Créer une base de données utilisateur*.
 . Sur la page Créer une base de données utilisateur, sous informations sur la base de données, fournissez les informations suivantes :
 +

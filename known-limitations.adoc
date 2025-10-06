@@ -4,14 +4,14 @@ permalink: known-limitations.html
 keywords: limitations, databases 
 summary: Les limitations connues identifient les plateformes, les périphériques ou les fonctions qui ne sont pas pris en charge par cette version du produit, ou qui ne fonctionnent pas correctement avec elle. Examinez attentivement ces limites. 
 ---
-= Limitations connues de l'usine de workloads BlueXP  pour les bases de données
+= Limitations connues de NetApp Workload Factory pour les bases de données
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-Les limitations connues identifient les plateformes, les périphériques ou les fonctions qui ne sont pas pris en charge par cette version du produit, ou qui ne fonctionnent pas correctement avec elle. Examinez attentivement ces limites.
+Les limitations connues identifient les plates-formes, les périphériques ou les fonctions qui ne sont pas pris en charge avec NetApp Workload Factory for Databases ou qui n'interagissent pas correctement avec lui. Examinez attentivement ces limitations.
 
 
 
@@ -35,13 +35,13 @@ Le déploiement avec un ami personnalisé suppose que le support d'installation 
 * Lors de la sélection d'un classement autre que celui défini dans l'image pour un déploiement autonome
 
 
-Dans le cadre du déploiement, l'usine de workloads n'installe pas d'ami personnalisé avec plusieurs instances de Microsoft SQL Server. Seule l'instance par défaut de Microsoft SQL Server est sélectionnée et configurée dans le cadre du déploiement.
+Dans le cadre du déploiement, Workload Factory n’installe pas d’AMI personnalisée avec plusieurs instances Microsoft SQL Server.  Seule l’instance Microsoft SQL Server par défaut est sélectionnée et configurée dans le cadre du déploiement.
 
 
 
 == Effectuez une restauration et réessayez en cas d'échec des déploiements
 
-La restauration et les tentatives de reprise pour les déploiements en échec ne sont pas prises en charge dans l'usine de la charge de travail. Vous pouvez revenir en arrière ou réessayer une pile défaillante à partir de la console CloudFormation dans AWS.
+La restauration et la nouvelle tentative pour les déploiements ayant échoué ne sont pas prises en charge dans Workload Factory.  Vous pouvez restaurer ou réessayer une pile ayant échoué à partir de la console CloudFormation dans AWS.
 
 
 
@@ -60,7 +60,7 @@ Vous devrez les nettoyer manuellement ou attendre que le domaine purge les entr�
 
 == Prise en charge de la configuration des groupes de disponibilité permanente
 
-En usine de charges de travail, la gestion des configurations de groupes de disponibilité always-on n'est pas prise en charge.
+La gestion des configurations de groupes de disponibilité Always On n'est pas prise en charge dans Workload Factory.
 
 
 
@@ -84,7 +84,7 @@ Le nombre maximum de clones sandbox pouvant être créés à partir d'un serveur
 
 == Détection et gestion de Microsoft SQL Server
 
-La détection de Microsoft SQL Server n'est pas enregistrée. Chaque fois que vous accédez aux bases de données en usine, la détection de Microsoft SQL Server s'exécute à nouveau pour identifier les installations SQL dans la région.
+La détection de Microsoft SQL Server n'est pas enregistrée.  Chaque fois que vous accédez aux bases de données dans Workload Factory, la détection Microsoft SQL Server s'exécute à nouveau pour identifier les installations SQL dans la région.
 
 
 
@@ -118,7 +118,7 @@ L'optimisation en bloc de plusieurs instances SQL Server n'est pas prise en char
 
 === Évaluation des correctifs du système d'exploitation pour l'optimisation
 
-L'évaluation des correctifs du système d'exploitation effectuée à des fins d'optimisation peut ne pas fonctionner sur un réseau privé. L'évaluation repose sur AWS Patch Manager. Pour savoir comment appliquer des correctifs aux instances Windows EC2 dans un réseau privé, reportez-vous à la section link:https://aws.amazon.com/blogs/mt/how-to-patch-windows-ec2-instances-in-private-subnets-using-aws-systems-manager/["Blog AWS Cloud Operations « Comment corriger les instances Windows EC2 dans des sous-réseaux privés à l'aide d'AWS Systems Manager »"^].
+L'évaluation des correctifs du système d'exploitation effectuée à des fins d'optimisation peut ne pas fonctionner sur un réseau privé.  L'évaluation s'appuie sur AWS Patch Manager.  Pour comprendre comment corriger les instances Windows EC2 dans un réseau privé, reportez-vous au blog AWS Cloud Operationslink:https://aws.amazon.com/blogs/mt/how-to-patch-windows-ec2-instances-in-private-subnets-using-aws-systems-manager/["Comment corriger les instances Windows EC2 dans les sous-réseaux privés à l'aide d'AWS Systems Manager"^] .
 
 
 
@@ -131,17 +131,35 @@ Les calculs des économies et des pourcentages de la taille du volume pour le st
 == Évaluation de la réplication entre les régions
 
 * L'évaluation d'optimisation ne peut pas déterminer si la réplication interrégionale (CRR) est utilisée lorsque le système de fichiers FSX pour ONTAP cible se trouve dans un autre compte AWS.
-* L'usine de charge de travail évalue uniquement la configuration CRR du système de fichiers source FSX pour ONTAP.
+* Workload Factory évalue uniquement la configuration CRR du système de fichiers source FSx pour ONTAP .
 
 
 
 
-== Authentification de l'hôte de la base de données dans Explore Savings
+== Authentification de l'hôte de la base de données lors de l'exploration des économies
 
 Dans certains cas, avec des autorisations limitées, la page d'exploration des économies ne charge pas les données après une authentification réussie.
 
 
 
-== Intégration avec la BlueXP backup and recovery
+== Intégration avec NetApp Backup and Recovery
 
-Après avoir ajouté des hôtes à la sauvegarde et à la récupération BlueXP pour la protection, la découverte de la base de données échoue parfois.
+Après avoir ajouté des hôtes à NetApp Backup and Recovery pour la protection, la découverte de la base de données échoue parfois.
+
+
+
+== Soutien régional
+
+Les régions AWS suivantes ne sont pas prises en charge :
+
+* Régions de Chine
+* GovCloud (USA)
+* Le cloud secret
+* Top secret
+
+
+
+
+== Enregistrement d'Oracle sur SUSE Linux Enterprise Server 12
+
+Lors de l'enregistrement d'Oracle Database sur SUSE Linux Enterprise Server 12, Workload Factory n'installe pas les dépendances Python.  Vous devez configurer manuellement la version Python requise.  Workload Factory nécessite la version minimale 3.6 ; cependant, nous recommandons la version 3.11.

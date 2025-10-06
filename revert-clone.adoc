@@ -2,25 +2,25 @@
 sidebar: sidebar 
 permalink: revert-clone.html 
 keywords: re-baseline, revert clone, database, Microsoft SQL 
-summary: 'Restaurez un clone sandbox dans l"usine de workloads BlueXP  pour les bases de données.' 
+summary: 'Rétablir un clone de base de données (bac à sable) à sa version d"origine au moment de sa création dans NetApp Workload Factory for Databases.' 
 ---
-= Restaurez un clone sandbox dans l'usine de workloads BlueXP  pour les bases de données
+= Rétablir un clone de base de données dans NetApp Workload Factory for Databases
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-Restaurez la version d'origine d'un clone de base de données au moment de sa création dans l'usine de charges de travail BlueXP  pour les bases de données.
+Rétablir un clone de base de données (bac à sable) à sa version d'origine au moment de sa création dans NetApp Workload Factory for Databases.
 
 .Description de la tâche
-Lorsque vous clonez une base de données, le clone à la création est un clone _baseline_. Les données de la base de données clonée sont les mêmes que celles de la base de données source au moment de la création. Au fur et à mesure que les données d'un clone de base de données sandbox changent au fil du temps, vous pouvez rétablir les données à la base lors de la création du clone. Cette opération s'appelle la redéfinition de la base d'un clone. La redéfinition de la base d'un clone plutôt que de créer un nouveau clone permet de gagner de l'espace. Toutefois, toute modification apportée au clone sandbox sera supprimée.
+Lorsque vous clonez une base de données, le clone à la création est un clone _de base_.  Les données de la base de données clonée sont les mêmes que celles de la base de données source au moment de la création.  À mesure que les données d'un clone de base de données évoluent au fil du temps, vous souhaiterez peut-être rétablir les données à la ligne de base lors de la création initiale du clone.  Cette opération est appelée re-baselining d'un clone.  La redéfinition d'un clone plutôt que la création d'un nouveau clone permet d'économiser de l'espace ; cependant, toutes les modifications apportées au clone de base de données seront supprimées.
 
 .Étapes
 . Connectez-vous à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
 . Dans la mosaïque bases de données, sélectionnez *aller à l'inventaire des bases de données*.
-. Dans bases de données, sélectionnez l'onglet *sandbox*.
-. Dans l'onglet sandbox, cliquez sur le menu à trois points du clone sandbox à rétablir.
+. Dans le menu Bases de données, sélectionnez *Bacs à sable*.
+. Dans Sandboxes, sélectionnez le menu d’action du clone de base de données que vous souhaitez restaurer.
 . Sélectionnez *Re-Baseline*.
-. Dans la boîte de dialogue Re-Baseline, cliquez sur *Re-Baseline*.
+. Dans la boîte de dialogue Re-baseline, sélectionnez *Re-baseline*.
 

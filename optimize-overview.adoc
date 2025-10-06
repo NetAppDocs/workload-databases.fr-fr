@@ -27,7 +27,7 @@ Les fonctionnalités principales comprennent :
 
 == État bien conçu
 
-Dans la console d'usine des workloads au niveau du système de fichiers, un état bien conçu est indiqué pour tous les systèmes de fichiers FSX pour ONTAP. Les États bien conçus sont classés comme « problèmes », « non analysés » ou « bien conçus ». La sélection de l'état bien conçu vous redirige vers l'onglet d'état bien conçu du système de fichiers, où vous pouvez trouver le score bien conçu, les catégories de configuration, toutes les configurations du système de fichiers.
+Dans la console Workload Factory, au niveau du système de fichiers, l'état « bien architecturé » est répertorié pour tous les systèmes de fichiers FSx for ONTAP . Les statuts bien architecturés sont classés comme « problèmes », « non analysés » ou « bien architecturés ». La sélection du statut bien architecturé vous redirige vers l'onglet du statut bien architecturé dans le système de fichiers où vous pouvez trouver le score bien architecturé, les catégories de configuration et toutes les configurations du système de fichiers.
 
 
 

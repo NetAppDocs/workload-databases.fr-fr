@@ -2,16 +2,16 @@
 sidebar: sidebar 
 permalink: register-instance.html 
 keywords: manage, register, Microsoft SQL Server instance, Oracle database, manage database, manage instance 
-summary: 'Enregistrez les ressources afin de pouvoir surveiller l"état des ressources, leur utilisation, leur protection et les performances de stockage dans Workload Factory pour les bases de données.' 
+summary: 'Enregistrez les ressources afin de pouvoir surveiller l"état des ressources, leur utilisation, leur protection et les performances de stockage dans NetApp Workload Factory for Databases.' 
 ---
-= Enregistrer les ressources dans la fabrique de charges de travail pour les bases de données
+= Enregistrer des ressources dans NetApp Workload Factory pour les bases de données
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-Enregistrez des instances pour Microsoft SQL Server et des bases de données pour Oracle afin de pouvoir surveiller l'état de l'instance et de la base de données, l'utilisation des ressources, la protection et les performances de stockage dans la fabrique de charges de travail pour les bases de données.
+Enregistrez des instances pour Microsoft SQL Server et des bases de données pour Oracle afin de pouvoir surveiller l'état des instances et des bases de données, l'utilisation des ressources, la protection et les performances de stockage dans NetApp Workload Factory for Databases.
 
 L'enregistrement n'est possible que pour les moteurs de bases de données exécutés sur FSx pour le stockage du système de fichiers ONTAP .
 
@@ -32,7 +32,7 @@ NOTE: Workload Factory prend uniquement en charge l'enregistrement et la gestion
 
 Tenez compte des éléments suivants avant d’enregistrer une instance :
 
-L'hôte de l'instance ou de la base de données doit apparaître dans l'onglet Inventaire.  Pour que les hôtes apparaissent dans l'inventaire,link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["vous devez ajouter les informations d'identification du compte AWS et les autorisations en mode _lecture seule_ ou _lecture/écriture_"^] .
+L'hôte de l'instance ou de la base de données doit apparaître dans l'inventaire. Pour que les hôtes apparaissent dans l'inventaire,link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["vous devez ajouter les informations d'identification du compte AWS et les autorisations en mode _lecture seule_ ou _lecture/écriture_"^] .
 
 
 
@@ -62,8 +62,8 @@ L'enregistrement d'une instance inclut l'authentification et la préparation de 
 .Étapes
 . Connectez-vous à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
 . Dans la mosaïque bases de données, sélectionnez *aller à l'inventaire des bases de données*.
-. Dans bases de données, sélectionnez l'onglet *Inventaire*.
-. Sélectionnez *Microsoft SQL Server* comme type de moteur.
+. Dans le menu Bases de données, sélectionnez *Inventaire*.
+. Dans l’inventaire, sélectionnez *Microsoft SQL Server* comme type de moteur.
 . Sélectionnez l'onglet *Instances*.
 . Sélectionnez pour enregistrer une seule instance ou plusieurs instances.
 +
@@ -117,8 +117,8 @@ L'enregistrement d'une base de données comprend l'authentification et la prépa
 .Étapes
 . Connectez-vous à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
 . Dans la mosaïque bases de données, sélectionnez *aller à l'inventaire des bases de données*.
-. Dans bases de données, sélectionnez l'onglet *Inventaire*.
-. Dans l’onglet Inventaire, sélectionnez *Oracle* comme moteur de base de données.
+. Dans le menu Bases de données, sélectionnez *Inventaire*.
+. Dans l’inventaire, sélectionnez *Oracle* comme moteur de base de données.
 . Sélectionnez l'onglet *Bases de données*.
 . Sélectionnez pour enregistrer une seule base de données ou plusieurs bases de données.
 +

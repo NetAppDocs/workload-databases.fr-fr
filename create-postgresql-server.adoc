@@ -2,41 +2,41 @@
 sidebar: sidebar 
 permalink: create-postgresql-server.html 
 keywords: create, server, PostgreSQL, deploy, host, deploy a database host, database host 
-summary: 'Créez un nouveau serveur SQL PostgreSQL dans l"usine de charges de travail BlueXP  pour les bases de données.' 
+summary: Créez un nouveau serveur SQL PostgreSQL dans NetApp Workload Factory pour les bases de données. 
 ---
-= Créez un serveur PostgreSQL en usine de charges de travail BlueXP 
+= Créer un serveur PostgreSQL dans NetApp Workload Factory
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-La création d'un nouveau serveur PostgreSQL, ou hôte de base de données, en usine de charges de travail BlueXP  pour les bases de données nécessite un déploiement de système de fichiers FSX pour ONTAP et des ressources pour Active Directory.
+La création d'un nouveau serveur PostgreSQL ou d'un hôte de base de données dans NetApp Workload Factory for Databases nécessite un déploiement de système de fichiers FSx pour ONTAP et des ressources pour Active Directory.
 
-.Description de la tâche
-Avant de créer un serveur PostgreSQL à partir de l'usine de charges de travail BlueXP , découvrez les types de déploiement du stockage disponibles pour la configuration des hôtes de base de données, les modes de fonctionnement de l'usine des charges de travail et les conditions requises pour réaliser cette opération.
 
-FSX pour les déploiements de systèmes de fichiers ONTAP:: La création d'un nouveau serveur PostgreSQL requiert un système de fichiers FSX pour ONTAP en tant que système back-end de stockage. Vous pouvez utiliser un système de fichiers FSX pour ONTAP existant ou créer un nouveau système de fichiers. Si vous sélectionnez un système de fichiers FSX pour ONTAP existant comme back-end de stockage du serveur de base de données, nous créons une nouvelle VM de stockage pour les charges de travail PostgreSQL.
-+
---
-Les systèmes de fichiers FSX pour ONTAP disposent de deux modèles de déploiement de serveur PostgreSQL : _haute disponibilité (HA)_ ou _instance unique_. Différentes ressources sont créées pour le système de fichiers FSX pour ONTAP selon le modèle de déploiement de FSX pour ONTAP que vous sélectionnez.
+
+== Description de la tâche
+
+Avant de créer un serveur PostgreSQL à partir de Workload Factory, découvrez les types de déploiement de stockage disponibles pour la configuration de l'hôte de base de données, les modes de fonctionnement de Workload Factory et les exigences pour effectuer cette opération.
+
+.FSX pour les déploiements de systèmes de fichiers ONTAP
+La création d'un nouveau serveur PostgreSQL requiert un système de fichiers FSX pour ONTAP en tant que système back-end de stockage. Vous pouvez utiliser un système de fichiers FSX pour ONTAP existant ou créer un nouveau système de fichiers. Si vous sélectionnez un système de fichiers FSX pour ONTAP existant comme back-end de stockage du serveur de base de données, nous créons une nouvelle VM de stockage pour les charges de travail PostgreSQL.
+
++ Les systèmes de fichiers FSx pour ONTAP ont deux modèles de déploiement de serveur PostgreSQL : _Haute disponibilité (HA)_ ou _instance unique_.  Différentes ressources sont créées pour le système de fichiers FSx for ONTAP en fonction du modèle de déploiement FSx for ONTAP que vous sélectionnez.
 
 * *Déploiement haute disponibilité (HA)* : un système de fichiers FSX pour NetApp ONTAP à plusieurs zones de disponibilité est déployé lorsqu'un nouveau système de fichiers FSX pour ONTAP est sélectionné pour le déploiement haute disponibilité. Des volumes et des LUN distincts sont créés pour les fichiers de données, de journaux et de tempdb pour un déploiement HA. Un volume et une LUN supplémentaires sont créés pour quorum ou disque témoin pour le cluster Windows. Le déploiement HAUTE DISPONIBILITÉ configure la réplication de flux entre les serveurs PostgreSQL principaux et secondaires.
 * *Déploiement d'une instance unique* : un système de fichiers FSX pour ONTAP à zone de disponibilité unique est créé lors de la création d'un nouveau serveur PostgreSQL. De plus, des volumes et des LUN distincts sont créés pour les fichiers de données, de journaux et de tempdb.
 
 
---
 
 
-.Avant de commencer
-Assurez-vous de disposer des conditions préalables suivantes avant de créer un nouvel hôte de base de données.
+== Avant de commencer
 
-Informations d'identification et autorisations:: Vous devez link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Informations d'identification du compte AWS et autorisations en mode _lecture/écriture_"^]créer un nouvel hôte de base de données en usine de la charge de travail.
-
+Vous devez link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Informations d'identification du compte AWS et autorisations en mode _lecture/écriture_"^]créer un nouvel hôte de base de données en usine de la charge de travail.
 
 
 
-== Créez un serveur de base de données
+== Créez un serveur PostgreSQL
 
 Vous pouvez utiliser les modes de déploiement _Quick CREATE_ ou _Advanced CREATE_ pour effectuer cette tâche en usine avec des autorisations de mode _automate_. Vous pouvez également utiliser les outils suivants disponibles dans la Codebox : l'API REST, la CLI AWS, AWS CloudFormation et Terraform. link:https://docs.netapp.com/us-en/workload-setup-admin/use-codebox.html#how-to-use-codebox["Découvrez comment utiliser Codebox pour l'automatisation"^].
 
@@ -52,7 +52,7 @@ NOTE: Dans _Quick create_, HA est le modèle de déploiement par défaut, Window
 
 .Étapes
 . Connectez-vous à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
-. Dans la mosaïque Databases, sélectionnez *Deploy database host*, puis sélectionnez *PostgreSQL Server* dans le menu déroulant.
+. Dans la mosaïque Bases de données, sélectionnez *Déployer l'hôte*, puis sélectionnez *Serveur PostgreSQL* dans le menu.
 . Sélectionnez *création rapide*.
 . Sous *zone d'atterrissage*, fournissez les informations suivantes :
 +
@@ -141,7 +141,7 @@ Vous pouvez également sélectionner *Enregistrer la configuration* pour déploy
 --
 .Étapes
 . Connectez-vous à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
-. Dans la mosaïque Databases, sélectionnez *Deploy database host*, puis sélectionnez *PostgreSQL Server* dans le menu déroulant.
+. Dans la mosaïque Bases de données, sélectionnez *Déployer l'hôte*, puis sélectionnez *Serveur PostgreSQL* dans le menu.
 . Sélectionnez *création avancée*.
 . Sous *modèle de déploiement*, sélectionnez *instance autonome* ou *haute disponibilité (HA)*.
 . Sous *zone d'atterrissage*, fournissez les informations suivantes :
@@ -174,20 +174,17 @@ Les attributs DNS VPC `EnableDnsSupport` et `EnableDnsHostnames` sont modifiés 
 
 .. *Zones de disponibilité* : sélectionnez les zones de disponibilité et les sous-réseaux.
 +
-Pour les déploiements à instance unique::
+*Pour les déploiements d'instance unique*
+
 +
---
 Dans le champ *Configuration du cluster - nœud 1*, sélectionnez une zone de disponibilité dans le menu déroulant *zone de disponibilité* et un sous-réseau dans le menu déroulant *sous-réseau*.
 
---
-Pour les déploiements HA::
 +
---
+*Pour les déploiements HA*
+
++
 ... Dans le champ *Configuration du cluster - nœud 1*, sélectionnez la zone de disponibilité principale de la configuration MAZ FSX pour ONTAP dans le menu déroulant *zone de disponibilité* et un sous-réseau dans la zone de disponibilité principale dans le menu déroulant *sous-réseau*.
 ... Dans le champ *Configuration du cluster - nœud 2*, sélectionnez la zone de disponibilité secondaire pour la configuration MAZ FSX pour ONTAP dans le menu déroulant *zone de disponibilité* et un sous-réseau dans la zone de disponibilité secondaire dans le menu déroulant *sous-réseau*.
-
-
---
 
 
 .. *Groupe de sécurité* : sélectionnez un groupe de sécurité existant ou créez un nouveau groupe de sécurité.
