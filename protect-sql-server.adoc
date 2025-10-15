@@ -21,7 +21,7 @@ Workload Factory automatise la découverte des ressources, la validation des pr�
 
 NetApp Backup and Recovery exploite la technologie de réplication de données NetApp SnapMirror pour garantir que toutes les sauvegardes sont entièrement synchronisées en créant des copies instantanées et en les transférant vers les emplacements de sauvegarde.
 
-Pour plus de détails sur la protection avec Backup and Recovery, reportez-vous aulink:https://docs.netapp.com/us-en/console-backup-recovery/br-use-mssql-protect-overview.html["Présentation de la protection des charges de travail Microsoft SQL avec la sauvegarde et la récupération"^] .
+Pour plus de détails sur la protection avec Backup and Recovery, reportez-vous au link:https://docs.netapp.com/us-en/data-services-backup-recovery/br-use-mssql-protect-overview.html["Présentation de la protection des charges de travail Microsoft SQL avec la sauvegarde et la récupération"^].
 
 
 
@@ -29,8 +29,8 @@ Pour plus de détails sur la protection avec Backup and Recovery, reportez-vous 
 
 Les exigences suivantes doivent être respectées pour protéger les charges de travail Microsoft SQL Server avec Backup and Recovery.
 
-* Assurez-vous que votre environnement répondlink:https://docs.netapp.com/us-en/console-backup-recovery/concept-start-prereq.html#microsoft-sql-server-workload-requirements["les exigences de sauvegarde et de récupération de SQL Server"^] .
-* link:https://docs.netapp.com/us-en/console-backup-recovery/concept-start-prereq.html#in-netapp-console["Configuration requise complète de la console NetApp"^]y compris la configuration, l'attribution de rôles IAM et l'installation d'un agent de console.
+* Assurez-vous que votre environnement répond link:https://docs.netapp.com/us-en/data-services-backup-recovery/concept-start-prereq.html#microsoft-sql-server-workload-requirements["les exigences de sauvegarde et de récupération de SQL Server"^].
+* link:https://docs.netapp.com/us-en/data-services-backup-recovery/concept-start-prereq.html#in-netapp-console["Configuration requise complète de la console NetApp"^] y compris la configuration, l'attribution de rôles IAM et l'installation d'un agent de console.
 
 
 Si vous disposez d'un accès administrateur d'organisation au compte NetApp , le `backup and recovery super admin` le rôle est automatiquement attribué lorsque vous<<Préparez-vous à la protection avec NetApp Backup and Recovery,préparez-vous à la protection avec NetApp Backup and Recovery>> .
@@ -40,7 +40,7 @@ Si vous disposez d'un accès administrateur d'organisation au compte NetApp , le
 Pour découvrir des bases de données, vous devez définir la résolution de l'hôte sur le connecteur.  Sur l'appareil hébergé, ajoutez le mappage de l'adresse IP au nom d'hôte dans le `/etc/hosts` déposer.
 
 +
-** link:https://docs.netapp.com/us-en/console-backup-recovery/br-start-licensing.html["Configurer les licences pour NetApp Backup and Recovery"^]
+** link:https://docs.netapp.com/us-en/data-services-backup-recovery/br-start-licensing.html["Configurer les licences pour NetApp Backup and Recovery"^]
 
 
 
@@ -69,6 +69,6 @@ Pour utiliser NetApp Backup and Recovery pour la protection, les instances SQL S
 .Et la suite
 À partir de Sauvegarde et récupération, créez une stratégie pour protéger votre instance et vos bases de données Microsoft SQL Server.
 
-link:https://docs.netapp.com/us-en/console-backup-recovery/br-use-policies-create.html["Découvrez comment créer une politique pour protéger votre instance et vos bases de données Microsoft SQL Server"^] .
+link:https://docs.netapp.com/us-en/data-services-backup-recovery/br-use-policies-create.html["Découvrez comment créer une politique pour protéger votre instance et vos bases de données Microsoft SQL Server"^].
 
-Pour des informations connexes, reportez-vous à lalink:https://docs.netapp.com/us-en/console-backup-recovery/br-use-mssql-protect-overview.html["Documentation de sauvegarde et de récupération"^] pour gérer les charges de travail Microsoft SQL Server.
+Pour des informations connexes, reportez-vous à la link:https://docs.netapp.com/us-en/data-services-backup-recovery/br-use-mssql-protect-overview.html["Documentation de sauvegarde et de récupération"^] pour gérer les charges de travail Microsoft SQL Server.
