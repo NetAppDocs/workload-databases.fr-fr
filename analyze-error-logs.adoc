@@ -104,6 +104,6 @@ Utilisez la console Workload Factory pour analyser les journaux d’erreurs SQL 
 +
 Après l'analyse, les erreurs sont affichées dans la console, offrant une vue complète des problèmes détectés par l'analyseur de journal d'erreurs intelligent.
 
-. Utilisez des filtres pour affiner les erreurs affichées en fonction de critères tels que la gravité, la période et le code d'erreur.
+. Utilisez des filtres pour affiner les erreurs affichées en fonction de critères tels que la gravité, la période et le code d'erreur, ou par des balises orientées infrastructure telles que le calcul, le stockage, le réseau et la sécurité.
 . Consultez les informations détaillées sur l’erreur, y compris le message d’erreur d’origine, l’explication basée sur l’IA et les étapes de correction suggérées pour résoudre les erreurs.
 

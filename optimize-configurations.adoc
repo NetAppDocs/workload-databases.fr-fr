@@ -41,7 +41,7 @@ Pour les instances Microsoft SQL Server :
 
 Pour les bases de données Oracle :
 
-* Configuration du stockage : inclut la gestion de la capacité, le provisionnement léger, la politique de hiérarchisation, les instantanés, l'efficacité du stockage et les configurations du système d'exploitation pour les déploiements utilisant iSCSI avec ou sans gestion automatique du stockage (ASM), y compris l'état et les paramètres Microsoft Multipath I/O (MPIO)
+* Configuration du stockage : inclut la gestion de la capacité, le provisionnement fin, la stratégie de hiérarchisation, les instantanés, l’optimisation du stockage et les configurations du système d’exploitation pour les déploiements utilisant NFS ou iSCSI avec ou sans gestion automatique du stockage (ASM), y compris l’état et les paramètres de Microsoft Multipath I/O (MPIO).
 * Disposition du stockage : inclut le placement du journal de rétablissement, le placement de l'espace table temporaire, le placement des fichiers de données, le placement du journal d'archive, le placement des fichiers de contrôle et le placement des binaires, le nombre d'unités LUN des groupes de disques ASM
 
 

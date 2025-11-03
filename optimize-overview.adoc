@@ -25,27 +25,13 @@ Les fonctionnalités principales comprennent :
 
 
 
-== État bien conçu
+== Composantes de l'analyse de configuration
 
-Dans la console Workload Factory, au niveau du système de fichiers, l'état « bien architecturé » est répertorié pour tous les systèmes de fichiers FSx for ONTAP . Les statuts bien architecturés sont classés comme « problèmes », « non analysés » ou « bien architecturés ». La sélection du statut bien architecturé vous redirige vers l'onglet du statut bien architecturé dans le système de fichiers où vous pouvez trouver le score bien architecturé, les catégories de configuration et toutes les configurations du système de fichiers.
+L'analyse de configuration comprend les composants suivants :
 
-
-
-== Score bien conçu
-
-Le score inclut toutes les configurations actuellement analysées et apparaît sous forme de pourcentage. Un score de 25 % signifie que 25 % des configurations de système de fichiers sont bien conçues.
-
-
-
-== Catégories de configuration
-
-Les configurations de système de fichiers sont organisées par catégories, en accord avec les cinq piliers du framework Well-Architected AWS.
-
-* _Reliability_ : garantit que les charges de travail exécutent correctement et de manière cohérente les fonctions prévues, même en cas de perturbations. Un exemple de configuration est FSX pour les sauvegardes ONTAP.
-* _Sécurité_ : met l'accent sur la protection des données, des systèmes et des ressources au moyen d'évaluations des risques et de stratégies d'atténuation.
-* _Excellence opérationnelle_ : met l'accent sur la fourniture de l'architecture et de la valeur métier les plus optimales.
-* _Optimisation des coûts_ : vise à générer de la valeur commerciale tout en réduisant les coûts.
-* _Efficacité des performances_ : se concentre sur l'utilisation efficace des ressources pour répondre aux exigences du système et pour maintenir des performances optimales au fur et à mesure de l'évolution de la demande.
+État bien conçu:: L'état « bien architecturé » fait référence à l'état général de vos configurations de base de données ; les configurations sont catégorisées comme « optimisées », « non optimisées » ou « surdimensionnées ». L'état d'architecture correcte d'une configuration est référencé depuis une instance Microsoft SQL Server ou une base de données Oracle dans la console Workload Factory.
+Score bien conçu:: Le score inclut toutes les configurations actuellement analysées et s'affiche sous forme de pourcentage. Un score de 25 % signifie que 25 % de vos déploiements de bases de données sont bien architecturés. Le score d'architecture bien conçue est référencé depuis l'écran *Architecture bien conçue* et depuis une instance Microsoft SQL Server ou une base de données Oracle dans la console Workload Factory.
+Catégories de configuration:: Les configurations sont organisées dans les catégories suivantes : stockage, calcul, application, résilience et clonage. Chaque catégorie comprend des évaluations de configuration spécifiques qui sont analysées régulièrement. Les catégories de configuration sont référencées à partir de l'écran *Bien architecturé* et à partir d'une instance Microsoft SQL Server ou d'une base de données Oracle dans la console Workload Factory.
 
 
 
