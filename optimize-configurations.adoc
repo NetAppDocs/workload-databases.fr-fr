@@ -49,7 +49,7 @@ Pour les bases de données Oracle :
 
 == Avant de commencer
 
-* Vous devez avoir link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Informations d'identification du compte AWS et autorisations de lecture/écriture"^] pour analyser vos configurations de base de données.
+* Vous devezlink:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["accorder les autorisations d'_opérations et de correction_"^] dans votre compte AWS.
 * Pour évaluer le stockage d'une instance Microsoft SQL Server ou d'une base de données Oracle, la ressource doit être enregistrée dans Workload Factory et le type de stockage doit être FSx pour ONTAP.link:register-instance.html["Apprenez à enregistrer des ressources."]
 * Vérifiez attentivement chaque recommandation avant de choisir de corriger un paramètre ou une configuration. Pour les paramètres RSS et MAXDOP, nous vous suggérons de tester les paramètres recommandés pour déterminer les améliorations de performances avant d'apporter des modifications à votre environnement de production.
 

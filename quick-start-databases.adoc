@@ -23,10 +23,13 @@ Vous aurez besoin delink:https://docs.netapp.com/us-en/workload-setup-admin/sign
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["Deux"] Ajoutez des informations d'identification et des autorisations
 [role="quick-margin-para"]
-Choisissez entre link:https://docs.netapp.com/us-en/workload-setup-admin/operational-modes.html["modes de fonctionnement _de base_, _lecture seule_ et _lecture/écriture_"^].
+Choisissez lelink:https://docs.netapp.com/us-en/workload-setup-admin/permissions-reference.html["Politiques d'autorisation"^] pour répondre à vos besoins.
 
 [role="quick-margin-para"]
-Si vous travaillez en mode _lecture seule_ ou _lecture/écriture_, vous devrezlink:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["ajoutez manuellement des informations d'identification à un compte"^] sélectionnez les capacités de charge de travail, telles que les bases de données et GenAI, et créez des politiques IAM pour les autorisations requises.
+Si vous choisissez de ne pas accorder d'autorisations, vous pouvez commencer à utiliser Workload Factory for Databases pour copier des exemples de code partiellement complétés.
+
+[role="quick-margin-para"]
+Si vous choisissez d'accorder des autorisations, vous devrezlink:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["ajoutez manuellement des informations d'identification à un compte"^] Cela comprend la sélection des capacités de charge de travail, telles que les bases de données et l'IA, et la création des politiques IAM pour les autorisations requises.
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["Trois"]Découvrir ou déployer des ressources
 [role="quick-margin-para"]

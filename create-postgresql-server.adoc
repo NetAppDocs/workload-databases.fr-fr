@@ -32,7 +32,7 @@ La création d'un nouveau serveur PostgreSQL requiert un système de fichiers FS
 
 == Avant de commencer
 
-Vous devez link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Informations d'identification du compte AWS et autorisations en mode _lecture/écriture_"^]créer un nouvel hôte de base de données en usine de la charge de travail.
+Vous devez avoir link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["accorder les permissions de création de l'hôte de base de données"^] dans votre compte AWS pour créer un nouvel hôte de base de données dans Workload Factory.
 
 
 

@@ -144,9 +144,6 @@ Workload Factory prend en charge les moteurs de base de données, versions, syst
 | Microsoft SQL Server | SQL Server 2016, 2017, 2019, 2022 | N'importe lequel | FCI, instance unique 
 
 
-| Microsoft SQL Server | SQL Server 2016, 2019, 2022 | N'importe lequel | Groupes de disponibilité toujours actifs 
-
-
 | Oracle | 19c | RHEL, SuSe Linux | Autonome (locataire unique/multi-locataire) 
 
 
@@ -163,12 +160,6 @@ Workload Factory prend en charge les moteurs de base de données, versions, syst
 
 
 | Oracle | 21c | RHEL, SuSe Linux | Autonome avec ASM (locataire unique/multi-locataire) 
-
-
-| Oracle | 19c | RHEL, SuSe Linux | Dataguard 
-
-
-| Oracle | 21c | RHEL, SuSe Linux | Dataguard 
 
 
 | PostgreSQL | PostgreSQL 15 | AMI Amazon Linux 2023 | HA, instance autonome 

@@ -72,3 +72,20 @@ Pour utiliser NetApp Backup and Recovery pour la protection, les instances SQL S
 link:https://docs.netapp.com/us-en/data-services-backup-recovery/br-use-policies-create.html["Découvrez comment créer une politique pour protéger votre instance et vos bases de données Microsoft SQL Server"^].
 
 Pour des informations connexes, reportez-vous à la link:https://docs.netapp.com/us-en/data-services-backup-recovery/br-use-mssql-protect-overview.html["Documentation de sauvegarde et de récupération"^] pour gérer les charges de travail Microsoft SQL Server.
+
+
+
+== Protection contre la modification des ressources Microsoft SQL Server
+
+Vous pouvez modifier la protection des instances et des bases de données Microsoft SQL Server déjà protégées dans NetApp Backup and Recovery. La modification de la protection vous permet de modifier la stratégie ou la planification de protection de vos instances SQL Server protégées.
+
+. Connectez-vous à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
+. Dans la mosaïque bases de données, sélectionnez *aller à l'inventaire des bases de données*.
+. Dans le menu Bases de données, sélectionnez *Inventaire*.
+. Dans l’inventaire, sélectionnez *Microsoft SQL Server* comme type de moteur.
+. Sélectionnez l'onglet *Bases de données*.
+. Localisez la base de données dont vous souhaitez modifier la protection, puis sélectionnez *Modifier la protection* dans le menu.
++
+Vous serez redirigé vers la section Sauvegarde et restauration de la NetApp Console où vous pourrez modifier la politique ou la planification de protection.
+
+

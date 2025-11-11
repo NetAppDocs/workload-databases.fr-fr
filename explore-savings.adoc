@@ -62,7 +62,7 @@ Deux options de calculateur sont disponibles pour établir une comparaison des c
 
 Explorer les économies via la personnalisation : vous fournissez les paramètres de configuration de Microsoft SQL Server sur Amazon EC2 avec EBS ou FSX pour Windows File Server, notamment la région, le modèle de déploiement, l'édition SQL Server, le taux de modification mensuel des données, la fréquence des snapshots et bien plus encore.
 
-Explorez les économies réalisées sur les hôtes détectés : Workload Factory se connecte à vos serveurs Microsoft SQL existants et récupère les détails dans la calculatrice pour une comparaison automatique.  Vous devrez accorder des autorisations de _lecture seule_ ou de _lecture/écriture_ pour utiliser cette option de calculatrice. Vous pouvez modifier le cas d'utilisation, mais tous les autres détails sont automatiquement déterminés dans le calcul.
+Explorez les économies possibles pour les hôtes détectés : Workload Factory se connecte à vos serveurs Microsoft SQL existants et importe les détails dans le calculateur pour une comparaison automatique. Vous devrez accorder les autorisations de _visualisation, de planification et d'analyse_ pour utiliser cette option de calculatrice. Vous pouvez modifier le cas d'utilisation, mais tous les autres détails sont automatiquement déterminés dans le calcul.
 
 En outre, vous pouvez link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Ajoutez des identifiants AWS"^]améliorer la précision de l'analyse de la calculatrice. Sélectionnez *calculer les économies en fonction des ressources existantes*. Vous serez redirigé vers la page Ajouter des informations d'identification. Après avoir ajouté des informations d'identification, sélectionnez les ressources existantes à comparer avec FSX pour ONTAP, puis sélectionnez *Explorer les économies*.
 
@@ -158,7 +158,7 @@ Workload Factory saisit les caractéristiques détectées de l'hôte Elastic Blo
 .Avant de commencer
 Avant de commencer, remplissez les conditions préalables suivantes :
 
-* link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Accorder des autorisations _lecture seule_ ou _lecture/écriture_"^] Sur votre compte AWS, pour détecter les systèmes Elastic Block Store (EBS) et FSX pour Windows sous l'onglet *Explorer les économies* et pour afficher le calcul des économies dans le calculateur d'économies.
+* link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Accorder les autorisations de _consultation, de planification et d'analyse_"^] dans votre compte AWS pour détecter les systèmes Elastic Block Store (EBS) et FSx pour Windows sous l'onglet *Explorer les économies* et pour afficher le calcul des économies dans le calculateur d'économies.
 * Pour obtenir des recommandations de type d’instance et améliorer la précision des coûts, procédez comme suit :
 +
 .. Accordez les autorisations Amazon CloudWatch et AWS Compute Optimizer.
@@ -326,6 +326,9 @@ Si vous souhaitez passer à FSX pour ONTAP pour réaliser des économies, clique
 NOTE: Workload Factory ne prend pas en charge l'enregistrement ou la création de plusieurs systèmes de fichiers FSx pour ONTAP .
 
 .Méthodes de déploiement
-En mode _lecture/écriture_, vous pouvez déployer le nouveau serveur Microsoft SQL sur AWS EC2 à l'aide de FSx for ONTAP directement depuis Workload Factory.  Vous pouvez également copier le contenu de la fenêtre Codebox et déployer la configuration recommandée à l’aide de l’une des méthodes Codebox.
+Avec les _autorisations de création d'hôte de base de données_, vous pouvez déployer le nouveau serveur Microsoft SQL sur AWS EC2 en utilisant FSx pour ONTAP directement depuis Workload Factory. Vous pouvez également copier le contenu de la fenêtre Codebox et déployer la configuration recommandée en utilisant l'une des méthodes Codebox.
 
-+ En mode _basic_, vous pouvez copier le contenu de la fenêtre Codebox et déployer la configuration recommandée à l'aide de l'une des méthodes Codebox.
+Sans autorisation, vous pouvez copier le contenu de la fenêtre Codebox et déployer la configuration recommandée en utilisant l'une des méthodes Codebox.
+
+.Informations connexes
+link:https://docs.netapp.com/us-en/workload-setup-admin/permissions-reference.html["Référence des autorisations de Workload Factory"^]

@@ -18,7 +18,7 @@ Lors de la création de la base de données, deux nouveaux volumes sont créés 
 
 Si vous souhaitez isoler le stockage de la base de données, vous pouvez le faire en utilisant un _point de montage virtuel_. Le point de montage virtuel vous permet de consolider des bases de données sur quelques lecteurs communs de l'hôte.
 
-La création d'une base de données en usine de charges de travail nécessite des autorisations de mode automatisé. En mode de base, vous pouvez également copier ou télécharger un modèle de code partiellement rempli pour terminer l'opération en dehors de l'usine de la charge de travail. link:https://docs.netapp.com/us-en/workload-setup-admin/operational-modes.html["En savoir plus sur les modes de fonctionnement en usine de charges de travail"^] pour choisir le mode que vous souhaitez utiliser.
+La création d'une base de données dans Workload Factory nécessite les autorisations de _visualisation, de planification et d'analyse_. Vous pouvez également copier ou télécharger un modèle de code partiellement rempli pour terminer l'opération en dehors de Workload Factory. link:https://docs.netapp.com/us-en/workload-setup-admin/permissions-reference.html["Découvrez les autorisations de Workload Factory"^] pour choisir le mode que vous souhaitez utiliser.
 
 
 NOTE: Les serveurs Microsoft SQL utilisant le protocole SMB ne prennent pas en charge la création de bases de données.
@@ -26,7 +26,7 @@ NOTE: Les serveurs Microsoft SQL utilisant le protocole SMB ne prennent pas en c
 .Avant de commencer
 Assurez-vous de remplir les conditions préalables suivantes avant de créer une nouvelle base de données.
 
-* *Informations d'identification et autorisations* : Vous devez avoirlink:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Informations d'identification du compte AWS et autorisations en mode _lecture seule_ ou _lecture/écriture_"^] pour créer une nouvelle base de données dans Workload Factory.
+* *Identifiants et autorisations* : Vous devez posséder link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Identifiants du compte AWS et autorisations de _visualisation, de planification et d'analyse_"^] pour créer une nouvelle base de données dans Workload Factory.
 +
 Vous pouvez également utiliser la Codebox pour copier un modèle afin de déployer une base de données hors de l'usine de la charge de travail à l'aide de l'API REST. link:https://docs.netapp.com/us-en/workload-setup-admin/codebox-automation.html["En savoir plus sur l'automatisation de Codebox"^].
 
@@ -39,7 +39,7 @@ Vous pouvez également utiliser la Codebox pour copier un modèle afin de déplo
 
 == Créer une base de données
 
-Vous pouvez utiliser les modes de déploiement _Création rapide_ ou _Création avancée_ pour effectuer cette tâche dans la fabrique de charges de travail avec des autorisations en mode _lecture seule_ ou _lecture/écriture_.
+Vous pouvez utiliser les modes de déploiement _Création rapide_ ou _Création avancée_ pour effectuer cette tâche dans Workload Factory.
 
 [role="tabbed-block"]
 ====

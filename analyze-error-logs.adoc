@@ -49,7 +49,7 @@ Les données client ne sont pas utilisées pour former ou améliorer les modèle
 
 Pour utiliser l'analyseur de journal d'erreurs, vous devez remplir les conditions préalables suivantes :
 
-* Vous devez avoirlink:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Informations d'identification du compte AWS et autorisations en mode _lecture/écriture_"^] pour créer un nouvel hôte de base de données dans Workload Factory.
+* Vous devez link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["accorder les autorisations de _consultation, de planification et d'analyse_"^] dans votre compte AWS pour créer un nouvel hôte de base de données dans Workload Factory.
 * link:https://docs.netapp.com/us-en/workload-databases/register-instance.html["Enregistrer une instance SQL Server"^]dans Workload Factory.
 * Les conditions préalables suivantes doivent également être remplies.  Vous serez invité à compléter ces conditions préalables dans le cadre des étapes d’analyse des erreurs de journal.
 +

@@ -32,7 +32,7 @@ NOTE: Workload Factory prend uniquement en charge l'enregistrement et la gestion
 
 Tenez compte des éléments suivants avant d’enregistrer une instance :
 
-L'hôte de l'instance ou de la base de données doit apparaître dans l'inventaire. Pour que les hôtes apparaissent dans l'inventaire,link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["vous devez ajouter les informations d'identification du compte AWS et les autorisations en mode _lecture seule_ ou _lecture/écriture_"^] .
+L'hôte de l'instance ou de la base de données doit figurer dans l'inventaire. Pour que les hôtes apparaissent dans l'inventaire, vous devez link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["accorder les autorisations de _consultation, de planification et d'analyse_"^] dans votre compte AWS.
 
 
 

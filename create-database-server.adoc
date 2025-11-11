@@ -60,7 +60,7 @@ Si vous décidez de restaurer vos ressources DNS (Domain Name System), les enreg
 Assurez-vous de disposer des conditions préalables suivantes avant de créer un nouvel hôte de base de données.
 
 .Informations d'identification et autorisations
-Vous devez avoirlink:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Informations d'identification du compte AWS et autorisations en mode _lecture/écriture_"^] pour créer un nouvel hôte de base de données dans Workload Factory.
+Vous devez link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["accorder les permissions de création de l'hôte de base de données"^] dans votre compte AWS pour créer un nouvel hôte de base de données dans Workload Factory.
 
 .Active Directory
 Lorsque vous vous connectez à Active Directory, vous devez disposer d'un accès administrateur avec des autorisations pour effectuer les opérations suivantes :
