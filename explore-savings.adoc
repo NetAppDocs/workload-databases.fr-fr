@@ -219,11 +219,11 @@ Suivez les étapes de l'onglet correspondant à votre type de stockage.
 --
 .Étapes
 . Connectez-vous à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
-. Dans la mosaïque bases de données, sélectionnez *Explorer les économies* puis *Microsoft SQL Server sur FSX pour Windows* dans le menu déroulant.
+. Dans la mosaïque Bases de données, sélectionnez *Explorer les économies* puis *Microsoft SQL Server sur FSx pour Windows* dans le menu.
 +
 Si Workload Factory détecte des hôtes EBS, vous serez redirigé vers l'onglet Explorer les économies.  Si Workload Factory ne détecte pas les hôtes EBS, vous serez redirigé vers la calculatrice pour<<Explorer les économies via la personnalisation,explorer les économies via la personnalisation>> .
 
-. Dans l'onglet Explorer les économies, cliquez sur *Explorer les économies* du serveur de base de données utilisant le stockage EBS.
+. Dans *Explorer les économies*, sélectionnez un ou plusieurs hôtes de base de données exécutés sur EBS, puis sélectionnez *Explorer les économies*.
 . Si nécessaire, authentifiez l’hôte de la base de données avec les informations d’identification SQL Server, les informations d’identification Windows ou en ajoutant les autorisations SQL Server manquantes.
 +
 Si la page Explorer les économies ne charge pas les données après une authentification réussie, sélectionnez l'onglet *Inventaire* pour recharger les données, puis sélectionnez à nouveau l'onglet *Explorer les économies*.
@@ -234,6 +234,10 @@ Si la page Explorer les économies ne charge pas les données après une authent
 .. *Fréquence d'actualisation du clonage* : sélectionnez la fréquence d'actualisation des clones dans le menu.
 .. *Nombre de copies clonées* : entrez le nombre de copies clonées dans la configuration EBS.
 .. *Taux de modification mensuel* : saisissez le pourcentage de changements de données de clonage et d'instantanés en moyenne par mois.
+.. *Ajouter des hôtes* : Vous pouvez sélectionner jusqu’à cinq hôtes EBS détectés à inclure dans le calcul des économies.
++
+Workload Factory consolide plusieurs hôtes SQL Server en une seule recommandation de configuration FSx pour ONTAP afin d'optimiser les économies de coûts, sauf si les hôtes EBS sélectionnés dépassent les limites de débit, de capacité ou d'IOPS pour un seul système de fichiers FSx pour ONTAP .
+
 
 
 
