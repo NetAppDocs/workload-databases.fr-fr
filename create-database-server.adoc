@@ -285,6 +285,9 @@ NOTE: Si le jeu de classement sélectionné n'est pas compatible avec l'installa
 
 .. *Nom de la base de données* : entrez le nom du cluster de base de données.
 .. *Informations d'identification de la base de données* : saisissez un nom d'utilisateur et un mot de passe pour un nouveau compte de service ou utilisez les informations d'identification de compte de service existantes dans Active Directory.
++
+Facultatif : sélectionnez *Utiliser un compte de service géré* pour le compte de service SQL Server. Utilisez cette option si votre environnement utilise des comptes de service gérés (MSA) ou des comptes de service gérés par groupe (gMSA) où la gestion des mots de passe est assurée par Active Directory.
+
 
 
 . Sous *connectivité*, fournissez les informations suivantes :
@@ -304,6 +307,9 @@ Pour les répertoires actifs gérés par AWS, les adresses IP DNS apparaissent d
 
 ... Dans le champ *Nom d'utilisateur*, entrez le nom d'utilisateur du domaine Active Directory.
 ... Dans le champ *Mot de passe*, entrez un mot de passe pour le domaine Active Directory.
+... *Contrôleur de domaine préféré* : Vous pouvez saisir le contrôleur de domaine préféré auquel Active Directory devra se joindre.
+... *Chemin d'accès à l'unité organisationnelle préférée* : Vous pouvez également saisir l'unité organisationnelle (UO) préférée dans Active Directory à rejoindre.
+... *Groupe Active Directory cible* : Vous pouvez éventuellement saisir le groupe Active Directory cible auquel ajouter les ordinateurs.
 
 
 
