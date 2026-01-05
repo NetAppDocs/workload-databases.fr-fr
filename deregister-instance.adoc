@@ -17,7 +17,7 @@ Vous pouvez réenregistrer la ressource.
 
 .Étapes
 . Connectez-vous à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
-. Dans la mosaïque bases de données, sélectionnez *aller à l'inventaire des bases de données*.
+. Sélectionnez le menu image:workloads-menu-icon.png["L'icône du menu hamburger permet d'accéder aux charges de travail telles que le stockage, l'analyse de données d'entreprise (EDA), l'intelligence artificielle (IA), les bases de données, VMware et l'administration."] puis sélectionnez *Bases de données*.
 . Dans le menu Bases de données, sélectionnez *Inventaire*.
 . Dans l'inventaire, sélectionnez le type de moteur : *Microsoft SQL Server*, *Oracle* ou *PostgreSQL*.
 . Localisez la ressource que vous souhaitez désinscrire, sélectionnez le menu d'action, puis sélectionnez *Désinscrire*.

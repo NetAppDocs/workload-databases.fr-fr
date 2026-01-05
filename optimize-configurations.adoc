@@ -69,7 +69,7 @@ NOTE: Le processus de correction peut entraîner des temps d’arrêt ou des int
 
 .Étapes
 . Connectez-vous à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
-. Dans la mosaïque bases de données, sélectionnez *aller à l'inventaire des bases de données*.
+. Sélectionnez le menu image:workloads-menu-icon.png["L'icône du menu hamburger permet d'accéder aux charges de travail telles que le stockage, l'analyse de données d'entreprise (EDA), l'intelligence artificielle (IA), les bases de données, VMware et l'administration."] puis sélectionnez *Bases de données*.
 . Dans l'*Inventaire*, sélectionnez le type de moteur : Microsoft SQL Server ou Oracle.
 . Sélectionnez les ressources à corriger pour des configurations spécifiques.
 +
@@ -130,7 +130,7 @@ Délai de 30 jours avant l'arrêt d'une analyse de configuration. Au bout de 30 
 
 .Étapes
 . Connectez-vous à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
-. Dans la mosaïque bases de données, sélectionnez *aller à l'inventaire des bases de données*.
+. Sélectionnez le menu image:workloads-menu-icon.png["L'icône du menu hamburger permet d'accéder aux charges de travail telles que le stockage, l'analyse de données d'entreprise (EDA), l'intelligence artificielle (IA), les bases de données, VMware et l'administration."] puis sélectionnez *Bases de données*.
 . Dans le menu Bases de données, sélectionnez *Inventaire*.
 . Dans l'inventaire, sélectionnez le type de moteur de base de données : *Microsoft SQL Server* ou *Oracle*.
 . Accédez à l’instance SQL Server ou à la base de données Oracle avec la configuration à reporter, sélectionnez le menu Action, puis sélectionnez *Bien architecturé*.
@@ -148,7 +148,7 @@ Ignorer pour arrêter indéfiniment une analyse de configuration. Vous pouvez re
 
 .Étapes
 . Connectez-vous à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
-. Dans la mosaïque bases de données, sélectionnez *aller à l'inventaire des bases de données*.
+. Sélectionnez le menu image:workloads-menu-icon.png["L'icône du menu hamburger permet d'accéder aux charges de travail telles que le stockage, l'analyse de données d'entreprise (EDA), l'intelligence artificielle (IA), les bases de données, VMware et l'administration."] puis sélectionnez *Bases de données*.
 . Dans le menu Bases de données, sélectionnez *Inventaire*.
 . Dans l'inventaire, sélectionnez le type de moteur de base de données : *Microsoft SQL Server* ou *Oracle*.
 . Accédez à l’instance SQL Server ou à la base de données Oracle avec la configuration à reporter, sélectionnez le menu Action, puis sélectionnez *Bien architecturé*.
@@ -166,7 +166,7 @@ Réactiver à tout moment une analyse de configuration différée ou rejetée.
 
 .Étapes
 . Connectez-vous à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
-. Dans la mosaïque bases de données, sélectionnez *aller à l'inventaire des bases de données*.
+. Sélectionnez le menu image:workloads-menu-icon.png["L'icône du menu hamburger permet d'accéder aux charges de travail telles que le stockage, l'analyse de données d'entreprise (EDA), l'intelligence artificielle (IA), les bases de données, VMware et l'administration."] puis sélectionnez *Bases de données*.
 . Dans le menu Bases de données, sélectionnez *Inventaire*.
 . Dans l'inventaire, sélectionnez le type de moteur de base de données : *Microsoft SQL Server* ou *Oracle*.
 . Accédez à l’instance SQL Server ou à la base de données Oracle avec la configuration à reporter, sélectionnez le menu Action, puis sélectionnez *Bien architecturé*.

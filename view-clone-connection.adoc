@@ -15,7 +15,7 @@ Affichez et copiez les informations de connexion d'un clone de base de données 
 
 .Étapes
 . Connectez-vous à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
-. Dans la mosaïque bases de données, sélectionnez *aller à l'inventaire des bases de données*.
+. Sélectionnez le menu image:workloads-menu-icon.png["L'icône du menu hamburger permet d'accéder aux charges de travail telles que le stockage, l'analyse de données d'entreprise (EDA), l'intelligence artificielle (IA), les bases de données, VMware et l'administration."] puis sélectionnez *Bases de données*.
 . Dans le menu Bases de données, sélectionnez *Bacs à sable*.
 . Dans les bacs à sable, sélectionnez le menu d’action du clone du bac à sable pour afficher ses informations de connexion.
 . Sélectionnez *Afficher infos connexion*.

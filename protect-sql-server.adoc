@@ -53,7 +53,7 @@ Terminez le processus de préparation pour protéger vos ressources Microsoft SQ
 
 .Étapes
 . Connectez-vous à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
-. Dans la mosaïque bases de données, sélectionnez *aller à l'inventaire des bases de données*.
+. Sélectionnez le menu image:workloads-menu-icon.png["L'icône du menu hamburger permet d'accéder aux charges de travail telles que le stockage, l'analyse de données d'entreprise (EDA), l'intelligence artificielle (IA), les bases de données, VMware et l'administration."] puis sélectionnez *Bases de données*.
 . Dans le menu Bases de données, sélectionnez *Inventaire*.
 . Dans l’inventaire, sélectionnez *Microsoft SQL Server* comme type de moteur.
 . Localisez l’instance que vous souhaitez protéger, puis sélectionnez *Protéger* dans le menu.
@@ -80,7 +80,7 @@ Pour des informations connexes, reportez-vous à la link:https://docs.netapp.com
 Vous pouvez modifier la protection des instances et des bases de données Microsoft SQL Server déjà protégées dans NetApp Backup and Recovery. La modification de la protection vous permet de modifier la stratégie ou la planification de protection de vos instances SQL Server protégées.
 
 . Connectez-vous à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
-. Dans la mosaïque bases de données, sélectionnez *aller à l'inventaire des bases de données*.
+. Sélectionnez le menu image:workloads-menu-icon.png["L'icône du menu hamburger permet d'accéder aux charges de travail telles que le stockage, l'analyse de données d'entreprise (EDA), l'intelligence artificielle (IA), les bases de données, VMware et l'administration."] puis sélectionnez *Bases de données*.
 . Dans le menu Bases de données, sélectionnez *Inventaire*.
 . Dans l’inventaire, sélectionnez *Microsoft SQL Server* comme type de moteur.
 . Sélectionnez l'onglet *Bases de données*.

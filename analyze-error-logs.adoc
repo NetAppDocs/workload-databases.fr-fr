@@ -92,7 +92,7 @@ Utilisez la console Workload Factory pour analyser les journaux d’erreurs SQL 
 
 .Étapes
 . Connectez-vous à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
-. Dans la mosaïque bases de données, sélectionnez *aller à l'inventaire des bases de données*.
+. Sélectionnez le menu image:workloads-menu-icon.png["L'icône du menu hamburger permet d'accéder aux charges de travail telles que le stockage, l'analyse de données d'entreprise (EDA), l'intelligence artificielle (IA), les bases de données, VMware et l'administration."] puis sélectionnez *Bases de données*.
 . Dans le menu Bases de données, sélectionnez *Inventaire*.
 . Dans l'inventaire, sélectionnez *Microsoft SQL Server* ou *Oracle* comme type de moteur de base de données.
 . Dans l'onglet Instances, repérez l'instance SQL Server ou la base de données Oracle spécifique que vous souhaitez analyser, puis sélectionnez *Rechercher les erreurs* dans le menu.

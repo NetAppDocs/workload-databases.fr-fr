@@ -41,7 +41,7 @@ Surveillez les tâches pour suivre la progression des opérations de base de don
 
 .Étapes
 . Connectez-vous à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
-. Dans la mosaïque bases de données, sélectionnez *aller à l'inventaire des bases de données*.
+. Sélectionnez le menu image:workloads-menu-icon.png["L'icône du menu hamburger permet d'accéder aux charges de travail telles que le stockage, l'analyse de données d'entreprise (EDA), l'intelligence artificielle (IA), les bases de données, VMware et l'administration."] puis sélectionnez *Bases de données*.
 . Dans le menu Bases de données, sélectionnez *Surveillance des tâches*.
 . Dans la surveillance des tâches, utilisez les filtres ou effectuez une recherche pour affiner les résultats des tâches. Vous pouvez également télécharger un rapport sur les emplois.
 . Vous pouvez également sélectionner le menu d'action de la tâche et cliquer sur *Accéder à CloudFormation* pour afficher le journal des tâches dans la console AWS CloudFormation.

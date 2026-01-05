@@ -561,7 +561,6 @@
   <block id="5c89f4f6af1a71c2ed6cfac605e94c16" category="paragraph"><block ref="5c89f4f6af1a71c2ed6cfac605e94c16" category="inline-link-macro-rx"></block></block>
   <block id="fd3039d7fbe9d24b3141aca3c62383a2" category="section-title">Évaluation et optimisation des licences Microsoft SQL Server surprovisionnées</block>
   <block id="f90a806c02db45741274868bc065ab90" category="paragraph">Le calculateur d'économies évalue maintenant si Enterprise Edition est nécessaire pour votre déploiement Microsoft SQL Server. Si une licence est surprovisionnée, le calculateur recommande la mise à niveau vers une version antérieure. Vous pourrez rétrograder automatiquement la licence dans les bases de données en optimisant l'application.</block>
-  <block id="f319ba887c03b66fa6a83807c78f65e9" category="list-text">Dans la mosaïque bases de données, sélectionnez *aller à l'inventaire des bases de données*.</block>
   <block id="770dee3f954306dca2e369d2ef823c94" category="section-title">Analyse du déploiement de SQL Server</block>
   <block id="1d93f11e5331c46990f076ad4257106e" category="paragraph">Le calculateur effectue une analyse complète de votre déploiement SQL Server afin de s'assurer que les ressources et les fonctionnalités utilisées sont adaptées à l'édition SQL Server. Voici les facteurs et conditions clés que le calculateur vérifie avant de recommander une mise à niveau vers l'édition Standard :</block>
   <block id="a0e3089d312c100208595d685b4104d2" category="list-text">Modèle de déploiement</block>
@@ -1354,4 +1353,7 @@
   <block id="5e3b7f958129022f75fe2931c55615b2" category="doc">Intégration de l'assistant IA à la page d'accueil de Ask me</block>
   <block id="65bcc541760e8f25e0281edbfdfbf7f3" category="paragraph">La page d'accueil de la console Workload Factory intègre l'assistant IA Ask me, vous permettant de poser des questions sur votre propre infrastructure de stockage, d'obtenir des informations personnalisées directement à partir de votre environnement et de consulter les conversations précédentes. Vous pouvez interagir avec « Demandez-moi » pour comprendre vos charges de travail, résoudre les problèmes et en savoir plus sur Workload Factory, le tout sans quitter la console.</block>
   <block id="334f5b13a66630c66877aaf36ce24673" category="section-title">04 janvier 2026</block>
+  <block id="342a19841e494c61bf9c06a5879eaffa" category="inline-image-macro">L'icône du menu hamburger permet d'accéder aux charges de travail telles que le stockage, l'analyse de données d'entreprise (EDA), l'intelligence artificielle (IA), les bases de données, VMware et l'administration.</block>
+  <block id="1d59c9bea900e36e3d5b9ca53cd55587" category="list-text">Sélectionnez le menu <block ref="d1917ed039a7bd34b3d1373e5ffc5ece" category="inline-image-macro-rx" type="image"></block> puis sélectionnez *Bases de données*.</block>
+  <block id="757a7ffb20a279d7239febb013141ad5" category="list-text">Sélectionnez le menu <block ref="d1917ed039a7bd34b3d1373e5ffc5ece" category="inline-image-macro-rx" type="image"></block> puis sélectionnez *Stockage*.</block>
 </blocks>
