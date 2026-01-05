@@ -1351,4 +1351,7 @@
   <block id="ae41853f33cf42c1d6ea60e021ce20b3" category="list-text">*Chemin d'accès à l'unité organisationnelle préférée* : Vous pouvez également saisir l'unité organisationnelle (UO) préférée dans Active Directory à rejoindre.</block>
   <block id="5da5a84735de60ec35b817899791d509" category="list-text">*Groupe Active Directory cible* : Vous pouvez éventuellement saisir le groupe Active Directory cible auquel ajouter les ordinateurs.</block>
   <block id="bfcc9fa5a3178fd803540af87a6b6ab7" category="section-title">18 décembre 2025</block>
+  <block id="5e3b7f958129022f75fe2931c55615b2" category="doc">Intégration de l'assistant IA à la page d'accueil de Ask me</block>
+  <block id="65bcc541760e8f25e0281edbfdfbf7f3" category="paragraph">La page d'accueil de la console Workload Factory intègre l'assistant IA Ask me, vous permettant de poser des questions sur votre propre infrastructure de stockage, d'obtenir des informations personnalisées directement à partir de votre environnement et de consulter les conversations précédentes. Vous pouvez interagir avec « Demandez-moi » pour comprendre vos charges de travail, résoudre les problèmes et en savoir plus sur Workload Factory, le tout sans quitter la console.</block>
+  <block id="334f5b13a66630c66877aaf36ce24673" category="section-title">04 janvier 2026</block>
 </blocks>
