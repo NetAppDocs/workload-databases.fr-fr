@@ -17,7 +17,7 @@ indexpage:
     links:
     - title: Découvrez les économies
       url: "/explore-savings.html"
-    - title: Enregistrer une instance
+    - title: Enregistrer les ressources
       url: "/register-instance.html"
     - title: Visualisez l'état d'architecture de vos instances
       url: "/optimize-configurations.html"

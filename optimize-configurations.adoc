@@ -11,7 +11,7 @@ summary: 'NetApp Workload Factory for Databases analyse les configurations Micro
 
 
 [role="lead"]
-À l’aide des informations et des recommandations d’analyse de configuration, exploitez NetApp Workload Factory pour mettre en œuvre les meilleures pratiques pour vos configurations de base de données avec Microsoft SQL Server et Oracle. Vous pouvez facilement examiner l'état de l'architecture, en savoir plus sur les problèmes liés aux configurations de base de données et prendre des mesures pour améliorer les configurations qui ne sont pas optimisées pour la fiabilité, la sécurité, l'efficacité, les performances et le coût.
+En utilisant les analyses de configuration et les recommandations, exploitez NetApp Workload Factory pour mettre en œuvre les meilleures pratiques pour vos configurations de base de données avec Microsoft SQL Server et Oracle. Vous pouvez facilement vérifier l’état bien architecturé, découvrir les problèmes liés aux configurations de base de données et corriger les configurations qui ne sont pas optimisées pour la fiabilité, la sécurité, l’efficacité, la performance et le coût.
 
 Vous pouvez également ignorer l'analyse de configurations spécifiques qui ne s'appliquent pas à votre environnement pour éviter des alertes inutiles et des résultats d'optimisation inexacts.
 
@@ -42,7 +42,7 @@ Pour les instances Microsoft SQL Server :
 Pour les bases de données Oracle :
 
 * Dimensionnement du stockage : comprend l’allocation d’espace d’échange et la marge disponible pour le système de fichiers.
-* Configuration du stockage : inclut la gestion de la capacité, le provisionnement fin, la stratégie de hiérarchisation, les instantanés, l’optimisation du stockage et les configurations du système d’exploitation pour les déploiements utilisant NFS ou iSCSI avec ou sans gestion automatique du stockage (ASM), y compris l’état et les paramètres de Microsoft Multipath I/O (MPIO).
+* Configuration du stockage : comprend la gestion de la capacité, le provisionnement fin, la politique de hiérarchisation, les instantanés, les optimisations du stockage et les configurations du système d’exploitation pour les déploiements utilisant NFS ou iSCSI avec ou sans Automatic Storage Management (ASM), y compris l’état et les paramètres de Microsoft Multipath I/O (MPIO), ainsi que les paramètres dNFS suivants : activation de dNFS, résolution IP cohérente dNFS, fichier de configuration dNFS, et dNFS `nosharecache`
 * Disposition du stockage : inclut le placement du journal de rétablissement, le placement de l'espace table temporaire, le placement des fichiers de données, le placement du journal d'archive, le placement des fichiers de contrôle et le placement des binaires, le nombre d'unités LUN des groupes de disques ASM
 
 
