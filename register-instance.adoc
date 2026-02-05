@@ -65,8 +65,8 @@ Workload Factory prend en charge l'enregistrement pour Failover Cluster Instance
 . Sélectionnez pour enregistrer une seule instance ou plusieurs instances.
 . Pour authentifier les instances (étape 1), procédez comme suit, puis sélectionnez *Next* :
 +
-** Sélectionnez *Utiliser les mêmes informations d'identification pour toutes les instances* ou *Gérer les informations d'identification manuellement*.
-** Authentifiez SQL Server et Windows en fournissant les informations de nom d'utilisateur et de mot de passe.
+.. Sélectionnez *Utiliser les mêmes informations d'identification pour toutes les instances* ou *Gérer les informations d'identification manuellement*.
+.. Authentifiez SQL Server et Windows en fournissant les informations de nom d'utilisateur et de mot de passe.
 +
 Si les instances sont authentifiées, sélectionnez *Next*.
 
@@ -74,8 +74,8 @@ Si les instances sont authentifiées, sélectionnez *Next*.
 
 . Pour authentifier FSx pour ONTAP (étape 2), procédez comme suit :
 +
-** Sélectionnez *Utiliser les mêmes informations d'identification pour toutes les ressources* ou *Gérer les informations d'identification manuellement*.
-** Saisissez le nom d'utilisateur et le mot de passe du système de fichiers FSx for ONTAP, puis sélectionnez *Suivant*.
+.. Sélectionnez *Utiliser les mêmes informations d'identification pour toutes les ressources* ou *Gérer les informations d'identification manuellement*.
+.. Saisissez le nom d'utilisateur et le mot de passe du système de fichiers FSx for ONTAP, puis sélectionnez *Suivant*.
 +
 Si le système de fichiers FSx for ONTAP est authentifié, sélectionnez *Suivant*.
 
@@ -83,15 +83,16 @@ Si le système de fichiers FSx for ONTAP est authentifié, sélectionnez *Suivan
 
 . Pour préparer (étape 3), assurez-vous que l'instance (ou les instances) répond(ent) aux exigences minimales.
 +
-Pour satisfaire aux exigences minimales, l'instance doit disposer des modules AWS et NetApp PowerShell ainsi que des modules PowerShell 7 installés, et vous devez remplir les prérequis pour au moins une des fonctionnalités listées sous Vérification des prérequis. .. Consultez les prérequis dans la vue *Vérification des prérequis*.
+Pour satisfaire aux exigences minimales, l'instance doit disposer des modules AWS et NetApp PowerShell ainsi que des modules PowerShell 7 installés, et vous devez remplir les prérequis pour au moins une des fonctionnalités listées sous Vérification des prérequis.
 
 +
-+ Vous devez remplir toutes les conditions préalables pour une seule fonctionnalité comme *Examiner les problèmes et recommandations bien architecturés* afin d'enregistrer l'instance.
-
+.. Examinez les prérequis dans la vue *Vérification des prérequis*.
 +
+Vous devez remplir toutes les conditions préalables pour une seule fonctionnalité comme *Examiner les problèmes et recommandations bien architecturés* pour enregistrer l'instance.
+
 .. Sélectionnez *Détails de configuration* pour chaque fonctionnalité afin de connaître les prérequis de la fonctionnalité et suivez les instructions à l'écran pour compléter tout prérequis manquant pour une fonctionnalité.
 +
-Pour que Workload Factory link:optimize-configurations.html["examiner et corriger les problèmes bien architecturés"] pour vos instances, complétez toutes les conditions préalables listées sous les capacités *Examiner les problèmes et recommandations liés à une architecture correcte* et *Corriger les problèmes liés à une architecture correcte*.
+Pour disposer de Workload Factory link:optimize-configurations.html["examiner et corriger les problèmes bien architecturés"] pour vos instances, remplissez toutes les conditions préalables énumérées dans les fonctionnalités *Examiner les problèmes et recommandations liés à une architecture correcte* et *Corriger les problèmes liés à une architecture correcte*.
 
 
 
@@ -140,7 +141,7 @@ Vous devez remplir toutes les conditions préalables pour une seule fonctionnali
 
 .. Sélectionnez *Détails de configuration* pour chaque fonctionnalité afin de connaître les prérequis de la fonctionnalité et suivez les instructions à l'écran pour compléter tout prérequis manquant pour une fonctionnalité.
 +
-Pour que Workload Factory link:optimize-configurations.html["examiner et corriger les problèmes bien architecturés"] pour vos bases de données, remplissez tous les prérequis énumérés sous les capacités *Examiner les problèmes et recommandations liés à une architecture correcte* et *Corriger les problèmes liés à une architecture correcte*.
+Pour disposer de Workload Factory link:optimize-configurations.html["examiner et corriger les problèmes bien architecturés"] pour vos bases de données, remplissez tous les prérequis énumérés dans les fonctionnalités *Examiner les problèmes et recommandations liés à une architecture correcte* et *Corriger les problèmes liés à une architecture correcte*.
 
 
 
