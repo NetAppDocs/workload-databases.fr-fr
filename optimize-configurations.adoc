@@ -21,9 +21,11 @@ link:optimize-overview.html["Découvrez l’analyse de configuration et l’éta
 
 == Description de la tâche
 
-Workload Factory analyse quotidiennement les configurations de bases de données.  L'analyse quotidienne fournit un état bien architecturé, ainsi que des informations et des recommandations avec des options pour résoudre automatiquement les problèmes de configuration afin que vos configurations répondent aux meilleures pratiques.
+Workload Factory analyse quotidiennement les configurations de base de données. L'analyse quotidienne fournit un état bien architecturé, des informations et des recommandations. Vous pouvez corriger automatiquement les problèmes de configuration pour respecter les bonnes pratiques.
 
-Vous disposez d'options pour consulter les recommandations concernant les problèmes de configuration et résoudre ces problèmes à partir de l'inventaire des bases de données dans la console Workload Factory.
+Vous pouvez consulter les recommandations relatives aux problèmes de configuration et corriger ces problèmes à partir de l'inventaire des bases de données dans la console Workload Factory.
+
+Pour les ressources SQL Server, vous pouvez effectuer une évaluation ponctuelle afin d'examiner les bonnes pratiques pour la configuration de vos bases de données. Vous n'avez pas besoin d'enregistrer des ressources ou de stocker des identifiants pour effectuer l'évaluation ponctuelle.
 
 .Ce qui est analysé
 Workload Factory analyse l’état d’architecture des configurations suivantes :
@@ -44,19 +46,44 @@ Pour les bases de données Oracle :
 * Dimensionnement du stockage : comprend l’allocation d’espace d’échange et la marge disponible pour le système de fichiers.
 * Configuration du stockage : comprend la gestion de la capacité, le provisionnement fin, la politique de hiérarchisation, les instantanés, les optimisations du stockage et les configurations du système d’exploitation pour les déploiements utilisant NFS ou iSCSI avec ou sans Automatic Storage Management (ASM), y compris l’état et les paramètres de Microsoft Multipath I/O (MPIO), ainsi que les paramètres dNFS suivants : activation de dNFS, résolution IP cohérente dNFS, fichier de configuration dNFS, et dNFS `nosharecache`
 * Disposition du stockage : inclut le placement du journal de rétablissement, le placement de l'espace table temporaire, le placement des fichiers de données, le placement du journal d'archive, le placement des fichiers de contrôle et le placement des binaires, le nombre d'unités LUN des groupes de disques ASM
+* Calcul : inclut les correctifs du système d’exploitation
+
+
+L'analyse bien architecturée pour Oracle vous avertit lorsqu'une configuration dépend d'autres et répertorie les actions pour optimiser les configurations liées.
+
+
+
+== Effectuez une évaluation ponctuelle des configurations de base de données SQL Server
+
+Effectuez une évaluation ponctuelle pour connaître l'état d'architecture de vos instances Microsoft SQL Server sans stocker d'identifiants ni enregistrer d'instances.
+
+Vous pouvez exécuter le script et importer les résultats autant de fois que vous le souhaitez. Chaque fois que vous importez, le statut bien architecturé et les informations sont mis à jour en fonction des derniers résultats.
+
+.Étapes
+. Connectez-vous à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
+. Sélectionnez le menu image:workloads-menu-icon.png["L'icône du menu hamburger permet d'accéder aux charges de travail telles que le stockage, l'analyse de données d'entreprise (EDA), l'intelligence artificielle (IA), les bases de données, VMware et l'administration."] puis sélectionnez *Bases de données*.
+. Dans l’*Inventory*, sélectionnez *One-time assessment* > *Learn about assessment*. Consultez les informations relatives à la one-time assessment.
+. Sélectionnez *Download script*.
++
+.. Copiez le script sur votre hôte Microsoft SQL Server.
+.. Exécutez le script dans PowerShell. Un seul script collecte les métadonnées de toutes les instances.
+
+
+. Sélectionnez *Évaluation ponctuelle* > *Téléverser*. Trouvez le fichier et téléversez-le sur la console Workload Factory.
+. Consultez la recommandation pour toute configuration. Les recommandations incluent les bonnes pratiques et les problèmes que vous pourriez rencontrer si les configurations ne sont pas optimisées.
 
 
 
 
-== Avant de commencer
+== Avant de commencer à corriger, à ignorer et à réactiver les configurations
 
 * Vous devezlink:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["accorder les autorisations d'_opérations et de correction_"^] dans votre compte AWS.
-* Pour évaluer le stockage d'une instance Microsoft SQL Server ou d'une base de données Oracle, la ressource doit être enregistrée dans Workload Factory et le type de stockage doit être FSx pour ONTAP.link:register-instance.html["Apprenez à enregistrer des ressources."]
-* Vérifiez attentivement chaque recommandation avant de choisir de corriger un paramètre ou une configuration. Pour les paramètres RSS et MAXDOP, nous vous suggérons de tester les paramètres recommandés pour déterminer les améliorations de performances avant d'apporter des modifications à votre environnement de production.
+* La ressource doit être enregistrée dans Workload Factory et le type de stockage doit être FSx for ONTAP. link:register-instance.html["Apprenez à enregistrer des ressources."]
+* Examinez chaque recommandation avant de modifier un paramètre ou une configuration. Pour RSS et MAXDOP, testez les paramètres recommandés pour vérifier les performances avant de modifier votre environnement de production.
 
 
 
-NOTE: Le processus de correction peut entraîner des temps d'indisponibilité d'instance ou des interruptions de service. Assurez-vous de lire attentivement la recommandation avant de choisir de corriger une configuration.
+NOTE: La modification d'une configuration peut entraîner des indisponibilités d'instance ou des interruptions de service. Assurez-vous d’examiner attentivement la recommandation avant de choisir de corriger une configuration.
 
 
 
@@ -83,7 +110,7 @@ NOTE: Le processus de correction peut entraîner des temps d’arrêt ou des int
 Vous pouvez filtrer les problèmes de configuration par catégories, sous-catégories, statut, gravité et balises.
 
 +
-Vous pouvez également télécharger un rapport des résultats en sélectionnant *Exporter PDF*.
+Sélectionnez *Export PDF* pour télécharger un rapport des résultats.
 
 . Sélectionnez la flèche déroulante pour afficher les recommandations pour une configuration. Les recommandations incluent les meilleures pratiques, les pièges potentiels des configurations non optimisées et des considérations importantes. Assurez-vous de revoir attentivement la recommandation.
 . Sélectionnez pour *Afficher et corriger* les problèmes de configuration lorsque l'option est disponible.
@@ -108,43 +135,9 @@ Workload Factory commence à résoudre le(s) problème(s).  Sélectionnez l'ongl
 
 
 
-== Reporter ou ignorer l'analyse des configurations de base de données
+== Rejeter l'analyse des configurations de base de données
 
-Différez ou ignorez l'analyse de configurations de base de données spécifiques qui ne s'appliquent pas à votre environnement de base de données afin d'éviter les alertes inutiles et les résultats d'optimisation imprécis. Vous pouvez à tout moment réactiver une analyse de configuration différée ou rejetée.
-
-Les exigences d’application pour les configurations de base de données varient.  Workload Factory vous propose deux options pour ignorer l'analyse de configurations de base de données spécifiques afin que vous puissiez surveiller uniquement les problèmes pertinents et obtenir une vue précise de l'état des configurations pertinentes.  Lorsqu'une analyse de configuration spécifique est reportée ou rejetée, la configuration n'est pas incluse dans le score d'optimisation total.
-
-Vous pouvez reporter, ignorer et réactiver l'analyse de configuration au niveau de la configuration et au niveau de l'instance SQL Server ou au niveau de la base de données Oracle.
-
-* *Différer de 30 jours* : retarder l'analyse arrêtera l'analyse pendant 30 jours. Au bout de 30 jours, l'analyse redémarre automatiquement.
-* *Rejeter*: Le rejet de l'analyse retarde indéfiniment l'analyse. Vous pouvez redémarrer l'analyse si nécessaire.
-
-
-Les instructions suivantes décrivent comment reporter, rejeter ou réactiver une analyse au niveau de la configuration.  Pour effectuer les tâches suivantes pour des instances SQL Server ou des bases de données Oracle spécifiques, démarrez dans l'onglet *Tableau de bord*.
-
-[role="tabbed-block"]
-====
-.Reporter
---
-Délai de 30 jours avant l'arrêt d'une analyse de configuration. Au bout de 30 jours, l'analyse redémarre automatiquement.
-
-.Étapes
-. Connectez-vous à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
-. Sélectionnez le menu image:workloads-menu-icon.png["L'icône du menu hamburger permet d'accéder aux charges de travail telles que le stockage, l'analyse de données d'entreprise (EDA), l'intelligence artificielle (IA), les bases de données, VMware et l'administration."] puis sélectionnez *Bases de données*.
-. Dans le menu Bases de données, sélectionnez *Inventaire*.
-. Dans l'inventaire, sélectionnez le type de moteur de base de données : *Microsoft SQL Server* ou *Oracle*.
-. Accédez à l’instance SQL Server ou à la base de données Oracle avec la configuration à reporter, sélectionnez le menu Action, puis sélectionnez *Bien architecturé*.
-. Sur la page d’analyse Well-architectured, faites défiler jusqu’à la configuration à reporter, sélectionnez le menu d’action, puis sélectionnez *Ignorer*.
-. Dans la boîte de dialogue de configuration Ignorer, sélectionnez *Reporter de 30 jours*, puis sélectionnez *Ignorer*.
-
-
-.Résultat
-L'analyse de la configuration s'arrête pendant 30 jours.
-
---
-.Rejeter
---
-Ignorer pour arrêter indéfiniment une analyse de configuration. Vous pouvez redémarrer l'analyse si nécessaire.
+Ignorez l'analyse des configurations de base de données spécifiques qui ne s'appliquent pas à votre environnement de base de données afin d'éviter les alertes inutiles et des résultats d'optimisation inexacts. Vous pouvez réactiver une analyse de configuration ignorée à tout moment.
 
 .Étapes
 . Connectez-vous à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
@@ -159,10 +152,13 @@ Ignorer pour arrêter indéfiniment une analyse de configuration. Vous pouvez re
 .Résultat
 L'analyse de la configuration s'arrête.
 
---
-.Réactiver
---
-Réactiver à tout moment une analyse de configuration différée ou rejetée.
+Vous pouvez réactiver l'analyse à tout moment. La configuration n'est plus prise en compte dans le score d'optimisation total.
+
+
+
+== Réactiver une analyse de configuration rejetée
+
+Réactivez à tout moment une analyse de configuration annulée. Vous pouvez sélectionner une ou plusieurs configurations à réactiver.
 
 .Étapes
 . Connectez-vous à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
@@ -175,7 +171,4 @@ Réactiver à tout moment une analyse de configuration différée ou rejetée.
 
 
 .Résultat
-L'analyse de la configuration est réactivée et se produit quotidiennement à l'avenir.
-
---
-====
+L'analyse de configuration est réactivée et s'exécute désormais chaque jour.

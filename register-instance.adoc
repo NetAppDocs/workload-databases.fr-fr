@@ -19,9 +19,9 @@ Vous pouvez enregistrer vos ressources uniquement si elles s'exécutent sur le s
 
 == À propos de la tâche
 
-L'enregistrement d'une instance (SQL Server) ou d'une base de données (Oracle) comporte trois étapes : l'authentification de l'instance ou de la base de données, l'authentification FSx for ONTAP, et la préparation. La préparation consiste à s'assurer que tous les modules AWS, NetApp et PowerShell sont installés sur l'instance ou la base de données, et que les exigences minimales pour les fonctionnalités de Workload Factory for Databases telles que link:analyze-error-logs.html["analyse des journaux d'erreurs"] ou link:optimize-configurations.html["revue bien architecturée"] sont respectées.
+L'enregistrement d'une instance (SQL Server) ou d'une base de données (Oracle) comprend trois étapes : l'authentification de l'instance ou de la base de données, l'authentification FSx for ONTAP, et la préparation. Pour préparer, installez les modules AWS, NetApp et PowerShell sur l'instance ou la base de données, et assurez-vous de respecter les exigences minimales pour les fonctionnalités de Workload Factory for Databases telles que link:analyze-error-logs.html["analyse des journaux d'erreurs"] ou link:optimize-configurations.html["évaluation bien conçue"].
 
-Workload Factory prend uniquement en charge l'enregistrement et la gestion des instances Microsoft SQL Server et des bases de données Oracle.  Selon les informations d’identification du compte AWS que vous sélectionnez dans Workload Factory, les hôtes PostgreSQL peuvent apparaître dans l’inventaire.  Actuellement, Workload Factory prend en charge les instances PostgreSQL non enregistrées exécutées uniquement sur les systèmes d’exploitation Amazon Linux.
+Workload Factory prend uniquement en charge l'enregistrement et la gestion des instances Microsoft SQL Server et des bases de données Oracle. Selon les informations d'identification du compte AWS que vous sélectionnez dans Workload Factory, les hôtes PostgreSQL apparaissent dans l'Inventory. Actuellement, Workload Factory prend en charge les instances PostgreSQL non enregistrées exécutées uniquement sur des systèmes d'exploitation Amazon Linux.
 
 
 
@@ -33,14 +33,14 @@ L'hôte de l'instance ou de la base de données doit figurer dans l'inventaire. 
 
 === Enregistrement d'une instance dans un réseau privé
 
-Pour enregistrer une instance (SQL Server) ou une base de données (Oracle) dans un réseau privé sans connectivité externe, les points de terminaison suivants doivent être disponibles dans le VPC avec une association aux sous-réseaux où les serveurs SQL sont présents.  Assurez-vous que les points de terminaison de l’interface autorisent le port 443 dans le groupe de sécurité attaché.
+Pour enregistrer une instance ou une base de données dans un réseau privé sans connectivité externe, rendez les points de terminaison requis disponibles dans le VPC et associez-les aux sous-réseaux appropriés. Autorisez le port 443 dans le Security Group pour les points de terminaison d'interface.
 
 * `S3 Gateway/endpoint`
 * `ssm`
 * `ssmmessages`
 * `fsx`
 +
-Si vous utilisez un serveur proxy pour toutes les connexions sortantes des instances EC2, vous devez autoriser l'accès aux domaines suivants afin que les opérations de gestion fonctionnent :
+Si vous utilisez un serveur proxy pour les connexions EC2 sortantes, autorisez l'accès à ces domaines pour les opérations de gestion :
 
 * ``.microsoft.com``(Serveur SQL)
 * ``.powershellgallery.com``(Serveur SQL)
@@ -92,11 +92,11 @@ Vous devez remplir toutes les conditions préalables pour une seule fonctionnali
 
 .. Sélectionnez *Détails de configuration* pour chaque fonctionnalité afin de connaître les prérequis de la fonctionnalité et suivez les instructions à l'écran pour compléter tout prérequis manquant pour une fonctionnalité.
 +
-Pour disposer de Workload Factory link:optimize-configurations.html["examiner et corriger les problèmes bien architecturés"] pour vos instances, remplissez toutes les conditions préalables énumérées dans les fonctionnalités *Examiner les problèmes et recommandations liés à une architecture correcte* et *Corriger les problèmes liés à une architecture correcte*.
+Pour permettre à Workload Factory de link:optimize-configurations.html["examiner et corriger les problèmes bien architecturés"], remplissez tous les prérequis sous *Examiner les problèmes et recommandations liés à une architecture correcte* et *Corriger les problèmes liés à une architecture correcte*.
 
 
 
-. Une fois les prérequis remplis, *Enregistrez* la ou les instance(s).
+. Une fois toutes les conditions préalables remplies, *Register* l'instance (ou les instances).
 
 
 .Résultat
@@ -145,14 +145,14 @@ Pour disposer de Workload Factory link:optimize-configurations.html["examiner et
 
 
 
-. Une fois les prérequis remplis, *Enregistrez* la ou les base(s) de données.
+. Une fois les prérequis remplis, *Enregistrez* la base de données ou les bases de données.
 
 
 .Résultat
 L'enregistrement de la base de données commence. Sélectionnez l'onglet *Job monitoring* pour suivre la progression.
 
 .Et la suite
-Après l’enregistrement des ressources, vous pouvez effectuer les tâches suivantes.
+Après votre inscription, vous pouvez effectuer ces tâches.
 
 * Afficher les bases de données de l'inventaire
 * link:create-database.html["Créer une base de données"]
