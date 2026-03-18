@@ -25,28 +25,238 @@ Les fonctionnalités principales comprennent :
 
 
 
-== Composantes de l'analyse de configuration
+== Comment ça marche
 
-L'analyse de configuration comprend les composants suivants :
+Workload Factory analyse vos charges de travail exécutées sur les déploiements de systèmes de fichiers Amazon FSx for NetApp ONTAP quotidiennement. L'analyse fournit un état bien architecturé, des informations et des recommandations.
 
-État bien conçu:: L'état « bien architecturé » fait référence à l'état général de vos configurations de base de données ; les configurations sont catégorisées comme « optimisées », « non optimisées » ou « surdimensionnées ». L'état d'architecture correcte d'une configuration est référencé depuis une instance Microsoft SQL Server ou une base de données Oracle dans la console Workload Factory.
-Score bien conçu:: Le score inclut toutes les configurations actuellement analysées et s'affiche sous forme de pourcentage. Un score de 25 % signifie que 25 % de vos déploiements de bases de données sont bien architecturés. Le score d'architecture bien conçue est référencé depuis l'écran *Architecture bien conçue* et depuis une instance Microsoft SQL Server ou une base de données Oracle dans la console Workload Factory.
-Catégories de configuration:: Les configurations sont organisées dans les catégories suivantes : stockage, calcul, application, résilience et clonage. Chaque catégorie comprend des évaluations de configuration spécifiques qui sont analysées régulièrement. Les catégories de configuration sont référencées à partir de l'écran *Bien architecturé* et à partir d'une instance Microsoft SQL Server ou d'une base de données Oracle dans la console Workload Factory.
+Une fois l'analyse quotidienne terminée, les configurations apparaissent comme « optimisées » ou « non optimisées » dans le tableau de bord Well-architected du déploiement. Vous trouverez le score d'optimisation total, les problèmes de configuration par catégorie et une liste des problèmes de configuration et des recommandations. Vous pouvez consulter les recommandations pour les problèmes de configuration. Certains problèmes peuvent être résolus automatiquement par Workload Factory, tandis que d'autres nécessitent une intervention manuelle. Dans ce cas, Workload Factory fournit des instructions détaillées pour vous aider à mettre en œuvre les modifications recommandées.
 
-
+Vous pouvez ignorer l'analyse des configurations qui ne s'appliquent pas à vos environnements. Cela évite les alertes inutiles et des résultats d'optimisation inexacts. Lorsque vous ignorez une analyse de configuration spécifique, Workload Factory n'inclut pas la configuration dans le score d'optimisation total.
 
 
-== Portée de l'analyse
 
-La portée de l'optimisation varie en fonction du composant évalué. Par exemple, l'optimisation du stockage a lieu au niveau de l'instance SQL alors que l'optimisation du calcul a lieu au niveau de l'hôte.
+== Pourquoi c'est important
+
+Workload Factory applique les meilleures pratiques aux environnements de stockage, de base de données et VMware de grande envergure en combinant une évaluation continue avec des recommandations et des corrections. Les correctifs automatisés appliqués dans la console Workload Factory réduisent les erreurs humaines, garantissent une gestion uniforme et préservent les performances et la fiabilité de vos infrastructures de charges de travail.
 
 
 
 == Exigences d'analyse
 
-Pour une analyse complète de l'environnement de base de données, les ressources doivent être enregistrées et en ligne.
+Pour une analyse complète de l'environnement de base de données, vous devez procéder comme suit :
 
-link:register-instance.html["Apprenez à enregistrer des ressources."]
+* link:register-instance.html["Enregistrez vos ressources"] et assurez-vous qu'ils sont en ligne.
+* Associez un lien. La connectivité des liens permet à Workload Factory d'analyser toutes les configurations de déploiement de base de données, telles que la disposition du stockage et la résilience.
++
+link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Apprenez comment associer un lien existant ou créer et associer un nouveau lien"].
+
+* Accordez les autorisations de _visualisation, de planification et d'analyse_ dans votre compte AWS.
++
+link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Découvrez comment accorder des autorisations à un compte AWS"^]
+
+
+
+
+
+== Meilleures pratiques et recommandations pour les charges de travail des bases de données
+
+Workload Factory propose un ensemble de bonnes pratiques et de recommandations pour l'exploitation de charges de travail de base de données bien architecturées. L'analyse bien architecturée évalue les configurations et les paramètres de Microsoft SQL Server et Oracle Database relatifs au dimensionnement du stockage, à l'agencement du stockage, à la configuration du stockage, au calcul, à l'application (SQL Server) et à la résilience.
+
+
+
+=== Microsoft SQL Server
+
+
+
+==== Dimensionnement du stockage
+
+* *Niveau de stockage*
++
+Utilisez le niveau SSD principal pour les volumes FSx for ONTAP afin de garantir des performances optimales. Le niveau de pool de capacité peut réduire les performances et augmenter la latence. Le niveau SSD principal est conçu pour les charges de travail à hautes performances, tandis que le niveau de pool de capacité est optimisé pour la rentabilité et peut ne pas répondre aux exigences de performances des charges de travail SQL Server.
+
+* *Marge de manœuvre du système de fichiers*
++
+Maintenez une capacité de système de fichiers suffisante au-dessus de la taille totale de votre volume. Une marge insuffisante entraîne des problèmes de performance ; une marge excessive gaspille du stockage et augmente les coûts.
+
+* *Taille du disque de journalisation*
++
+Dimensionnez et surveillez correctement votre lecteur de journal SQL Server afin de prévenir les annulations de transactions, l'indisponibilité de la base de données, la corruption des données et les problèmes de performances causés par un lecteur de journal plein.
+
+* *Taille du disque TempDB*
++
+Dimensionnez et surveillez correctement TempDB pour garantir des performances optimales et la stabilité du système. Un espace insuffisant sur TempDB peut entraîner des ralentissements des requêtes, des délais d'attente d'application et des plantages système.
+
+
+
+
+
+==== Agencement de stockage
+
+* *Emplacement des fichiers de données (.mdf)* et *emplacement des fichiers journaux (.ldf)*
++
+Placez les fichiers de données et les fichiers journaux sur des disques séparés pour améliorer les performances et permettre des opérations de sauvegarde et de restauration indépendantes.
+
+* *Emplacement de TempDB*
++
+Installez TempDB sur un disque dédié pour éviter les conflits d'E/S et améliorer les performances et la stabilité de SQL Server. Sinon, vous pouvez rencontrer des goulots d'étranglement d'E/S, des requêtes plus lentes et une instabilité du système.
+
+
+
+
+
+==== Configuration du stockage
+
+* *Configuration ONTAP*
++
+Activez le provisionnement fin, le dimensionnement automatique et la gestion de l'espace pour les volumes FSx for ONTAP afin d'optimiser l'efficacité du stockage et la rentabilité. Configurez des stratégies de hiérarchisation pour déplacer les snapshots plus anciens vers le niveau de capacité tout en maintenant des performances élevées pour les données actives. Pour les LUN, assurez-vous que le type de système d'exploitation corresponde à votre schéma de partitionnement du système d'exploitation pour un alignement correct des E/S, activez la réservation d'espace pour éviter les échecs d'écriture et activez l'allocation d'espace pour permettre la récupération automatique d'espace et les notifications de l'hôte lorsque le stockage est plein.
+
+* *Système d'exploitation*
++
+Activez et configurez Microsoft Multipath I/O (MPIO) avec des délais d'expiration appropriés afin de garantir une haute disponibilité et une cohérence d'accès aux données pour les bases de données SQL Server sur EC2 avec FSx pour ONTAP. MPIO fournit des chemins redondants pour une résilience et des performances accrues lors des basculements. Configurez la taille des unités d'allocation NTFS de manière appropriée pour une utilisation et des performances optimales du disque.
+
+
+
+
+
+==== Calcul
+
+* *Dimensionnement optimal des ressources de calcul*
++
+Dimensionnez votre instance EC2 SQL Server en fonction des exigences de la charge de travail afin d'équilibrer les performances et l'efficacité des coûts. Si votre instance actuelle est sous-dimensionnée, une mise à niveau peut améliorer la capacité du processeur, de la mémoire et des E/S. Si elle est surdimensionnée, une réduction de la capacité peut maintenir les performances tout en réduisant les coûts.
+
+* *Correctif du système d'exploitation*
++
+Appliquez les derniers correctifs du système d'exploitation pour améliorer la sécurité et la fiabilité du système.
+
+* *Paramètres de l'adaptateur réseau*
++
+Configurez la mise à l'échelle côté réception (RSS) pour répartir le traitement réseau sur plusieurs processeurs et améliorer les performances du réseau. Testez les paramètres avant de les appliquer en production.
+
+* *Alignement MTU*
++
+Alignez les paramètres Maximum Transmission Unit (MTU) des instances EC2 avec FSx for ONTAP afin de prévenir la fragmentation du réseau et d’optimiser les performances de SQL Server. La correction des incohérences MTU garantit une configuration MTU cohérente sur l’ensemble des nœuds et des chemins réseau.
+
+
+
+
+
+==== Application (SQL Server)
+
+* *Licence*
++
+L'évaluation et la recommandation de la licence SQL Server sont fournies au niveau de l'hôte. Workload Factory considère une licence comme « non optimisée » lorsqu'il détecte que votre infrastructure de base de données n'utilise aucune des fonctionnalités de la licence commerciale pour lesquelles vous payez. Une licence non optimisée peut engendrer des coûts inutiles. Vérifiez l'utilisation de votre licence SQL Server afin de vous assurer d'exploiter pleinement toutes les fonctionnalités pour lesquelles vous payez.
+
+* *Correctif Microsoft SQL Server*
++
+Appliquez les derniers correctifs SQL Server pour renforcer la sécurité, protéger contre les vulnérabilités et améliorer la fiabilité du système.
+
+* *MAXDOP*
++
+Configurez MAXDOP pour optimiser les performances des requêtes. Les valeurs de 4, 8 ou 16 donnent généralement de bons résultats. Testez votre charge de travail et surveillez les types d'attente liés au parallélisme, tels que CXPACKET.
+
+
+
+
+
+==== Fiabilité
+
+* *Planifiez des instantanés locaux*
++
+Planifiez des instantanés réguliers pour des sauvegardes à un moment précis et une récupération rapide en cas de suppressions accidentelles, de corruption des données et d'autres problèmes.
+
+* *Configuration de sauvegarde*
++
+Configurez FSx for ONTAP ou AWS Backup pour répondre aux exigences de conservation des données et de conformité. Évitez les sauvegardes redondantes.
+
+* *Réplication interrégionale*
++
+Activez la réplication interrégionale (CRR) pour améliorer la disponibilité des données et la reprise après sinistre. Utilisez CRR pour protéger contre les pannes régionales et assurer la continuité des activités.
+
+* *Microsoft SQL Server haute disponibilité*
++
+Assurez-vous que la haute disponibilité est configurée pour SQL Server en vérifiant que tout le stockage partagé est accessible par tous les nœuds du cluster, que les lettres de lecteur sont identiques sur tous les nœuds pour éviter les conflits lors du basculement, que le quorum est configuré pour l'intégrité du cluster, que les seuils de pulsation sont définis pour les environnements cloud et que les services SQL Server sont configurés pour le démarrage et le basculement automatiques.
+
+* *Nettoyage des clones*
++
+Examinez et supprimez régulièrement les clones obsolètes afin de réduire les coûts de stockage. Les clones anciens et inutilisés engendrent des coûts élevés.
+
+
+
+
+
+=== Oracle
+
+
+
+==== Dimensionnement du stockage
+
+* *Marge de manœuvre du système de fichiers*
++
+Maintenez une capacité de système de fichiers adéquate pour optimiser les performances de stockage et prévenir la dégradation des performances. Une marge suffisante permet une gestion efficace du stockage et soutient la croissance de la base de données.
+
+* *Espace d'échange*
++
+Configurez l'espace d'échange en fonction de la quantité de RAM afin que le système puisse gérer la pression sur la mémoire et éviter les ralentissements ou les plantages.
+
+
+
+
+
+==== Agencement de stockage
+
+* *Placement binaire Oracle*
++
+Placez les fichiers binaires Oracle sur un volume dédié pour garantir des performances et une stabilité optimales en réduisant les conflits d'E/S. Cette séparation simplifie les mises à jour logicielles et minimise le risque de modifications accidentelles ou de corruption.
+
+* *Emplacement des fichiers de données*
++
+Placez les fichiers de données sur un volume dédié ou avec des fichiers de contrôle pour isoler les E/S aléatoires et améliorer les performances. Cette séparation permet des configurations de snapshots personnalisées, des politiques de hiérarchisation et des mécanismes d'efficacité pour optimiser les performances et les coûts.
+
+* *Emplacement des fichiers de contrôle*
++
+Stockez des copies des fichiers de contrôle sur différents volumes ou disques afin d'éviter un point de défaillance unique et d'ajouter de la redondance. Placez les fichiers de contrôle sur un volume dédié ou partagez-les avec les journaux de restauration ou les fichiers de données, mais ne les placez pas sur des volumes hiérarchisés vers le stockage objet en raison des exigences de performance.
+
+* *Emplacement des redo logs*
++
+Placez les journaux de restauration sur un volume dédié ou partagez-les judicieusement avec les fichiers temporaires ou de contrôle afin d'isoler les opérations d'E/S à forte activité d'écriture et d'améliorer les performances. Stockez chaque copie du journal de restauration sur un volume distinct pour la redondance. Ne placez pas les journaux de restauration sur des instantanés de volume ni sur des volumes hiérarchisés vers le stockage objet, car ils sont fréquemment mis à jour.
+
+* *Placement temporaire*
++
+Placez les fichiers temporaires sur un volume dédié ou partagez-les judicieusement avec les fichiers de redo ou de contrôle afin d'isoler les opérations d'E/S à forte activité d'écriture et d'améliorer les performances. Chaque copie temporaire multiplexée doit résider sur un volume distinct pour la redondance. Les fichiers temporaires ne doivent pas être placés sur des snapshots de volume ou des volumes hiérarchisés vers le stockage objet en raison de leur fréquence de mise à jour.
+
+* *Placement des archives*
++
+Placez les journaux d'archivage sur un volume dédié afin d'améliorer les performances et les processus de récupération en évitant que les fortes demandes d'E/S n'interfèrent avec d'autres opérations de base de données.
+
+* *Configurations ASM uniquement : LUN de groupe de disques de données ASM, LUN de groupe de disques de journaux ASM et LUN de groupe de disques de groupe d’archivage ASM*
++
+Répartissez les LUN entre les groupes de disques de données, de journal de restauration et de journal d'archivage Automatic Storage Management (ASM) pour des performances et une redondance optimales.
+
+
+
+
+
+==== Configuration du stockage
+
+* *ONTAP*
++
+Optimisez la configuration FSx for ONTAP pour les bases de données Oracle en activant le provisionnement fin, le dimensionnement automatique et la gestion de l'espace pour les volumes. Configurez des stratégies de snapshot et de hiérarchisation appropriées afin d'équilibrer les performances et les coûts. Pour les LUN, assurez-vous du bon alignement du type de système d'exploitation, de la réservation d'espace et des paramètres d'allocation d'espace afin d'éviter les échecs d'écriture et de permettre la récupération automatique de l'espace.
+
+* *Système d'exploitation*
++
+Configurez les paramètres du système d'exploitation pour des performances optimales de la base de données Oracle, notamment en ajustant les paramètres du noyau pour les charges de travail de la base de données et en configurant correctement les paramètres NFS ou dNFS pour l'accès au système de fichiers réseau.
+
+
+
+
+
+==== Calcul
+
+* *Correctif du système d'exploitation*
++
+Appliquez régulièrement les correctifs du système d'exploitation pour garantir la sécurité, la stabilité et les améliorations de performance de votre environnement de base de données Oracle.
+
+
 
 .Et la suite
 link:optimize-configurations.html["Mettre en œuvre des configurations de base de données bien architecturées"]
