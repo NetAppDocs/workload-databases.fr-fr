@@ -348,6 +348,9 @@ Si Workload Factory détecte des shadow copies FSx for Windows, il définit la v
 
 
 . Pour des résultats plus précis, mettez à jour les informations de calcul et les informations sur le stockage et les performances.
++
+Workload Factory consolide plusieurs bases de données Oracle sur site en une seule recommandation de configuration FSx for ONTAP afin d’optimiser les économies, sauf si les bases de données sur site sélectionnées dépassent les limites de débit, de capacité ou d’IOPS pour un seul système de fichiers FSx for ONTAP.
+
 
 
 --

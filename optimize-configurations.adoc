@@ -13,7 +13,7 @@ summary: 'NetApp Workload Factory for Databases analyse les configurations Micro
 [role="lead"]
 En utilisant les analyses de configuration et les recommandations, exploitez NetApp Workload Factory pour mettre en œuvre les meilleures pratiques pour vos configurations de base de données avec Microsoft SQL Server et Oracle. Vous pouvez facilement vérifier l’état bien architecturé, découvrir les problèmes liés aux configurations de base de données et corriger les configurations qui ne sont pas optimisées pour la fiabilité, la sécurité, l’efficacité, la performance et le coût.
 
-Vous pouvez également ignorer l'analyse de configurations spécifiques qui ne s'appliquent pas à votre environnement pour éviter des alertes inutiles et des résultats d'optimisation inexacts.
+Vous pouvez également ignorer l'analyse des configurations qui ne s'appliquent pas à votre environnement afin d'éviter des alertes supplémentaires et des résultats inexacts.
 
 link:optimize-overview.html["Découvrez l’analyse de configuration et l’état bien architecturé dans Workload Factory."]
 
@@ -23,9 +23,9 @@ link:optimize-overview.html["Découvrez l’analyse de configuration et l’éta
 
 Workload Factory analyse quotidiennement les configurations de base de données. L'analyse quotidienne fournit un état bien architecturé, des informations et des recommandations. Vous pouvez corriger automatiquement les problèmes de configuration pour respecter les bonnes pratiques.
 
-Vous pouvez consulter les recommandations relatives aux problèmes de configuration et corriger ces problèmes à partir de l'inventaire des bases de données dans la console Workload Factory.
+Vous pouvez consulter et corriger les problèmes à partir de l'inventaire des bases de données ou du tableau de bord Well-architected dans la console Workload Factory.
 
-Pour les ressources SQL Server, vous pouvez effectuer une évaluation ponctuelle afin d'examiner les bonnes pratiques pour la configuration de vos bases de données. Vous n'avez pas besoin d'enregistrer des ressources ou de stocker des identifiants pour effectuer l'évaluation ponctuelle.
+Vous pouvez également effectuer une évaluation ponctuelle pour examiner les meilleures pratiques pour la configuration de votre base de données, sans avoir à stocker d'identifiants ni à enregistrer de ressources.
 
 .Ce qui est analysé
 Workload Factory analyse l’état d’architecture des configurations suivantes :
@@ -36,7 +36,7 @@ Pour les instances Microsoft SQL Server :
 * Disposition du stockage : inclut le placement des fichiers de données utilisateur, le placement des fichiers journaux et le placement de TempDB
 * Configuration du stockage : inclut la gestion de la capacité, le provisionnement léger, la politique de hiérarchisation, les instantanés, l'état Microsoft Multipath I/O (MPIO) et le paramètre de délai d'expiration MPIO
 * Calcul : inclut le dimensionnement correct, les correctifs du système d’exploitation et les paramètres de la carte réseau tels que la mise à l’échelle côté réception (RSS), le déchargement TCP et l’alignement MTU
-* Applications : inclut les licences Microsoft SQL Server, le correctif Microsoft SQL Server et les paramètres MAXDOP
+* Application : inclut les licences Microsoft SQL Server, le correctif Microsoft SQL Server et les paramètres MAXDOP
 * Résilience : inclut les instantanés locaux, les sauvegardes FSx pour ONTAP , la réplication interrégionale (CRR) et la haute disponibilité Microsoft SQL.
 * Clones : inclut des options pour actualiser et supprimer les clones (bacs à sable) qui ont été créés dans ou en dehors de Workload Factory et qui datent de plus de 60 jours
 
@@ -47,22 +47,29 @@ Pour les bases de données Oracle :
 * Configuration du stockage : comprend la gestion de la capacité, le provisionnement fin, la politique de hiérarchisation, les instantanés, les optimisations du stockage et les configurations du système d’exploitation pour les déploiements utilisant NFS ou iSCSI avec ou sans Automatic Storage Management (ASM), y compris l’état et les paramètres de Microsoft Multipath I/O (MPIO), ainsi que les paramètres dNFS suivants : activation de dNFS, résolution IP cohérente dNFS, fichier de configuration dNFS, et dNFS `nosharecache`
 * Disposition du stockage : inclut le placement du journal de rétablissement, le placement de l'espace table temporaire, le placement des fichiers de données, le placement du journal d'archive, le placement des fichiers de contrôle et le placement des binaires, le nombre d'unités LUN des groupes de disques ASM
 * Calcul : inclut les correctifs du système d’exploitation
+* Application : inclut les mises à jour critiques d’Oracle
+* Résilience : comprend la réplication interrégionale (CRR) et des instantanés cohérents au niveau des applications
 
 
 L'analyse bien architecturée pour Oracle vous avertit lorsqu'une configuration dépend d'autres et répertorie les actions pour optimiser les configurations liées.
 
 
 
-== Effectuez une évaluation ponctuelle des configurations de base de données SQL Server
+== Effectuez une évaluation unique de vos configurations
 
-Effectuez une évaluation ponctuelle pour connaître l'état d'architecture de vos instances Microsoft SQL Server sans stocker d'identifiants ni enregistrer d'instances.
+Effectuez une évaluation ponctuelle pour connaître l'état d'architecture de vos instances Microsoft SQL Server ou de vos bases de données Oracle sans stocker d'informations d'identification ni enregistrer de ressources.
 
-Vous pouvez exécuter le script et importer les résultats autant de fois que vous le souhaitez. Chaque fois que vous importez, le statut bien architecturé et les informations sont mis à jour en fonction des derniers résultats.
+Vous pouvez exécuter le script et importer les résultats plusieurs fois. Workload Factory met à jour le statut bien architecturé et les insights à chaque importation.
 
+[role="tabbed-block"]
+====
+.Instances Microsoft SQL Server
+--
 .Étapes
 . Connectez-vous à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
 . Sélectionnez le menu image:workloads-menu-icon.png["L'icône du menu hamburger permet d'accéder aux charges de travail telles que le stockage, l'analyse de données d'entreprise (EDA), l'intelligence artificielle (IA), les bases de données, VMware et l'administration."] puis sélectionnez *Bases de données*.
-. Dans l’*Inventory*, sélectionnez *One-time assessment* > *Learn about assessment*. Consultez les informations relatives à la one-time assessment.
+. Dans l'*Inventaire*, sélectionnez *SQL Server* comme type de moteur.
+. Sélectionnez *Évaluation ponctuelle* > *En savoir plus sur l'évaluation*. Consultez les informations relatives à l'évaluation ponctuelle.
 . Sélectionnez *Download script*.
 +
 .. Copiez le script sur votre hôte Microsoft SQL Server.
@@ -70,20 +77,39 @@ Vous pouvez exécuter le script et importer les résultats autant de fois que vo
 
 
 . Sélectionnez *Évaluation ponctuelle* > *Téléverser*. Trouvez le fichier et téléversez-le sur la console Workload Factory.
-. Consultez la recommandation pour toute configuration. Les recommandations incluent les bonnes pratiques et les problèmes que vous pourriez rencontrer si les configurations ne sont pas optimisées.
+. Consultez les recommandations pour chaque configuration. Workload Factory inclut les bonnes pratiques et les problèmes potentiels dans ses recommandations si les configurations ne sont pas optimisées.
 
 
+--
+.bases de données Oracle
+--
+.Étapes
+. Connectez-vous à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
+. Sélectionnez le menu image:workloads-menu-icon.png["L'icône du menu hamburger permet d'accéder aux charges de travail telles que le stockage, l'analyse de données d'entreprise (EDA), l'intelligence artificielle (IA), les bases de données, VMware et l'administration."] puis sélectionnez *Bases de données*.
+. Dans l'*Inventaire*, sélectionnez *Oracle* comme type de moteur.
+. Sélectionnez *Évaluation ponctuelle* > *En savoir plus sur l'évaluation*. Consultez les informations relatives à l'évaluation ponctuelle.
+. Sélectionnez *Download script*.
++
+.. Copiez le script Python sur votre hôte de base de données Oracle.
+.. Exécutez le script dans l'interpréteur de commandes approprié. Un seul script collecte les métadonnées de toutes les bases de données.
+
+
+. Sélectionnez *Évaluation ponctuelle* > *Téléverser*. Trouvez le fichier et téléversez-le sur la console Workload Factory.
+. Consultez les recommandations pour chaque configuration. Workload Factory inclut les bonnes pratiques et les problèmes potentiels dans ses recommandations si les configurations ne sont pas optimisées.
+
+
+--
+====
 
 
 == Avant de commencer à corriger, à ignorer et à réactiver les configurations
+
+Les exigences suivantes sont nécessaires pour la surveillance continue de votre environnement de base de données et la correction automatique des problèmes de configuration. Ces exigences ne sont pas requises pour l'évaluation ponctuelle.
 
 * Vous devezlink:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["accorder les autorisations d'_opérations et de correction_"^] dans votre compte AWS.
 * La ressource doit être enregistrée dans Workload Factory et le type de stockage doit être FSx for ONTAP. link:register-instance.html["Apprenez à enregistrer des ressources."]
 * Examinez chaque recommandation avant de modifier un paramètre ou une configuration. Pour RSS et MAXDOP, testez les paramètres recommandés pour vérifier les performances avant de modifier votre environnement de production.
 
-
-
-NOTE: La modification d'une configuration peut entraîner des indisponibilités d'instance ou des interruptions de service. Assurez-vous d’examiner attentivement la recommandation avant de choisir de corriger une configuration.
 
 
 
@@ -92,7 +118,7 @@ NOTE: La modification d'une configuration peut entraîner des indisponibilités 
 Résoudre les problèmes de configuration pour les environnements SQL Server ou Oracle exécutés sur FSx pour le stockage ONTAP .
 
 
-NOTE: Le processus de correction peut entraîner des temps d’arrêt ou des interruptions de service.  Assurez-vous de lire attentivement la recommandation avant de décider de résoudre un problème de configuration.
+NOTE: La modification d'une configuration peut entraîner des interruptions ou une interruption de service. Veuillez examiner attentivement la recommandation avant de procéder à toute modification de configuration.
 
 .Étapes
 . Connectez-vous à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
@@ -118,7 +144,7 @@ Sélectionnez *Export PDF* pour télécharger un rapport des résultats.
 *Sélectionner tout* est la valeur par défaut, mais vous pouvez sélectionner des ressources spécifiques à corriger.
 
 +
-.. Pour toutes les configurations, à l’exception du nettoyage des clones, consultez les détails de la recommandation pour savoir ce qui se passera si vous choisissez de résoudre le problème. Certaines opérations de correction peuvent entraîner des interruptions de service ou des temps d'arrêt des instances.
+.. Pour toutes les configurations, à l'exception du nettoyage des clones, consultez les détails de la recommandation afin d'évaluer l'impact de la résolution du problème. Certaines opérations de correction peuvent entraîner une interruption ou des interruptions de service.
 .. Pour le nettoyage des clones, sélectionnez les bases de données clonées (sandbox) à actualiser ou à supprimer.
 +
 *** L'actualisation d'un clone le synchronise avec sa base de données source.  L'actualisation est disponible uniquement pour les clones créés dans Workload Factory.
@@ -150,7 +176,7 @@ Ignorez l'analyse des configurations de base de données spécifiques qui ne s'a
 
 
 .Résultat
-L'analyse de la configuration s'arrête.
+Workload Factory interrompt l'analyse de configuration.
 
 Vous pouvez réactiver l'analyse à tout moment. La configuration n'est plus prise en compte dans le score d'optimisation total.
 
@@ -171,4 +197,4 @@ Réactivez à tout moment une analyse de configuration annulée. Vous pouvez sé
 
 
 .Résultat
-L'analyse de configuration est réactivée et s'exécute désormais chaque jour.
+Workload Factory réactive l'analyse de configuration et l'exécute désormais quotidiennement.
