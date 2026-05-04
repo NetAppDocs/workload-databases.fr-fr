@@ -163,7 +163,7 @@ Pour passer à FSX pour ONTAP, suivez les instructions à <<Déployez Microsoft 
 
 === Découvrez les économies réalisées pour les hôtes détectés
 
-Workload Factory saisit les caractéristiques détectées de l'hôte Elastic Block Store et FSx for Windows File Server afin que vous puissiez explorer automatiquement les économies.
+Workload Factory intègre les caractéristiques de l'hôte détectées afin que vous puissiez explorer automatiquement les économies.
 
 .Avant de commencer
 Avant de commencer, remplissez les conditions préalables suivantes :
@@ -220,6 +220,10 @@ Avant de commencer, remplissez les conditions préalables suivantes :
 
 
 
+
+
+
+==== Découvrez les économies pour les hôtes Microsoft SQL Server détectés
 
 Suivez les étapes de l'onglet correspondant à votre type de stockage.
 
@@ -318,6 +322,59 @@ Workload Factory consolide plusieurs hôtes SQL Server sur site en une seule rec
 
 
 
+.Retrait d'hôte sur site
+Après avoir exploré les économies réalisées sur un hôte Microsoft SQL Server sur site, vous avez la possibilité de supprimer l’enregistrement de l’hôte sur site de Workload Factory.  Sélectionnez le menu d’action de l’hôte local Microsoft SQL Server, puis sélectionnez *Supprimer*.
+
+--
+====
+Après avoir fourni des détails sur la configuration de l'hôte de votre base de données, consultez les calculs et les recommandations fournis sur la page.
+
+De plus, faites défiler jusqu'au bas de la page pour afficher le rapport en sélectionnant l'une des options suivantes :
+
+* *Exporter PDF*
+* *Envoyer par courriel*
+* *Afficher les calculs*
+
+
+Pour passer à FSX pour ONTAP, suivez les instructions à <<Déployez Microsoft SQL Server sur AWS EC2 à l'aide de FSX pour ONTAP,Déployez Microsoft SQL Server sur AQS EC2 à l'aide des systèmes de fichiers FSX pour ONTAP>>.
+
+
+
+==== Découvrez les économies pour les hôtes Oracle détectés
+
+Suivez les étapes de l'onglet correspondant à votre type de stockage.
+
+[role="tabbed-block"]
+====
+.Amazon Elastic Block Store (EBS)
+--
+.Étapes
+. Connectez-vous à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
+. Sélectionnez le menu image:workloads-menu-icon.png["L'icône du menu hamburger permet d'accéder aux charges de travail telles que le stockage, l'analyse de données d'entreprise (EDA), l'intelligence artificielle (IA), les bases de données, VMware et l'administration."] puis sélectionnez *Bases de données*.
+. Dans le menu Bases de données, sélectionnez *Explorer les économies*.
+. Dans Explorer les économies, sélectionnez l’onglet *Oracle on Elastic Block Store (EBS)*.
++
+Si Workload Factory détecte des hôtes EBS, il vous redirige vers l'onglet Explorer les économies. S'il ne détecte pas d'hôtes EBS, il vous redirige vers le calculateur pour <<Explorer les économies via la personnalisation,explorer les économies via la personnalisation>>.
+
+. Dans *Explorer les économies*, sélectionnez un ou plusieurs hôtes de base de données exécutés sur EBS, puis sélectionnez *Explorer les économies*.
+. Si nécessaire, authentifiez l’hôte de la base de données avec les identifiants Oracle, ou en ajoutant les autorisations Oracle manquantes.
++
+Si la page Explorer les économies ne charge pas les données après une authentification réussie, sélectionnez l'onglet *Inventaire* pour recharger les données, puis sélectionnez à nouveau l'onglet *Explorer les économies*.
+
+. Dans le calculateur d'économies, vous pouvez fournir les détails suivants sur les clones et les instantanés de votre stockage EBS pour une estimation plus précise des économies.
++
+.. *Fréquence d'instantané* : sélectionnez une fréquence d'instantané dans le menu.
+.. *Fréquence d'actualisation du clonage* : sélectionnez la fréquence d'actualisation des clones dans le menu.
+.. *Nombre de copies clonées* : entrez le nombre de copies clonées dans la configuration EBS.
+.. *Taux de modification mensuel* : saisissez le pourcentage de changements de données de clonage et d'instantanés en moyenne par mois.
+.. *Ajouter des hôtes* : Vous pouvez sélectionner jusqu’à cinq hôtes EBS détectés à inclure dans le calcul des économies.
++
+Workload Factory consolide plusieurs hôtes Oracle en une seule recommandation de configuration FSx for ONTAP afin d'optimiser les économies, sauf si les hôtes EBS sélectionnés dépassent les limites de débit, de capacité ou d'IOPS pour un seul système de fichiers FSx for ONTAP.
+
+
+
+
+
 --
 .Serveur Oracle sur site
 --
@@ -353,6 +410,9 @@ Workload Factory consolide plusieurs bases de données Oracle sur site en une se
 
 
 
+.Retrait d'hôte sur site
+Après avoir exploré les économies pour un hôte Oracle sur site, vous avez la possibilité de supprimer l'enregistrement de l'hôte sur site dans Workload Factory. Sélectionnez le menu d'actions de l'hôte Oracle sur site, puis sélectionnez *Supprimer*.
+
 --
 ====
 Après avoir fourni des détails sur la configuration de l'hôte de votre base de données, consultez les calculs et les recommandations fournis sur la page.
@@ -365,9 +425,6 @@ De plus, faites défiler jusqu'au bas de la page pour afficher le rapport en sé
 
 
 Pour passer à FSX pour ONTAP, suivez les instructions à <<Déployez Microsoft SQL Server sur AWS EC2 à l'aide de FSX pour ONTAP,Déployez Microsoft SQL Server sur AQS EC2 à l'aide des systèmes de fichiers FSX pour ONTAP>>.
-
-.Retrait d'hôte sur site
-Après avoir exploré les économies réalisées sur un hôte Microsoft SQL Server sur site, vous avez la possibilité de supprimer l’enregistrement de l’hôte sur site de Workload Factory.  Sélectionnez le menu d’action de l’hôte local Microsoft SQL Server, puis sélectionnez *Supprimer*.
 
 
 

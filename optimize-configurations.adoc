@@ -37,7 +37,7 @@ Pour les instances Microsoft SQL Server :
 * Configuration du stockage : inclut la gestion de la capacité, le provisionnement léger, la politique de hiérarchisation, les instantanés, l'état Microsoft Multipath I/O (MPIO) et le paramètre de délai d'expiration MPIO
 * Calcul : inclut le dimensionnement correct, les correctifs du système d’exploitation et les paramètres de la carte réseau tels que la mise à l’échelle côté réception (RSS), le déchargement TCP et l’alignement MTU
 * Application : inclut les licences Microsoft SQL Server, le correctif Microsoft SQL Server et les paramètres MAXDOP
-* Résilience : inclut les instantanés locaux, les sauvegardes FSx pour ONTAP , la réplication interrégionale (CRR) et la haute disponibilité Microsoft SQL.
+* Résilience : inclut les instantanés locaux, la configuration de sauvegarde, la réplication interrégionale (CRR), la haute disponibilité Microsoft SQL et le nettoyage des clones
 * Clones : inclut des options pour actualiser et supprimer les clones (bacs à sable) qui ont été créés dans ou en dehors de Workload Factory et qui datent de plus de 60 jours
 
 
@@ -48,7 +48,7 @@ Pour les bases de données Oracle :
 * Disposition du stockage : inclut le placement du journal de rétablissement, le placement de l'espace table temporaire, le placement des fichiers de données, le placement du journal d'archive, le placement des fichiers de contrôle et le placement des binaires, le nombre d'unités LUN des groupes de disques ASM
 * Calcul : inclut les correctifs du système d’exploitation
 * Application : inclut les mises à jour critiques d’Oracle
-* Résilience : comprend la réplication interrégionale (CRR) et des instantanés cohérents au niveau des applications
+* Résilience : comprend la réplication interrégionale (CRR), les instantanés cohérents au niveau des applications, la configuration de sauvegarde et le nettoyage des clones
 
 
 L'analyse bien architecturée pour Oracle vous avertit lorsqu'une configuration dépend d'autres et répertorie les actions pour optimiser les configurations liées.
