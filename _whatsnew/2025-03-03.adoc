@@ -8,7 +8,7 @@
 
 Vous pouvez maintenant déployer une configuration haute disponibilité pour le serveur PostgreSQL.
 
-link:https://review.docs.netapp.com/us-en/workload-databases_explore-savings-updates/create-postgresql-server.html["Créez un serveur PostgreSQL"]
+link:https://docs.netapp.com/us-en/workload-databases/create-postgresql-server.html["Créez un serveur PostgreSQL"]
 
 
 
