@@ -23,6 +23,8 @@ L'enregistrement d'une instance (SQL Server) ou d'une base de données (Oracle) 
 
 Workload Factory prend uniquement en charge l'enregistrement et la gestion des instances Microsoft SQL Server et des bases de données Oracle. Selon les informations d'identification du compte AWS que vous sélectionnez dans Workload Factory, les hôtes PostgreSQL apparaissent dans l'Inventory. Actuellement, Workload Factory prend en charge les instances PostgreSQL non enregistrées exécutées uniquement sur des systèmes d'exploitation Amazon Linux.
 
+Les utilisateurs AWS GovCloud (US) doivent utiliser AWS Secrets Manager pour authentifier les identifiants FSx for ONTAP. Pour tous les autres utilisateurs, vous devez authentifier FSx for ONTAP avec des identifiants de système de fichiers.
+
 
 
 == Avant de commencer
@@ -72,10 +74,13 @@ Si les instances sont authentifiées, sélectionnez *Next*.
 
 
 
-. Pour authentifier FSx pour ONTAP (étape 2), procédez comme suit :
+. Pour authentifier FSx pour ONTAP (étape 2), procédez comme suit, puis sélectionnez *Suivant* :
 +
 .. Sélectionnez *Utiliser les mêmes informations d'identification pour toutes les ressources* ou *Gérer les informations d'identification manuellement*.
-.. Saisissez le nom d'utilisateur et le mot de passe du système de fichiers FSx for ONTAP, puis sélectionnez *Suivant*.
+.. Saisissez soit l'ARN du paramètre AWS SSM avec les informations d'identification FSx for ONTAP pour les comptes GovCloud, soit le nom d'utilisateur et le mot de passe du système de fichiers FSx for ONTAP pour tous les autres comptes, puis sélectionnez *Suivant*.
++
+Pour les comptes GovCloud, la valeur ARN du paramètre AWS SSM est disponible dans le Parameter Store sous Détails du paramètre dans la console de gestion AWS, au format suivant : `{fsx:{"username":"fsxadmin","password":"pass"}}`. Le type du paramètre AWS SSM doit être « Secure String » avec le nom au format `/netapp/wlmdb/<fsx_filesystemID>`. En savoir plus sur la récupération des paramètres SSM depuis link:https://docs.aws.amazon.com/govcloud-us/latest/UserGuide/govcloud-ssm.html["Documentation AWS GovCloud"^].
+
 +
 Si le système de fichiers FSx for ONTAP est authentifié, sélectionnez *Suivant*.
 
@@ -115,10 +120,10 @@ L'enregistrement d'une instance comporte trois étapes : l'authentification de 
 . Dans l’inventaire, sélectionnez *Oracle* comme type de moteur.
 . Sélectionnez l'onglet *Bases de données*.
 . Sélectionnez pour enregistrer une seule base de données ou plusieurs bases de données.
-. Pour authentifier les bases de données (étape 1), procédez comme suit :
+. Pour authentifier les bases de données (étape 1), procédez comme suit, puis sélectionnez *Suivant* :
 +
-** Sélectionnez *Utiliser les mêmes informations d'identification pour toutes les instances* ou *Gérer les informations d'identification manuellement*.
-** Authentifiez l'utilisateur Oracle et l'utilisateur Automatic Storage Management (ASM) grid (le cas échéant) en fournissant les informations de nom d'utilisateur et de mot de passe.
+.. Sélectionnez *Utiliser les mêmes informations d'identification pour toutes les instances* ou *Gérer les informations d'identification manuellement*.
+.. Authentifiez l'utilisateur Oracle et l'utilisateur Automatic Storage Management (ASM) grid (le cas échéant) en fournissant les informations de nom d'utilisateur et de mot de passe.
 +
 Si les bases de données sont authentifiées, sélectionnez *Next*.
 
@@ -126,8 +131,12 @@ Si les bases de données sont authentifiées, sélectionnez *Next*.
 
 . Pour authentifier FSx pour ONTAP (étape 2), procédez comme suit, puis sélectionnez *Suivant* :
 +
-** Sélectionnez *Utiliser les mêmes informations d'identification pour toutes les ressources* ou *Gérer les informations d'identification manuellement*.
-** Gérer les ressources
+.. Sélectionnez *Utiliser les mêmes informations d'identification pour toutes les ressources* ou *Gérer les informations d'identification manuellement*.
+.. Saisissez soit l'ARN du paramètre AWS SSM avec les informations d'identification FSx for ONTAP pour les comptes GovCloud, soit le nom d'utilisateur et le mot de passe du système de fichiers FSx for ONTAP pour tous les autres comptes, puis sélectionnez *Suivant*.
++
+Le type du paramètre AWS SSM doit être « Chaîne sécurisée » avec le nom au format `/netapp/wlmdb/<fsx_filesystemID>`. Saisissez la valeur de l’ARN du paramètre AWS SSM au format suivant :
+`{fsx:{"username":"fsxadmin","password":"pass"}}`. En savoir plus sur la récupération des paramètres SSM depuis link:https://docs.aws.amazon.com/govcloud-us/latest/UserGuide/govcloud-ssm.html["Documentation AWS GovCloud"^].
+
 +
 Si le système de fichiers FSx for ONTAP est authentifié, sélectionnez *Suivant*.
 
