@@ -15,10 +15,12 @@ Découvrez les nouveautés de NetApp Workload Factory pour les bases de données
 
 
 
+[[01-june-2026]]
 == 01 juin 2026
 
 
 
+[[custom-savings-for-oracle-hosts-on-amazon-elastic-block-store]]
 === Économies personnalisées pour les hôtes Oracle sur Amazon Elastic Block Store
 
 NetApp Workload Factory for Databases vous permet de personnaliser les économies réalisées pour les hôtes Oracle sur Amazon Elastic Block Store (EBS). Vous pouvez ajuster plusieurs champs comme la fréquence des instantanés, le nombre de copies clonées et les détails des volumes pour voir comment ils affectent vos économies.
@@ -27,6 +29,7 @@ link:https://docs.netapp.com/us-en/workload-databases/explore-savings.html["Déc
 
 
 
+[[multiple-security-group-selection-for-microsoft-sql-server-and-postgresql-host-deployment]]
 === Sélection multiple de groupes de sécurité pour le déploiement d’hôtes Microsoft SQL Server et PostgreSQL
 
 NetApp Workload Factory for Databases vous permet désormais de sélectionner plusieurs groupes de sécurité lors du déploiement d’hôtes Microsoft SQL Server et PostgreSQL. Vous bénéficiez ainsi d’une plus grande flexibilité pour la configuration de la sécurité réseau de vos charges de travail de base de données.
@@ -37,16 +40,19 @@ NetApp Workload Factory for Databases vous permet désormais de sélectionner pl
 
 
 
+[[support-for-aws-govcloud-us-in-netapp-workload-factory]]
 === Prise en charge d'AWS GovCloud (US) dans NetApp Workload Factory
 
 NetApp Workload Factory prend en charge les comptes AWS GovCloud (US). En utilisant un compte GovCloud, vous pouvez déployer et gérer des charges de travail de base de données dans les régions AWS GovCloud (US).
 
 
 
+[[03-may-2026]]
 == 3 mai 2026
 
 
 
+[[well-architected-analysis-for-oracle]]
 === Analyse bien architecturée pour Oracle
 
 L'analyse bien architecturée inclut les nouvelles configurations suivantes pour Oracle :
@@ -59,6 +65,7 @@ link:https://docs.netapp.com/us-en/workload-databases/optimize-configurations.ht
 
 
 
+[[automatic-savings-calculation-for-oracle-databases-on-amazon-elastic-block-store-ebs]]
 === Calcul automatique des économies pour les bases de données Oracle sur Amazon Elastic Block Store (EBS)
 
 Workload Factory analyse automatiquement le coût du stockage EBS utilisé pour les bases de données Oracle, puis suggère la configuration FSx for ONTAP la plus performante et la plus économique. Vous pouvez sélectionner plusieurs hôtes EBS à analyser et comparer ensuite le coût d'exécution de ces hôtes sur EBS par rapport à FSx for ONTAP.
@@ -67,6 +74,7 @@ link:https://docs.netapp.com/us-en/workload-databases/explore-savings.html#explo
 
 
 
+[[crr-configuration-prerequisite-check]]
 === Vérification préalable de la configuration CRR
 
 Lorsque vous activez la réplication interrégionale (CRR) pour votre base de données, la charge de travail de base de données vérifie si le système de fichiers FSx for ONTAP possède une liaison et une configuration de réplication associées. Le cas échéant, la charge de travail de base de données vous redirige vers l’assistant de réplication de la charge de travail de stockage FSx for ONTAP afin de gérer les prérequis de liaison de la même manière que le stockage.
@@ -75,16 +83,19 @@ link:https://docs.netapp.com/us-en/workload-databases/optimize-configurations.ht
 
 
 
+[[associated-luns-for-microsoft-sql-server-databases]]
 === LUN associés pour les bases de données Microsoft SQL Server
 
 Vous pouvez désormais visualiser les LUN mappées aux bases de données Microsoft SQL Server dans Workload Factory depuis l'écran Inventaire. Cela vous permet d'identifier facilement les LUN associées à chaque base de données, ce qui facilite la gestion et l'optimisation de vos ressources de stockage.
 
 
 
+[[06-april-2026]]
 == 06 avril 2026
 
 
 
+[[well-architected-analysis-for-oracle]]
 === Analyse bien architecturée pour Oracle
 
 L'analyse bien architecturée inclut les nouvelles configurations suivantes pour Oracle :
@@ -98,6 +109,7 @@ link:https://docs.netapp.com/us-en/workload-databases/optimize-configurations.ht
 
 
 
+[[one-time-assessment-for-oracle]]
 === Évaluation ponctuelle pour Oracle
 
 Workload Factory propose désormais une évaluation ponctuelle pour analyser la configuration de vos déploiements de bases de données Oracle, à tout moment : nouveaux déploiements, post-migration, dépannage, etc. Vous recevrez des recommandations pour vous aider à optimiser vos configurations de déploiement et à vous conformer aux bonnes pratiques. C'est l'occasion d'utiliser la fonctionnalité bien architecturée sans vous engager pleinement dans le processus de configuration. Vous pouvez évaluer vos bases de données sans stocker d'identifiants dans Workload Factory, sans enregistrer de ressources de base de données ni configurer de connexions externes.
@@ -106,6 +118,7 @@ link:https://docs.netapp.com/us-en/workload-databases/optimize-configurations.ht
 
 
 
+[[improved-cost-savings-for-several-oracle-databases]]
 === Amélioration des économies pour plusieurs bases de données Oracle
 
 Nous avons amélioré l'analyse des économies pour Oracle afin de fournir une solution de stockage consolidée pour plusieurs bases de données Oracle sur site sur un seul système de fichiers FSx for ONTAP. Cette consolidation optimise les coûts de stockage en réduisant le nombre de systèmes de fichiers nécessaires pour plusieurs bases de données, ce qui conduit à une amélioration des économies.
@@ -114,10 +127,12 @@ link:https://docs.netapp.com/us-en/workload-databases/explore-savings.html#explo
 
 
 
+[[02-march-2026]]
 == 02 mars 2026
 
 
 
+[[one-time-assessment-for-sql-server]]
 === Évaluation ponctuelle pour SQL Server
 
 Workload Factory propose désormais une évaluation ponctuelle pour analyser la configuration de vos déploiements de bases de données SQL Server à tout moment : nouveaux déploiements, post-migration, dépannage, etc. Vous recevrez des recommandations pour vous aider à optimiser vos configurations de déploiement et à vous conformer aux bonnes pratiques. C'est l'occasion d'utiliser la fonctionnalité bien architecturée sans vous engager pleinement dans le processus de configuration. Vous pouvez évaluer vos bases de données sans stocker d'identifiants dans Workload Factory, sans enregistrer de ressources de base de données ni configurer de connexions externes.
@@ -126,6 +141,7 @@ link:https://docs.netapp.com/us-en/workload-databases/optimize-configurations.ht
 
 
 
+[[registration-support-for-always-on-availability-groups-on-microsoft-sql-server-and-data-guard-on-oracle]]
 === Prise en charge de l'enregistrement des groupes de disponibilité Always On sur Microsoft SQL Server et de Data Guard sur Oracle
 
 Vous pouvez désormais découvrir et enregistrer des instances Microsoft SQL Server avec le modèle de déploiement Always On availability group (AOAG) et des bases de données Oracle avec le modèle de déploiement Data Guard dans la charge de travail Bases de données de NetApp Workload Factory. Cette amélioration permet une meilleure gestion des ressources SQL Server et Oracle au sein de la console Workload Factory.
@@ -138,6 +154,7 @@ link:https://docs.netapp.com/us-en/workload-databases/register-instance.html#reg
 
 
 
+[[well-architected-analysis-for-oracle]]
 === Analyse bien architecturée pour Oracle
 
 L'analyse bien conçue inclut les *correctifs du système d'exploitation* pour Oracle afin de vérifier si vous disposez des derniers correctifs sur le système d'exploitation et vous indiquer comment les installer.
@@ -148,6 +165,7 @@ link:https://docs.netapp.com/us-en/workload-databases/optimize-configurations.ht
 
 
 
+[[oracle-on-premises-database-environments-cost-analysis-and-migration-planning]]
 === Analyse des coûts et planification de la migration des environnements de base de données Oracle sur site
 
 Workload Factory for Databases analyse désormais et vous aide à planifier la migration de la base de données Oracle sur site vers Amazon FSx for NetApp ONTAP. Vous pouvez utiliser le calculateur d'économies pour estimer le coût d'exécution de votre environnement de base de données Oracle sur site dans le cloud et consulter les recommandations pour migrer votre environnement de base de données sur site vers le cloud.
@@ -156,6 +174,7 @@ link:https://docs.netapp.com/us-en/workload-databases/explore-savings.html["Déc
 
 
 
+[[new-ask-me-bookmark-available-in-workload-factory]]
 === Nouveau signet Ask Me disponible dans Workload Factory
 
 Nous avons ajouté un nouveau raccourci Ask Me sur chaque écran de la console Workload Factory. Cette amélioration vous permet d'accéder plus facilement et plus rapidement à Ask Me chaque fois que vous avez besoin d'aide. Ask Me est notre assistant IA, qui vous permet de poser des questions sur vos propres environnements de charge de travail, d'obtenir des informations personnalisées directement à partir de votre environnement et de consulter les conversations précédentes.
@@ -166,10 +185,12 @@ link:https://docs.netapp.com/us-en/workload-setup-admin/workload-factory-overvie
 
 
 
+[[02-february-2026]]
 == 02 février 2026
 
 
 
+[[improved-cost-savings-for-several-database-hosts-on-microsoft-sql-server-on-premises]]
 === Économies améliorées pour plusieurs hôtes de base de données sur Microsoft SQL Server en local
 
 L'analyse des économies pour le stockage sur site de Microsoft SQL Server a été améliorée afin de fournir une solution de stockage consolidée pour plusieurs hôtes de base de données sur un seul système de fichiers FSx for ONTAP. Cette consolidation optimise les coûts de stockage en réduisant le nombre de systèmes de fichiers nécessaires pour plusieurs hôtes de base de données, ce qui permet d'améliorer les économies.
@@ -178,6 +199,7 @@ link:https://docs.netapp.com/us-en/workload-databases/explore-savings.html#explo
 
 
 
+[[well-architected-analysis-for-oracle]]
 === Analyse bien architecturée pour Oracle
 
 L'analyse bien architecturée comprend quatre nouvelles sous-évaluations pour l'analyse de la configuration de stockage pour Oracle : activation de dNFS, résolution IP cohérente de dNFS, fichier de configuration dNFS, et dNFS `nosharecache`. Ces évaluations concernent l'activation et la configuration de Direct NFS (dNFS) pour votre environnement Oracle, qui contourne le client NFS hôte et effectue les opérations de fichiers NFS directement sur un serveur NFS, améliorant les performances d'E/S et diminuant la charge sur l'hôte et le système de stockage car les E/S sont effectuées de manière plus efficace.
@@ -186,20 +208,24 @@ link:https://docs.netapp.com/us-en/workload-databases/optimize-configurations.ht
 
 
 
+[[04-january-2026]]
 == 04 janvier 2026
 
 
 
+[[ask-me-ai-assistant-home-page-integration]]
 === Intégration de la page d'accueil de l'assistant Ask Me AI
 
 La page d'accueil de la console Workload Factory intègre l'assistant IA Ask Me, vous permettant de poser des questions sur votre propre stockage, d'obtenir des informations personnalisées directement à partir de votre environnement et de consulter vos conversations précédentes. Vous pouvez interagir avec Ask Me pour comprendre vos workloads, résoudre des problèmes et en apprendre davantage sur Workload Factory — le tout sans quitter la console.
 
 
 
+[[18-december-2025]]
 == 18 décembre 2025
 
 
 
+[[active-directory-integration-enhancements]]
 === Améliorations de l'intégration d'Active Directory
 
 Workload Factory for Databases inclut trois nouveaux champs Active Directory (AD) lors du déploiement de Microsoft SQL Server à l'aide de l'option *Création avancée*. Ces améliorations vous permettent de spécifier les préférences de jonction à Active Directory et d'utiliser un compte de service géré.
@@ -215,10 +241,12 @@ link:https://docs.netapp.com/us-en/workload-databases/create-database.html["Dép
 
 
 
+[[27-november-2025]]
 == 27 novembre 2025
 
 
 
+[[optimize-savings-in-the-databases-calculator-for-amazon-elastic-block-store-ebs]]
 === Optimisez vos économies grâce au calculateur de bases de données pour Amazon Elastic Block Store (EBS)
 
 Deux nouvelles fonctionnalités du calculateur améliorent l'analyse des économies réalisées lors de l'exécution de plusieurs instances avec un stockage EBS, ce qui vous permet d'économiser davantage en passant à FSx pour ONTAP.
@@ -231,12 +259,14 @@ link:https://docs.netapp.com/us-en/workload-databases/explore-savings.html#explo
 
 
 
+[[excel-report-available-for-the-well-architected-dashboard]]
 === Rapport Excel disponible pour le tableau de bord bien conçu
 
 Vous pouvez télécharger un rapport Excel du tableau de bord bien conçu.  Le rapport fournit l'état bien architecturé de la ressource de base de données et des recommandations pour toutes les configurations de ressources, y compris les sous-configurations pour le système d'exploitation et ONTAP.
 
 
 
+[[error-log-analyzer-available-for-oracle-databases]]
 === Analyseur de journaux d'erreurs disponible pour les bases de données Oracle
 
 L'analyseur de journaux d'erreurs Agentic, basé sur l'IA, est disponible pour les bases de données Oracle.  Cette fonctionnalité exploite des algorithmes d'apprentissage automatique avancés pour détecter et analyser automatiquement les erreurs dans les fichiers journaux. Cet outil vise à rationaliser le processus de dépannage en fournissant aux développeurs des informations et des recommandations exploitables basées sur les modèles qu'il identifie dans les journaux.
@@ -245,6 +275,7 @@ link:https://docs.netapp.com/us-en/workload-databases/analyze-error-logs.html["E
 
 
 
+[[well-architected-analysis-for-oracle]]
 === Analyse bien architecturée pour Oracle
 
 L'analyse, bien conçue, inclut deux nouvelles configurations de dimensionnement du stockage.  L'analyse évalue et corrige les problèmes de configuration liés à l'allocation d'espace d'échange et à la marge de manœuvre du système de fichiers pour les déploiements de bases de données Oracle existants.
@@ -253,16 +284,19 @@ link:https://docs.netapp.com/us-en/workload-databases/optimize-configurations.ht
 
 
 
+[[02-november-2025]]
 == 02 novembre 2025
 
 
 
+[[dashboard-improvements]]
 === Améliorations du tableau de bord
 
 Le nouveau tableau de bord est simplifié et mieux organisé pour offrir une vue d'ensemble plus claire de vos ressources de base de données et des fonctionnalités clés de Workload Factory sur un seul écran ; une carte met en évidence les ressources de base de données, une carte fournit des informations sur le score et l'analyse de l'architecture, une carte affiche l'analyse des erreurs, deux cartes affichent le coût mensuel et les économies potentielles, et une carte affiche des informations sur les environnements de test.
 
 
 
+[[well-architected-analysis-for-oracle]]
 === Analyse bien architecturée pour Oracle
 
 L'analyse bien conçue comprend les évaluations et les correctifs suivants pour les configurations Oracle :
@@ -276,6 +310,7 @@ link:https://docs.netapp.com/us-en/workload-databases/optimize-configurations.ht
 
 
 
+[[permissions-changes-for-workload-factory-for-databases]]
 === Modifications des autorisations pour Workload Factory pour les bases de données
 
 Workload Factory for Databases a mis à jour les politiques d'autorisation afin de clarifier les exigences pour des actions spécifiques et d'offrir une granularité permettant de sélectionner uniquement les autorisations nécessaires. Lorsque vous ajouterez des informations d'identification, vous aurez le choix entre trois options d'autorisation au lieu du modèle d'autorisation précédent qui était _lecture seule_ et _lecture/écriture_. Le nouveau modèle d'autorisations décompose les politiques d'autorisation comme suit :
@@ -291,12 +326,14 @@ link:https://docs.netapp.com/us-en/workload-setup-admin/permissions-reference.ht
 
 
 
+[[well-architected-dashboard-screen-added]]
 === Écran de tableau de bord bien conçu ajouté
 
 Un nouvel écran de tableau de bord _bien conçu_ a été ajouté au menu Bases de données. Cet écran vous permet d'obtenir une vue d'ensemble de l'état de configuration de l'ensemble de votre parc de bases de données.
 
 
 
+[[edit-protection-for-database-deployments-in-netapp-backup-and-recovery]]
 === Protection des modifications pour les déploiements de bases de données dans NetApp Backup and Recovery
 
 Depuis la console Workload Factory, vous pouvez sélectionner l'option permettant de modifier la protection d'une ressource protégée, puis vous serez redirigé vers la section Sauvegarde et restauration de la NetApp Console où vous pourrez modifier la stratégie ou la planification de protection.
@@ -305,6 +342,7 @@ link:https://docs.netapp.com/us-en/workload-databases/protect-sql-server.html["P
 
 
 
+[[error-filtering-by-tags-available-for-the-error-analysis-feature]]
 === Le filtrage des erreurs par étiquettes est disponible pour la fonction d'analyse des erreurs.
 
 Vous pouvez filtrer et afficher les journaux d'erreurs de Microsoft SQL Server par balises orientées infrastructure lorsque vous utilisez la fonctionnalité d'analyse des erreurs dans Workload Factory. Cette amélioration vous permet de trier, de dépanner et de résoudre rapidement les problèmes.
@@ -313,16 +351,19 @@ link:https://docs.netapp.com/us-en/workload-databases/analyze-error-logs.html["A
 
 
 
+[[06-october-2025]]
 == 06 octobre 2025
 
 
 
+[[bluexp-workload-factory-now-netapp-workload-factory]]
 === BlueXP workload factory désormais NetApp Workload Factory
 
 BlueXP a été renommé et repensé pour mieux refléter le rôle qu'il joue dans la gestion de votre infrastructure de données. Par conséquent, BlueXP workload factory a été renommée NetApp Workload Factory.
 
 
 
+[[enhancements-for-oracle-in-the-workload-factory-console]]
 === Améliorations pour Oracle dans la console Workload Factory
 
 
@@ -349,12 +390,14 @@ link:https://docs.netapp.com/us-en/workload-databases/optimize-configurations.ht
 
 
 
+[[databases-inventory-enhancements]]
 === Améliorations de l'inventaire des bases de données
 
 À partir de l’écran d’instance dans l’inventaire des bases de données, les options permettant de corriger, de reporter et d’ignorer un problème de configuration sont disponibles pour une ou plusieurs instances pour Microsoft SQL Server ou pour une ou plusieurs bases de données pour Oracle.
 
 
 
+[[optimize-savings-based-on-usage-for-amazon-elastic-block-store-ebs]]
 === Optimisez les économies en fonction de l'utilisation d'Amazon Elastic Block Store (EBS)
 
 Workload Factory peut analyser votre utilisation des performances EBS, puis suggérer la configuration FSx for ONTAP la meilleure et la plus rentable afin que vous puissiez économiser davantage en passant à FSx for ONTAP.
@@ -363,10 +406,12 @@ link:https://docs.netapp.com/us-en/workload-databases/explore-savings.html#explo
 
 
 
+[[1-september-2025]]
 == 1er septembre 2025
 
 
 
+[[agentic-ai-powered-error-log-analyzer]]
 === Analyseur de journaux d'erreurs basé sur l'IA Agentic
 
 L'analyseur de journaux d'erreurs basé sur l'IA Agentic est une nouvelle fonctionnalité qui exploite des algorithmes d'apprentissage automatique avancés pour détecter et analyser automatiquement les erreurs dans les fichiers journaux.  Cet outil vise à rationaliser le processus de dépannage en fournissant aux développeurs des informations et des recommandations exploitables basées sur les modèles qu'il identifie dans les journaux.
@@ -375,6 +420,7 @@ link:https://docs.netapp.com/us-en/workload-databases/analyze-error-logs.html["E
 
 
 
+[[oracle-support]]
 === Support Oracle
 
 Workload Factory inclut la prise en charge des bases de données Oracle.  Dans la console Workload Factory, vous pouvez afficher vos bases de données Oracle à partir de l'inventaire, enregistrer des bases de données pour utiliser des fonctionnalités avancées dans Workload Factory et analyser les bases de données Oracle pour les aligner sur les meilleures pratiques à l'aide de la fonctionnalité bien architecturée.  L'analyse bien architecturée détermine si les configurations de stockage des bases de données Oracle sont optimisées.  Vous pouvez utiliser ces informations pour prendre des décisions éclairées concernant vos déploiements de bases de données et garantir leur fonctionnement efficace.
@@ -383,12 +429,14 @@ link:https://docs.netapp.com/us-en/workload-databases/optimize-configurations.ht
 
 
 
+[[support-for-microsoft-sql-server-deployments-on-second-generation-fsx-for-ontap-file-systems]]
 === Prise en charge des déploiements Microsoft SQL Server sur les systèmes de fichiers FSx for ONTAP de deuxième génération
 
 Workload Factory prend en charge les déploiements Microsoft SQL Server sur les systèmes de fichiers FSx de deuxième génération pour ONTAP .  Cette amélioration vous permet de tirer parti des dernières fonctionnalités et améliorations de performances disponibles dans les systèmes de fichiers de deuxième génération tout en gérant vos charges de travail SQL Server.
 
 
 
+[[windows-authentication-for-sql-server-protection]]
 === Authentification Windows pour la protection de SQL Server
 
 L'authentification des instances Microsoft SQL Server avec les informations d'identification Windows est intégrée au flux de travail pour préparer les hôtes Microsoft SQL Server à la protection avec la BlueXP backup and recovery.  Il s’agissait auparavant d’une étape préalable à effectuer manuellement.  Au lieu de cela, vous serez invité à partager les informations d’identification Windows avec un accès administratif si vous n’avez pas enregistré les hôtes dans la fabrique de charges de travail à l’aide des informations d’identification Windows.
@@ -397,6 +445,7 @@ link:https://docs.netapp.com/us-en/workload-databases/protect-sql-server.html["D
 
 
 
+[[well-architected-analysis-includes-mtu-alignment-for-sql-server]]
 === Une analyse bien conçue inclut l'alignement MTU pour SQL Server
 
 L'analyse bien conçue évalue et corrige le désalignement de l'unité de transmission maximale (MTU) sur les points de terminaison pour Microsoft SQL Server sur FSx pour le stockage ONTAP .  L’alignement des paramètres MTU permet d’optimiser les performances du réseau et de réduire la latence des charges de travail SQL Server.
@@ -405,10 +454,12 @@ link:https://docs.netapp.com/us-en/workload-databases/optimize-configurations.ht
 
 
 
+[[12-august-2025]]
 == 12 août 2025
 
 
 
+[[bluexp-backup-and-recovery-now-supports-microsoft-sql-server-workloads]]
 === La BlueXP backup and recovery prennent désormais en charge les charges de travail Microsoft SQL Server
 
 La BlueXP backup and recovery vous permettent de sauvegarder, restaurer, vérifier et cloner des bases de données et des groupes de disponibilité Microsoft SQL Server.  À partir de la console de l’usine de charge de travail, vous pouvez accéder et utiliser la BlueXP backup and recovery pour protéger les charges de travail Microsoft SQL Server.
@@ -419,10 +470,12 @@ Pour plus de détails sur la BlueXP backup and recovery, reportez-vous aulink:ht
 
 
 
+[[04-august-2025]]
 == 04 août 2025
 
 
 
+[[well-architected-analysis-includes-high-availability-cluster-validation]]
 === Une analyse bien conçue inclut la validation de clusters à haute disponibilité
 
 L’analyse bien conçue inclut désormais la validation des clusters à haute disponibilité.  Cette validation vérifie toutes les configurations liées au cluster côté serveur, y compris la disponibilité et la configuration du disque sur les deux nœuds, la configuration du cluster Windows et la préparation au basculement.  Cela garantit que le cluster Windows est correctement configuré et peut basculer avec succès en cas de besoin.
@@ -431,6 +484,7 @@ link:https://docs.netapp.com/us-en/workload-databases/optimize-configurations.ht
 
 
 
+[[multi-level-menu-available-for-instances]]
 === Menu à plusieurs niveaux disponible pour les instances
 
 La console de l'usine de charge de travail inclut désormais un menu à plusieurs niveaux pour les instances.  Ce changement fournit une structure de navigation plus organisée et intuitive pour la gestion des instances.  Les options de menu pour la gestion des instances incluent l'affichage du tableau de bord de l'instance, l'affichage des bases de données, la création d'une base de données et la création d'un clone sandbox.
@@ -439,6 +493,7 @@ image:manage-instance-table-menu.png["Une capture d'écran du menu de la table d
 
 
 
+[[new-authentication-option-to-explore-savings]]
 === Nouvelle option d'authentification pour explorer les économies
 
 Quand le `NT Authority\SYSTEM` Si l'utilisateur ne dispose pas des autorisations suffisantes sur Microsoft SQL Server, vous pouvez vous authentifier avec les informations d'identification SQL Server ou ajouter les autorisations SQL Server manquantes à `NT Authority\SYSTEM` .
@@ -447,10 +502,12 @@ link:https://docs.netapp.com/us-en/workload-databases/explore-savings.html["Expl
 
 
 
+[[30-june-2025]]
 == 30 juin 2025
 
 
 
+[[bluexp-workload-factory-notification-service-support]]
 === Prise en charge du service de notification de l'usine de charge de travail BlueXP
 
 Le service de notification de l'usine de charge de travail BlueXP permet à l'usine de charge de travail d'envoyer des notifications au service d'alertes BlueXP ou à une rubrique Amazon SNS. Les notifications envoyées aux alertes BlueXP apparaissent dans le panneau des alertes BlueXP. Lorsque la fabrique de charges de travail publie des notifications dans une rubrique Amazon SNS, les abonnés à cette rubrique (tels que les personnes ou d'autres applications) reçoivent les notifications aux points de terminaison configurés pour cette rubrique (tels que les e-mails ou les SMS).
@@ -465,6 +522,7 @@ Workload Factory fournit les notifications suivantes pour les bases de données�
 
 
 
+[[onboarding-enhancement-for-registering-instances]]
 === Amélioration de l'intégration pour l'enregistrement des instances
 
 Workload Factory for Databases a amélioré son processus d'intégration pour l'enregistrement des instances exécutées sur Amazon FSx pour le stockage NetApp ONTAP. Vous pouvez désormais sélectionner des instances en masse pour l'enregistrement. Une fois qu'une instance est enregistrée, vous pouvez créer et gérer les ressources de base de données dans la console de l'usine de charge de travail.
@@ -473,6 +531,7 @@ link:https://docs.netapp.com/us-en/workload-databases/manage-instance.html["Gest
 
 
 
+[[analysis-and-fix-for-microsoft-multipath-io-timeout-setting]]
 === Analyse et correction du paramètre de délai d'expiration d'E/S multipath de Microsoft
 
 L'état bien architecturé de vos instances de base de données inclut désormais l'analyse et le correctif pour le paramètre de délai d'expiration Microsoft Multipath I/O (MPIO). Définir ce délai à 60 secondes garantit la connectivité et la stabilité du stockage FSx for ONTAP lors des basculements. Si le paramètre MPIO n'est pas correctement défini, Workload Factory fournira un correctif pour définir ce délai à 60 secondes.
@@ -481,6 +540,7 @@ link:https://docs.netapp.com/us-en/workload-databases/optimize-configurations.ht
 
 
 
+[[enhancements-to-graphics-in-instance-inventory]]
 === Améliorations des graphiques dans l'inventaire des instances
 
 À partir de l'écran d'inventaire des instances, divers graphiques d'utilisation des ressources tels que le débit et les IOPS affichent désormais 7 jours de données afin que vous puissiez surveiller plus efficacement les performances des nœuds SQL à partir de la console de l'usine de charge de travail. Les indicateurs de performance collectés auprès des nœuds SQL sont enregistrés dans Amazon CloudWatch et peuvent être utilisés pour Logs Insights ou intégrés à d'autres services d'analyse de votre environnement.
@@ -489,6 +549,7 @@ link:https://docs.netapp.com/us-en/workload-databases/optimize-configurations.ht
 
 
 
+[[support-for-windows-authentication-in-workload-factory]]
 === Prise en charge de l'authentification Windows dans Workload Factory
 
 Désormais, Workload Factory prend en charge l'authentification SQL Server à l'aide d'utilisateurs authentifiés Windows pour enregistrer des instances et bénéficier des fonctionnalités de gestion.
@@ -497,16 +558,19 @@ link:https://docs.netapp.com/us-en/workload-databases/register-instance.html["En
 
 
 
+[[03-june-2025]]
 == 03 juin 2025
 
 
 
+[[postgresql-and-oracle-detection]]
 === Détection PostgreSQL et Oracle
 
 Vous pouvez désormais découvrir les instances exécutant des bases de données PostgreSQL et des déploiements de bases de données Oracle sur votre compte AWS depuis la console Workload Factory. Les instances découvertes apparaîtront dans l'inventaire des bases de données.
 
 
 
+[[updated-optimization-terminology]]
 === Terminologie « Optimisation » mise à jour
 
 Auparavant appelée « Optimisation », Workload Factory utilise désormais « problèmes bien architecturés » et « état bien architecturé » pour décrire l'analyse des configurations de base de données et « correctif » pour décrire la correction des opportunités d'amélioration des configurations de base de données afin de répondre aux recommandations des meilleures pratiques.
@@ -515,6 +579,7 @@ link:https://docs.netapp.com/us-en/workload-databases/optimize-overview.html["An
 
 
 
+[[improved-onboarding-for-instances]]
 === Intégration améliorée pour les instances
 
 Au lieu des termes « non détecté », « non géré » ou « géré » pour la gestion des instances, Workload Factory utilise désormais « registre » pour l'intégration des instances. Le nouveau processus d'enregistrement inclut l'authentification et la préparation des instances afin que vous puissiez créer, surveiller, analyser et corriger les ressources dans vos configurations de base de données depuis la console Workload Factory. L'étape de préparation du processus d'enregistrement indique si vos instances sont prêtes à être gérées.
@@ -523,10 +588,12 @@ link:https://docs.netapp.com/us-en/workload-databases/manage-instance.html["Gest
 
 
 
+[[04-may-2025]]
 == 04 mai 2025
 
 
 
+[[dashboard-enhancements]]
 === Améliorations du tableau de bord
 
 * Des vues multi-comptes et inter-régions sont disponibles lorsque vous naviguez entre les onglets dans la console BlueXP  Workload Factory. Ces nouvelles vues améliorent la gestion, la surveillance et l'optimisation des ressources.
@@ -535,18 +602,21 @@ link:https://docs.netapp.com/us-en/workload-databases/manage-instance.html["Gest
 
 
 
+[[ad-hoc-scan-available-for-database-configurations]]
 === Analyse ad hoc disponible pour les configurations de base de données
 
 L'usine de workloads BlueXP  pour les bases de données analyse automatiquement les instances Microsoft SQL Server gérées avec FSX pour le stockage ONTAP en vue d'identifier les problèmes de configuration potentiels. Désormais, en plus de l'acquisition quotidienne, vous pouvez numériser à tout moment.
 
 
 
+[[removal-of-on-premises-assessment-records]]
 === Suppression des dossiers d'évaluation sur place
 
 Après avoir étudié les économies réalisées pour un hôte sur site Microsoft SQL Server, vous avez la possibilité de supprimer l'enregistrement hôte sur site de l'usine de charge de travail BlueXP .
 
 
 
+[[optimization-enhancements]]
 === Optimisation améliorée
 
 
@@ -563,16 +633,19 @@ Certaines configurations peuvent ne pas s'appliquer à vos environnements de bas
 
 
 
+[[updated-permissions-terminology]]
 === Mise à jour de la terminologie des autorisations
 
 L'interface utilisateur et la documentation de l'usine de charge de travail utilisent désormais « lecture seule » pour faire référence aux autorisations de lecture et « lecture/écriture » pour faire référence aux autorisations d'automatisation.
 
 
 
+[[04-april-2025]]
 == 04 avril 2025
 
 
 
+[[optimization-enhancements]]
 === Optimisation améliorée
 
 Lors de l'optimisation de vos environnements de base de données, de nouvelles évaluations d'optimisation, des corrections et l'affichage de plusieurs ressources sont disponibles.
@@ -611,12 +684,14 @@ link:https://docs.netapp.com/us-en/workload-databases/optimize-configurations.ht
 
 
 
+[[improved-inventory-view]]
 === Vue Inventaire améliorée
 
 L'onglet Inventaire de la console d'usine des workloads a été rationalisé de sorte qu'il ne contienne que les serveurs SQL s'exécutant sur Amazon FSX pour NetApp ONTAP. Vous trouverez maintenant des serveurs SQL sur site et s'exécutant sur Amazon Elastic Block Store et Amazon FSX pour Windows File Server dans l'onglet économies Explore.
 
 
 
+[[quick-create-available-for-postgresql-server-deployment]]
 === Création rapide disponible pour le déploiement du serveur PostgreSQL
 
 Vous pouvez utiliser cette option de déploiement rapide pour créer un serveur PostgreSQL avec une configuration haute disponibilité et les meilleures pratiques intégrées.
@@ -625,10 +700,12 @@ link:https://docs.netapp.com/us-en/workload-databases/create-postgresql-server.h
 
 
 
+[[03-march-2025]]
 == 03 mars 2025
 
 
 
+[[postgresql-high-availability-configuration]]
 === Configuration PostgreSQL haute disponibilité
 
 Vous pouvez maintenant déployer une configuration haute disponibilité pour le serveur PostgreSQL.
@@ -637,6 +714,7 @@ link:https://docs.netapp.com/us-en/workload-databases/create-postgresql-server.h
 
 
 
+[[terraform-support-for-postgresql-server-creation]]
 === Prise en charge de Terraform pour la création de serveur PostgreSQL
 
 Vous pouvez maintenant utiliser Terraform à partir de Codebox pour déployer PostgreSQL.
@@ -647,6 +725,7 @@ Vous pouvez maintenant utiliser Terraform à partir de Codebox pour déployer Po
 
 
 
+[[resiliency-assessment-for-local-snapshot-schedule]]
 === Évaluation de la résilience pour la planification des snapshots locaux
 
 Une nouvelle évaluation de la résilience est disponible pour les charges de travail de la base de données. Nous évaluons si les volumes de vos instances Microsoft SQL Server disposent de règles de snapshot planifiées valides. Les copies Snapshot sont des copies instantanées de vos données et contribuent à la résilience de vos environnements de base de données en cas de perte de données.
@@ -655,6 +734,7 @@ link:https://docs.netapp.com/us-en/workload-databases/optimize-configurations.ht
 
 
 
+[[maxdop-remediation-for-database-workloads]]
 === Correction MAXDOP pour les charges de travail de base de données
 
 L'usine de charges de travail BlueXP  pour les bases de données prend désormais en charge la correction pour la configuration maximale du serveur de degré de parallélisme (MAXDOP). Lorsque la configuration MAXDOP n'est pas optimale, vous pouvez laisser BlueXP  charge de travail usine optimiser la configuration pour vous.
@@ -663,16 +743,19 @@ link:https://docs.netapp.com/us-en/workload-databases/optimize-configurations.ht
 
 
 
+[[email-savings-analysis-report]]
 === Rapport d'analyse des économies par e-mail
 
 Lorsque vous découvrez les économies pour vos environnements de stockage Amazon Elastic Block Store et FSX pour serveur de fichiers Windows par rapport à FSX pour ONTAP, vous pouvez désormais envoyer le rapport de recommandations par e-mail à vous-même, aux membres de l'équipe et aux clients.
 
 
 
+[[03-february-2025]]
 == 03 février 2025
 
 
 
+[[sql-server-on-premises-database-environments-cost-analysis-and-migration-planning]]
 === Analyse des coûts et planification de la migration des environnements de base de données SQL Server sur site
 
 BlueXP Workload Factory for Databases détecte, analyse et vous aide à planifier la migration de bases de données SQL Server sur site vers Amazon FSx for NetApp ONTAP. Vous pouvez utiliser le calculateur d'économies pour estimer le coût d'exécution de votre environnement de base de données SQL Server sur site dans le cloud et consulter les recommandations pour migrer votre environnement de base de données sur site vers le cloud.
@@ -681,6 +764,7 @@ link:https://docs.netapp.com/us-en/workload-databases/explore-savings.html["Déc
 
 
 
+[[new-optimization-assessments-for-databases]]
 === Nouvelles évaluations d'optimisation pour les bases de données
 
 Les évaluations suivantes sont désormais disponibles en usine de workloads BlueXP  pour les bases de données. Ces évaluations portent principalement sur la détection et la protection contre les vulnérabilités de sécurité potentielles, ainsi que sur la détection et la réduction des goulets d'étranglement au niveau des performances.
@@ -694,10 +778,12 @@ link:https://docs.netapp.com/us-en/workload-databases/optimize-configurations.ht
 
 
 
+[[06-january-2025]]
 == 06 janvier 2025
 
 
 
+[[databases-dashboard-enhancements]]
 === Améliorations du tableau de bord bases de données
 
 Une nouvelle conception du tableau de bord inclut les graphiques et améliorations suivants :
@@ -713,6 +799,7 @@ Une nouvelle conception du tableau de bord inclut les graphiques et amélioratio
 
 
 
+[[new-completed-with-issues-status-in-job-monitoring]]
 === Nouveau statut « terminé avec problèmes » dans surveillance des travaux
 
 La fonction de surveillance des travaux pour les bases de données fournit désormais le nouvel état « terminé avec problèmes » pour vous permettre d'apprendre quels sous-travaux ont rencontré des problèmes et quels sont les problèmes.
@@ -721,6 +808,7 @@ link:https://docs.netapp.com/us-en/workload-databases/monitor-databases.html["Su
 
 
 
+[[assessment-and-optimization-for-over-provisioned-microsoft-sql-server-licenses]]
 === Évaluation et optimisation des licences Microsoft SQL Server surprovisionnées
 
 Le calculateur d'économies évalue maintenant si Enterprise Edition est nécessaire pour votre déploiement Microsoft SQL Server. Si une licence est surprovisionnée, le calculateur recommande la mise à niveau vers une version antérieure. Vous pourrez rétrograder automatiquement la licence dans les bases de données en optimisant l'application.
@@ -731,10 +819,12 @@ Le calculateur d'économies évalue maintenant si Enterprise Edition est nécess
 
 
 
+[[01-december-2024]]
 == 01 décembre 2024
 
 
 
+[[continuous-optimization-adds-compute-remediation-and-assessment]]
 === L'optimisation continue permet de résoudre les problèmes de calcul et d'évaluer
 
 Les bases de données offrent désormais des informations et des recommandations pour vous aider à optimiser les ressources de calcul des instances Microsoft SQL Server. Nous mesurons l'utilisation du processeur et nous nous appuyons sur le service AWS Compute Optimizer pour recommander des types d'instances optimaux et correctement dimensionnés, et vous informer des correctifs disponibles sur le système d'exploitation. L'optimisation des ressources de calcul vous aide à prendre des décisions avisées sur les types d'instances, ce qui vous permet de réaliser des économies et d'utiliser efficacement les ressources.
@@ -743,6 +833,7 @@ link:https://docs.netapp.com/us-en/workload-databases/optimize-configurations.ht
 
 
 
+[[postgresql-support]]
 === Prise en charge de PostgreSQL
 
 Vous pouvez désormais déployer et gérer des déploiements de serveurs PostgreSQL autonomes dans des bases de données.
@@ -751,10 +842,12 @@ link:https://docs.netapp.com/us-en/workload-databases/create-postgresql-server.h
 
 
 
+[[3-november-2024]]
 == 3 novembre 2024
 
 
 
+[[continuously-optimize-your-microsoft-sql-server-workloads-with-databases]]
 === Optimisez en continu vos workloads Microsoft SQL Server avec les bases de données
 
 La fabrique de workloads BlueXP  propose des conseils continus et des rambardes afin d'assurer une optimisation continue et le respect des meilleures pratiques pour le composant de stockage de vos workloads Microsoft SQL Server sur Amazon FSX pour NetApp ONTAP. Cette fonctionnalité analyse en continu votre environnement Microsoft SQL Server hors ligne et vous fournit un rapport complet d'informations, d'opportunités et de recommandations pour vous aider à atteindre des niveaux de performance, de rentabilité et de conformité élevés.
@@ -763,6 +856,7 @@ link:https://docs.netapp.com/us-en/workload-databases/optimize-configurations.ht
 
 
 
+[[terraform-support]]
 === Prise en charge de Terraform
 
 Vous pouvez maintenant utiliser Terraform à partir de la Codebox pour déployer Microsoft SQL Server.
@@ -773,10 +867,12 @@ Vous pouvez maintenant utiliser Terraform à partir de la Codebox pour déployer
 
 
 
+[[29-september-2024]]
 == 29 septembre 2024
 
 
 
+[[explore-savings-for-detected-microsoft-sql-servers-on-fsx-for-windows-file-server]]
 === Découvrez les économies réalisées grâce à la détection de serveurs Microsoft SQL sur FSX pour serveur de fichiers Windows
 
 Vous pouvez désormais explorer les économies générées par les serveurs Microsoft SQL détectés sur Amazon EC2 avec FSX pour le stockage de serveur de fichiers Windows dans le calculateur d'économies. Selon vos besoins en stockage et en serveur SQL, le stockage FSX pour ONTAP est probablement le plus économique pour vos workloads de base de données.
@@ -785,10 +881,12 @@ link:https://docs.netapp.com/us-en/workload-databases/explore-savings.html["Déc
 
 
 
+[[1-september-2024]]
 == 1er septembre 2024
 
 
 
+[[explore-savings-via-customization]]
 === Explorer les économies via la personnalisation
 
 Vous pouvez désormais personnaliser les paramètres de configuration de Microsoft SQL Server sur Amazon EC2 avec FSX pour Windows File Server et le stockage Elastic Block Store dans le calculateur d'économies. En fonction de vos besoins en stockage, vous constaterez peut-être que le stockage FSX pour ONTAP est le plus économique pour vos workloads de base de données.
@@ -797,6 +895,7 @@ link:https://docs.netapp.com/us-en/workload-databases/explore-savings.html["Déc
 
 
 
+[[navigate-to-the-savings-calculator-from-the-home-page]]
 === Accédez au calculateur d'économies depuis la page d'accueil
 
 Vous pouvez maintenant accéder au calculateur d'économies à partir de la link:https://console.workloads.netapp.com["console d'usine de charge de travail"]page d'accueil. Pour commencer, faites votre choix dans Elastic Block Store et FSX for Windows File Server.
@@ -805,10 +904,12 @@ image:screenshot-explore-savings-home-small.png["capture d'écran de la page d'a
 
 
 
+[[4-august-2024]]
 == 4 août 2024
 
 
 
+[[savings-calculator-enhancements]]
 === Améliorations du calculateur d'économies
 
 * Descriptions des estimations de coûts
@@ -837,10 +938,12 @@ link:https://docs.netapp.com/us-en/workload-databases/explore-savings.html["Déc
 
 
 
+[[7-july-2024]]
 == 7 juillet 2024
 
 
 
+[[initial-release-of-bluexp-workload-factory-for-databases]]
 === Version initiale de l'usine de workloads BlueXP  pour les bases de données
 
 La version initiale permet d'explorer les possibilités d'économies avec Amazon FSX for NetApp ONTAP en tant qu'environnement de stockage pour vos workloads de base de données, de détecter, de gérer et de déployer des serveurs Microsoft SQL Server, de déployer et de cloner des bases de données, et de surveiller ces tâches au sein de l'usine de workloads.

@@ -15,6 +15,7 @@ Protégez les données de vos applications Microsoft SQL Server à l’aide de N
 
 
 
+[[about-this-task]]
 == Description de la tâche
 
 Workload Factory automatise la découverte des ressources, la validation des prérequis, ainsi que la configuration et l'installation du plug-in pour Microsoft SQL Server pour préparer la protection de vos charges de travail avec NetApp Backup and Recovery. Le plug-in est un composant côté hôte du logiciel NetApp qui vous permet de protéger vos charges de travail Microsoft SQL Server.
@@ -25,6 +26,7 @@ Pour plus de détails sur la protection avec Backup and Recovery, reportez-vous 
 
 
 
+[[before-you-begin]]
 == Avant de commencer
 
 Les exigences suivantes doivent être respectées pour protéger les charges de travail Microsoft SQL Server avec Backup and Recovery.
@@ -47,6 +49,7 @@ Pour découvrir des bases de données, vous devez définir la résolution de l'h
 
 
 
+[[prepare-for-protection-with-netapp-backup-and-recovery]]
 == Préparez-vous à la protection avec NetApp Backup and Recovery
 
 Terminez le processus de préparation pour protéger vos ressources Microsoft SQL Server avec NetApp Backup and Recovery.
@@ -75,6 +78,7 @@ Pour des informations connexes, reportez-vous à la link:https://docs.netapp.com
 
 
 
+[[edit-protection-for-microsoft-sql-server-resources]]
 == Protection contre la modification des ressources Microsoft SQL Server
 
 Vous pouvez modifier la protection des instances et des bases de données Microsoft SQL Server déjà protégées dans NetApp Backup and Recovery. La modification de la protection vous permet de modifier la stratégie ou la planification de protection de vos instances SQL Server protégées.

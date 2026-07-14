@@ -15,6 +15,7 @@ La création d'un nouveau serveur PostgreSQL ou d'un hôte de base de données d
 
 
 
+[[about-this-task]]
 == Description de la tâche
 
 Avant de créer un serveur PostgreSQL à partir de Workload Factory, découvrez les types de déploiement de stockage disponibles pour la configuration de l'hôte de base de données, les modes de fonctionnement de Workload Factory et les exigences pour effectuer cette opération.
@@ -30,12 +31,14 @@ La création d'un nouveau serveur PostgreSQL requiert un système de fichiers FS
 
 
 
+[[before-you-begin]]
 == Avant de commencer
 
 Vous devez avoir link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["accorder les permissions de création de l'hôte de base de données"^] dans votre compte AWS pour créer un nouvel hôte de base de données dans Workload Factory.
 
 
 
+[[create-a-postgresql-server]]
 == Créez un serveur PostgreSQL
 
 Vous pouvez utiliser les modes de déploiement _Quick CREATE_ ou _Advanced CREATE_ pour effectuer cette tâche en usine avec des autorisations de mode _automate_. Vous pouvez également utiliser les outils suivants disponibles dans la Codebox : l'API REST, la CLI AWS, AWS CloudFormation et Terraform. link:https://docs.netapp.com/us-en/workload-setup-admin/use-codebox.html#how-to-use-codebox["Découvrez comment utiliser Codebox pour l'automatisation"^].

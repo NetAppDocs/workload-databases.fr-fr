@@ -4,6 +4,7 @@
 
 
 
+[[dashboard-enhancements]]
 === Améliorations du tableau de bord
 
 * Des vues multi-comptes et inter-régions sont disponibles lorsque vous naviguez entre les onglets dans la console BlueXP  Workload Factory. Ces nouvelles vues améliorent la gestion, la surveillance et l'optimisation des ressources.
@@ -12,18 +13,21 @@
 
 
 
+[[ad-hoc-scan-available-for-database-configurations]]
 === Analyse ad hoc disponible pour les configurations de base de données
 
 L'usine de workloads BlueXP  pour les bases de données analyse automatiquement les instances Microsoft SQL Server gérées avec FSX pour le stockage ONTAP en vue d'identifier les problèmes de configuration potentiels. Désormais, en plus de l'acquisition quotidienne, vous pouvez numériser à tout moment.
 
 
 
+[[removal-of-on-premises-assessment-records]]
 === Suppression des dossiers d'évaluation sur place
 
 Après avoir étudié les économies réalisées pour un hôte sur site Microsoft SQL Server, vous avez la possibilité de supprimer l'enregistrement hôte sur site de l'usine de charge de travail BlueXP .
 
 
 
+[[optimization-enhancements]]
 === Optimisation améliorée
 
 
@@ -40,6 +44,7 @@ Certaines configurations peuvent ne pas s'appliquer à vos environnements de bas
 
 
 
+[[updated-permissions-terminology]]
 === Mise à jour de la terminologie des autorisations
 
 L'interface utilisateur et la documentation de l'usine de charge de travail utilisent désormais « lecture seule » pour faire référence aux autorisations de lecture et « lecture/écriture » pour faire référence aux autorisations d'automatisation.

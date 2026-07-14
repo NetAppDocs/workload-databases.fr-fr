@@ -15,6 +15,7 @@ Découvrez les économies réalisées dans NetApp Workload Factory for Databases
 
 
 
+[[about-this-task]]
 == Description de la tâche
 
 Vous pouvez explorer les économies pour vos charges de travail de base de données sur EBS, FSx for Windows File Server et le stockage sur site à l'aide du tableau de bord, de l'onglet Inventaire ou de l'onglet Explorer les économies. Dans tous les cas, vous pouvez utiliser le calculateur d'économies pour comparer les différents composants de coût liés à l'exécution de charges de travail Microsoft SQL Server, tels que le stockage, le calcul, la licence SQL, les instantanés et les clones, pour vos charges de travail de base de données sur les systèmes de fichiers FSx for ONTAP par rapport à Elastic Block Store (EBS), FSx for Windows File Server et le stockage sur site.
@@ -35,6 +36,7 @@ image:screenshot-ebs-savings-calculator-update.png["Une capture d'écran de la p
 
 
 
+[[sql-server-deployment-analysis]]
 == Analyse du déploiement de SQL Server
 
 Le calculateur vérifie votre déploiement SQL Server pour s'assurer que les ressources et les fonctionnalités utilisées correspondent à l'édition SQL Server. Voici les principaux facteurs et conditions que le calculateur vérifie avant de recommander une rétrogradation vers l'édition Standard :
@@ -64,6 +66,7 @@ Si l'instance SQL Server évaluée n'utilise aucune des fonctionnalités Enterpr
 
 
 
+[[calculator-options]]
 == Options de calculatrice
 
 Deux options de calculateur sont disponibles pour établir une comparaison des coûts entre vos systèmes et FSX for ONTAP — personnalisation et détection.
@@ -76,6 +79,7 @@ En outre, vous pouvez link:https://docs.netapp.com/us-en/workload-setup-admin/ad
 
 
 
+[[explore-savings-via-customization]]
 === Explorer les économies via la personnalisation
 
 Personnalisez les champs du calculateur pour obtenir l'estimation d'économies la plus précise.
@@ -214,6 +218,7 @@ De plus, faites défiler jusqu'au bas de la page pour afficher le rapport en sé
 
 
 
+[[explore-savings-for-detected-hosts]]
 === Découvrez les économies réalisées pour les hôtes détectés
 
 Workload Factory intègre les caractéristiques de l'hôte détectées afin que vous puissiez explorer automatiquement les économies.
@@ -479,6 +484,7 @@ De plus, faites défiler jusqu'au bas de la page pour afficher le rapport en sé
 
 
 
+[[deploy-microsoft-sql-server-on-aws-ec2-using-fsx-for-ontap]]
 == Déployez Microsoft SQL Server sur AWS EC2 à l'aide de FSX pour ONTAP
 
 Si vous souhaitez passer à FSX pour ONTAP pour réaliser des économies, cliquez sur *Créer* pour créer la ou les configurations recommandées directement à partir de l'assistant Créer un nouveau serveur Microsoft SQL ou cliquez sur *Enregistrer* pour enregistrer la ou les configurations recommandées ultérieurement.

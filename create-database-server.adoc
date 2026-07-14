@@ -15,6 +15,7 @@ La création d'un nouveau serveur Microsoft SQL ou d'un hôte de base de donnée
 
 
 
+[[about-this-task]]
 == Description de la tâche
 
 Avant de créer un serveur Microsoft SQL Server à partir de Workload Factory, découvrez les types de déploiement de stockage disponibles pour la configuration de l'hôte de base de données, la configuration Microsoft Multi-path I/O, le déploiement Active Directory, les détails de mise en réseau et les exigences pour effectuer cette opération.
@@ -55,6 +56,7 @@ Si vous décidez de restaurer vos ressources DNS (Domain Name System), les enreg
 
 
 
+[[before-you-begin]]
 == Avant de commencer
 
 Assurez-vous de disposer des conditions préalables suivantes avant de créer un nouvel hôte de base de données.
@@ -75,6 +77,7 @@ Lorsque vous vous connectez à Active Directory, vous devez disposer d'un accès
 
 
 
+[[step-1-create-a-database-server]]
 == Étape 1 : création d'un serveur de base de données
 
 Vous pouvez utiliser les modes de déploiement _Création rapide_ ou _Création avancée_ pour effectuer cette tâche dans Workload Factory avec les autorisations du mode _Automatiser_.  Vous pouvez également utiliser les outils suivants disponibles dans Codebox : API REST, AWS CLI, AWS CloudFormation et Terraform. link:https://docs.netapp.com/us-en/workload-setup-admin/use-codebox.html#how-to-use-codebox["Découvrez comment utiliser Codebox pour l'automatisation"^] .
@@ -399,6 +402,7 @@ Vous pouvez également enregistrer la configuration.
 ====
 
 
+[[step-2-enable-remote-connection-on-the-microsoft-sql-server]]
 == Étape 2 : activez la connexion à distance sur Microsoft SQL Server
 
 Une fois le serveur déployé, Workload Factory n’active pas la connexion à distance sur Microsoft SQL Server.  Pour activer la connexion à distance, procédez comme suit.

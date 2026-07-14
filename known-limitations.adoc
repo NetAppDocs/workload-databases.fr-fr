@@ -15,18 +15,21 @@ Les limitations connues identifient les plates-formes, les périphériques ou le
 
 
 
+[[instance-detection-support]]
 == Prise en charge de la détection d'instance
 
 Workload Factory prend en charge la détection des instances PostgreSQL exécutées uniquement sur les systèmes d'exploitation Amazon Linux et des instances Oracle exécutées uniquement sur Red Hat Enterprise Linux.
 
 
 
+[[ami-image-version-support]]
 == Prise en charge de la version d'image ami
 
 Nous n'affichons que quatre versions ou révisions récentes d'images ami pour chaque version SQL. Nous n'autorisons pas l'installation à partir d'une image ami antérieure aux quatre dernières versions.
 
 
 
+[[custom-ami]]
 == Ami personnalisé
 
 Le déploiement avec un ami personnalisé suppose que le support d'installation est présent dans l'image. Ceci est nécessaire pour la configuration FCI pour les raisons suivantes :
@@ -39,12 +42,14 @@ Dans le cadre du déploiement, Workload Factory n’installe pas d’AMI personn
 
 
 
+[[roll-back-and-retry-for-failed-deployments]]
 == Effectuez une restauration et réessayez en cas d'échec des déploiements
 
 La restauration et la nouvelle tentative pour les déploiements ayant échoué ne sont pas prises en charge dans Workload Factory.  Vous pouvez restaurer ou réessayer une pile ayant échoué à partir de la console CloudFormation dans AWS.
 
 
 
+[[active-directory-and-dns-resource-rollback]]
 == Restauration des ressources Active Directory et DNS
 
 Les ressources DNS suivantes ne sont pas supprimées d'Active Directory et DNS lorsque vous effectuez une restauration d'un test ou que vous avez échoué au déploiement depuis la console CloudFormation dans AWS :
@@ -58,76 +63,89 @@ Vous devrez les nettoyer manuellement ou attendre que le domaine purge les entr�
 
 
 
+[[always-on-availability-groups-configuration-support]]
 == Prise en charge de la configuration des groupes de disponibilité permanente
 
 La gestion des configurations de groupes de disponibilité Always On n'est pas prise en charge dans Workload Factory.
 
 
 
+[[custom-encryption-keys]]
 == Clés de chiffrement personnalisées
 
 Les clés de chiffrement personnalisées pour FSX pour ONTAP ne sont pas répertoriées en fonction de l'applicabilité du service. Vous devez choisir la clé appropriée. Les clés gérées AWS sont filtrées en fonction de leur applicabilité au service.
 
 
 
+[[cloudformation-template]]
 == Modèle CloudFormation
 
 Un modèle CloudFormation téléchargé ou copié généré par Codebox (fichier YAML) a une période de conservation limitée de sept jours.
 
 
 
+[[sandbox-support]]
 == Prise en charge de sandbox
 
 Le nombre maximum de clones sandbox pouvant être créés à partir d'un serveur de base de données est de 90.
 
 
 
+[[microsoft-sql-server-detection-and-management]]
 == Détection et gestion de Microsoft SQL Server
 
 La détection de Microsoft SQL Server n'est pas enregistrée.  Chaque fois que vous accédez aux bases de données dans Workload Factory, la détection Microsoft SQL Server s'exécute à nouveau pour identifier les installations SQL dans la région.
 
 
 
+[[explore-savings]]
 == Découvrez les économies
 
 Dans l'onglet Inventaire, le coût estimé affiché pour chaque instance de Microsoft SQL est calculé au niveau du système de fichiers FSX pour ONTAP et non pour les volumes hébergeant l'instance SQL.
 
 
 
+[[multiple-fsx-for-ontap-file-systems]]
 == Plusieurs solutions FSX pour les systèmes de fichiers ONTAP
 
 Workload Factory ne prend pas en charge la création ou l'enregistrement de configurations pour Microsoft SQL Server avec plusieurs systèmes de fichiers FSX pour ONTAP. Un seul déploiement de configuration de système de fichiers FSX pour ONTAP est pris en charge.
 
 
 
+[[optimization-limitations]]
 == Limitations de l'optimisation
 
 
 
+[[compute-rightsizing-optimization]]
 === Optimisation du dimensionnement approprié des ressources de calcul
 
 Lors du passage à certains types d'instances, la configuration réseau peut être réinitialisée, ce qui peut entraîner un échec de la connexion au nœud pendant l'optimisation et entraîner l'échec du travail. Une intervention manuelle peut être nécessaire pour vérifier et mettre à jour le paramètre DNS et les sessions iSCSI. Pour plus d'informations sur les limites de redimensionnement EC2, reportez-vous à la sectionlink:https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/resize-limitations.html["Documentation d'Amazon Elastic Compute Cloud"^].
 
 
 
+[[ontap-and-os-configuration-optimization]]
 === Optimisation de la configuration ONTAP et OS
 
 L'optimisation en bloc de plusieurs instances SQL Server n'est pas prise en charge pour la configuration ONTAP et la configuration du système d'exploitation.
 
 
 
+[[operating-system-patch-assessment-for-optimization]]
 === Évaluation des correctifs du système d'exploitation pour l'optimisation
 
 L'évaluation des correctifs du système d'exploitation effectuée à des fins d'optimisation peut ne pas fonctionner sur un réseau privé.  L'évaluation s'appuie sur AWS Patch Manager.  Pour comprendre comment corriger les instances Windows EC2 dans un réseau privé, reportez-vous au blog AWS Cloud Operationslink:https://aws.amazon.com/blogs/mt/how-to-patch-windows-ec2-instances-in-private-subnets-using-aws-systems-manager/["Comment corriger les instances Windows EC2 dans les sous-réseaux privés à l'aide d'AWS Systems Manager"^] .
 
 
 
+[[on-premises-savings-calculation]]
 == Calcul des économies sur site
 
 Les calculs des économies et des pourcentages de la taille du volume pour le stockage sur site Microsoft SQL Server ne sont pas pris en compte.
 
 
 
+[[cross-region-replication-assessment]]
 == Évaluation de la réplication entre les régions
 
 * L'évaluation d'optimisation ne peut pas déterminer si la réplication interrégionale (CRR) est utilisée lorsque le système de fichiers FSX pour ONTAP cible se trouve dans un autre compte AWS.
@@ -136,30 +154,33 @@ Les calculs des économies et des pourcentages de la taille du volume pour le st
 
 
 
+[[database-host-authentication-when-exploring-savings]]
 == Authentification de l'hôte de la base de données lors de l'exploration des économies
 
 Dans certains cas, avec des autorisations limitées, la page d'exploration des économies ne charge pas les données après une authentification réussie.
 
 
 
+[[integration-with-netapp-backup-and-recovery]]
 == Intégration avec NetApp Backup and Recovery
 
 Après avoir ajouté des hôtes à NetApp Backup and Recovery pour la protection, la découverte de la base de données échoue parfois.
 
 
 
+[[region-support]]
 == Soutien régional
 
 Les régions AWS suivantes ne sont pas prises en charge :
 
 * Régions de Chine
-* GovCloud (USA)
 * Le cloud secret
 * Top secret
 
 
 
 
+[[registering-oracle-on-suse-linux-enterprise-server-12]]
 == Enregistrement d'Oracle sur SUSE Linux Enterprise Server 12
 
 Lors de l'enregistrement d'Oracle Database sur SUSE Linux Enterprise Server 12, Workload Factory n'installe pas les dépendances Python.  Vous devez configurer manuellement la version Python requise.  Workload Factory nécessite la version minimale 3.6 ; cependant, nous recommandons la version 3.11.

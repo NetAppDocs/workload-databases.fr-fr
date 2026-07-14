@@ -4,6 +4,7 @@
 
 
 
+[[optimization-enhancements]]
 === Optimisation améliorée
 
 Lors de l'optimisation de vos environnements de base de données, de nouvelles évaluations d'optimisation, des corrections et l'affichage de plusieurs ressources sont disponibles.
@@ -42,12 +43,14 @@ link:https://docs.netapp.com/us-en/workload-databases/optimize-configurations.ht
 
 
 
+[[improved-inventory-view]]
 === Vue Inventaire améliorée
 
 L'onglet Inventaire de la console d'usine des workloads a été rationalisé de sorte qu'il ne contienne que les serveurs SQL s'exécutant sur Amazon FSX pour NetApp ONTAP. Vous trouverez maintenant des serveurs SQL sur site et s'exécutant sur Amazon Elastic Block Store et Amazon FSX pour Windows File Server dans l'onglet économies Explore.
 
 
 
+[[quick-create-available-for-postgresql-server-deployment]]
 === Création rapide disponible pour le déploiement du serveur PostgreSQL
 
 Vous pouvez utiliser cette option de déploiement rapide pour créer un serveur PostgreSQL avec une configuration haute disponibilité et les meilleures pratiques intégrées.

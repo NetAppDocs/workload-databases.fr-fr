@@ -37,6 +37,7 @@ Vous pouvez également utiliser la Codebox pour copier un modèle afin de déplo
 
 
 
+[[create-a-database]]
 == Créer une base de données
 
 Vous pouvez utiliser les modes de déploiement _Création rapide_ ou _Création avancée_ pour effectuer cette tâche dans Workload Factory.

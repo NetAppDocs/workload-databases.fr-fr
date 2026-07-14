@@ -17,6 +17,7 @@ Vous pouvez enregistrer vos ressources uniquement si elles s'exécutent sur le s
 
 
 
+[[about-the-task]]
 == À propos de la tâche
 
 L'enregistrement d'une instance (SQL Server) ou d'une base de données (Oracle) comprend trois étapes : l'authentification de l'instance ou de la base de données, l'authentification FSx for ONTAP, et la préparation. Pour préparer, installez les modules AWS, NetApp et PowerShell sur l'instance ou la base de données, et assurez-vous de respecter les exigences minimales pour les fonctionnalités de Workload Factory for Databases telles que link:analyze-error-logs.html["analyse des journaux d'erreurs"] ou link:optimize-configurations.html["évaluation bien conçue"].
@@ -27,12 +28,14 @@ Les utilisateurs AWS GovCloud (US) doivent utiliser AWS Secrets Manager pour aut
 
 
 
+[[before-you-begin]]
 == Avant de commencer
 
 L'hôte de l'instance ou de la base de données doit figurer dans l'inventaire. Pour que les hôtes apparaissent dans l'inventaire, vous devez link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["accorder les autorisations de _consultation, de planification et d'analyse_"^] dans votre compte AWS.
 
 
 
+[[registering-an-instance-in-a-private-network]]
 === Enregistrement d'une instance dans un réseau privé
 
 Pour enregistrer une instance ou une base de données dans un réseau privé sans connectivité externe, rendez les points de terminaison requis disponibles dans le VPC et associez-les aux sous-réseaux appropriés. Autorisez le port 443 dans le Security Group pour les points de terminaison d'interface.
@@ -52,6 +55,7 @@ Si vous utilisez un serveur proxy pour les connexions EC2 sortantes, autorisez l
 
 
 
+[[register-a-microsoft-sql-server-instance]]
 == Enregistrer une instance Microsoft SQL Server
 
 L'enregistrement d'une instance comporte trois étapes : l'authentification de l'instance, l'authentification FSx for ONTAP et la préparation pour compléter les prérequis manquants. Vous pouvez enregistrer une ou plusieurs instances.
@@ -109,6 +113,7 @@ L'enregistrement de l'instance est lancé. Sélectionnez l'onglet *Suivi des tâ
 
 
 
+[[register-an-oracle-database]]
 == Enregistrer une base de données Oracle
 
 L'enregistrement d'une instance comporte trois étapes : l'authentification de la base de données, l'authentification FSx pour ONTAP et la préparation pour compléter les prérequis manquants. Vous pouvez enregistrer une ou plusieurs bases de données.

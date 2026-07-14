@@ -15,6 +15,7 @@ Utilisez l'analyseur intelligent de journaux d'erreurs pour interpréter automat
 
 
 
+[[about-this-task]]
 == Description de la tâche
 
 L'analyse et la correction des journaux d'erreurs contribuent à maintenir la santé et les performances des instances SQL Server et des bases de données Oracle.  L'interprétation efficace des journaux d'erreurs nécessite une analyse approfondie et une expertise. La surveillance manuelle, la détection des erreurs et l’analyse des causes profondes prennent beaucoup de temps et sont sujettes aux erreurs. Ces défis peuvent retarder la résolution des problèmes, augmenter les temps d’arrêt et entraîner des inefficacités opérationnelles.  L'analyseur intelligent de journaux d'erreurs répond à ces défis grâce aux avantages clés suivants :
@@ -33,6 +34,7 @@ link:https://aws.amazon.com/bedrock/pricing/["Tarifs d'Amazon Bedrock"^]
 
 
 
+[[data-privacy-and-security]]
 === Confidentialité et sécurité des données
 
 Cette fonctionnalité garantit la confidentialité et la sécurité des données grâce aux mesures suivantes :
@@ -45,6 +47,7 @@ Les données client ne sont pas utilisées pour former ou améliorer les modèle
 
 
 
+[[before-you-begin]]
 == Avant de commencer
 
 Pour utiliser l'analyseur de journal d'erreurs, vous devez remplir les conditions préalables suivantes :
@@ -86,6 +89,7 @@ L'autorisation suivante accorde un accès en lecture aux alertes de diagnostic �
 
 
 
+[[analyze-error-logs]]
 == Analyser les journaux d'erreurs
 
 Utilisez la console Workload Factory pour analyser les journaux d’erreurs SQL Server.

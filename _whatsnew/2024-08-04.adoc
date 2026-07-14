@@ -4,6 +4,7 @@
 
 
 
+[[savings-calculator-enhancements]]
 === Améliorations du calculateur d'économies
 
 * Descriptions des estimations de coûts

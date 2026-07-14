@@ -19,6 +19,7 @@ link:optimize-overview.html["Découvrez l’analyse de configuration et l’éta
 
 
 
+[[about-this-task]]
 == Description de la tâche
 
 Workload Factory analyse quotidiennement les configurations de base de données. L'analyse quotidienne fournit un état bien architecturé, des informations et des recommandations. Vous pouvez corriger automatiquement les problèmes de configuration pour respecter les bonnes pratiques.
@@ -55,6 +56,7 @@ L'analyse bien architecturée pour Oracle vous avertit lorsqu'une configuration 
 
 
 
+[[perform-a-one-time-assessment-of-your-configurations]]
 == Effectuez une évaluation unique de vos configurations
 
 Effectuez une évaluation ponctuelle pour connaître l'état d'architecture de vos instances Microsoft SQL Server ou de vos bases de données Oracle sans stocker d'informations d'identification ni enregistrer de ressources.
@@ -102,6 +104,7 @@ Vous pouvez exécuter le script et importer les résultats plusieurs fois. Workl
 ====
 
 
+[[before-you-begin-fixing-dismissing-and-re-activating-configurations]]
 == Avant de commencer à corriger, à ignorer et à réactiver les configurations
 
 Les exigences suivantes sont nécessaires pour la surveillance continue de votre environnement de base de données et la correction automatique des problèmes de configuration. Ces exigences ne sont pas requises pour l'évaluation ponctuelle.
@@ -113,6 +116,7 @@ Les exigences suivantes sont nécessaires pour la surveillance continue de votre
 
 
 
+[[fix-a-configuration-issue]]
 == Résoudre un problème de configuration
 
 Résoudre les problèmes de configuration pour les environnements SQL Server ou Oracle exécutés sur FSx pour le stockage ONTAP .
@@ -161,6 +165,7 @@ Workload Factory commence à résoudre le(s) problème(s).  Sélectionnez l'ongl
 
 
 
+[[dismiss-the-analysis-of-database-configurations]]
 == Rejeter l'analyse des configurations de base de données
 
 Ignorez l'analyse des configurations de base de données spécifiques qui ne s'appliquent pas à votre environnement de base de données afin d'éviter les alertes inutiles et des résultats d'optimisation inexacts. Vous pouvez réactiver une analyse de configuration ignorée à tout moment.
@@ -182,6 +187,7 @@ Vous pouvez réactiver l'analyse à tout moment. La configuration n'est plus pri
 
 
 
+[[reactivate-a-dismissed-configuration-analysis]]
 == Réactiver une analyse de configuration rejetée
 
 Réactivez à tout moment une analyse de configuration annulée. Vous pouvez sélectionner une ou plusieurs configurations à réactiver.

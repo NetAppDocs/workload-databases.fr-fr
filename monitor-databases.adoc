@@ -15,6 +15,7 @@ Suivez les tâches de base de données et surveillez les bases de données dans 
 
 
 
+[[about-this-task]]
 == Description de la tâche
 
 Les bases de données permettent de surveiller la progression des tâches et de diagnostiquer et dépanner en cas de défaillance. Vous pouvez filtrer les travaux par type et par état, rechercher des travaux à l'aide de la fonction de recherche et télécharger la table des travaux.
@@ -35,6 +36,7 @@ Les événements de surveillance des travaux sont conservés dans l'interface ut
 
 
 
+[[monitor-jobs]]
 == Surveiller les tâches
 
 Surveillez les tâches pour suivre la progression des opérations de base de données, diagnostiquez et dépannez en cas de panne.

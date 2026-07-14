@@ -4,6 +4,7 @@
 
 
 
+[[optimize-savings-in-the-databases-calculator-for-amazon-elastic-block-store-ebs]]
 === Optimisez vos économies grâce au calculateur de bases de données pour Amazon Elastic Block Store (EBS)
 
 Deux nouvelles fonctionnalités du calculateur améliorent l'analyse des économies réalisées lors de l'exécution de plusieurs instances avec un stockage EBS, ce qui vous permet d'économiser davantage en passant à FSx pour ONTAP.
@@ -16,12 +17,14 @@ link:https://docs.netapp.com/us-en/workload-databases/explore-savings.html#explo
 
 
 
+[[excel-report-available-for-the-well-architected-dashboard]]
 === Rapport Excel disponible pour le tableau de bord bien conçu
 
 Vous pouvez télécharger un rapport Excel du tableau de bord bien conçu.  Le rapport fournit l'état bien architecturé de la ressource de base de données et des recommandations pour toutes les configurations de ressources, y compris les sous-configurations pour le système d'exploitation et ONTAP.
 
 
 
+[[error-log-analyzer-available-for-oracle-databases]]
 === Analyseur de journaux d'erreurs disponible pour les bases de données Oracle
 
 L'analyseur de journaux d'erreurs Agentic, basé sur l'IA, est disponible pour les bases de données Oracle.  Cette fonctionnalité exploite des algorithmes d'apprentissage automatique avancés pour détecter et analyser automatiquement les erreurs dans les fichiers journaux. Cet outil vise à rationaliser le processus de dépannage en fournissant aux développeurs des informations et des recommandations exploitables basées sur les modèles qu'il identifie dans les journaux.
@@ -30,6 +33,7 @@ link:https://docs.netapp.com/us-en/workload-databases/analyze-error-logs.html["E
 
 
 
+[[well-architected-analysis-for-oracle]]
 === Analyse bien architecturée pour Oracle
 
 L'analyse, bien conçue, inclut deux nouvelles configurations de dimensionnement du stockage.  L'analyse évalue et corrige les problèmes de configuration liés à l'allocation d'espace d'échange et à la marge de manœuvre du système de fichiers pour les déploiements de bases de données Oracle existants.
