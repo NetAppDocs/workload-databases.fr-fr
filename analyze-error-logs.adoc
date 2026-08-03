@@ -33,6 +33,9 @@ Pour utiliser l'analyseur de journal des erreurs, vous devez activer Amazon Bedr
 link:https://aws.amazon.com/bedrock/pricing/["Tarifs d'Amazon Bedrock"^]
 
 
+NOTE: Si l'administrateur de votre compte a désactivé les fonctionnalités d'IA, un message s'affichera et vous ne pourrez pas utiliser l'analyse par IA. Contactez votre administrateur ou link:https://docs.netapp.com/us-en/workload-setup-admin/manage-genai-features.html["Découvrez l'administration de l'IA"^].
+
+
 
 [[data-privacy-and-security]]
 === Confidentialité et sécurité des données

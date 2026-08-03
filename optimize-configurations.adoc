@@ -22,11 +22,15 @@ link:optimize-overview.html["Découvrez l’analyse de configuration et l’éta
 [[about-this-task]]
 == Description de la tâche
 
-Workload Factory analyse quotidiennement les configurations de base de données. L'analyse quotidienne fournit un état bien architecturé, des informations et des recommandations. Vous pouvez corriger automatiquement les problèmes de configuration pour respecter les bonnes pratiques.
+Workload Factory analyse quotidiennement les configurations de base de données. L'analyse quotidienne fournit un état bien architecturé, des informations et des recommandations.
 
-Vous pouvez consulter et corriger les problèmes à partir de l'inventaire des bases de données ou du tableau de bord Well-architected dans la console Workload Factory.
+De nombreuses recommandations sont disponibles lorsque vous accordez les autorisations _view, planning, and analysis_ à votre compte AWS. Si vous accordez les autorisations _operations and remediation_, toutes les recommandations sont disponibles et vous pouvez corriger automatiquement les problèmes de configuration afin de respecter les bonnes pratiques.
+
+Vous pouvez consulter et corriger les problèmes depuis l'inventaire des bases de données ou le tableau de bord « Architecture optimisée » de la console Workload Factory. Comme les exigences de configuration des bases de données varient, vous pouvez ignorer l'analyse des configurations spécifiques qui ne s'appliquent pas à votre environnement de base de données. Cela vous permet d'éviter les alertes inutiles et les résultats d'optimisation erronés.
 
 Vous pouvez également effectuer une évaluation ponctuelle pour examiner les meilleures pratiques pour la configuration de votre base de données, sans avoir à stocker d'identifiants ni à enregistrer de ressources.
+
+Vous pouvez également créer des règles personnalisées en langage clair pour valider vos environnements par rapport aux normes de votre organisation et aux bonnes pratiques NetApp. Testez les règles à blanc, puis planifiez leur exécution dans vos environnements. link:https://docs.netapp.com/us-en/console-well-architected/learn-custom-rules.html["En savoir plus sur les règles personnalisées."^]
 
 .Ce qui est analysé
 Workload Factory analyse l’état d’architecture des configurations suivantes :
@@ -62,6 +66,8 @@ L'analyse bien architecturée pour Oracle vous avertit lorsqu'une configuration 
 Effectuez une évaluation ponctuelle pour connaître l'état d'architecture de vos instances Microsoft SQL Server ou de vos bases de données Oracle sans stocker d'informations d'identification ni enregistrer de ressources.
 
 Vous pouvez exécuter le script et importer les résultats plusieurs fois. Workload Factory met à jour le statut bien architecturé et les insights à chaque importation.
+
+Pour chaque configuration, vous pouvez consulter la valeur actuelle et la valeur recommandée.
 
 [role="tabbed-block"]
 ====
@@ -104,13 +110,29 @@ Vous pouvez exécuter le script et importer les résultats plusieurs fois. Workl
 ====
 
 
+[[perform-an-on-demand-assessment]]
+== Effectuer une évaluation à la demande
+
+Si vous accordez les autorisations _opérations et remédiation_ à votre compte AWS, vous pouvez effectuer une évaluation à la demande de vos bases de données Oracle. Vous n'avez pas besoin d'enregistrer de ressources pour exécuter cette évaluation.
+
+.Étapes
+. Connectez-vous à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
+. Sélectionnez le menu image:workloads-menu-icon.png["L'icône du menu hamburger permet d'accéder aux charges de travail telles que le stockage, l'analyse de données d'entreprise (EDA), l'intelligence artificielle (IA), les bases de données, VMware et l'administration."] puis sélectionnez *Bases de données*.
+. Dans l'*Inventaire*, sélectionnez *Oracle* comme type de moteur.
+. Sélectionnez *Afficher et corriger*.
+. Dans l'onglet Well-architected status, sélectionnez *Analyser maintenant*.
+. Consultez les recommandations pour chaque configuration. Workload Factory inclut les bonnes pratiques et les problèmes potentiels dans ses recommandations si les configurations ne sont pas optimisées.
+
+
+
+
 [[before-you-begin-fixing-dismissing-and-re-activating-configurations]]
 == Avant de commencer à corriger, à ignorer et à réactiver les configurations
 
-Les exigences suivantes sont nécessaires pour la surveillance continue de votre environnement de base de données et la correction automatique des problèmes de configuration. Ces exigences ne sont pas requises pour l'évaluation ponctuelle.
+Les exigences suivantes sont nécessaires pour l'évaluation continue de votre environnement de base de données et la correction automatique des problèmes de configuration. Ces exigences ne sont pas requises pour l'évaluation ponctuelle.
 
 * Vous devezlink:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["accorder les autorisations d'_opérations et de correction_"^] dans votre compte AWS.
-* La ressource doit être enregistrée dans Workload Factory et le type de stockage doit être FSx for ONTAP. link:register-instance.html["Apprenez à enregistrer des ressources."]
+* Vous devez enregistrer la ressource dans Workload Factory et le type de stockage doit être FSx pour ONTAP. link:register-instance.html["Apprenez à enregistrer des ressources."]
 * Examinez chaque recommandation avant de modifier un paramètre ou une configuration. Pour RSS et MAXDOP, testez les paramètres recommandés pour vérifier les performances avant de modifier votre environnement de production.
 
 
@@ -204,3 +226,13 @@ Réactivez à tout moment une analyse de configuration annulée. Vous pouvez sé
 
 .Résultat
 Workload Factory réactive l'analyse de configuration et l'exécute désormais quotidiennement.
+
+
+
+[[related-information]]
+== Informations connexes
+
+* link:optimize-overview.html["Découvrez l'analyse de la configuration des ressources de base de données et l'état bien architecturé dans Workload Factory"]
+* link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Connectez-vous à un système de fichiers FSx for ONTAP à l'aide d'un lien"^]
+* link:https://docs.netapp.com/us-en/console-well-architected/learn-custom-rules.html["Découvrez les règles personnalisées"^]
+

@@ -11,7 +11,7 @@ summary: 'Enregistrez les ressources afin de pouvoir surveiller l"état des ress
 
 
 [role="lead"]
-Enregistrez des instances pour Microsoft SQL Server et des bases de données pour Oracle afin de pouvoir surveiller l'état des instances et des bases de données, l'utilisation des ressources, la protection et les performances de stockage dans NetApp Workload Factory for Databases.
+Enregistrez des instances pour Microsoft SQL Server et des bases de données pour Oracle afin de pouvoir gérer vos ressources, créer des bases de données et des clones sandbox, exécuter une analyse des journaux d'erreurs et optimiser les configurations dans NetApp Workload Factory for Databases.
 
 Vous pouvez enregistrer vos ressources uniquement si elles s'exécutent sur le stockage de système de fichiers FSx for ONTAP.
 
@@ -20,18 +20,20 @@ Vous pouvez enregistrer vos ressources uniquement si elles s'exécutent sur le s
 [[about-the-task]]
 == À propos de la tâche
 
-L'enregistrement d'une instance (SQL Server) ou d'une base de données (Oracle) comprend trois étapes : l'authentification de l'instance ou de la base de données, l'authentification FSx for ONTAP, et la préparation. Pour préparer, installez les modules AWS, NetApp et PowerShell sur l'instance ou la base de données, et assurez-vous de respecter les exigences minimales pour les fonctionnalités de Workload Factory for Databases telles que link:analyze-error-logs.html["analyse des journaux d'erreurs"] ou link:optimize-configurations.html["évaluation bien conçue"].
+L'enregistrement d'une instance (SQL Server) ou d'une base de données (Oracle) comprend deux étapes : l'authentification de l'instance ou de la base de données et la préparation. L'authentification consiste à vérifier les informations d'identification de l'instance ou de la base de données. La préparation inclut l'installation des modules AWS, NetApp et PowerShell sur l'instance ou la base de données, afin de satisfaire aux exigences minimales des fonctionnalités de Workload Factory for Databases telles que link:create-database.html["création d'une base de données"], link:create-sandbox-clone.html["création d'un bac à sable"], link:analyze-error-logs.html["analyse des journaux d'erreurs"] ou link:optimize-configurations.html["l'évaluation bien architecturée"].
 
 Workload Factory prend uniquement en charge l'enregistrement et la gestion des instances Microsoft SQL Server et des bases de données Oracle. Selon les informations d'identification du compte AWS que vous sélectionnez dans Workload Factory, les hôtes PostgreSQL apparaissent dans l'Inventory. Actuellement, Workload Factory prend en charge les instances PostgreSQL non enregistrées exécutées uniquement sur des systèmes d'exploitation Amazon Linux.
-
-Les utilisateurs AWS GovCloud (US) doivent utiliser AWS Secrets Manager pour authentifier les identifiants FSx for ONTAP. Pour tous les autres utilisateurs, vous devez authentifier FSx for ONTAP avec des identifiants de système de fichiers.
 
 
 
 [[before-you-begin]]
 == Avant de commencer
 
-L'hôte de l'instance ou de la base de données doit figurer dans l'inventaire. Pour que les hôtes apparaissent dans l'inventaire, vous devez link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["accorder les autorisations de _consultation, de planification et d'analyse_"^] dans votre compte AWS.
+Vous devez effectuer les opérations suivantes avant d'enregistrer une instance ou une base de données :
+
+* Assurez-vous que les hôtes des ressources que vous souhaitez enregistrer figurent dans l'inventaire. link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["Accordez les autorisations d'_opérations et de remédiation_'"^] dans votre compte AWS.
+* Associez un lien au système de fichiers FSx for ONTAP qui héberge les ressources que vous souhaitez enregistrer. link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["Découvrez comment associer un lien existant ou créer et associer un nouveau lien."^] Après l'association du lien, revenez à cette opération.
+
 
 
 
@@ -58,7 +60,7 @@ Si vous utilisez un serveur proxy pour les connexions EC2 sortantes, autorisez l
 [[register-a-microsoft-sql-server-instance]]
 == Enregistrer une instance Microsoft SQL Server
 
-L'enregistrement d'une instance comporte trois étapes : l'authentification de l'instance, l'authentification FSx for ONTAP et la préparation pour compléter les prérequis manquants. Vous pouvez enregistrer une ou plusieurs instances.
+L'enregistrement d'une instance comporte deux étapes : l'authentification de l'instance et la préparation. Vous pouvez enregistrer une seule instance ou plusieurs instances.
 
 Workload Factory prend en charge l'enregistrement pour Failover Cluster Instance (FCI) et le déploiement autonome pour SQL Server.
 
@@ -78,19 +80,7 @@ Si les instances sont authentifiées, sélectionnez *Next*.
 
 
 
-. Pour authentifier FSx pour ONTAP (étape 2), procédez comme suit, puis sélectionnez *Suivant* :
-+
-.. Sélectionnez *Utiliser les mêmes informations d'identification pour toutes les ressources* ou *Gérer les informations d'identification manuellement*.
-.. Saisissez soit l'ARN du paramètre AWS SSM avec les informations d'identification FSx for ONTAP pour les comptes GovCloud, soit le nom d'utilisateur et le mot de passe du système de fichiers FSx for ONTAP pour tous les autres comptes, puis sélectionnez *Suivant*.
-+
-Pour les comptes GovCloud, la valeur ARN du paramètre AWS SSM est disponible dans le Parameter Store sous Détails du paramètre dans la console de gestion AWS, au format suivant : `{fsx:{"username":"fsxadmin","password":"pass"}}`. Le type du paramètre AWS SSM doit être « Secure String » avec le nom au format `/netapp/wlmdb/<fsx_filesystemID>`. En savoir plus sur la récupération des paramètres SSM depuis link:https://docs.aws.amazon.com/govcloud-us/latest/UserGuide/govcloud-ssm.html["Documentation AWS GovCloud"^].
-
-+
-Si le système de fichiers FSx for ONTAP est authentifié, sélectionnez *Suivant*.
-
-
-
-. Pour préparer (étape 3), assurez-vous que l'instance (ou les instances) répond(ent) aux exigences minimales.
+. Pour préparer (étape 2), assurez-vous que l'instance (ou les instances) répond(ent) aux exigences minimales.
 +
 Pour satisfaire aux exigences minimales, l'instance doit disposer des modules AWS et NetApp PowerShell ainsi que des modules PowerShell 7 installés, et vous devez remplir les prérequis pour au moins une des fonctionnalités listées sous Vérification des prérequis.
 
@@ -116,7 +106,7 @@ L'enregistrement de l'instance est lancé. Sélectionnez l'onglet *Suivi des tâ
 [[register-an-oracle-database]]
 == Enregistrer une base de données Oracle
 
-L'enregistrement d'une instance comporte trois étapes : l'authentification de la base de données, l'authentification FSx pour ONTAP et la préparation pour compléter les prérequis manquants. Vous pouvez enregistrer une ou plusieurs bases de données.
+L'enregistrement d'une instance comporte deux étapes : l'authentification de la base de données et la préparation. Vous pouvez enregistrer une seule instance ou plusieurs bases de données.
 
 .Étapes
 . Connectez-vous à l'aide de l'un des link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["expériences de la console"^].
@@ -134,20 +124,7 @@ Si les bases de données sont authentifiées, sélectionnez *Next*.
 
 
 
-. Pour authentifier FSx pour ONTAP (étape 2), procédez comme suit, puis sélectionnez *Suivant* :
-+
-.. Sélectionnez *Utiliser les mêmes informations d'identification pour toutes les ressources* ou *Gérer les informations d'identification manuellement*.
-.. Saisissez soit l'ARN du paramètre AWS SSM avec les informations d'identification FSx for ONTAP pour les comptes GovCloud, soit le nom d'utilisateur et le mot de passe du système de fichiers FSx for ONTAP pour tous les autres comptes, puis sélectionnez *Suivant*.
-+
-Le type du paramètre AWS SSM doit être « Chaîne sécurisée » avec le nom au format `/netapp/wlmdb/<fsx_filesystemID>`. Saisissez la valeur de l’ARN du paramètre AWS SSM au format suivant :
-`{fsx:{"username":"fsxadmin","password":"pass"}}`. En savoir plus sur la récupération des paramètres SSM depuis link:https://docs.aws.amazon.com/govcloud-us/latest/UserGuide/govcloud-ssm.html["Documentation AWS GovCloud"^].
-
-+
-Si le système de fichiers FSx for ONTAP est authentifié, sélectionnez *Suivant*.
-
-
-
-. Pour préparer (étape 3), assurez-vous que la ou les base(s) de données répond(ent) aux prérequis requis. Si tous les modules requis sont installés et que les prérequis sont remplis, sélectionnez *Suivant* pour enregistrer la base de données. Sinon, suivez ces étapes.
+. Pour préparer (étape 2), assurez-vous que la ou les base(s) de données répond(ent) aux prérequis requis. Si tous les modules requis sont installés et que les prérequis sont remplis, sélectionnez *Suivant* pour enregistrer la base de données. Sinon, suivez ces étapes.
 +
 .. Examinez les prérequis dans la vue *Vérification des prérequis*.
 +
@@ -171,5 +148,5 @@ Après votre inscription, vous pouvez effectuer ces tâches.
 * Afficher les bases de données de l'inventaire
 * link:create-database.html["Créer une base de données"]
 * link:create-sandbox-clone.html["Créer un clone de base de données (bac à sable)"]
-* link:optimize-configurations.html["Mettre en œuvre des configurations de base de données bien architecturées"]
+* link:optimize-configurations.html["Obtenez une évaluation complète et bien architecturée des configurations de bases de données"]
 
