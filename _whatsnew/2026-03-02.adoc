@@ -22,7 +22,7 @@ Après avoir enregistré vos instances AOAG et vos bases de données Data Guard,
 
 Workload Factory for Databases prend également en charge l'analyse bien architecturée des instances Microsoft SQL Server avec le modèle de déploiement AOAG. Vous pouvez analyser les configurations de vos instances SQL Server dans un groupe de disponibilité et recevoir des recommandations pour optimiser vos configurations de déploiement et vous conformer aux bonnes pratiques. Enregistrez vos instances AOAG pour activer cette fonctionnalité.
 
-link:https://docs.netapp.com/us-en/workload-databases/register-instance.html#register-a-sql-server-instance["Enregistrez les ressources dans NetApp Workload Factory for Databases"]
+link:https://docs.netapp.com/us-en/workload-databases/register-instance.html["Enregistrez les ressources dans NetApp Workload Factory for Databases"]
 
 
 
