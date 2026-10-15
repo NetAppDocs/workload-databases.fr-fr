@@ -66,6 +66,8 @@ sidebar:
       url: "/monitor-databases.html"
     - title: Protégez les charges de travail Microsoft SQL Server
       url: "/protect-sql-server.html"
+  - title: FAQ
+    url: "/faq-workload-factory-databases.html"
   - title: Connaissances et support
     entries:
     - title: S'inscrire pour obtenir de l'aide

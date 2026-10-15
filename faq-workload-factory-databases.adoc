@@ -1,0 +1,204 @@
+---
+sidebar: sidebar 
+permalink: faq-workload-factory-databases.html 
+keywords: faq, frequently asked questions, frequently asked questions about workload factory for databases, workload factory, databases, sql server, oracle, postgresql, fsx for ontap, savings calculator, well-architected, sandbox clones, codebox, backup and recovery 
+summary: Questions fréquentes concernant NetApp Workload Factory pour les bases de données. 
+---
+= FAQ pour NetApp Workload Factory for Databases
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Trouvez des réponses aux questions courantes sur NetApp Workload Factory for Databases, notamment les concepts, les prérequis et le comportement utiles lorsque vous déployez, enregistrez, optimisez, clonez et protégez des charges de travail de base de données sur Amazon FSx for NetApp ONTAP.
+
+
+
+[[getting-started-and-permissions]]
+== Premiers pas et autorisations
+
+.Qu’est-ce que Workload Factory for Databases, et quels moteurs de base de données et modèles de déploiement prend-il en charge ?
+Workload Factory for Databases découvre, évalue, provisionne et gère les bases de données SQL Server, PostgreSQL et Oracle sur FSx for ONTAP.
+
+Consultez link:learn-databases.html["En savoir plus sur Workload Factory pour les bases de données"] pour connaître les modèles pris en charge.
+
+.Dans quelles régions AWS Workload Factory for Databases est-il disponible ?
+Workload Factory for Databases fonctionne dans toutes les régions commerciales où FSx for ONTAP est pris en charge, mais pas dans les régions chinoises, Secret Cloud ou Top Secret Cloud.
+
+https://aws.amazon.com/about-aws/global-infrastructure/regional-product-services/["Affichez les régions Amazon prises en charge."^]
+
+.Dois-je accorder des autorisations à AWS pour commencer à utiliser Workload Factory for Databases ?
+Non. Vous pouvez démarrer en mode de base sans accorder d'autorisations et copier des exemples de code partiellement remplis depuis Codebox. Si vous souhaitez détecter des hôtes et gérer des ressources, vous devez ajouter des identifiants AWS et créer des stratégies IAM pour les autorisations dont vous avez besoin. Voir link:quick-start-databases.html["Démarrage rapide"].
+
+.De quel niveau d'autorisation ai-je besoin pour chaque tâche (découverte, enregistrement, création de base de données, déploiement sur l'hôte, correction des configurations) ?
+Le calculateur d'économies pour les hôtes détectés et l'analyseur de journaux d'erreurs nécessitent des autorisations de consultation, de planification et d'analyse. L'enregistrement des ressources, la création de bases de données, la création de clones sandbox et la correction des problèmes liés à la bonne architecture nécessitent des autorisations d'opérations et de correction. Le déploiement d'un nouvel hôte de base de données nécessite des autorisations de création d'hôte de base de données.
+
+link:https://docs.netapp.com/us-en/workload-setup-admin/permissions-reference.html#permissions-for-database-workloads["Autorisations pour les charges de travail de base de données"^]
+
+
+
+[[deploy-database-hosts]]
+== Déployer des hôtes de base de données
+
+.Quelle est la différence entre la création rapide et la création avancée lors du déploiement d'un hôte SQL Server ?
+La création rapide applique les paramètres par défaut : déploiement FCI, Windows Server 2016 et SQL Server 2019 Standard Edition. La création avancée permet de personnaliser le modèle de déploiement (FCI ou instance unique), le système d’exploitation, l’édition, la version, le type d’instance, les IOPS et le débit provisionnés, le chiffrement et la surveillance.
+
+link:create-database-server.html["Créer un hôte SQL Server"].
+
+.Quelle configuration de FSx for ONTAP un nouveau déploiement FCI ou autonome de SQL Server crée-t-il ?
+Les déploiements FCI créent un système de fichiers FSx for ONTAP Multi-AZ, et FCI est pris en charge uniquement sur les configurations Multi-AZ. Les déploiements autonomes créent un système de fichiers Single-AZ. Si vous sélectionnez un système de fichiers existant, une nouvelle machine virtuelle de stockage est créée pour les charges de travail SQL Server.
+
+link:create-database-server.html["Créer un hôte SQL Server"].
+
+.Le déploiement d'un hôte modifie-t-il la configuration réseau de mon VPC ?
+C'est possible. Le déploiement crée les points de terminaison d'interface AWS et le point de terminaison de passerelle S3 dont il a besoin s'ils n'existent pas. Il définit également les attributs DNS du VPC `EnableDnsSupport` et `EnableDnsHostnames` sur « true » s'ils ne le sont pas déjà.
+
+link:create-database-server.html["Apprenez-en davantage sur la création d'un hôte SQL Server"].
+
+.Quels accès Active Directory sont nécessaires pour déployer un hôte SQL Server ?
+Vous devez disposer d'un accès administrateur Active Directory afin que le déploiement puisse rejoindre le domaine et créer des objets ordinateur. Le déploiement crée un compte de service SQL si vous n'en fournissez pas. Pour un Active Directory géré par l'utilisateur, vous devez fournir un groupe de sécurité autorisant le trafic des instances EC2 vers le service d'annuaire.
+
+link:create-database-server.html["Apprenez-en davantage sur la création d'un hôte SQL Server"].
+
+.Pourquoi mon déploiement SQL Server a-t-il pu échouer à cause de CredSSP ?
+Lors du déploiement, Workload Factory active CredSSP pour la délégation d'identifiants aux scripts de provisionnement. Si une stratégie de groupe bloque la délégation CredSSP pour tous les ordinateurs du domaine, le déploiement échoue. Workload Factory désactive CredSSP après le déploiement.
+
+link:create-database-server.html["Apprenez-en davantage sur la création d'un hôte SQL Server"].
+
+.Puis-je me connecter à SQL Server immédiatement après le déploiement ?
+Pas immédiatement. Workload Factory n'active pas la connexion à distance sur SQL Server déployé, vous devrez donc la configurer vous-même, par exemple en autorisant l'adresse IP ou le sous-réseau client requis dans le groupe de sécurité.
+
+link:create-database-server.html["Découvrez comment activer la connexion à distance sur SQL Server"].
+
+
+
+[[register-and-manage-resources]]
+== Enregistrer et gérer les ressources
+
+.Quels avantages puis-je tirer de l'enregistrement d'une instance dans Workload Factory, et quelles sont les conditions préalables ?
+L'enregistrement vous permet de créer des bases de données et des clones sandbox, d'effectuer une analyse des journaux d'erreurs et d'optimiser les configurations. Les ressources doivent s'exécuter sur le stockage FSx for ONTAP et figurer dans l'inventaire, ce qui nécessite des identifiants AWS. Vous devez également associer un lien au système de fichiers FSx for ONTAP et effectuer les vérifications préalables, notamment concernant AWS et les modules NetApp PowerShell pour SQL Server.
+
+link:register-instance.html["Enregistrer les ressources"].
+
+.Quelles bases de données peuvent être enregistrées et gérées, et qu'en est-il de PostgreSQL ?
+Seules les instances SQL Server (FCI et autonomes) et les bases de données Oracle peuvent être enregistrées et gérées. Les hôtes PostgreSQL apparaissent dans Inventory en fonction de vos identifiants AWS, mais ne sont pas enregistrés. La détection concerne uniquement PostgreSQL sur Amazon Linux et Oracle uniquement sur Red Hat Enterprise Linux.
+
+.De quoi ai-je besoin pour enregistrer une instance dans un réseau privé sans accès à Internet ?
+Rendez les points de terminaison VPC pour S3, AWS Systems Manager et FSx for ONTAP disponibles dans le VPC et autorisez le port 443 dans le groupe de sécurité des points de terminaison d'interface. Si vous utilisez un proxy, vous devez également autoriser les domaines Microsoft, PowerShell Gallery (SQL Server) et AWS requis.
+
+link:register-instance.html["Découvrez comment enregistrer les ressources"].
+
+.Que se passe-t-il lorsque je désenregistre une ressource ?
+Vous ne pouvez plus déployer sur la ressource ni la surveiller depuis la console, et sa capacité de stockage FSx for ONTAP n'est plus comptabilisée comme utilisée par l'instance. Vous pourrez enregistrer à nouveau la ressource ultérieurement.
+
+link:deregister-instance.html["Annuler l’enregistrement d’une ressource"].
+
+.Que dois-je savoir sur la création de bases de données?
+La création d'une base de données ajoute deux nouveaux volumes avec des LUN indépendants pour les fichiers de données et de journalisation. Ces fichiers bénéficient d'un provisionnement fin et n'occupent que quelques mégaoctets de l'espace alloué. Les serveurs SQL Server qui utilisent SMB ne prennent pas en charge la création de bases de données.
+
+link:create-database.html["Créer une base de données SQL Server"].
+
+
+
+[[savings-calculator]]
+== Calculateur d'économies
+
+.Que compare le calculateur d'économies et comment les hôtes SQL Server sur site sont-ils évalués ?
+Il compare les coûts de stockage, de calcul, de licence SQL, de snapshot et de clone sur FSx for ONTAP à ceux d’Amazon Elastic Block Store, de FSx for Windows File Server et du stockage sur site. Pour les hôtes sur site, téléchargez un script d’évaluation PowerShell, exécutez-le sur l’hôte et téléchargez les résultats. Vous pouvez ensuite sélectionner jusqu’à cinq hôtes à analyser. Notez que la taille des volumes sur site n’est pas prise en compte dans les calculs des coûts et des économies en pourcentage.
+
+link:explore-savings.html["Apprenez à utiliser le calculateur d’économies"].
+
+.Pourquoi le calculateur recommande-t-il de rétrograder SQL Server Enterprise vers Standard Edition ?
+Il est recommandé de rétrograder l'instance lorsqu'elle dispose de 48 vCPU ou moins et de 128 Go de mémoire ou moins. L'instance ne doit pas non plus utiliser les fonctionnalités Enterprise telles que les opérations d'indexation en ligne, Resource Governor, la réplication peer-to-peer ou Oracle, les extensions R/Python ou TempDB à mémoire optimisée. Le modèle de déploiement ne doit pas non plus nécessiter Enterprise.
+
+.Comment le calculateur dimensionne-t-il une configuration FSx for ONTAP lorsque je sélectionne plusieurs hôtes ?
+Vous pouvez sélectionner jusqu'à cinq hôtes détectés. Workload Factory les regroupe en une seule recommandation de configuration FSx for ONTAP avec une instance SQL, sauf si les hôtes dépassent les limites de débit, de capacité ou d'IOPS d'un seul système de fichiers. La création ou l'enregistrement de plusieurs systèmes de fichiers FSx for ONTAP n'est pas pris en charge.
+
+link:explore-savings.html["Découvrez les économies"].
+
+
+
+[[well-architected-configurations]]
+== Configurations bien architecturées
+
+.Quelle est la différence entre une évaluation Well-Architected ponctuelle et une évaluation Well-Architected continue ?
+L'évaluation ponctuelle exécute un script sur l'hôte et télécharge les résultats, de sorte qu'aucun identifiant n'est stocké et que l'enregistrement des ressources n'est pas nécessaire. L'évaluation continue nécessite l'enregistrement des ressources, l'association d'un lien et l'octroi des autorisations. Elle analyse quotidiennement et peut corriger automatiquement les problèmes.
+
+link:optimize-configurations.html["Optimisez la configuration de votre base de données"].
+
+.Quels risques dois-je prendre en compte avant de corriger un problème de configuration dans une architecture bien conçue ?
+Certaines corrections peuvent entraîner une interruption ou des interruptions de service ; examinez donc d’abord chaque recommandation. Par exemple, testez les recommandations RSS et MAXDOP afin d’évaluer les performances avant de les appliquer en production.
+
+link:optimize-configurations.html["Exécutez l'évaluation pour en savoir plus sur les recommandations de configuration"].
+
+.Puis-je ignorer les recommandations de bonne architecture qui ne s'appliquent pas à mon environnement ?
+Oui. Le rejet d'une configuration interrompt son analyse, évite les alertes inutiles et la retire du score d'optimisation total. Vous pouvez la réactiver à tout moment, et l'analyse reprendra alors quotidiennement.
+
+link:optimize-configurations.html["Rejeter une configuration de l’évaluation well-architected"].
+
+.Pourquoi les bonnes pratiques recommandent-elles de désactiver les instantanés locaux planifiés sur les volumes pour SQL Server et Oracle ?
+Les snapshots FSx pour ONTAP planifiés ne sont pas cohérents au niveau des applications. Il est recommandé de gérer les snapshots en externe à l’aide d’outils tels que NetApp SnapCenter afin d’obtenir des sauvegardes cohérentes au niveau des applications et d’éviter toute corruption lors de la restauration. Notez que le déploiement Advanced create host active par défaut une stratégie de snapshot quotidienne avec une durée de conservation de 7 jours.
+
+link:optimize-overview.html["En savoir plus sur l’analyse des configurations de bases de données"].
+
+
+
+[[sandbox-clones]]
+== Clones de bac à sable
+
+.Comment crée-t-on un clone de bac à sable, et où peut-on le placer ?
+Un clone sandbox est créé à partir du snapshot le plus récent de la base de données source. Il peut se trouver sur la même instance SQL Server ou sur une autre, à condition que l'hôte cible soit dans le même VPC et partage le même système de fichiers FSx for ONTAP que la source. Sa création requiert un SQL Server géré (enregistré), ainsi que des autorisations d'opérations et de correction.
+
+link:create-sandbox-clone.html["Créez un clone sandbox"].
+
+.Quelle est la différence entre actualiser, redéfinir la ligne de base et scinder pour un clone de sandbox ?
+L'option « Actualiser » synchronise le clone avec l'état actuel de la base de données source ou avec un instantané précédent, et supprime toutes les modifications que vous avez apportées au clone. L'option « Rétablir la base de référence » ramène le clone à son état au moment de sa création, supprime également les modifications et permet de gagner de l'espace par rapport à la création d'un nouveau clone. L'option « Séparer » transforme le clone en une base de données indépendante qui consomme de la capacité de stockage, et le clone est supprimé une fois la séparation terminée.
+
+* link:manage-clones.html["Gérer les clones de base de données"].
+* link:split-clone.html["Scinder un clone de base de données"].
+
+
+.Comment puis-je vérifier que les données d'un clone de sandbox sont correctes et que se passe-t-il si la vérification échoue ?
+Si vous créez un clone pendant que la base de données est occupée, le clone risque de ne pas être synchronisé avec le dernier instantané. Le contrôle d'intégrité examine tous les objets du clone. En cas d'échec, n'utilisez pas le clone et créez-en un nouveau.
+
+link:manage-clones.html["Vérifier l'intégrité d'un clone de base de données"].
+
+.Que dois-je vérifier avant de diviser un clone ?
+La division crée une nouvelle base de données qui consomme du stockage supplémentaire. Prévoyez la capacité nécessaire et augmentez au préalable la capacité du système de fichiers FSx for ONTAP si nécessaire.
+
+link:split-clone.html["Scinder un clone de base de données"].
+
+
+
+[[data-protection]]
+== Protection des données
+
+.Quelle protection Backup and Recovery offre-t-il aux charges de travail SQL Server ?
+Il sauvegarde les charges de travail à l’aide d’instantanés locaux sur le stockage principal FSx for ONTAP et les réplique vers le stockage secondaire FSx for ONTAP à l’aide de la technologie SnapMirror. Vous créez des stratégies de protection dans Backup and Recovery.
+
+link:protect-sql-server.html["Protégez les charges de travail SQL Server avec Backup and Recovery"].
+
+.Que faut-il pour protéger SQL Server avec NetApp Backup and Recovery ?
+L'instance SQL Server doit être enregistrée avec des identifiants Windows. Vous devez également respecter les exigences de Backup and Recovery pour SQL Server, les exigences de NetApp Console (y compris un agent Console) et les exigences de licence. Workload Factory installe ensuite le Plug-in for Microsoft SQL Server et vous redirige vers Backup and Recovery pour créer une stratégie de protection.
+
+link:protect-sql-server.html["Protégez les charges de travail SQL Server avec Backup and Recovery"].
+
+
+
+[[automation-and-error-analysis]]
+== Automatisation et analyse des erreurs
+
+.Qu'est-ce que Codebox, et y a-t-il des inconvénients à utiliser du code généré ?
+Codebox est un copilote d’infrastructure en tant que code qui génère du code REST API, AWS CLI, CloudFormation et Terraform pour les opérations prises en charge par Workload Factory. Le code Terraform masque les mots de passe fsxadmin et vsadmin, vous devez donc les saisir à nouveau. Un modèle CloudFormation téléchargé ou copié n’est conservé que pendant sept jours. Voir link:automate-codebox.html["Automatisez avec Codebox"].
+
+.De quoi ai-je besoin pour configurer l'analyseur de journaux d'erreurs basé sur l'IA ?
+L'analyseur nécessite l'activation d'Amazon Bedrock, un point de terminaison VPC Bedrock associé au sous-réseau de l'hôte, des ressources enregistrées et les autorisations IAM requises. Pour Oracle, vous devez également autoriser l'accès à V$DIAG_ALERT_EXT. Si votre administrateur de compte a désactivé les fonctionnalités d'IA, l'analyseur n'est pas disponible.
+
+link:analyze-error-logs.html["Apprenez à analyser les journaux d'erreurs dans Workload Factory"].
+
+.Mes données de journalisation sont-elles sécurisées lorsque j'utilise l'analyseur de journaux d'erreurs ?
+Les données de journalisation et les agrégations restent dans votre compte AWS et transitent par un point de terminaison VPC privé, sans être exposées sur Internet. Les données client ne sont pas utilisées pour l'entraînement ou l'amélioration des modèles. Bedrock traite les journaux en temps réel et les résultats sont stockés dans votre environnement.
